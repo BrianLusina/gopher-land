@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // the type of variable comes last
 var c, python, kotlin bool
