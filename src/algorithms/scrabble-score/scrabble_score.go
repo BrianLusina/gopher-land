@@ -11,6 +11,7 @@ var scrabbleMapScore = map[rune]int{
 	'z': 10,
 }
 
+// Score function that takes in a string input and returns its scrabble score
 func Score(word string) int {
 	word = strings.ToLower(word)
 
