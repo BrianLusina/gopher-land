@@ -5,7 +5,7 @@ import (
 )
 
 // add takes in variadic parameters
-func add(numbers ...float64) (finalResult float64) {
+func Add(numbers ...float64) (finalResult float64) {
 	for _, number := range numbers {
 		finalResult += number
 	}
