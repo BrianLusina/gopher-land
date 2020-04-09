@@ -16,36 +16,66 @@ type Identifiable interface {
 	ID() string
 }
 
+// Citizen embeds the Identifiable interfaces
+type Citizen interface {
+	Identifiable
+	Country() string
+}
+
+type Conflict interface {
+	ID() string
+}
+
 type Name struct {
 	first string
 	last  string
 }
 
+type Person struct {
+	Name
+	twitterHandler TwitterHandler
+	Citizen
+}
 type socialSecurityNumber string
 
-func NewSocialSecurityNumber(value string) Identifiable {
-	return socialSecurityNumber(
-		value
-	)
+func NewSocialSecurityNumber(value string) Citizen {
+	return socialSecurityNumber(value)
+}
+
+type europeanUnionIdentifier struct {
+	id      string
+	country string
+}
+
+func NewEuropeanUnionIdentifier(id, country string) Citizen {
+	return europeanUnionIdentifier{
+		id:      id,
+		country: country,
+	}
 }
 
 func (ssn socialSecurityNumber) ID() string {
 	return string(ssn)
 }
-
-type Person struct {
-	Name
-	twitterHandler TwitterHandler
-	Identifiable
+func (ssn socialSecurityNumber) Country() string {
+	return "USA"
 }
 
-func NewPerson(firstName, lastName string, identifiable Identifiable) Person {
+func (eui europeanUnionIdentifier) ID() string {
+	return eui.id
+}
+
+func (eui europeanUnionIdentifier) Country() string {
+	return eui.country
+}
+
+func NewPerson(firstName, lastName string, citizen Citizen) Person {
 	return Person{
 		Name: Name{
 			first: firstName,
 			last:  lastName,
 		},
-		Identifiable: identifiable,
+		Citizen: citizen,
 	}
 }
 
@@ -69,7 +99,7 @@ func (p *Person) SetTwitterHandler(handler TwitterHandler) error {
 }
 
 func (p *Person) ID() string {
-	return fmt.Sprintf(p.Identifiable.ID())
+	return fmt.Sprintf(p.Citizen.ID())
 }
 
 func (th TwitterHandler) RedirectUrl() string {
