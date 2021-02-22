@@ -1,3 +1,3 @@
 module github.com/BrianLusina/goffer-land
 
-go 1.14
+go 1.16
