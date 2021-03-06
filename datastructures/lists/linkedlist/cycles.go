@@ -1,6 +1,6 @@
 package linkedlist
 
-func DetectCycle(head SinglyLinkedListNode) SinglyLinkedListNode {
+func DetectCycle(head *SinglyLinkedListNode) *SinglyLinkedListNode {
 	if head == nil || head.Next == nil {
 		return nil
 	}
@@ -13,14 +13,19 @@ func DetectCycle(head SinglyLinkedListNode) SinglyLinkedListNode {
 		slowPointer = slowPointer.Next
 
 		if slowPointer == fastPointer {
-			slowPointer = head
-
-			for slowPointer != fastPointer {
-				slowPointer = slowPointer.Next
-				fastPointer = fastPointer.Next
-			}
-			return slowPointer
+			break
 		}
 	}
-	return nil
+
+	if fastPointer == nil || fastPointer.Next == nil {
+		return nil
+	}
+
+	curr := head
+	for curr != slowPointer {
+		curr = curr.Next
+		slowPointer = slowPointer.Next
+	}
+
+	return curr
 }
