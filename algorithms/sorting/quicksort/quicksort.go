@@ -50,13 +50,14 @@ func quicksortSubSlice(theSlice []int, startIndex, endIndex int) {
 }
 
 // Quicksort sorts a slice of integers using quicksort algorithm
-func Quicksort(theSlice []int) {
+func Quicksort(theSlice []int) []int {
 	length := len(theSlice)
 
 	// Nothing to sort here
 	if length <= 1 {
-		return
+		return theSlice
 	}
 
 	quicksortSubSlice(theSlice, 0, length-1)
+	return theSlice
 }

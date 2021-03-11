@@ -1,27 +1,25 @@
 package binarytrees
 
-import "fmt"
-
 // Walk walks the tree and sends all values to the channel intChannel
-func Walk(tree *Tree, intChannel chan int) {
+func Walk(tree *BinaryTreeNode, intChannel chan int) {
 	recursivelyWalk(tree, intChannel)
 	close(intChannel)
 }
 
 // recursivelyWalk recursively walks down a tree and pushes values to the channel
-func recursivelyWalk(tree *Tree, intChannel chan int) {
+func recursivelyWalk(tree *BinaryTreeNode, intChannel chan int) {
 	if tree != nil {
 		// walk to the left first and send left part to the channel
 		recursivelyWalk(tree.Left, intChannel)
 		// send value to channel
-		intChannel <- tree.Value
+		intChannel <- tree.Data
 		// walk to the right
 		recursivelyWalk(tree.Right, intChannel)
 	}
 }
 
 // AreTreesSame determines whether 2 trees are the same
-func AreTreesSame(tree1, tree2 *Tree) bool {
+func AreTreesSame(tree1, tree2 *BinaryTreeNode) bool {
 	channel1 := make(chan int)
 	channel2 := make(chan int)
 
@@ -51,12 +49,12 @@ func AreTreesSame(tree1, tree2 *Tree) bool {
 	}
 }
 
-func main() {
-	ch := make(chan int)
-	go Walk(NewTree(1), ch)
-	for v := range ch {
-		fmt.Println(v)
-	}
-	fmt.Println(AreTreesSame(NewTree(1), NewTree(1)))
-	fmt.Println(AreTreesSame(NewTree(1), NewTree(2)))
-}
+// func main() {
+// 	ch := make(chan int)
+// 	go Walk(NewBinaryTree(1), ch)
+// 	for v := range ch {
+// 		fmt.Println(v)
+// 	}
+// 	fmt.Println(AreTreesSame(NewBinaryTree(1), NewBinaryTree(1)))
+// 	fmt.Println(AreTreesSame(NewBinaryTree(1), NewBinaryTree(2)))
+// }
