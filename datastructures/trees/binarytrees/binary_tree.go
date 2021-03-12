@@ -108,3 +108,38 @@ func (t *BinaryTreeNode) PreOrderTraversal() (values []int) {
 
 	return
 }
+
+// PostorderTraversal of a binary tree, returns values of each node starting with left most subtree, uses 2 stacks
+// to keep track of values of nodes and pops them from one stack adding them to the other
+func (t *BinaryTreeNode) PostOrderTraversal() (values []int) {
+	stackOne := []*BinaryTreeNode{}
+	stackTwo := []*BinaryTreeNode{}
+
+	if t == nil {
+		return
+	}
+
+	stackOne = append(stackOne, t)
+
+	for len(stackOne) != 0 {
+		node := stackOne[len(stackOne)-1]
+		stackOne = stackOne[:len(stackOne)-1]
+		stackTwo = append(stackTwo, node)
+
+		if node.Left != nil {
+			stackOne = append(stackOne, node.Left)
+		}
+
+		if node.Right != nil {
+			stackOne = append(stackOne, node.Right)
+		}
+	}
+
+	for len(stackTwo) != 0 {
+		node := stackTwo[len(stackTwo)-1]
+		stackTwo = stackTwo[:len(stackTwo)-1]
+		values = append(values, node.Data)
+	}
+
+	return
+}
