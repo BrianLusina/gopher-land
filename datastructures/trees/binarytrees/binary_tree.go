@@ -80,3 +80,31 @@ func (t *BinaryTreeNode) inOrderMorrisTraversal() (result []int) {
 
 	return
 }
+
+// IsValidBst checks if a binary tree is valid
+func (t *BinaryTreeNode) IsValidBst() bool {
+	panic("Implement me!")
+}
+
+// PreOrderTraversal of a binary tree, returns values of each node
+func (t *BinaryTreeNode) PreOrderTraversal() (values []int) {
+
+	if t == nil {
+		return
+	}
+
+	stack := []*BinaryTreeNode{}
+	current := t
+
+	for current != nil || len(stack) != 0 {
+		for current != nil {
+			values = append(values, t.Data)
+			stack = append(stack, t)
+			current = t.Left
+		}
+		current, stack = stack[len(stack)-1], stack[:len(stack)-1]
+		current = current.Right
+	}
+
+	return
+}

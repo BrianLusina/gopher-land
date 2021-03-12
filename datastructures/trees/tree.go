@@ -4,6 +4,8 @@ package trees
 // Tree interface to operate on trees
 type Tree interface {
 	NewNode()
+	InorderTraversalIteravely()
+	InorderMorrisTraversal()
 }
 
 // TreeNode represent a Node in a Tree
