@@ -3,9 +3,10 @@ package main
 import (
 	"fmt"
 	f "fmt"
-	"github.com/BrianLusina/goffer-land/tour/interfaces"
 	"runtime"
 	"time"
+
+	"github.com/BrianLusina/goffer-land/tour/interfaces"
 )
 
 type Distance int
