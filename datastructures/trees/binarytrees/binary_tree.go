@@ -143,3 +143,26 @@ func (t *BinaryTreeNode) PostOrderTraversal() (values []int) {
 
 	return
 }
+
+// SearchNode searches for a value in a BST by walking either left or right of the tree given the value is either
+// less than or greater than current node respectively. This uses a recursive approach to find a node in a Tree
+// if found, returns the node which is the subtree with that value if not found, returns nil
+func (t *BinaryTreeNode) SearchNode(node *BinaryTreeNode, val int) *BinaryTreeNode {
+	if node == nil {
+		return nil
+	}
+
+	if val == node.Data {
+		return node
+	}
+
+	if val < node.Data && node.Left != nil {
+		return t.SearchNode(node.Left, val)
+	}
+
+	if val > node.Data && node.Right != nil {
+		return t.SearchNode(node.Right, val)
+	}
+
+	return nil
+}
