@@ -166,3 +166,28 @@ func (t *BinaryTreeNode) SearchNode(node *BinaryTreeNode, val int) *BinaryTreeNo
 
 	return nil
 }
+
+// InsertNode inserts a BinaryTreeNode into the BST. Inserts it left if the val is less than the current root
+// inserts it right if the val is greater than the current root. This operation is repeated recursively
+func (root *BinaryTreeNode) InsertNode(val int) *BinaryTreeNode {
+	if root == nil {
+		return &BinaryTreeNode{
+			Data: val,
+		}
+	}
+
+	if val < root.Data && root.Left != nil {
+		root.InsertNode(val)
+	} else if val <= root.Data {
+		root.Left = &BinaryTreeNode{
+			Data: val,
+		}
+	} else if val > root.Data && root.Right != nil {
+		root.InsertNode(val)
+	} else {
+		root.Right = &BinaryTreeNode{
+			Data: val,
+		}
+	}
+	return root
+}
