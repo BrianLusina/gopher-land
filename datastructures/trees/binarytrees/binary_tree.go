@@ -216,7 +216,7 @@ func (root *BinaryTreeNode) Height() int {
 			return height
 		}
 
-		height += 1
+		height++
 
 		for currentLevelNodes > 0 {
 			node := queue[0]
@@ -234,4 +234,45 @@ func (root *BinaryTreeNode) Height() int {
 		}
 	}
 	return 0
+}
+
+// LowestCommonAncestor returns the LCA of 2 nodes
+// Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this
+// If both of the values in the 2 nodes provided are greater than the root node, then we move to the right.
+// if the nodes are less than the root node, we move to the left.
+// If there is no root node, then we exit and return None, as no common ancestor could exist in such a case with
+// no root node.
+//
+// Assumptions:
+// - assumes that the node itself can also be an ancestor/descendant of itself
+//
+// Complexity Analysis:
+// Time Complexity: O(h).
+// The Time Complexity of the above solution is O(h), where h is the height of the tree.
+//
+// Space Complexity: O(1).
+// The space complexity of the above solution is constant.
+func (root *BinaryTreeNode) LowestCommonAncestor(nodeOne, nodeTwo BinaryTreeNode) *BinaryTreeNode {
+	if root == nil {
+		return nil
+	}
+
+	// if any of the node values matches the data value for the root node, return the root node
+	if root.Data == nodeOne.Data || root.Data == nodeTwo.Data {
+		return root
+	}
+
+	for root != nil {
+		// if both node_one and node_two are smaller than root, then LCA lies in the left
+		if root.Data > nodeOne.Data && root.Data > nodeTwo.Data {
+			root = root.Left
+		} else if root.Data < nodeOne.Data && root.Data < nodeTwo.Data {
+			// if both node_one and node_two are greater than root, then LCA lies in the right
+			root = root.Right
+		} else {
+			break
+		}
+	}
+
+	return root
 }
