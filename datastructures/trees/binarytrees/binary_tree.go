@@ -8,6 +8,10 @@ type BinaryTreeNode struct {
 	Right *BinaryTreeNode
 }
 
+type BinaryTreeIterator struct {
+	stack []*BinaryTreeNode
+}
+
 // NewBinaryTree creates a new Binary Tree Node
 func (t *BinaryTreeNode) NewBinaryTree(data int) BinaryTreeNode {
 	return BinaryTreeNode{
@@ -190,4 +194,44 @@ func (root *BinaryTreeNode) InsertNode(val int) *BinaryTreeNode {
 		}
 	}
 	return root
+}
+
+// Height returns the height of the Binary Search Tree
+func (root *BinaryTreeNode) Height() int {
+	if root == nil {
+		return 0
+	}
+
+	if root.Left == nil && root.Right == nil {
+		return 0
+	}
+
+	height := 0
+	queue := []*BinaryTreeNode{}
+
+	for true {
+		currentLevelNodes := len(queue)
+
+		if currentLevelNodes == 0 {
+			return height
+		}
+
+		height += 1
+
+		for currentLevelNodes > 0 {
+			node := queue[0]
+			queue = queue[1 : len(queue)-1]
+
+			if node.Left != nil {
+				queue = append(queue, node.Left)
+			}
+
+			if node.Right != nil {
+				queue = append(queue, node.Right)
+			}
+
+			currentLevelNodes--
+		}
+	}
+	return 0
 }
