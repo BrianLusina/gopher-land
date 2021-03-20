@@ -1,6 +1,8 @@
 // Package binarytrees contains types and struct forTrees
 package binarytrees
 
+import "strconv"
+
 // BinaryTreeNode represent a BinaryTreeNode in a BinarySearchTree
 type BinaryTreeNode struct {
 	Data  int
@@ -275,4 +277,40 @@ func (root *BinaryTreeNode) LowestCommonAncestor(nodeOne, nodeTwo BinaryTreeNode
 	}
 
 	return root
+}
+
+// Paths returns all the paths of this binary tree from root to leaf node
+func (root *BinaryTreeNode) Paths() (res []string) {
+	type Pair struct {
+		node *BinaryTreeNode
+		path string
+	}
+
+	if root == nil {
+		return res
+	}
+
+	stack := []Pair{{root, ""}}
+
+	for len(stack) != 0 {
+		item := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+
+		node := item.node
+		path := item.path
+
+		if !(node.Left != nil || node.Right != nil) {
+			res = append(res, path+strconv.Itoa(node.Data))
+		}
+
+		if node.Left != nil {
+			stack = append(stack, Pair{node.Left, path + strconv.Itoa(node.Data) + "->"})
+		}
+
+		if node.Right != nil {
+			stack = append(stack, Pair{node.Right, path + strconv.Itoa(node.Data) + "->"})
+		}
+	}
+
+	return
 }
