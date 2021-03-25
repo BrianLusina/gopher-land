@@ -314,3 +314,30 @@ func (root *BinaryTreeNode) Paths() (res []string) {
 
 	return
 }
+
+// Size returns the number of nodes in this Tree
+func (root *BinaryTreeNode) Size() (counter int) {
+	if root == nil {
+		return
+	}
+
+	counter++
+	stack := []*BinaryTreeNode{}
+
+	for len(stack) != 0 {
+		node := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+
+		if node.Left != nil {
+			counter++
+			stack = append(stack, node.Left)
+		}
+
+		if node.Right != nil {
+			counter++
+			stack = append(stack, node.Right)
+		}
+	}
+
+	return
+}
