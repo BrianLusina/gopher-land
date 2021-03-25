@@ -1,6 +1,9 @@
 package linkedlist
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // SinglyLinkedListNode of a Singly Linked List
 type SinglyLinkedListNode struct {
@@ -125,4 +128,60 @@ func (ll *SinglyLinkedList) IsPalindrome() bool {
 	}
 
 	return true
+}
+
+// DetectCycle detects cycles in a LinkedList & returns the Node that contains a cycle
+func (ll *SinglyLinkedList) DetectCycle() *SinglyLinkedListNode {
+	if ll.Head == nil || ll.Head.Next == nil {
+		return nil
+	}
+
+	slowPointer := ll.Head
+	fastPointer := ll.Head
+
+	for slowPointer != nil && fastPointer != nil && fastPointer.Next != nil {
+		fastPointer = fastPointer.Next.Next
+		slowPointer = slowPointer.Next
+
+		if slowPointer == fastPointer {
+			break
+		}
+	}
+
+	if fastPointer == nil || fastPointer.Next == nil {
+		return nil
+	}
+
+	curr := ll.Head
+	for curr != slowPointer {
+		curr = curr.Next
+		slowPointer = slowPointer.Next
+	}
+
+	return curr
+}
+
+// GetNthNode gets the nth node in a linked list
+func (ll *SinglyLinkedList) GetNthNode(position int) (n *SinglyLinkedListNode, err error) {
+	if position < 0 {
+		return nil, errors.New("Position less than 0")
+	}
+
+	if ll.Head == nil {
+		return nil, errors.New("List is empty")
+	}
+
+	current := ll.Head
+
+	for current != nil {
+		for x := 0; x < position; x++ {
+			current = current.Next
+
+			if current == nil {
+				return nil, errors.New("Null node encountered")
+			}
+		}
+	}
+
+	return current, nil
 }
