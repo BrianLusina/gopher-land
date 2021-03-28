@@ -185,3 +185,40 @@ func (ll *SinglyLinkedList) GetNthNode(position int) (n *SinglyLinkedListNode, e
 
 	return current, nil
 }
+
+// DeleteNodeAtPosition deletes a node at the specified position and returns the deleted node
+func (ll *SinglyLinkedList) DeleteNodeAtPosition(position int) (*SinglyLinkedListNode, error) {
+	if position < 0 {
+		errMessage := fmt.Sprintf("Invalid Index position given. Index is {%d}, expected position >= 0", position)
+		return nil, errors.New(errMessage)
+	}
+
+	// Nothing to delete here
+	if ll.Head == nil {
+		return nil, nil
+	}
+
+	if ll.Head != nil && position == 0 {
+		current := ll.Head
+		ll.Head = nil
+		return current, nil
+	}
+
+	current := ll.Head
+
+	for current != nil {
+		for i := 0; i < position; i++ {
+			current = current.Next
+
+			if current == nil {
+				return nil, fmt.Errorf("Invalid position %d specified, reached end of list.", position)
+			}
+		}
+	}
+
+	node := current
+	current.Data = current.Next.Data
+	current.Next = current.Next.Next
+
+	return node, nil
+}
