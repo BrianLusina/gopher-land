@@ -4,8 +4,10 @@ package binarytrees
 import "strconv"
 
 // BinaryTreeNode represent a BinaryTreeNode in a BinarySearchTree
+// interface{} on Data is probably not the right choice here, but before Generics in Go is released, this is a feasible solution
+// when performing comparisons, it is important to cast this interface to a concrete type(same will apply when generics are released)
 type BinaryTreeNode struct {
-	Data  int
+	Data  interface{}
 	Left  *BinaryTreeNode
 	Right *BinaryTreeNode
 }
@@ -21,7 +23,7 @@ func (t *BinaryTreeNode) NewBinaryTree(data int) BinaryTreeNode {
 	}
 }
 
-func (t *BinaryTreeNode) inorderTraversalIteravely() (result []int) {
+func (t *BinaryTreeNode) inorderTraversalIteravely() (result []interface{}) {
 	stack := []*BinaryTreeNode{}
 	current := t
 
@@ -38,7 +40,7 @@ func (t *BinaryTreeNode) inorderTraversalIteravely() (result []int) {
 	return
 }
 
-func (t *BinaryTreeNode) inorderTraversalRecurse(root *BinaryTreeNode) (result []int) {
+func (t *BinaryTreeNode) inorderTraversalRecurse(root *BinaryTreeNode) (result []interface{}) {
 	if root != nil {
 		if root.Left != nil {
 			t.inorderTraversalRecurse(t.Left)
@@ -54,7 +56,7 @@ func (t *BinaryTreeNode) inorderTraversalRecurse(root *BinaryTreeNode) (result [
 	return
 }
 
-func (t *BinaryTreeNode) inOrderMorrisTraversal() (result []int) {
+func (t *BinaryTreeNode) inOrderMorrisTraversal() (result []interface{}) {
 	current := t
 	var pre *BinaryTreeNode
 
@@ -87,13 +89,27 @@ func (t *BinaryTreeNode) inOrderMorrisTraversal() (result []int) {
 	return
 }
 
-// IsValidBst checks if a binary tree is valid
-func (t *BinaryTreeNode) IsValidBst() bool {
-	panic("Implement me!")
+func isBstRecursive(node *BinaryTreeNode, min, max interface{}) bool {
+	if node == nil {
+		return true
+	}
+
+	if node.Data.(int) < min.(int) || node.Data.(int) > max.(int) {
+		return false
+	}
+
+	return isBstRecursive(node.Left, min, node.Data.(int)-1) && isBstRecursive(node.Right, node.Data.(int)+1, max)
+}
+
+// IsValidBst checks if a binary tree is valid is a valid BST
+func (root *BinaryTreeNode) IsValidBst() bool {
+	max := 4294967296
+	min := -4294967296
+	return isBstRecursive(root, min, max)
 }
 
 // PreOrderTraversal of a binary tree, returns values of each node
-func (t *BinaryTreeNode) PreOrderTraversal() (values []int) {
+func (t *BinaryTreeNode) PreOrderTraversal() (values []interface{}) {
 
 	if t == nil {
 		return
@@ -117,7 +133,7 @@ func (t *BinaryTreeNode) PreOrderTraversal() (values []int) {
 
 // PostorderTraversal of a binary tree, returns values of each node starting with left most subtree, uses 2 stacks
 // to keep track of values of nodes and pops them from one stack adding them to the other
-func (t *BinaryTreeNode) PostOrderTraversal() (values []int) {
+func (t *BinaryTreeNode) PostOrderTraversal() (values []interface{}) {
 	stackOne := []*BinaryTreeNode{}
 	stackTwo := []*BinaryTreeNode{}
 
@@ -153,7 +169,7 @@ func (t *BinaryTreeNode) PostOrderTraversal() (values []int) {
 // SearchNode searches for a value in a BST by walking either left or right of the tree given the value is either
 // less than or greater than current node respectively. This uses a recursive approach to find a node in a Tree
 // if found, returns the node which is the subtree with that value if not found, returns nil
-func (t *BinaryTreeNode) SearchNode(node *BinaryTreeNode, val int) *BinaryTreeNode {
+func (t *BinaryTreeNode) SearchNode(node *BinaryTreeNode, val interface{}) *BinaryTreeNode {
 	if node == nil {
 		return nil
 	}
@@ -162,11 +178,11 @@ func (t *BinaryTreeNode) SearchNode(node *BinaryTreeNode, val int) *BinaryTreeNo
 		return node
 	}
 
-	if val < node.Data && node.Left != nil {
+	if val.(int) < node.Data.(int) && node.Left != nil {
 		return t.SearchNode(node.Left, val)
 	}
 
-	if val > node.Data && node.Right != nil {
+	if val.(int) > node.Data.(int) && node.Right != nil {
 		return t.SearchNode(node.Right, val)
 	}
 
@@ -175,20 +191,20 @@ func (t *BinaryTreeNode) SearchNode(node *BinaryTreeNode, val int) *BinaryTreeNo
 
 // InsertNode inserts a BinaryTreeNode into the BST. Inserts it left if the val is less than the current root
 // inserts it right if the val is greater than the current root. This operation is repeated recursively
-func (root *BinaryTreeNode) InsertNode(val int) *BinaryTreeNode {
+func (root *BinaryTreeNode) InsertNode(val interface{}) *BinaryTreeNode {
 	if root == nil {
 		return &BinaryTreeNode{
 			Data: val,
 		}
 	}
 
-	if val < root.Data && root.Left != nil {
+	if val.(int) < root.Data.(int) && root.Left != nil {
 		root.InsertNode(val)
-	} else if val <= root.Data {
+	} else if val.(int) <= root.Data.(int) {
 		root.Left = &BinaryTreeNode{
 			Data: val,
 		}
-	} else if val > root.Data && root.Right != nil {
+	} else if val.(int) > root.Data.(int) && root.Right != nil {
 		root.InsertNode(val)
 	} else {
 		root.Right = &BinaryTreeNode{
@@ -266,9 +282,9 @@ func (root *BinaryTreeNode) LowestCommonAncestor(nodeOne, nodeTwo BinaryTreeNode
 
 	for root != nil {
 		// if both node_one and node_two are smaller than root, then LCA lies in the left
-		if root.Data > nodeOne.Data && root.Data > nodeTwo.Data {
+		if root.Data.(int) > nodeOne.Data.(int) && root.Data.(int) > nodeTwo.Data.(int) {
 			root = root.Left
-		} else if root.Data < nodeOne.Data && root.Data < nodeTwo.Data {
+		} else if root.Data.(int) < nodeOne.Data.(int) && root.Data.(int) < nodeTwo.Data.(int) {
 			// if both node_one and node_two are greater than root, then LCA lies in the right
 			root = root.Right
 		} else {
@@ -300,15 +316,15 @@ func (root *BinaryTreeNode) Paths() (res []string) {
 		path := item.path
 
 		if !(node.Left != nil || node.Right != nil) {
-			res = append(res, path+strconv.Itoa(node.Data))
+			res = append(res, path+strconv.Itoa(node.Data.(int)))
 		}
 
 		if node.Left != nil {
-			stack = append(stack, Pair{node.Left, path + strconv.Itoa(node.Data) + "->"})
+			stack = append(stack, Pair{node.Left, path + strconv.Itoa(node.Data.(int)) + "->"})
 		}
 
 		if node.Right != nil {
-			stack = append(stack, Pair{node.Right, path + strconv.Itoa(node.Data) + "->"})
+			stack = append(stack, Pair{node.Right, path + strconv.Itoa(node.Data.(int)) + "->"})
 		}
 	}
 
