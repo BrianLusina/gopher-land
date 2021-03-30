@@ -1,4 +1,4 @@
-package linkedlist
+package singlylinkedlist
 
 import (
 	"errors"
@@ -221,4 +221,66 @@ func (ll *SinglyLinkedList) DeleteNodeAtPosition(position int) (*SinglyLinkedLis
 	current.Next = current.Next.Next
 
 	return node, nil
+}
+
+// RemoveDuplicates removes duplicates from a SinglyLinkedList
+// This assumes the linked list is sorted in ascending order
+func (ll *SinglyLinkedList) RemoveDuplicates() *SinglyLinkedListNode {
+	head := ll.Head
+
+	if head == nil || head.Next == nil {
+		return head
+	}
+
+	current := head
+	next := current.Next
+
+	for next != nil {
+		if next.Data == current.Data {
+			current.Next = current.Next.Next
+			next = current.Next
+		} else {
+			current = next
+			next = current.Next
+		}
+	}
+	return head
+}
+
+// PairwiseSwap swaps each pair in a linked list
+// Swaps nodes in a linked list in pairs.
+// The premise(idea) is to swap the data of each node with the data of the next node. This is while using
+// an iterative approach
+// Example:
+// 1 -> 2 -> 3 -> 4
+// becomes
+// 2 -> 1 -> 4 -> 3
+func (ll *SinglyLinkedList) PairwiseSwap() *SinglyLinkedListNode {
+	head := ll.Head
+
+	// Nothing to do here
+	if head == nil {
+		return head
+	}
+
+	current := head
+
+	// traverse only if there are at least 2 nodes left
+	for current != nil && current.Next != nil {
+
+		// if the 2 nodes have the same data value, no need to swap
+		if current.Data == current.Next.Data {
+			// move to the next pair
+			current = current.Next.Next
+		} else {
+			temp := current.Data
+			current.Data = current.Next.Data
+			current.Next.Data = temp
+
+			// move to next pair
+			current = current.Next.Next
+		}
+	}
+
+	return head
 }

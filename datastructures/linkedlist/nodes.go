@@ -6,12 +6,6 @@ type Node struct {
 	Next *Node
 }
 
-// SinglyLinkedListNode of a Singly Linked List
-type SinglyLinkedListNode struct {
-	Data int32
-	Next *SinglyLinkedListNode
-}
-
 // DoublyLinkedListNode reprentation of a Doubly Linked List Node with 2 pointers
 type DoublyLinkedListNode struct {
 	Data int32
