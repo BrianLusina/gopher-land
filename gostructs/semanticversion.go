@@ -1,4 +1,4 @@
-package structs_scalar
+package gostructs
 
 import "fmt"
 
