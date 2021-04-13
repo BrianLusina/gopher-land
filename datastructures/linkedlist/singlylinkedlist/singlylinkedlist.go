@@ -284,3 +284,26 @@ func (ll *SinglyLinkedList) PairwiseSwap() *SinglyLinkedListNode {
 
 	return head
 }
+
+// SwapNodes swaps head of the linked list after swapping the values of the kth node from the beginning and the kth node
+// from the end (the list is 1-indexed).
+// E.g Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
+// Output: [7,9,6,6,8,7,3,0,9,5]
+func (ll *SinglyLinkedList) SwapNodes(k int) *SinglyLinkedList {
+	a, b := ll.Head, ll.Head
+
+	for i := 1; i < k; i++ {
+		a = a.Next
+	}
+
+	node := a
+	a = a.Next
+
+	for a != nil {
+		a, b = a.Next, b.Next
+	}
+
+	node.Data, b.Data = b.Data, node.Data
+
+	return ll
+}
