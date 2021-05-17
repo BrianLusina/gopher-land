@@ -16,6 +16,10 @@ type SinglyLinkedList struct {
 	Head *SinglyLinkedListNode
 }
 
+func (l SinglyLinkedList) Print() string {
+	return fmt.Sprintf("%s", l.Head.Data)
+}
+
 func CreateList() *SinglyLinkedList {
 	return &SinglyLinkedList{}
 }
