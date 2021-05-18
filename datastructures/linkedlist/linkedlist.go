@@ -10,6 +10,7 @@ type LinkedList interface {
 	DeleteNodeByData(data interface{})
 	SwapNodes(dataOne, dataTwo interface{})
 	SwapNodesAtKthAndKPlusOne(k int)
+	Reverse()
 	Print() string
 }
 

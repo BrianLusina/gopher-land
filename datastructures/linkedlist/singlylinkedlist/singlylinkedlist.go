@@ -345,3 +345,23 @@ func (ll *SinglyLinkedList) SwapNodes(dataOne, dataTwo interface{}) {
 
 	currentOne.Data, currentTwo.Data = currentTwo.Data, currentOne.Data
 }
+
+// Reverse a LinkedList. Making the head the tail and the tail the head
+func (ll *SinglyLinkedList) Reverse() {
+	if ll.Head == nil {
+		return
+	}
+
+	var prev, Next *SinglyLinkedListNode
+
+	var current = ll.Head
+
+	for current != nil {
+		Next = current.Next
+		current.Next = prev
+		prev = current
+		current = Next
+	}
+
+	ll.Head = prev
+}
