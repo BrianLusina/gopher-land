@@ -293,7 +293,7 @@ func (ll *SinglyLinkedList) PairwiseSwap() *SinglyLinkedListNode {
 // from the end (the list is 1-indexed).
 // E.g Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
 // Output: [7,9,6,6,8,7,3,0,9,5]
-func (ll *SinglyLinkedList) SwapNodes(k int) *SinglyLinkedList {
+func (ll *SinglyLinkedList) SwapNodesAtKthAndKPlus1(k int) *SinglyLinkedList {
 	a, b := ll.Head, ll.Head
 
 	for i := 1; i < k; i++ {
@@ -310,4 +310,38 @@ func (ll *SinglyLinkedList) SwapNodes(k int) *SinglyLinkedList {
 	node.Data, b.Data = b.Data, node.Data
 
 	return ll
+}
+
+// SwapNodes swaps the data items of 2 nodes in the Linkedlist
+// Swaps two nodes based on the data they contain. We search through the LinkedList looking for the data item in
+// each node. Once the first is found, we keep track of it and move on until we find the next data item. Once that
+// is found, we swap the two nodes' data items.
+// If we can't find the first data item nor the second. No need to perform swap. If the 2 data items are similar
+// no need to perform swap as well.
+// If the LinkedList is empty (i.e. has no head node), return, no need to swap when we have no LinkedList :)
+func (ll *SinglyLinkedList) SwapNodes(dataOne, dataTwo interface{}) {
+	if ll.Head == nil {
+		return
+	}
+
+	if dataOne == dataTwo {
+		return
+	}
+
+	currentOne := ll.Head
+	currentTwo := ll.Head
+
+	for currentOne != nil && currentOne.Data != dataOne {
+		currentOne = currentOne.Next
+	}
+
+	for currentTwo != nil && currentTwo.Data != dataTwo {
+		currentTwo = currentTwo.Next
+	}
+
+	if currentOne == nil || currentTwo == nil {
+		return
+	}
+
+	currentOne.Data, currentTwo.Data = currentTwo.Data, currentOne.Data
 }

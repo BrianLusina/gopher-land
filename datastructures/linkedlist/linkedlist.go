@@ -8,6 +8,7 @@ type LinkedList interface {
 	DeleteAtPosition(position int) Node
 	DeleteNode(node Node)
 	DeleteNodeByData(data interface{})
+	SwapNodes(dataOne, dataTwo interface{})
 	SwapNodesAtKthAndKPlusOne(k int)
 	Print() string
 }
