@@ -1,10 +1,10 @@
-package primes_test
+package primes
 
 import (
 	"math"
 	"math/rand"
 	"time"
-	. ""
+
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
