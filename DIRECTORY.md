@@ -142,6 +142,10 @@
   * Uniquebsts
     * [Uniquebsts](https://github.com/TheAlgorithms/Go/blob/master/algorithms/uniquebsts/uniquebsts.go)
 
+## Bitmanipulation
+  * Int32Toipv4
+    * [Int32Toipv4](https://github.com/TheAlgorithms/Go/blob/master/bitmanipulation/int32toipv4/int32toipv4.go)
+
 ## Concurrency
   * Books
     * [Book](https://github.com/TheAlgorithms/Go/blob/master/concurrency/books/book.go)
@@ -201,6 +205,10 @@
     * [Stepsinprimes Test](https://github.com/TheAlgorithms/Go/blob/master/gomath/primes/stepsinprimes_test.go)
   * Twosum
     * [Twosum](https://github.com/TheAlgorithms/Go/blob/master/gomath/twosum/twosum.go)
+
+## Gopuzzles
+  * Greenvalley
+    * [Greenvalley](https://github.com/TheAlgorithms/Go/blob/master/gopuzzles/greenvalley/greenvalley.go)
 
 ## Gostrings
   * Deadfish
