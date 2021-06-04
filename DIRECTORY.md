@@ -7,6 +7,10 @@
     * [Anagram](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/anagram/anagram.go)
     * [Anagram Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/anagram/anagram_test.go)
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/anagram/cases_test.go)
+  * Arrays
+    * Removeduplicates
+      * [Removeduplicates](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeduplicates/removeduplicates.go)
+      * [Removeduplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeduplicates/removeduplicates_test.go)
   * Binary Gap
     * [Binary Gap](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binary_gap/binary_gap.go)
   * Climbstairs
