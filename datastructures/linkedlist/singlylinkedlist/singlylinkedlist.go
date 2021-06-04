@@ -227,6 +227,22 @@ func (ll *SinglyLinkedList) DeleteNodeAtPosition(position int) (*SinglyLinkedLis
 	return node, nil
 }
 
+func (ll *SinglyLinkedList) DeleteNodesByData(data interface{}) *SinglyLinkedListNode {
+	dummyHead := &SinglyLinkedListNode{-1, ll.Head}
+	current := dummyHead
+
+	for current.Next != nil {
+
+		if current.Next.Data == data {
+			current.Next = current.Next.Next
+		} else {
+			current = current.Next
+		}
+	}
+
+	return dummyHead.Next
+}
+
 // RemoveDuplicates removes duplicates from a SinglyLinkedList
 // This assumes the linked list is sorted in ascending order
 func (ll *SinglyLinkedList) RemoveDuplicates() *SinglyLinkedListNode {
