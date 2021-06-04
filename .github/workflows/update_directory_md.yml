@@ -12,7 +12,7 @@ jobs:
         run: |
             import os
             from typing import Iterator
-            URL_BASE = "https://github.com/TheAlgorithms/Go/blob/master"
+            URL_BASE = "https://github.com/BrianLusina/gopherland/blob/master"
             g_output = []
             def good_filepaths(top_dir: str = ".") -> Iterator[str]:
                 for dirpath, dirnames, filenames in os.walk(top_dir):
