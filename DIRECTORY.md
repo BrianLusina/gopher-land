@@ -11,6 +11,9 @@
     * Removeduplicates
       * [Removeduplicates](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeduplicates/removeduplicates.go)
       * [Removeduplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeduplicates/removeduplicates_test.go)
+    * Removeelement
+      * [Removeelement](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeelement/removeelement.go)
+      * [Removeelement Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeelement/removeelement_test.go)
   * Binary Gap
     * [Binary Gap](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binary_gap/binary_gap.go)
   * Climbstairs
