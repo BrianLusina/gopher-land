@@ -189,6 +189,21 @@
       * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/utils.go)
     * [Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree.go)
 
+## Designpatterns
+  * Parkinglot
+    * [Bus](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/bus.go)
+    * [Car](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/car.go)
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/cases_test.go)
+    * [Enums](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/enums.go)
+    * [Level](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/level.go)
+    * [Motorcycle](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/motorcycle.go)
+    * [Parkinglot](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkinglot.go)
+    * [Parkinglot Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkinglot_test.go)
+    * [Parkingspot](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingspot.go)
+    * [Parkingspot Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingspot_test.go)
+    * [Parkingsystem](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingsystem.go)
+    * [Vehicle](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/vehicle.go)
+
 ## Gomath
   * Circleofnumbers
     * [Circleofnumbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers.go)
