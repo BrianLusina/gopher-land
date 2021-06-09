@@ -221,6 +221,8 @@
     * [Kth Largest Element](https://github.com/BrianLusina/gopher-land/blob/master/gomath/kthlargestelement/kth_largest_element.go)
   * Ntheven
     * [Ntheven](https://github.com/BrianLusina/gopher-land/blob/master/gomath/ntheven/ntheven.go)
+  * Powersofi
+    * [Powersofi](https://github.com/BrianLusina/gopher-land/blob/master/gomath/powersofi/powersofi.go)
   * Primes
     * [Isprime](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/isprime.go)
     * [Stepsinprimes](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/stepsinprimes.go)
