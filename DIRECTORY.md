@@ -227,6 +227,9 @@
     * [Isprime](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/isprime.go)
     * [Stepsinprimes](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/stepsinprimes.go)
     * [Stepsinprimes Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/stepsinprimes_test.go)
+  * Tanktruck
+    * [Tanktruck](https://github.com/BrianLusina/gopher-land/blob/master/gomath/tanktruck/tanktruck.go)
+    * [Tanktruck Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/tanktruck/tanktruck_test.go)
   * Twosum
     * [Twosum](https://github.com/BrianLusina/gopher-land/blob/master/gomath/twosum/twosum.go)
 
