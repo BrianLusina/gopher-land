@@ -1,4 +1,4 @@
-package roman_numerals
+package romannumerals
 
 type romanNumeralTest struct {
 	arabic   int
