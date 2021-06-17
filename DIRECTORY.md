@@ -108,10 +108,10 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/rnatranscription/cases_test.go)
     * [Rna Transcription](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/rnatranscription/rna_transcription.go)
     * [Rna Transcription Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/rnatranscription/rna_transcription_test.go)
-  * Roman-Numerals
-    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/roman-numerals/cases_test.go)
-    * [Roman Numerals](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/roman-numerals/roman_numerals.go)
-    * [Roman Numerals Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/roman-numerals/roman_numerals_test.go)
+  * Romannumerals
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/romannumerals/cases_test.go)
+    * [Roman Numerals](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/romannumerals/roman_numerals.go)
+    * [Roman Numerals Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/romannumerals/roman_numerals_test.go)
   * Scrabble-Score
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/scrabble-score/cases_test.go)
     * [Scrabble Score](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/scrabble-score/scrabble_score.go)
@@ -190,6 +190,9 @@
     * [Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree.go)
 
 ## Designpatterns
+  * Orderedstream
+    * [Orderedstream](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/orderedstream/orderedstream.go)
+    * [Orderedstream Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/orderedstream/orderedstream_test.go)
   * Parkinglot
     * [Bus](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/bus.go)
     * [Car](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/car.go)
