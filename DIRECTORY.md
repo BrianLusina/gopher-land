@@ -190,6 +190,9 @@
     * [Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree.go)
 
 ## Designpatterns
+  * Hashset
+    * [Hashset](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/hashset/hashset.go)
+    * [Hashset Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/hashset/hashset_test.go)
   * Orderedstream
     * [Orderedstream](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/orderedstream/orderedstream.go)
     * [Orderedstream Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/orderedstream/orderedstream_test.go)
