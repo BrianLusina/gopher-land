@@ -114,7 +114,7 @@ func (p *Person) SetTwitterHandler(handler TwitterHandler) error {
 }
 
 func (p *Person) ID() string {
-	return fmt.Sprintf(p.Citizen.ID())
+	return fmt.Sprintf("CitizenID: %s", p.Citizen.ID())
 }
 
 func (th TwitterHandler) RedirectUrl() string {

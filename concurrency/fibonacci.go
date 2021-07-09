@@ -19,7 +19,7 @@ func sum(a []int, channel chan int) {
 	channel <- sum
 }
 
-func main() {
+func fibonnacci() {
 	a := []int{7, 2, 8, -9, 4, 0}
 
 	channel := make(chan int)
@@ -38,4 +38,3 @@ func main() {
 		fmt.Println(x)
 	}
 }
-

@@ -4,3 +4,9 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/BrianLusina/gopher-land)](https://goreportcard.com/report/github.com/BrianLusina/gopher-land)
 
 Simple implementations of algorithms in Golang ;D
+
+## Pre-requisites
+
+Have golang installed on your local development environment
+
+& simply run `go mod download` to get required packages or run `make install`

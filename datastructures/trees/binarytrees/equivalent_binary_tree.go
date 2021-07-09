@@ -12,7 +12,7 @@ func recursivelyWalk(tree *BinaryTreeNode, intChannel chan int) {
 		// walk to the left first and send left part to the channel
 		recursivelyWalk(tree.Left, intChannel)
 		// send value to channel
-		intChannel <- tree.Data
+		intChannel <- tree.Data.(int)
 		// walk to the right
 		recursivelyWalk(tree.Right, intChannel)
 	}

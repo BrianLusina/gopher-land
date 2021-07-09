@@ -11,7 +11,7 @@ func Welcome() {
 }
 
 // main runs a goroutine
-func main() {
+func goroutine() {
 	// run a different goroutine
 	go Welcome()
 
@@ -21,5 +21,5 @@ func main() {
 	}()
 
 	// we will wait until goroutines finish execution
-	time.Sleep(time.Millisecond*200)
+	time.Sleep(time.Millisecond * 200)
 }

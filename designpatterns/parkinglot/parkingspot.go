@@ -21,10 +21,7 @@ func NewParkingSpot(level, row, spotNumber, spotSize, vehicleSize int) ParkingSp
 }
 
 func (this *ParkingSpot) IsAvailable() bool {
-	if this.Vehicle == nil {
-		return true
-	}
-	return false
+	return this.Vehicle == nil
 }
 
 func (this *ParkingSpot) CanFitVehicle(vehicle Vehicle) bool {

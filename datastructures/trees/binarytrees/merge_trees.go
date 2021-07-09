@@ -9,7 +9,11 @@ func mergeTrees(root1 *BinaryTreeNode, root2 *BinaryTreeNode) *BinaryTreeNode {
 		return root1
 	}
 
-	root1.Data += root2.Data
+	r2, _ := root2.Data.(int)
+
+	r1, _ := root1.Data.(int)
+
+	r1 += r2
 
 	root1.Left = mergeTrees(root1.Left, root2.Left)
 	root1.Right = mergeTrees(root1.Right, root2.Right)

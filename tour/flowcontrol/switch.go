@@ -37,7 +37,7 @@ func switchWithNoCondition() {
 	}
 }
 
-func main() {
+func switchProg() {
 	fmt.Print("Go runs on ")
 	switch os := runtime.GOOS; os {
 	case "darwin":
@@ -53,4 +53,3 @@ func main() {
 	whenIsSaturday()
 	switchWithNoCondition()
 }
-

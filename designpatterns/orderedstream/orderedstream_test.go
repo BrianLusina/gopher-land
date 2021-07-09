@@ -3,7 +3,8 @@ package orderedstream_test
 import (
 	"testing"
 
-	"github.com/BrianLusina/goffer-land/designpatterns/orderedstream"
+	"gopherland/designpatterns/orderedstream"
+
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

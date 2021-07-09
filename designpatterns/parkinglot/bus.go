@@ -16,8 +16,5 @@ func NewBus(licensePlate string) Bus {
 }
 
 func (this *Bus) CanFitInSpot(parkingSpot *ParkingSpot) bool {
-	if this.SpotSize == parkingSpot.SpotSize {
-		return true
-	}
-	return false
+	return this.SpotSize == parkingSpot.SpotSize
 }

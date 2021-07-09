@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-func main() {
+func timeout() {
 
 	responseChannel := make(chan *http.Response, 1)
 	errorChannel := make(chan *error)
@@ -24,7 +24,7 @@ func main() {
 	for {
 		select {
 		case r := <-responseChannel:
-			fmt.Println("%s", r.Body)
+			fmt.Printf("Body %s", r.Body)
 			return
 		case e := <-errorChannel:
 			log.Fatal(*e)

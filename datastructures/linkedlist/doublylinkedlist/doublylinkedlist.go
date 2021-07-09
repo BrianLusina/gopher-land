@@ -1,4 +1,4 @@
-package DoublyLinkedlist
+package doublylinkedlist
 
 import (
 	"errors"
@@ -27,7 +27,7 @@ func CreateList() *DoublyLinkedList {
 
 // NewNode creates a new LinkedList Node
 func NewNode(data interface{}) *DoublyLinkedListNode {
-	return &DoublyLinkedListNode{data, nil}
+	return &DoublyLinkedListNode{data, nil, nil}
 }
 
 // Prepend adds a new node to the beggining of the list

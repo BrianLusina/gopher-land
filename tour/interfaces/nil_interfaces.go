@@ -14,6 +14,6 @@ func NilInterface() {
 	i = s
 	// at this point i not nil, because it has a concrete type string. nil interfaces are only considered nil when both
 	// the type & the value are nil
-	fmt.Println("i == nil:", i == nil)
+	// fmt.Println("i == nil:", i == nil)
 	fmt.Printf("%T, %v\n", i, i)
 }

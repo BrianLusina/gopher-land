@@ -12,7 +12,7 @@ func sendValues(myIntChannel chan int) {
 	close(myIntChannel)
 }
 
-func main() {
+func channels() {
 	// make a channel with
 	resultChannel := make(chan int)
 
@@ -22,7 +22,7 @@ func main() {
 	for y := 0; y < 10; y++ {
 		// receiving value using a unary operator
 		// get the value and status of channel
-		value, open := <- resultChannel
+		value, open := <-resultChannel
 
 		// if not open, break
 		if !open {
