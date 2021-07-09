@@ -184,6 +184,16 @@
       * [Singlylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinkedlist/singlylinkedlist.go)
   * Lrucache
     * [Lrucache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/lrucache.go)
+  * Stack
+    * [Interface](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/interface.go)
+    * Max
+      * [Maxstack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/max/maxstack.go)
+      * [Maxstack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/max/maxstack_test.go)
+    * Min
+      * [Minstack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/min/minstack.go)
+      * [Minstack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/min/minstack_test.go)
+    * [Stack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/stack.go)
+    * [Stack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/stack_test.go)
   * Trees
     * Binarytrees
       * [Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree.go)
