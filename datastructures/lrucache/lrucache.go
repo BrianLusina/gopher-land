@@ -1,7 +1,7 @@
 package lrucache
 
 import (
-	"gopherland/datastructures/linkedlist/doublylinkedlist"
+	doublylinkedlist "gopherland/datastructures/linkedlist/doublylinked"
 )
 
 type LRUCache struct {
