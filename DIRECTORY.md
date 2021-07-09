@@ -176,12 +176,12 @@
     * Minnumberofvertices
       * [Minnumberofvertices](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/minnumberofvertices/minnumberofvertices.go)
   * Linkedlist
-    * Doublylinkedlist
-      * [Doublylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinkedlist/doublylinkedlist.go)
+    * Doublylinked
+      * [Doublylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/doublylinkedlist.go)
     * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/linkedlist.go)
-    * [Nodes](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/nodes.go)
-    * Singlylinkedlist
-      * [Singlylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinkedlist/singlylinkedlist.go)
+    * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/node.go)
+    * Singlylinked
+      * [Singlylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/singlylinkedlist.go)
   * Lrucache
     * [Lrucache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/lrucache.go)
   * Stack
