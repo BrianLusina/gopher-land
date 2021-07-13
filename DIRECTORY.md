@@ -261,6 +261,9 @@
 ## Gostrings
   * Deadfish
     * [Parse](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/deadfish/parse.go)
+  * Isomorphic
+    * [Isomorphic](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isomorphic/isomorphic.go)
+    * [Isomorphic Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isomorphic/isomorphic_test.go)
   * Longestsubstring
     * [Longestsubstring](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstring/longestsubstring.go)
   * Longestsubstringwithkchars
