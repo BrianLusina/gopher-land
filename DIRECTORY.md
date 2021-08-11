@@ -169,6 +169,9 @@
       * [Buildarrayfromperm Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/buildarrayfromperm/buildarrayfromperm_test.go)
     * Highlow
       * [Highlow](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highlow/highlow.go)
+    * Maxlencontiguoussubarray
+      * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
+      * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
   * Graphs
     * Findtownjudge
       * [Findtownjudge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/findtownjudge/findtownjudge.go)
