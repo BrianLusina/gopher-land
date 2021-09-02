@@ -14,6 +14,11 @@
     * Removeelement
       * [Removeelement](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeelement/removeelement.go)
       * [Removeelement Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeelement/removeelement_test.go)
+  * Bfs
+    * Graph
+      * Findifpathexists
+        * [Validpath](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/bfs/graph/findifpathexists/validpath.go)
+        * [Validpath Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/bfs/graph/findifpathexists/validpath_test.go)
   * Binary Gap
     * [Binary Gap](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binary_gap/binary_gap.go)
   * Climbstairs
