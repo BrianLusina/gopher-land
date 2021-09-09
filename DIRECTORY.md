@@ -251,7 +251,14 @@
   * Powersofi
     * [Powersofi](https://github.com/BrianLusina/gopher-land/blob/master/gomath/powersofi/powersofi.go)
   * Primes
+    * Bakwardsreadprimes
+      * [Backwardsprimes](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/bakwardsreadprimes/backwardsprimes.go)
+      * [Backwardsprimes Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/bakwardsreadprimes/backwardsprimes_test.go)
     * [Isprime](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/isprime.go)
+    * Sieveoferastothenes
+      * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/sieveoferastothenes/cases_test.go)
+      * [Sieve](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/sieveoferastothenes/sieve.go)
+      * [Sieve Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/sieveoferastothenes/sieve_test.go)
     * [Stepsinprimes](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/stepsinprimes.go)
     * [Stepsinprimes Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/stepsinprimes_test.go)
   * Tanktruck
@@ -259,6 +266,9 @@
     * [Tanktruck Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/tanktruck/tanktruck_test.go)
   * Twosum
     * [Twosum](https://github.com/BrianLusina/gopher-land/blob/master/gomath/twosum/twosum.go)
+  * Utils
+    * [Reverseint](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/reverseint.go)
+    * [Reverseint Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/reverseint_test.go)
 
 ## Gopuzzles
   * Chessboardcellcolor
