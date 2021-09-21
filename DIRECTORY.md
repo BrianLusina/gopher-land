@@ -286,6 +286,9 @@
     * [Longestsubstring](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstring/longestsubstring.go)
   * Longestsubstringwithkchars
     * [Longestsubkchars](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstringwithkchars/longestsubkchars.go)
+  * Maximumtime
+    * [Maximum Time](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time.go)
+    * [Maximum Time Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time_test.go)
 
 ## Gostructs
   * [Semanticversion](https://github.com/BrianLusina/gopher-land/blob/master/gostructs/semanticversion.go)
