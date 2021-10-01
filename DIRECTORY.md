@@ -170,6 +170,10 @@
     * [Lasagna Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna_test.go)
 
 ## Bitmanipulation
+  * Grains
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/grains/cases_test.go)
+    * [Grains](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/grains/grains.go)
+    * [Grains Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/grains/grains_test.go)
   * Int32Toipv4
     * [Int32Toipv4](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/int32toipv4/int32toipv4.go)
 
@@ -307,15 +311,3 @@
 
 ## Gostructs
   * [Semanticversion](https://github.com/BrianLusina/gopher-land/blob/master/gostructs/semanticversion.go)
-
-## Tour
-  * Datatypes
-    * Organization
-      * [Person](https://github.com/BrianLusina/gopher-land/blob/master/tour/datatypes/organization/person.go)
-  * Flowcontrol
-    * [Defer](https://github.com/BrianLusina/gopher-land/blob/master/tour/flowcontrol/defer.go)
-    * [Switch](https://github.com/BrianLusina/gopher-land/blob/master/tour/flowcontrol/switch.go)
-  * Interfaces
-    * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/tour/interfaces/empty_interfaces.go)
-    * [Interface Example](https://github.com/BrianLusina/gopher-land/blob/master/tour/interfaces/interface_example.go)
-    * [Nil Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/tour/interfaces/nil_interfaces.go)
