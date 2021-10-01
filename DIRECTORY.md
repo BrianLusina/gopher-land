@@ -154,6 +154,21 @@
   * Uniquebsts
     * [Uniquebsts](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/uniquebsts/uniquebsts.go)
 
+## Basics
+  * Datatypes
+    * Organization
+      * [Person](https://github.com/BrianLusina/gopher-land/blob/master/basics/datatypes/organization/person.go)
+  * Flowcontrol
+    * [Defer](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/defer.go)
+    * [Switch](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/switch.go)
+  * Interfaces
+    * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
+    * [Interface Example](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/interface_example.go)
+    * [Nil Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/nil_interfaces.go)
+  * Lasagna
+    * [Lasagna](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna.go)
+    * [Lasagna Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna_test.go)
+
 ## Bitmanipulation
   * Int32Toipv4
     * [Int32Toipv4](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/int32toipv4/int32toipv4.go)
