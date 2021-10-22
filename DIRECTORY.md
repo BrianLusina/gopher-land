@@ -67,6 +67,10 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/leap/cases_test.go)
     * [Leap](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/leap/leap.go)
     * [Leap Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/leap/leap_test.go)
+  * Luhn
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/luhn/cases_test.go)
+    * [Luhn](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/luhn/luhn.go)
+    * [Luhn Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/luhn/luhn_test.go)
   * Mathematics
     * Factorial
       * [Trailingzeros](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/mathematics/factorial/trailingZeros.go)
