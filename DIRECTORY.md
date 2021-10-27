@@ -25,6 +25,7 @@
     * [Climbstairs](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/climbstairs/climbstairs.go)
   * Climbstairsmincost
     * [Climbstairsmincost](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/climbstairsmincost/climbstairsmincost.go)
+    * [Climbstairsmincost Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/climbstairsmincost/climbstairsmincost_test.go)
   * Cycle
     * [Cycle](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/cycle/cycle.go)
   * Diffsquares
@@ -47,6 +48,10 @@
   * Graphs
     * Courseschedule
       * [Courseschedule](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/graphs/courseschedule/courseschedule.go)
+    * Findtownjudge
+      * [Findtownjudge](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/graphs/findtownjudge/findtownjudge.go)
+    * Minnumberofvertices
+      * [Minnumberofvertices](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/graphs/minnumberofvertices/minnumberofvertices.go)
   * Hamming
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/hamming/cases_test.go)
     * [Hamming](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/hamming/hamming.go)
@@ -76,6 +81,7 @@
       * [Trailingzeros](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/mathematics/factorial/trailingZeros.go)
   * Natowords
     * [Nato](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/natowords/nato.go)
+    * [Nato Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/natowords/nato_test.go)
   * Nth-Prime
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/nth-prime/cases_test.go)
     * [Nth Prime](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/nth-prime/nth_prime.go)
@@ -86,6 +92,7 @@
     * [Nucleotide Count Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/nucleotide-count/nucleotide_count_test.go)
   * Numswithconsecutivesamediff
     * [Numswithconsecutivediff](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/numswithconsecutivesamediff/numswithconsecutivediff.go)
+    * [Numswithconsecutivediff Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/numswithconsecutivesamediff/numswithconsecutivediff_test.go)
   * Onlinestockspan
     * [Stockspanner](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/onlinestockspan/stockspanner.go)
   * Pangram
@@ -164,7 +171,6 @@
       * [Person](https://github.com/BrianLusina/gopher-land/blob/master/basics/datatypes/organization/person.go)
   * Flowcontrol
     * [Defer](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/defer.go)
-    * [Switch](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/switch.go)
   * Interfaces
     * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
     * [Interface Example](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/interface_example.go)
@@ -201,11 +207,13 @@
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
   * Graphs
-    * Findtownjudge
-      * [Findtownjudge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/findtownjudge/findtownjudge.go)
     * [Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/graph.go)
-    * Minnumberofvertices
-      * [Minnumberofvertices](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/minnumberofvertices/minnumberofvertices.go)
+  * Hashmap
+    * [Hashmap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashmap/hashmap.go)
+    * [Hashmap Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashmap/hashmap_test.go)
+  * Hashset
+    * [Hashset](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashset/hashset.go)
+    * [Hashset Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashset/hashset_test.go)
   * Linkedlist
     * Doublylinked
       * [Doublylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/doublylinkedlist.go)
@@ -234,9 +242,6 @@
     * [Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree.go)
 
 ## Designpatterns
-  * Hashset
-    * [Hashset](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/hashset/hashset.go)
-    * [Hashset Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/hashset/hashset_test.go)
   * Orderedstream
     * [Orderedstream](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/orderedstream/orderedstream.go)
     * [Orderedstream Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/orderedstream/orderedstream_test.go)
@@ -260,6 +265,7 @@
     * [Circleofnumbers Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers_test.go)
   * Constructrectangle
     * [Construct Rectangle](https://github.com/BrianLusina/gopher-land/blob/master/gomath/constructrectangle/construct_rectangle.go)
+    * [Construct Rectangle Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/constructrectangle/construct_rectangle_test.go)
   * Deoevaporator
     * [Deoevaporator](https://github.com/BrianLusina/gopher-land/blob/master/gomath/deoevaporator/deoevaporator.go)
   * Fibonacci
@@ -267,8 +273,10 @@
     * [Tribonacci](https://github.com/BrianLusina/gopher-land/blob/master/gomath/fibonacci/tribonacci.go)
   * Kclosest
     * [Kclosest](https://github.com/BrianLusina/gopher-land/blob/master/gomath/kclosest/kclosest.go)
+    * [Kclosest Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/kclosest/kclosest_test.go)
   * Kthlargestelement
     * [Kth Largest Element](https://github.com/BrianLusina/gopher-land/blob/master/gomath/kthlargestelement/kth_largest_element.go)
+    * [Kth Largest Element Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/kthlargestelement/kth_largest_element_test.go)
   * Ntheven
     * [Ntheven](https://github.com/BrianLusina/gopher-land/blob/master/gomath/ntheven/ntheven.go)
   * Powersofi
@@ -309,6 +317,7 @@
     * [Longestsubstring](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstring/longestsubstring.go)
   * Longestsubstringwithkchars
     * [Longestsubkchars](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstringwithkchars/longestsubkchars.go)
+    * [Longestsubkchars Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstringwithkchars/longestsubkchars_test.go)
   * Maximumtime
     * [Maximum Time](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time.go)
     * [Maximum Time Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time_test.go)
