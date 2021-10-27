@@ -41,9 +41,15 @@ func BenchmarkSquare(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 
 		for _, test := range squareTests {
-			Square(test.input)
-		}
+			actualVal, actualErr := Square(test.input)
+			if !test.expectError && actualVal != test.expectedVal {
+				b.Fatalf("FAIL: %s\nSquare(%d) expected %d, Actual %d", test.description, test.input, test.expectedVal, actualVal)
+			}
 
+			if test.expectError && actualErr == nil {
+				b.Fatalf("FAIL: %s\nSquare(%d) expected an error, but error is nil", test.description, test.input)
+			}
+		}
 	}
 }
 

@@ -9,9 +9,3 @@ func (t *Node) NewNode(value int) Node {
 		Value: value,
 	}
 }
-
-var graph = map[int][]Node{
-	1: {
-		Node{1},
-	},
-}

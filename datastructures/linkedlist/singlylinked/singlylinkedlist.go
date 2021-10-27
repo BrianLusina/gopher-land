@@ -13,7 +13,7 @@ type iSinglyLinkedList interface {
 
 // SinglyLinkedListNode of a Singly Linked List
 type SinglyLinkedListNode struct {
-	linkedlist.Node
+	Data interface{}
 	Next *SinglyLinkedListNode
 }
 
@@ -25,10 +25,8 @@ type SinglyLinkedList struct {
 // NewSinglyLinkedListNode creates a new LinkedList Node
 func NewSinglyLinkedListNode(data interface{}) *SinglyLinkedListNode {
 	return &SinglyLinkedListNode{
-		linkedlist.Node{
-			Data: data,
-		},
-		nil,
+		Data: data,
+		Next: nil,
 	}
 }
 
@@ -39,6 +37,34 @@ func NewSinglyLinkedList() iSinglyLinkedList {
 
 func (l SinglyLinkedList) String() string {
 	return fmt.Sprintf("%s", l.Head.Data)
+}
+
+func (ll *SinglyLinkedList) DeleteNode(node interface{}) {}
+
+func (ll *SinglyLinkedList) DeleteNodeByData(data interface{}) {}
+
+func (ll *SinglyLinkedList) DeleteTail() {}
+
+func (ll *SinglyLinkedList) SwapNodesAtKthAndKPlusOne(k int) {
+	if ll.Head == nil || ll.Head.Next == nil {
+		return
+	}
+
+	current := ll.Head
+	next := current.Next
+
+	for i := 0; i < k; i++ {
+		current = current.Next
+		next = current.Next
+	}
+
+	if next == nil {
+		return
+	}
+
+	current.Next = next.Next
+	next.Next = current
+	ll.Head = next
 }
 
 // Prepend adds a new node to the beggining of the list
@@ -244,7 +270,7 @@ func (sll *SinglyLinkedList) DeleteNodeAtPosition(position int) (*SinglyLinkedLi
 }
 
 func (sll *SinglyLinkedList) DeleteNodesByData(data interface{}) *SinglyLinkedListNode {
-	dummyHead := &SinglyLinkedListNode{linkedlist.Node{-1, nil}, sll.Head}
+	dummyHead := &SinglyLinkedListNode{-1, nil}
 	current := dummyHead
 
 	for current.Next != nil {

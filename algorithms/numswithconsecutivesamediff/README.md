@@ -1,10 +1,10 @@
+# Consecutive Same Difference
+
 Return all non-negative integers of length n such that the absolute difference between every two consecutive digits is k.
 
 Note that every number in the answer must not have leading zeros. For example, 01 has one leading zero and is invalid.
 
 You may return the answer in any order.
-
- 
 
 Example 1:
 
@@ -23,7 +23,6 @@ Example 4:
 
 Input: n = 2, k = 2
 Output: [13,20,24,31,35,42,46,53,57,64,68,75,79,86,97]
- 
 
 Constraints:
 

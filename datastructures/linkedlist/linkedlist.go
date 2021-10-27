@@ -7,7 +7,7 @@ type ILinkedList interface {
 	DeleteHead()
 	DeleteTail()
 	DeleteAtPosition(position int)
-	DeleteNode(node Node)
+	DeleteNode(node interface{})
 	DeleteNodeByData(data interface{})
 	SwapNodes(dataOne, dataTwo interface{})
 	SwapNodesAtKthAndKPlusOne(k int)

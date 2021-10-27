@@ -13,7 +13,7 @@ type iDoublyLinkedList interface {
 
 // DoublyLinkedListNode of a Singly Linked List
 type DoublyLinkedListNode struct {
-	linkedlist.Node
+	Data interface{}
 	Next *DoublyLinkedListNode
 	Prev *DoublyLinkedListNode
 }
@@ -26,7 +26,7 @@ type DoublyLinkedList struct {
 // NewDoublyLinkedListNode creates a new LinkedList Node
 func NewDoublyLinkedListNode(data interface{}) *DoublyLinkedListNode {
 	return &DoublyLinkedListNode{
-		Node: linkedlist.NewNode(data),
+		Data: data,
 		Next: nil,
 		Prev: nil,
 	}
@@ -65,6 +65,34 @@ func (ll *DoublyLinkedList) Append(val interface{}) {
 
 func (ll *DoublyLinkedList) DeleteHead() {
 
+}
+
+func (ll *DoublyLinkedList) DeleteNode(node interface{}) {}
+
+func (ll *DoublyLinkedList) DeleteNodeByData(data interface{}) {}
+
+func (ll *DoublyLinkedList) DeleteTail() {}
+
+func (ll *DoublyLinkedList) SwapNodesAtKthAndKPlusOne(k int) {
+	if ll.Head == nil || ll.Head.Next == nil {
+		return
+	}
+
+	current := ll.Head
+	next := current.Next
+
+	for i := 0; i < k; i++ {
+		current = current.Next
+		next = current.Next
+	}
+
+	if next == nil {
+		return
+	}
+
+	current.Next = next.Next
+	next.Next = current
+	ll.Head = next
 }
 
 // DeleteAtBeg removes a node at the beggining of a linked list & returns its value.

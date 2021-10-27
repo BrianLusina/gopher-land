@@ -1,8 +1,8 @@
 package protein
 
 import (
-"reflect"
-"testing"
+	"reflect"
+	"testing"
 )
 
 type codonCase struct {
@@ -160,7 +160,19 @@ func TestProtein(t *testing.T) {
 func BenchmarkCodon(b *testing.B) {
 	for _, test := range codonTestCases {
 		for i := 0; i < b.N; i++ {
-			FromCodon(test.input)
+			actual, err := FromCodon(test.input)
+			if test.errorExpected != nil {
+				if test.errorExpected != err {
+					b.Fatalf("FAIL: RNA translation test: %s\nExpected error: %q\nActual error: %q",
+						test.input, test.errorExpected, err)
+				}
+			} else if err != nil {
+				b.Fatalf("FAIL: RNA translation test: %s\nExpected: %s\nGot error: %q",
+					test.input, test.expected, err)
+			}
+			if !reflect.DeepEqual(actual, test.expected) {
+				b.Fatalf("FAIL: RNA Translation test: %s\nExpected: %q\nActual %q", test.input, test.expected, actual)
+			}
 		}
 	}
 }
