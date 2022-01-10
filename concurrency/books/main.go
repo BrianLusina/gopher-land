@@ -12,7 +12,7 @@ var cache = map[int]Book{}
 // random generator
 var rnd = rand.New(rand.NewSource(time.Now().UnixNano()))
 
-func channelsDemo() {
+func ChannelsDemo() {
 	wg := &sync.WaitGroup{}
 	// channel with a buffer of 1, this is a buffered channel
 	channel := make(chan int, 1)
