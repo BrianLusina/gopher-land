@@ -4,12 +4,14 @@ import (
 	"errors"
 	"math"
 	"strconv"
+	"strings"
 	"unicode"
 )
 
 // IsValidISBN checks if an ISBN is a valid ISBN-10
 func IsValidISBN(isbn string) bool {
-	isbn = removeHyphen(isbn)
+
+	isbn = removeHyphen(strings.ToUpper(isbn))
 
 	characterArray, err := toSlice(isbn)
 
