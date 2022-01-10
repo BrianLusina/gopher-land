@@ -302,6 +302,9 @@
     * [Reverseint Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/reverseint_test.go)
 
 ## Gopuzzles
+  * Annalyn
+    * [Annalyns Infiltration](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration.go)
+    * [Annalyns Infiltration Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration_test.go)
   * Chessboardcellcolor
     * [Chessboardcellcolor](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/chessboardcellcolor/chessboardcellcolor.go)
   * Greenvalley
