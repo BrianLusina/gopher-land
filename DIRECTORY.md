@@ -204,6 +204,9 @@
     * Buildarrayfromperm
       * [Buildarrayfromperm](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/buildarrayfromperm/buildarrayfromperm.go)
       * [Buildarrayfromperm Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/buildarrayfromperm/buildarrayfromperm_test.go)
+    * Containsduplicates
+      * [Contains Duplicates](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates.go)
+      * [Contains Duplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates_test.go)
     * Highlow
       * [Highlow](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highlow/highlow.go)
     * Maxlencontiguoussubarray
