@@ -166,6 +166,9 @@
     * [Uniquebsts](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/uniquebsts/uniquebsts.go)
 
 ## Basics
+  * Comments
+    * [Weather Forecast](https://github.com/BrianLusina/gopher-land/blob/master/basics/comments/weather_forecast.go)
+    * [Weather Forecast Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/comments/weather_forecast_test.go)
   * Datatypes
     * Organization
       * [Person](https://github.com/BrianLusina/gopher-land/blob/master/basics/datatypes/organization/person.go)
