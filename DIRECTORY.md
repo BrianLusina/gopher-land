@@ -166,6 +166,10 @@
     * [Uniquebsts](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/uniquebsts/uniquebsts.go)
 
 ## Basics
+  * Arithmetic
+    * Carsassemble
+      * [Cars Assemble](https://github.com/BrianLusina/gopher-land/blob/master/basics/arithmetic/carsassemble/cars_assemble.go)
+      * [Cars Assemble Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/arithmetic/carsassemble/cars_assemble_test.go)
   * Comments
     * [Weather Forecast](https://github.com/BrianLusina/gopher-land/blob/master/basics/comments/weather_forecast.go)
     * [Weather Forecast Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/comments/weather_forecast_test.go)
