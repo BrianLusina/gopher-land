@@ -185,6 +185,10 @@
   * Lasagna
     * [Lasagna](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna.go)
     * [Lasagna Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna_test.go)
+  * Strings
+    * Techpalace
+      * [Welcome To Tech Palace](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/techpalace/welcome_to_tech_palace.go)
+      * [Welcome To Tech Palace Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/techpalace/welcome_to_tech_palace_test.go)
 
 ## Bitmanipulation
   * Grains
