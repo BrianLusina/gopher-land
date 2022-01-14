@@ -186,6 +186,9 @@
     * [Lasagna](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna.go)
     * [Lasagna Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna_test.go)
   * Strings
+    * Partyrobot
+      * [Party Robot](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/partyrobot/party_robot.go)
+      * [Party Robot Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/partyrobot/party_robot_test.go)
     * Techpalace
       * [Welcome To Tech Palace](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/techpalace/welcome_to_tech_palace.go)
       * [Welcome To Tech Palace Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/techpalace/welcome_to_tech_palace_test.go)
