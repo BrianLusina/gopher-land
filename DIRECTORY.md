@@ -230,6 +230,9 @@
     * Maxlencontiguoussubarray
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
+    * Maxprofit
+      * [Maxprofit](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxprofit/maxprofit.go)
+      * [Maxprofit Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxprofit/maxprofit_test.go)
   * Graphs
     * [Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/graph.go)
   * Hashmap
