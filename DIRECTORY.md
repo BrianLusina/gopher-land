@@ -173,6 +173,10 @@
   * Comments
     * [Weather Forecast](https://github.com/BrianLusina/gopher-land/blob/master/basics/comments/weather_forecast.go)
     * [Weather Forecast Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/comments/weather_forecast_test.go)
+  * Conditionals
+    * Vehiclepurchase
+      * [Vehicle Purchase](https://github.com/BrianLusina/gopher-land/blob/master/basics/conditionals/vehiclepurchase/vehicle_purchase.go)
+      * [Vehicle Purchase Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/conditionals/vehiclepurchase/vehicle_purchase_test.go)
   * Datatypes
     * Organization
       * [Person](https://github.com/BrianLusina/gopher-land/blob/master/basics/datatypes/organization/person.go)
