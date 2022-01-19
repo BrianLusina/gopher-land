@@ -177,6 +177,9 @@
     * [Weather Forecast](https://github.com/BrianLusina/gopher-land/blob/master/basics/comments/weather_forecast.go)
     * [Weather Forecast Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/comments/weather_forecast_test.go)
   * Conditionals
+    * Blackjack
+      * [Blackjack](https://github.com/BrianLusina/gopher-land/blob/master/basics/conditionals/blackjack/blackjack.go)
+      * [Blackjack Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/conditionals/blackjack/blackjack_test.go)
     * Vehiclepurchase
       * [Vehicle Purchase](https://github.com/BrianLusina/gopher-land/blob/master/basics/conditionals/vehiclepurchase/vehicle_purchase.go)
       * [Vehicle Purchase Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/conditionals/vehiclepurchase/vehicle_purchase_test.go)
