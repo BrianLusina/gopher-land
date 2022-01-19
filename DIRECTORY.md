@@ -230,6 +230,9 @@
       * [Contains Duplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates_test.go)
     * Highlow
       * [Highlow](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highlow/highlow.go)
+    * Intersectionofarrays
+      * [Intersectionone](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionOne.go)
+      * [Intersectionone Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionOne_test.go)
     * Maxlencontiguoussubarray
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
