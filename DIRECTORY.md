@@ -202,6 +202,10 @@
     * Techpalace
       * [Welcome To Tech Palace](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/techpalace/welcome_to_tech_palace.go)
       * [Welcome To Tech Palace Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/techpalace/welcome_to_tech_palace_test.go)
+  * Structs
+    * Needforspeed
+      * [Need For Speed](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/needforspeed/need_for_speed.go)
+      * [Need For Speed Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/needforspeed/need_for_speed_test.go)
 
 ## Bitmanipulation
   * Grains
