@@ -243,6 +243,10 @@
       * [Intersectionone Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionOne_test.go)
       * [Intersectiontwo](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionTwo.go)
       * [Intersectiontwo Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionTwo_test.go)
+    * Matrix
+      * Reshapematrix
+        * [Reshapematrix](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/reshapematrix/reshapematrix.go)
+        * [Reshapematrix Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/reshapematrix/reshapematrix_test.go)
     * Maxlencontiguoussubarray
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
