@@ -4,7 +4,7 @@ func flatten(matrix [][]int) []int {
 	values := []int{}
 
 	for _, row := range matrix {
-		for c, _ := range row {
+		for c := range row {
 			values = append(values, row[c])
 		}
 	}
