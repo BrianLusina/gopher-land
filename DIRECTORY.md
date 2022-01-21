@@ -210,6 +210,10 @@
     * Needforspeed
       * [Need For Speed](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/needforspeed/need_for_speed.go)
       * [Need For Speed Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/needforspeed/need_for_speed_test.go)
+  * Time
+    * Bookingupforbeauty
+      * [Booking Up For Beauty](https://github.com/BrianLusina/gopher-land/blob/master/basics/time/bookingupforbeauty/booking_up_for_beauty.go)
+      * [Booking Up For Beauty Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/time/bookingupforbeauty/booking_up_for_beauty_test.go)
 
 ## Bitmanipulation
   * Grains
