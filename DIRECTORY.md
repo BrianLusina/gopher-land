@@ -195,6 +195,10 @@
   * Lasagna
     * [Lasagna](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna.go)
     * [Lasagna Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna_test.go)
+  * Slices
+    * Cardtricks
+      * [Card Tricks](https://github.com/BrianLusina/gopher-land/blob/master/basics/slices/cardtricks/card_tricks.go)
+      * [Card Tricks Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/slices/cardtricks/card_tricks_test.go)
   * Strings
     * Partyrobot
       * [Party Robot](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/partyrobot/party_robot.go)
