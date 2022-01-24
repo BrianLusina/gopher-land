@@ -188,6 +188,10 @@
       * [Person](https://github.com/BrianLusina/gopher-land/blob/master/basics/datatypes/organization/person.go)
   * Flowcontrol
     * [Defer](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/defer.go)
+    * Forloops
+      * Birdwatcher
+        * [Bird Watcher](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/forloops/birdwatcher/bird_watcher.go)
+        * [Bird Watcher Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/forloops/birdwatcher/bird_watcher_test.go)
   * Interfaces
     * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
     * [Interface Example](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/interface_example.go)
