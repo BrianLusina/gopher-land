@@ -192,13 +192,17 @@
       * Birdwatcher
         * [Bird Watcher](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/forloops/birdwatcher/bird_watcher.go)
         * [Bird Watcher Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/forloops/birdwatcher/bird_watcher_test.go)
+  * Functions
+    * Lasagna
+      * [Lasagna](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/lasagna/lasagna.go)
+      * [Lasagna Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/lasagna/lasagna_test.go)
+    * Lasagnamaster
+      * [Lasagna Master](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/lasagnamaster/lasagna_master.go)
+      * [Lasagna Master Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/lasagnamaster/lasagna_master_test.go)
   * Interfaces
     * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
     * [Interface Example](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/interface_example.go)
     * [Nil Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/nil_interfaces.go)
-  * Lasagna
-    * [Lasagna](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna.go)
-    * [Lasagna Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/lasagna/lasagna_test.go)
   * Slices
     * Cardtricks
       * [Card Tricks](https://github.com/BrianLusina/gopher-land/blob/master/basics/slices/cardtricks/card_tricks.go)
