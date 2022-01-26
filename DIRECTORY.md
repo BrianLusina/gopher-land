@@ -170,6 +170,10 @@
     * Carsassemble
       * [Cars Assemble](https://github.com/BrianLusina/gopher-land/blob/master/basics/arithmetic/carsassemble/cars_assemble.go)
       * [Cars Assemble Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/arithmetic/carsassemble/cars_assemble_test.go)
+    * Floatingpoint
+      * Interestisinteresting
+        * [Interest Is Interesting](https://github.com/BrianLusina/gopher-land/blob/master/basics/arithmetic/floatingpoint/interestisinteresting/interest_is_interesting.go)
+        * [Interest Is Interesting Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/arithmetic/floatingpoint/interestisinteresting/interest_is_interesting_test.go)
     * Previousmultpleofthree
       * [Previousmultiple](https://github.com/BrianLusina/gopher-land/blob/master/basics/arithmetic/previousmultpleofthree/previousmultiple.go)
       * [Previousmultiple Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/arithmetic/previousmultpleofthree/previousmultiple_test.go)
