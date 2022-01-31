@@ -211,6 +211,11 @@
     * Gross Store
       * [Gross Store](https://github.com/BrianLusina/gopher-land/blob/master/basics/maps/gross_store/gross_store.go)
       * [Gross Store Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/maps/gross_store/gross_store_test.go)
+  * Methods
+    * Elonstoys
+      * [Car](https://github.com/BrianLusina/gopher-land/blob/master/basics/methods/elonstoys/car.go)
+      * [Elons Toys](https://github.com/BrianLusina/gopher-land/blob/master/basics/methods/elonstoys/elons_toys.go)
+      * [Elons Toys Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/methods/elonstoys/elons_toys_test.go)
   * Pointers
     * Electionday
       * [Election Day](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_day.go)
