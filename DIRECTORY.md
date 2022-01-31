@@ -211,6 +211,11 @@
     * Gross Store
       * [Gross Store](https://github.com/BrianLusina/gopher-land/blob/master/basics/maps/gross_store/gross_store.go)
       * [Gross Store Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/maps/gross_store/gross_store_test.go)
+  * Pointers
+    * Electionday
+      * [Election Day](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_day.go)
+      * [Election Day Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_day_test.go)
+      * [Election Result](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_result.go)
   * Runes
     * Logslogslogs
       * [Logs Logs Logs](https://github.com/BrianLusina/gopher-land/blob/master/basics/runes/logslogslogs/logs_logs_logs.go)
