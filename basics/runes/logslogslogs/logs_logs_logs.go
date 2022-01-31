@@ -6,9 +6,9 @@ import (
 )
 
 var runeToAppMap = map[rune]string{
-	'❗': "recommendation",
-	'🔍': "search",
-	'☀': "weather",
+	'\u2757':     "recommendation",
+	'\U0001f50d': "search",
+	'\u2600':     "weather",
 }
 
 // Application identifies the application emitting the given log.
