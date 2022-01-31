@@ -211,6 +211,10 @@
     * Gross Store
       * [Gross Store](https://github.com/BrianLusina/gopher-land/blob/master/basics/maps/gross_store/gross_store.go)
       * [Gross Store Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/maps/gross_store/gross_store_test.go)
+  * Runes
+    * Logslogslogs
+      * [Logs Logs Logs](https://github.com/BrianLusina/gopher-land/blob/master/basics/runes/logslogslogs/logs_logs_logs.go)
+      * [Logs Logs Logs Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/runes/logslogslogs/logs_logs_logs_test.go)
   * Slices
     * Cardtricks
       * [Card Tricks](https://github.com/BrianLusina/gopher-land/blob/master/basics/slices/cardtricks/card_tricks.go)
@@ -230,6 +234,10 @@
     * Bookingupforbeauty
       * [Booking Up For Beauty](https://github.com/BrianLusina/gopher-land/blob/master/basics/time/bookingupforbeauty/booking_up_for_beauty.go)
       * [Booking Up For Beauty Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/time/bookingupforbeauty/booking_up_for_beauty_test.go)
+  * Types
+    * Chessboard
+      * [Chessboard](https://github.com/BrianLusina/gopher-land/blob/master/basics/types/chessboard/chessboard.go)
+      * [Chessboard Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/types/chessboard/chessboard_test.go)
 
 ## Bitmanipulation
   * Grains
