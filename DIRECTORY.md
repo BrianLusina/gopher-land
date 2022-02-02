@@ -307,6 +307,9 @@
     * Maxprofit
       * [Maxprofit](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxprofit/maxprofit.go)
       * [Maxprofit Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxprofit/maxprofit_test.go)
+    * Maxsubarray
+      * [Max Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray.go)
+      * [Max Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray_test.go)
   * Graphs
     * [Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/graph.go)
   * Hashmap
