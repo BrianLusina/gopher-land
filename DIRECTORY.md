@@ -252,6 +252,9 @@
     * Chessboard
       * [Chessboard](https://github.com/BrianLusina/gopher-land/blob/master/basics/types/chessboard/chessboard.go)
       * [Chessboard Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/types/chessboard/chessboard_test.go)
+    * Typeassertion
+      * [Sorting Room](https://github.com/BrianLusina/gopher-land/blob/master/basics/types/typeassertion/sorting_room.go)
+      * [Sorting Room Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/types/typeassertion/sorting_room_test.go)
 
 ## Bitmanipulation
   * Grains
