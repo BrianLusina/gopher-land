@@ -255,6 +255,10 @@
     * Typeassertion
       * [Sorting Room](https://github.com/BrianLusina/gopher-land/blob/master/basics/types/typeassertion/sorting_room.go)
       * [Sorting Room Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/types/typeassertion/sorting_room_test.go)
+  * Zerovalues
+    * Census
+      * [Census](https://github.com/BrianLusina/gopher-land/blob/master/basics/zerovalues/census/census.go)
+      * [Census Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/zerovalues/census/census_test.go)
 
 ## Bitmanipulation
   * Grains
@@ -283,6 +287,9 @@
       * [Contains Duplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates_test.go)
       * [Contains Nearby Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicate.go)
       * [Contains Nearby Duplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicates_test.go)
+    * Highestrank
+      * [Highest Rank](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highestrank/highest_rank.go)
+      * [Highest Rank Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highestrank/highest_rank_test.go)
     * Highlow
       * [Highlow](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highlow/highlow.go)
     * Intersectionofarrays
