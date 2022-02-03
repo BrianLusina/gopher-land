@@ -431,3 +431,9 @@
 
 ## Gostructs
   * [Semanticversion](https://github.com/BrianLusina/gopher-land/blob/master/gostructs/semanticversion.go)
+
+## Gotime
+  * Clock
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gotime/clock/cases_test.go)
+    * [Clock](https://github.com/BrianLusina/gopher-land/blob/master/gotime/clock/clock.go)
+    * [Clock Test](https://github.com/BrianLusina/gopher-land/blob/master/gotime/clock/clock_test.go)
