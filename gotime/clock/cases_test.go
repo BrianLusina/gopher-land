@@ -1,9 +1,5 @@
 package clock
 
-// Source: exercism/problem-specifications
-// Commit: b344762 clock: Add test case for exactly negative sixty minutes.
-// Problem Specifications Version: 2.4.0
-
 // Create a new clock with an initial time
 var timeTests = []struct {
 	h, m int
