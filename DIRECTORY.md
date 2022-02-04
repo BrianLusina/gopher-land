@@ -275,6 +275,11 @@
   * [Channels](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/channels.go)
   * [Fibonacci](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/fibonacci.go)
   * [Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/goroutine.go)
+  * Parallelletterfrequency
+    * [Parallel Letter Frequency](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/parallelletterfrequency/parallel_letter_frequency.go)
+    * [Parallel Letter Frequency Test](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/parallelletterfrequency/parallel_letter_frequency_test.go)
+  * Pinger
+    * [Pinger](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/pinger/pinger.go)
   * [Timeout](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/timeout.go)
 
 ## Datastructures
