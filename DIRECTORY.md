@@ -348,6 +348,9 @@
       * [Equivalent Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/equivalent_binary_tree.go)
       * [Merge Trees](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/merge_trees.go)
       * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/utils.go)
+    * Tree-Building
+      * [Tree Building](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building.go)
+      * [Tree Building Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building_test.go)
     * [Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree.go)
 
 ## Designpatterns
