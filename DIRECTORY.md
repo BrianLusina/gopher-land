@@ -156,14 +156,16 @@
     * [Sum Of Multiples Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/summultiples/sum_of_multiples_test.go)
   * Tapeequilibrium
     * [Tapeequlibrium](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/tapeequilibrium/tapeequlibrium.go)
+  * Trees
+    * Uniquebsts
+      * [Uniquebsts](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/trees/uniquebsts/uniquebsts.go)
+      * [Uniquebsts Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/trees/uniquebsts/uniquebsts_test.go)
   * Triangle
     * [Triangle](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/triangle/triangle.go)
     * [Triangle Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/triangle/triangle_test.go)
   * Twofer
     * [Two Fer](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twofer/two_fer.go)
     * [Two Fer Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twofer/two_fer_test.go)
-  * Uniquebsts
-    * [Uniquebsts](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/uniquebsts/uniquebsts.go)
 
 ## Basics
   * Arithmetic
@@ -347,7 +349,10 @@
       * [Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree.go)
       * [Equivalent Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/equivalent_binary_tree.go)
       * [Merge Trees](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/merge_trees.go)
-      * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/utils.go)
+      * Utils
+        * Generate Trees
+          * [Generate Trees](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/utils/generate_trees/generate_trees.go)
+          * [Generate Trees Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/utils/generate_trees/generate_trees_test.go)
     * Tree-Building
       * [Tree Building](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building.go)
       * [Tree Building Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building_test.go)
