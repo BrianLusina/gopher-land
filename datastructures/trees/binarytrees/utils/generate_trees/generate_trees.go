@@ -1,11 +1,24 @@
-package binarytrees
+package utils
 
+import (
+	. "gopherland/datastructures/trees/binarytrees"
+)
+
+// generator generates all possible Binary Trees given a range of numbers
 func generator(start, end int) []*BinaryTreeNode {
 	bsts := []*BinaryTreeNode{}
 
 	if start > end {
 		bsts = append(bsts, nil)
-		return nil
+		return bsts
+	}
+
+	if start == end {
+		node := &BinaryTreeNode{
+			Data: start,
+		}
+		bsts = append(bsts, node)
+		return bsts
 	}
 
 	for i := start; i < end+1; i++ {
@@ -29,7 +42,7 @@ func generator(start, end int) []*BinaryTreeNode {
 	return bsts
 }
 
-// Generates n Binary Trees given a number n
+// Generates n Unique Binary Search Trees given a number n
 func GenerateTrees(n int) []*BinaryTreeNode {
 	return generator(1, n)
 }

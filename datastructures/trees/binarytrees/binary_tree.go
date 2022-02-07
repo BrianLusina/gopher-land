@@ -1,4 +1,4 @@
-// Package binarytrees contains types and struct forTrees
+// Package binarytrees contains types and struct for Binary Trees
 package binarytrees
 
 import "strconv"
