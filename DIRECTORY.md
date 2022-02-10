@@ -293,7 +293,6 @@
       * [Contains Duplicates](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates.go)
       * [Contains Duplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates_test.go)
       * [Contains Nearby Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicate.go)
-      * [Contains Nearby Duplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicates_test.go)
     * Highestrank
       * [Highest Rank](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highestrank/highest_rank.go)
       * [Highest Rank Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highestrank/highest_rank_test.go)
@@ -429,6 +428,9 @@
   * Robotname
     * [Robot Name](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name.go)
     * [Robot Name Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name_test.go)
+  * Tournament
+    * [Tournament](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/tournament/tournament.go)
+    * [Tournament Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/tournament/tournament_test.go)
 
 ## Gostrings
   * Deadfish
