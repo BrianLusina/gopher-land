@@ -43,7 +43,9 @@ func (ll *SinglyLinkedList) DeleteNode(node interface{}) {}
 
 func (ll *SinglyLinkedList) DeleteNodeByData(data interface{}) {}
 
-func (ll *SinglyLinkedList) DeleteTail() {}
+func (ll *SinglyLinkedList) DeleteTail() (interface{}, error) {
+	panic("implement me")
+}
 
 func (ll *SinglyLinkedList) SwapNodesAtKthAndKPlusOne(k int) {
 	if ll.Head == nil || ll.Head.Next == nil {

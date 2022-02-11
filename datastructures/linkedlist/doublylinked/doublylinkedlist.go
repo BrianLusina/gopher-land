@@ -7,21 +7,22 @@ import (
 )
 
 // iDoublyLinkedListNode is a doubly linked list node interface
-type iDoublyLinkedList interface {
-	linkedlist.ILinkedList
-}
+type (
+	iDoublyLinkedList interface {
+		linkedlist.ILinkedList
+	}
 
-// DoublyLinkedListNode of a Singly Linked List
-type DoublyLinkedListNode struct {
-	Data interface{}
-	Next *DoublyLinkedListNode
-	Prev *DoublyLinkedListNode
-}
+	// DoublyLinkedListNode of a Singly Linked List
+	DoublyLinkedListNode struct {
+		Data       interface{}
+		Next, Prev *DoublyLinkedListNode
+	}
 
-// LinkedList data structure
-type DoublyLinkedList struct {
-	Head *DoublyLinkedListNode
-}
+	// LinkedList data structure
+	DoublyLinkedList struct {
+		Head, Tail *DoublyLinkedListNode
+	}
+)
 
 // NewDoublyLinkedListNode creates a new LinkedList Node
 func NewDoublyLinkedListNode(data interface{}) *DoublyLinkedListNode {
@@ -71,7 +72,54 @@ func (ll *DoublyLinkedList) DeleteNode(node interface{}) {}
 
 func (ll *DoublyLinkedList) DeleteNodeByData(data interface{}) {}
 
-func (ll *DoublyLinkedList) DeleteTail() {}
+// DeleteTail removes the last node in a doubly linked list and returns it's value
+func (ll *DoublyLinkedList) DeleteTail() (interface{}, error) {
+	switch {
+	case ll.Head == nil:
+		return nil, linkedlist.ErrEmptyList
+
+	case ll.Head.Next == nil:
+		data := ll.Head.Data
+		ll.Head = nil
+		return data, nil
+	case ll.Head.Next != nil:
+		current := ll.Head
+
+		for current.Next.Next != nil {
+			current = current.Next
+		}
+
+		data := current.Next.Data
+		current.Next = nil
+		return data, nil
+	default:
+		return nil, errors.New("Failed to delete tail")
+	}
+	// in the instance of having a tail
+	// switch {
+
+	// 	// empty list
+	// 	case l.Head == nil && l.Tail == nil:
+	// 		return nil, ErrEmptyList
+
+	// 	// linked list with 1 node, the head is the tail
+	// 	case l.Head != nil && l.Tail != nil && l.Tail.prev == nil:
+	// 		tail := l.Tail
+	// 		l.Head = nil
+	// 		l.Tail = nil
+	// 		return tail.Val, nil
+
+	// 	// linked list has more than 1 node
+	// 	case l.Head != nil && l.Tail != nil && l.Tail.prev != nil:
+	// 		tail := l.Tail
+	// 		l.Tail.prev.next = nil
+	// 		l.Tail = l.Tail.prev
+	// 		return tail.Val, nil
+
+	// 	default:
+	// 		return nil, errors.New("unexpected error")
+	// 	}
+}
 
 func (ll *DoublyLinkedList) SwapNodesAtKthAndKPlusOne(k int) {
 	if ll.Head == nil || ll.Head.Next == nil {

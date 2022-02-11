@@ -1,11 +1,13 @@
 package linkedlist
 
+import "errors"
+
 // iLinkedList is an interface for a linked list
 type ILinkedList interface {
 	Append(interface{})
 	Prepend(interface{})
 	DeleteHead()
-	DeleteTail()
+	DeleteTail() (node interface{}, err error)
 	DeleteAtPosition(position int)
 	DeleteNode(node interface{})
 	DeleteNodeByData(data interface{})
@@ -19,6 +21,10 @@ type ILinkedList interface {
 type LinkedList struct {
 	Head *Node
 }
+
+var (
+	ErrEmptyList = errors.New("List is empty")
+)
 
 func NewNode(data interface{}) Node {
 	return Node{Data: data}
