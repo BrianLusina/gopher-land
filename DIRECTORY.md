@@ -448,6 +448,9 @@
   * Maximumtime
     * [Maximum Time](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time.go)
     * [Maximum Time Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time_test.go)
+  * Twelvedays
+    * [Twelve Days](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/twelvedays/twelve_days.go)
+    * [Twelve Days Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/twelvedays/twelve_days_test.go)
 
 ## Gostructs
   * [Semanticversion](https://github.com/BrianLusina/gopher-land/blob/master/gostructs/semanticversion.go)
