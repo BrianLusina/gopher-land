@@ -304,6 +304,9 @@
       * [Intersectiontwo](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionTwo.go)
       * [Intersectiontwo Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionTwo_test.go)
     * Matrix
+      * Buildmatrix
+        * [Matrix](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/buildmatrix/matrix.go)
+        * [Matrix Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/buildmatrix/matrix_test.go)
       * Reshapematrix
         * [Reshapematrix](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/reshapematrix/reshapematrix.go)
         * [Reshapematrix Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/reshapematrix/reshapematrix_test.go)
