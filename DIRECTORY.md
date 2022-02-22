@@ -446,6 +446,9 @@
 ## Gostrings
   * Deadfish
     * [Parse](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/deadfish/parse.go)
+  * Indexedcapitalization
+    * [Indexed Capitalization](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/indexedcapitalization/indexed_capitalization.go)
+    * [Indexed Capitalization Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/indexedcapitalization/indexed_capitalization_test.go)
   * Isomorphic
     * [Isomorphic](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isomorphic/isomorphic.go)
     * [Isomorphic Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isomorphic/isomorphic_test.go)
@@ -457,6 +460,9 @@
   * Maximumtime
     * [Maximum Time](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time.go)
     * [Maximum Time Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time_test.go)
+  * Points
+    * [Points](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points.go)
+    * [Points Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points_test.go)
   * Squaredstrings
     * [Squared Strings](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings.go)
     * [Squared Strings Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings_test.go)
