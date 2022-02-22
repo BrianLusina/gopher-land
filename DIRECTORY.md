@@ -378,6 +378,12 @@
     * [Parkingsystem](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingsystem.go)
     * [Vehicle](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/vehicle.go)
 
+## Goerrors
+  * Erratum
+    * [Common](https://github.com/BrianLusina/gopher-land/blob/master/goerrors/erratum/common.go)
+    * [Error Handling](https://github.com/BrianLusina/gopher-land/blob/master/goerrors/erratum/error_handling.go)
+    * [Error Handling Test](https://github.com/BrianLusina/gopher-land/blob/master/goerrors/erratum/error_handling_test.go)
+
 ## Gomath
   * Circleofnumbers
     * [Circleofnumbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers.go)
