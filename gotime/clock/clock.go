@@ -1,20 +1,19 @@
 package clock
 
-import "fmt"
+import (
+	"fmt"
+	"gopherland/gomath/utils"
+)
 
 // Define the Clock type here.
 type Clock struct {
 	h, m int
 }
 
-func modulo(n, m int) int {
-	return ((n % m) + m) % m
-}
-
 func New(h, m int) Clock {
 	i := (h*60 + m)
 	n := 24 * 60
-	total := modulo(i, n)
+	total := utils.Modulo(i, n)
 	hour := total / 60
 	minute := total % 60
 	return Clock{h: hour, m: minute}
