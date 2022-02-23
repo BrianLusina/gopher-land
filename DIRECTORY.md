@@ -198,6 +198,10 @@
       * Birdwatcher
         * [Bird Watcher](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/forloops/birdwatcher/bird_watcher.go)
         * [Bird Watcher Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/forloops/birdwatcher/bird_watcher_test.go)
+    * Swtichcase
+      * Seasons
+        * [Seasons](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/swtichcase/seasons/seasons.go)
+        * [Seasons Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/swtichcase/seasons/seasons_test.go)
   * Functions
     * Lasagna
       * [Lasagna](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/lasagna/lasagna.go)
@@ -425,6 +429,10 @@
     * [Tanktruck Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/tanktruck/tanktruck_test.go)
   * Temperature
     * [Temp Conversion](https://github.com/BrianLusina/gopher-land/blob/master/gomath/temperature/temp_conversion.go)
+  * Triangle
+    * Istriangle
+      * [Is Triangle](https://github.com/BrianLusina/gopher-land/blob/master/gomath/triangle/istriangle/is_triangle.go)
+      * [Is Triangle Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/triangle/istriangle/is_triangle_test.go)
   * Twosum
     * [Twosum](https://github.com/BrianLusina/gopher-land/blob/master/gomath/twosum/twosum.go)
   * Utils
