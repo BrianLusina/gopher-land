@@ -76,9 +76,6 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/luhn/cases_test.go)
     * [Luhn](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/luhn/luhn.go)
     * [Luhn Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/luhn/luhn_test.go)
-  * Mathematics
-    * Factorial
-      * [Trailingzeros](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/mathematics/factorial/trailingZeros.go)
   * Natowords
     * [Nato](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/natowords/nato.go)
     * [Nato Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/natowords/nato_test.go)
@@ -299,7 +296,10 @@
     * Containsduplicates
       * [Contains Duplicates](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates.go)
       * [Contains Duplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates_test.go)
+      * [Contains Nearby Almost Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_almost_duplicate.go)
+      * [Contains Nearby Almost Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_almost_duplicate_test.go)
       * [Contains Nearby Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicate.go)
+      * [Contains Nearby Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicate_test.go)
     * Highestrank
       * [Highest Rank](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highestrank/highest_rank.go)
       * [Highest Rank Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highestrank/highest_rank_test.go)
@@ -400,6 +400,10 @@
     * [Construct Rectangle Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/constructrectangle/construct_rectangle_test.go)
   * Deoevaporator
     * [Deoevaporator](https://github.com/BrianLusina/gopher-land/blob/master/gomath/deoevaporator/deoevaporator.go)
+  * Factorial
+    * [Factorial](https://github.com/BrianLusina/gopher-land/blob/master/gomath/factorial/factorial.go)
+    * [Factorial Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/factorial/factorial_test.go)
+    * [Trailingzeros](https://github.com/BrianLusina/gopher-land/blob/master/gomath/factorial/trailingZeros.go)
   * Fibonacci
     * [Fibonacci](https://github.com/BrianLusina/gopher-land/blob/master/gomath/fibonacci/fibonacci.go)
     * [Tribonacci](https://github.com/BrianLusina/gopher-land/blob/master/gomath/fibonacci/tribonacci.go)
@@ -424,6 +428,9 @@
       * [Sieve Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/sieveoferastothenes/sieve_test.go)
     * [Stepsinprimes](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/stepsinprimes.go)
     * [Stepsinprimes Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/stepsinprimes_test.go)
+  * Rotateformax
+    * [Rotate For Max](https://github.com/BrianLusina/gopher-land/blob/master/gomath/rotateformax/rotate_for_max.go)
+    * [Rotate For Max Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/rotateformax/rotate_for_max_test.go)
   * Tanktruck
     * [Tanktruck](https://github.com/BrianLusina/gopher-land/blob/master/gomath/tanktruck/tanktruck.go)
     * [Tanktruck Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/tanktruck/tanktruck_test.go)
