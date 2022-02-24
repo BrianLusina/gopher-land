@@ -438,6 +438,7 @@
   * Utils
     * [Reverseint](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/reverseint.go)
     * [Reverseint Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/reverseint_test.go)
+    * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/utils.go)
 
 ## Gopuzzles
   * Annalyn
