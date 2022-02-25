@@ -18,17 +18,8 @@ func FibRecursion(n int) int {
 	return FibRecursion(n-1) + FibRecursion(n-2)
 }
 
-func memoize(n int) int {
-	cache := map[int]int{0: 0, 1: 1}
-
-	for i := 2; i <= n; i++ {
-		cache[i] = cache[i-1] + cache[i-2]
-	}
-	return cache[n]
-}
-
 /*
-Time complexity : O(N). Each number, starting at 2 up to and including N, is visited, computed and then stored for O(1)O(1) access later on.
+Time complexity : O(N). Each number, starting at 2 up to and including N, is visited, computed and then stored for O(1) access later on.
 
 Space complexity : O(N). The size of the data structure is proportionate to N.
 */
@@ -36,7 +27,25 @@ func FibMemo(n int) int {
 	if n <= 1 {
 		return n
 	}
+	memoize := func(n int) int {
+		cache := map[int]int{0: 0, 1: 1}
+
+		for i := 2; i <= n; i++ {
+			cache[i] = cache[i-1] + cache[i-2]
+		}
+		return cache[n]
+	}
+
 	return memoize(n)
+}
+
+// Fib returns a function closure that can be used to compute fibonacci numbers
+func Fib() func() int {
+	a, b := 0, 1
+	return func() int {
+		a, b = b, a+b
+		return b
+	}
 }
 
 /*
