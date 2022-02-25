@@ -482,6 +482,10 @@
   * Points
     * [Points](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points.go)
     * [Points Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points_test.go)
+  * Runlengthencoding
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/cases_test.go)
+    * [Run Length Encoding](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/run_length_encoding.go)
+    * [Run Length Encoding Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/run_length_encoding_test.go)
   * Squaredstrings
     * [Squared Strings](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings.go)
     * [Squared Strings Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings_test.go)
