@@ -200,6 +200,8 @@
         * [Seasons](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/swtichcase/seasons/seasons.go)
         * [Seasons Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/swtichcase/seasons/seasons_test.go)
   * Functions
+    * Factories
+      * [Factories](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/factories/factories.go)
     * Lasagna
       * [Lasagna](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/lasagna/lasagna.go)
       * [Lasagna Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/lasagna/lasagna_test.go)
