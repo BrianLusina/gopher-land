@@ -484,6 +484,9 @@
   * Points
     * [Points](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points.go)
     * [Points Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points_test.go)
+  * Rotationalcipher
+    * [Rotational Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/rotationalcipher/rotational_cipher.go)
+    * [Rotational Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/rotationalcipher/rotational_cipher_test.go)
   * Runlengthencoding
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/cases_test.go)
     * [Run Length Encoding](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/run_length_encoding.go)
