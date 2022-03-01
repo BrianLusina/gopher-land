@@ -473,6 +473,9 @@
     * [Atbash Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/atbashcipher/atbash_cipher.go)
     * [Atbash Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/atbashcipher/atbash_cipher_test.go)
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/atbashcipher/cases_test.go)
+  * Bandnamegenerator
+    * [Band Name Generator](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/bandnamegenerator/band_name_generator.go)
+    * [Band Name Generator Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/bandnamegenerator/band_name_generator_test.go)
   * Deadfish
     * [Parse](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/deadfish/parse.go)
   * Indexedcapitalization
@@ -502,6 +505,9 @@
   * Squaredstrings
     * [Squared Strings](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings.go)
     * [Squared Strings Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings_test.go)
+  * Sumofintegers
+    * [Sum Of Integers](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/sumofintegers/sum_of_integers.go)
+    * [Sum Of Integers Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/sumofintegers/sum_of_integers_test.go)
   * Twelvedays
     * [Twelve Days](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/twelvedays/twelve_days.go)
     * [Twelve Days Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/twelvedays/twelve_days_test.go)
