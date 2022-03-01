@@ -200,6 +200,8 @@
         * [Seasons](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/swtichcase/seasons/seasons.go)
         * [Seasons Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/swtichcase/seasons/seasons_test.go)
   * Functions
+    * Debug
+      * [Debug](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/debug/debug.go)
     * Factories
       * [Factories](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/factories/factories.go)
     * Lasagna
@@ -208,6 +210,8 @@
     * Lasagnamaster
       * [Lasagna Master](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/lasagnamaster/lasagna_master.go)
       * [Lasagna Master Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/lasagnamaster/lasagna_master_test.go)
+    * Timer
+      * [Timer](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/timer/timer.go)
   * Interfaces
     * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
     * [Interface Example](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/interface_example.go)
@@ -465,6 +469,10 @@
     * [Tournament Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/tournament/tournament_test.go)
 
 ## Gostrings
+  * Atbashcipher
+    * [Atbash Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/atbashcipher/atbash_cipher.go)
+    * [Atbash Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/atbashcipher/atbash_cipher_test.go)
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/atbashcipher/cases_test.go)
   * Deadfish
     * [Parse](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/deadfish/parse.go)
   * Indexedcapitalization
