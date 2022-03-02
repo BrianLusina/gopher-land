@@ -476,6 +476,9 @@
   * Bandnamegenerator
     * [Band Name Generator](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/bandnamegenerator/band_name_generator.go)
     * [Band Name Generator Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/bandnamegenerator/band_name_generator_test.go)
+  * Cryptosquare
+    * [Crypto Square](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/cryptosquare/crypto_square.go)
+    * [Crypto Square Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/cryptosquare/crypto_square_test.go)
   * Deadfish
     * [Parse](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/deadfish/parse.go)
   * Indexedcapitalization
