@@ -483,6 +483,9 @@
     * [Crypto Square Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/cryptosquare/crypto_square_test.go)
   * Deadfish
     * [Parse](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/deadfish/parse.go)
+  * Fixstringcase
+    * [Fix String Case](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/fixstringcase/fix_string_case.go)
+    * [Fix String Case Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/fixstringcase/fix_string_case_test.go)
   * Indexedcapitalization
     * [Indexed Capitalization](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/indexedcapitalization/indexed_capitalization.go)
     * [Indexed Capitalization Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/indexedcapitalization/indexed_capitalization_test.go)
