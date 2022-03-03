@@ -242,6 +242,8 @@
     * Cardtricks
       * [Card Tricks](https://github.com/BrianLusina/gopher-land/blob/master/basics/slices/cardtricks/card_tricks.go)
       * [Card Tricks Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/slices/cardtricks/card_tricks_test.go)
+    * Examples
+      * [Main](https://github.com/BrianLusina/gopher-land/blob/master/basics/slices/examples/main.go)
   * Strings
     * Partyrobot
       * [Party Robot](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/partyrobot/party_robot.go)
@@ -505,6 +507,10 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/cases_test.go)
     * [Run Length Encoding](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/run_length_encoding.go)
     * [Run Length Encoding Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/run_length_encoding_test.go)
+  * Simplecipher
+    * [Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/simplecipher/cipher.go)
+    * [Simple Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/simplecipher/simple_cipher.go)
+    * [Simple Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/simplecipher/simple_cipher_test.go)
   * Squaredstrings
     * [Squared Strings](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings.go)
     * [Squared Strings Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings_test.go)
