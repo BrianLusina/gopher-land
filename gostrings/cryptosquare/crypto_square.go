@@ -4,6 +4,7 @@ import (
 	"math"
 	"regexp"
 	"strings"
+	"unicode"
 )
 
 // norm is a function that normalizes a rune, replaces all runes that are not alphanumeric
@@ -18,17 +19,35 @@ func norm(r rune) rune {
 	return -1
 }
 
-// normalize a string, replacing all non-alphanumeric runes with spaces
+// normalize a string, replacing all non-alphanumeric runes
 func normalize(s string) string {
 	re := regexp.MustCompile(`[^\w]+`)
 	return re.ReplaceAllString(strings.ToLower(s), "")
 }
 
+// normalize_with_unicode normalizes a string, replacing all non-alphanumeric runes
+func normalize_with_unicode(r rune) rune {
+	if unicode.IsLetter(r) || unicode.IsDigit(r) {
+		return unicode.ToLower(r)
+	}
+	return -1
+}
+
 func Encode(pt string) string {
+	if pt == "" {
+		return pt
+	}
+
 	// either normalize or nor pass the tests and implement the solution correctly,
 	// however norm uses less memory than normalize and allocates less bytes per operaation
 	plain := strings.Map(norm, pt)
+	// plain := strings.Map(normalize_with_unicode, pt)
 	// plain := normalize(pt)
+
+	if plain == "" {
+		return plain
+	}
+
 	numCols := int(math.Ceil(math.Sqrt(float64(len(plain)))))
 	padding := numCols*(numCols-1) - len(plain)
 	if padding < 0 {
