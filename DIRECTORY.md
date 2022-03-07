@@ -296,6 +296,11 @@
     * [Pinger](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/pinger/pinger.go)
   * [Timeout](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/timeout.go)
 
+## Cryptography
+  * Diffiehellman
+    * [Diffie Hellman](https://github.com/BrianLusina/gopher-land/blob/master/cryptography/diffiehellman/diffie_hellman.go)
+    * [Diffie Hellman Test](https://github.com/BrianLusina/gopher-land/blob/master/cryptography/diffiehellman/diffie_hellman_test.go)
+
 ## Datastructures
   * Arrays
     * Buildarrayfromperm
@@ -334,6 +339,8 @@
     * Maxsubarray
       * [Max Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray.go)
       * [Max Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray_test.go)
+    * Utils
+      * [Sliceutils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/utils/sliceutils.go)
   * Graphs
     * [Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/graph.go)
   * Hashmap
