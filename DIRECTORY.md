@@ -493,6 +493,9 @@
   * Fixstringcase
     * [Fix String Case](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/fixstringcase/fix_string_case.go)
     * [Fix String Case Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/fixstringcase/fix_string_case_test.go)
+  * Highestandlowest
+    * [Higest Lowest](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/highestandlowest/higest_lowest.go)
+    * [Highest Lowest Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/highestandlowest/highest_lowest_test.go)
   * Indexedcapitalization
     * [Indexed Capitalization](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/indexedcapitalization/indexed_capitalization.go)
     * [Indexed Capitalization Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/indexedcapitalization/indexed_capitalization_test.go)
