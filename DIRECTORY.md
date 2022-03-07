@@ -130,6 +130,9 @@
     * [Scrabble Score](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/scrabble-score/scrabble_score.go)
     * [Scrabble Score Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/scrabble-score/scrabble_score_test.go)
   * Sorting
+    * Bubblesort
+      * [Bubblesort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/bubblesort/bubblesort.go)
+      * [Bubblesort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/bubblesort/bubblesort_test.go)
     * Mergeintervals
       * [Mergeintervals](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergeintervals/mergeintervals.go)
       * [Mergeintervals Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergeintervals/mergeintervals_test.go)
