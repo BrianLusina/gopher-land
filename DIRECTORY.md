@@ -410,6 +410,10 @@
     * [Error Handling Test](https://github.com/BrianLusina/gopher-land/blob/master/goerrors/erratum/error_handling_test.go)
 
 ## Gomath
+  * Allyourbase
+    * [All Your Base](https://github.com/BrianLusina/gopher-land/blob/master/gomath/allyourbase/all_your_base.go)
+    * [All Your Base Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/allyourbase/all_your_base_test.go)
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/allyourbase/cases_test.go)
   * Circleofnumbers
     * [Circleofnumbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers.go)
     * [Circleofnumbers Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers_test.go)
