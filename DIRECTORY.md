@@ -275,6 +275,10 @@
       * [Census Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/zerovalues/census/census_test.go)
 
 ## Bitmanipulation
+  * Allergies
+    * [Allergies](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/allergies/allergies.go)
+    * [Allergies Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/allergies/allergies_test.go)
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/allergies/cases_test.go)
   * Grains
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/grains/cases_test.go)
     * [Grains](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/grains/grains.go)
