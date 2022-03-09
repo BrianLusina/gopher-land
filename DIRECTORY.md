@@ -441,6 +441,9 @@
     * [Kth Largest Element Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/kthlargestelement/kth_largest_element_test.go)
   * Ntheven
     * [Ntheven](https://github.com/BrianLusina/gopher-land/blob/master/gomath/ntheven/ntheven.go)
+  * Oddcount
+    * [Odd Count](https://github.com/BrianLusina/gopher-land/blob/master/gomath/oddcount/odd_count.go)
+    * [Odd Count Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/oddcount/odd_count_test.go)
   * Powersofi
     * [Powersofi](https://github.com/BrianLusina/gopher-land/blob/master/gomath/powersofi/powersofi.go)
   * Primes
