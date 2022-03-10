@@ -444,6 +444,10 @@
   * Oddcount
     * [Odd Count](https://github.com/BrianLusina/gopher-land/blob/master/gomath/oddcount/odd_count.go)
     * [Odd Count Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/oddcount/odd_count_test.go)
+  * Perfectnumbers
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/perfectnumbers/cases_test.go)
+    * [Perfect Numbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/perfectnumbers/perfect_numbers.go)
+    * [Perfect Numbers Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/perfectnumbers/perfect_numbers_test.go)
   * Powersofi
     * [Powersofi](https://github.com/BrianLusina/gopher-land/blob/master/gomath/powersofi/powersofi.go)
   * Primes
