@@ -12,15 +12,10 @@ type (
 		linkedlist.ILinkedList
 	}
 
-	// DoublyLinkedListNode of a Singly Linked List
-	DoublyLinkedListNode struct {
-		Data       interface{}
-		Next, Prev *DoublyLinkedListNode
-	}
-
 	// LinkedList data structure
 	DoublyLinkedList struct {
 		Head, Tail *DoublyLinkedListNode
+		Len        int //current length of the list
 	}
 )
 
@@ -33,12 +28,33 @@ func NewDoublyLinkedListNode(data interface{}) *DoublyLinkedListNode {
 	}
 }
 
-func NewDoublyLinkedList() iDoublyLinkedList {
-	return &DoublyLinkedList{}
+func NewDoublyLinkedList() *DoublyLinkedList {
+	return new(DoublyLinkedList)
 }
 
 func (l DoublyLinkedList) String() string {
 	return fmt.Sprintf("%s", l.Head.Data)
+}
+
+// Size returns the size of the doubly linked list
+func (l *DoublyLinkedList) Size() int {
+	return l.Len
+}
+
+// Front returns the head of the linked list or nil if empty
+func (l *DoublyLinkedList) Front() *DoublyLinkedListNode {
+	if l.Len == 0 {
+		return nil
+	}
+	return l.Head
+}
+
+// Back returns the tail of the linked list or nil if empty
+func (l *DoublyLinkedList) Back() *DoublyLinkedListNode {
+	if l.Len == 0 {
+		return nil
+	}
+	return l.Tail
 }
 
 // Prepend adds a new node to the beggining of the list
