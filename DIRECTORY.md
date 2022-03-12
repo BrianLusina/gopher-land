@@ -285,6 +285,10 @@
     * [Grains Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/grains/grains_test.go)
   * Int32Toipv4
     * [Int32Toipv4](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/int32toipv4/int32toipv4.go)
+  * Secrethandshake
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/secrethandshake/cases_test.go)
+    * [Secret Handshake](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/secrethandshake/secret_handshake.go)
+    * [Secret Handshake Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/secrethandshake/secret_handshake_test.go)
 
 ## Concurrency
   * Bankaccount
