@@ -363,6 +363,7 @@
   * Linkedlist
     * Doublylinked
       * [Doublylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/doublylinkedlist.go)
+      * [Doublylinkedlistnode](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/doublylinkedlistnode.go)
     * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/linkedlist.go)
     * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/node.go)
     * Singlylinked
@@ -394,6 +395,9 @@
     * [Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree.go)
 
 ## Designpatterns
+  * Browserhistory
+    * [Browser History](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history.go)
+    * [Browser History Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history_test.go)
   * Orderedstream
     * [Orderedstream](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/orderedstream/orderedstream.go)
     * [Orderedstream Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/orderedstream/orderedstream_test.go)
