@@ -374,6 +374,11 @@
       * [Singlylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/singlylinkedlist.go)
   * Lrucache
     * [Lrucache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/lrucache.go)
+  * Queues
+    * Fifo
+      * [Fifo Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/fifo/fifo_queue.go)
+      * [Fifo Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/fifo/fifo_queue_test.go)
+    * [Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/queue.go)
   * Stack
     * [Interface](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/interface.go)
     * Max
