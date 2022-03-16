@@ -435,6 +435,10 @@
     * [All Your Base](https://github.com/BrianLusina/gopher-land/blob/master/gomath/allyourbase/all_your_base.go)
     * [All Your Base Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/allyourbase/all_your_base_test.go)
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/allyourbase/cases_test.go)
+  * Armstrong
+    * [Armstrong Numbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/armstrong/armstrong_numbers.go)
+    * [Armstrong Numbers Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/armstrong/armstrong_numbers_test.go)
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/armstrong/cases_test.go)
   * Circleofnumbers
     * [Circleofnumbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers.go)
     * [Circleofnumbers Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers_test.go)
@@ -571,6 +575,9 @@
   * Utils
     * [Stringutils](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/utils/stringutils.go)
     * [Stringutils Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/utils/stringutils_test.go)
+  * Validbraces
+    * [Valid Braces](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/validbraces/valid_braces.go)
+    * [Valid Braces Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/validbraces/valid_braces_test.go)
   * Wordcount
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordcount/cases_test.go)
     * [Word Count](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordcount/word_count.go)
