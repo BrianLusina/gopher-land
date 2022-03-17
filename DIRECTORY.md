@@ -591,3 +591,7 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gotime/clock/cases_test.go)
     * [Clock](https://github.com/BrianLusina/gopher-land/blob/master/gotime/clock/clock.go)
     * [Clock Test](https://github.com/BrianLusina/gopher-land/blob/master/gotime/clock/clock_test.go)
+  * Meetup
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gotime/meetup/cases_test.go)
+    * [Meetup](https://github.com/BrianLusina/gopher-land/blob/master/gotime/meetup/meetup.go)
+    * [Meetup Test](https://github.com/BrianLusina/gopher-land/blob/master/gotime/meetup/meetup_test.go)
