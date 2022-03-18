@@ -8,25 +8,12 @@ import (
 
 // iDoublyLinkedListNode is a doubly linked list node interface
 type (
-	iDoublyLinkedList interface {
-		linkedlist.ILinkedList
-	}
-
 	// LinkedList data structure
 	DoublyLinkedList struct {
 		Head, Tail *DoublyLinkedListNode
 		Len        int //current length of the list
 	}
 )
-
-// NewDoublyLinkedListNode creates a new LinkedList Node
-func NewDoublyLinkedListNode(data interface{}) *DoublyLinkedListNode {
-	return &DoublyLinkedListNode{
-		Data: data,
-		Next: nil,
-		Prev: nil,
-	}
-}
 
 func NewDoublyLinkedList() *DoublyLinkedList {
 	return new(DoublyLinkedList)
@@ -67,6 +54,7 @@ func (ll *DoublyLinkedList) Prepend(val interface{}) {
 // Append adds a new Node at the end of a linked list
 func (ll *DoublyLinkedList) Append(val interface{}) {
 	node := NewDoublyLinkedListNode(val)
+	ll.Len++
 
 	if ll.Head == nil {
 		ll.Head = node
@@ -97,6 +85,7 @@ func (ll *DoublyLinkedList) DeleteTail() (interface{}, error) {
 	case ll.Head.Next == nil:
 		data := ll.Head.Data
 		ll.Head = nil
+		ll.Len--
 		return data, nil
 	case ll.Head.Next != nil:
 		current := ll.Head
@@ -160,14 +149,14 @@ func (ll *DoublyLinkedList) SwapNodesAtKthAndKPlusOne(k int) {
 }
 
 // DeleteAtBeg removes a node at the beggining of a linked list & returns its value.
-// Returns -1 if the list is empty
 func (ll *DoublyLinkedList) DeleteAtBeg() interface{} {
 	if ll.Head == nil {
-		return -1
+		return nil
 	}
 
 	current := ll.Head
 	ll.Head = current.Next
+	ll.Len--
 
 	return current.Data
 }
@@ -176,7 +165,7 @@ func (ll *DoublyLinkedList) DeleteAtBeg() interface{} {
 // Returns -1 if the list is empty
 func (ll *DoublyLinkedList) DeleteAtEnd() interface{} {
 	if ll.Head == nil {
-		return -1
+		return nil
 	}
 
 	current := ll.Head
@@ -185,6 +174,7 @@ func (ll *DoublyLinkedList) DeleteAtEnd() interface{} {
 
 	data := current.Next.Data
 	current.Next = nil
+	ll.Len--
 	return data
 }
 
@@ -312,6 +302,7 @@ func (ll *DoublyLinkedList) DeleteNodeAtPosition(position int) (*DoublyLinkedLis
 	if ll.Head != nil && position == 0 {
 		current := ll.Head
 		ll.Head = nil
+		ll.Len--
 		return current, nil
 	}
 
@@ -330,6 +321,7 @@ func (ll *DoublyLinkedList) DeleteNodeAtPosition(position int) (*DoublyLinkedLis
 	node := current
 	current.Data = current.Next.Data
 	current.Next = current.Next.Next
+	ll.Len--
 
 	return node, nil
 }
@@ -490,4 +482,5 @@ func (dll *DoublyLinkedList) DeleteAtPosition(position int) {
 	}
 
 	dll.Head = prev
+	dll.Len--
 }

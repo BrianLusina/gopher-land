@@ -7,40 +7,39 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-func TestQueue(t *testing.T) {
+func TestFifoQueue(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Queue Test Suite")
+	RunSpecs(t, "FifoQueue Test Suite")
 }
 
-var _ = Describe("Queue", func() {
-	queue := NewQueue()
+var _ = Describe("FifoQueue", func() {
+	fifoQueue := NewFifoQueue()
 
-	It("Should add 1 to queue", func() {
-		queue.Enqueue(1)
+	It("Should add 1 to fifoQueue", func() {
+		fifoQueue.Enqueue(1)
 
-		Expect(queue.Peek()).To(Equal(1))
-		Expect(queue.Items()).To(Equal([]interface{}{1}))
+		Expect(fifoQueue.Peek()).To(Equal(1))
+		Expect(fifoQueue.items).To(Equal([]interface{}{1}))
 	})
 
-	It("Should add 2 to the queue", func() {
-		queue.Enqueue(2)
+	It("Should add 2 to the fifoQueue", func() {
+		fifoQueue.Enqueue(2)
 
-		Expect(queue.Peek()).To(Equal(1))
-		Expect(queue.Items()).To(Equal([]interface{}{1, 2}))
+		Expect(fifoQueue.Peek()).To(Equal(1))
+		Expect(fifoQueue.Items()).To(Equal([]interface{}{1, 2}))
 	})
 
-	It("Should peek front element in the queue without removing it", func() {
-		Expect(queue.Peek()).To(Equal(1))
-		Expect(queue.Items()).To(Equal([]interface{}{1, 2}))
+	It("Should peek front element in the fifoQueue without removing it", func() {
+		Expect(fifoQueue.Peek()).To(Equal(1))
+		Expect(fifoQueue.Items()).To(Equal([]interface{}{1, 2}))
 	})
 
 	It("Should remove element from the front of the Queue", func() {
-		Expect(queue.Dequeue()).To(Equal(1))
-		Expect(queue.Items()).To(Equal([]interface{}{2}))
+		Expect(fifoQueue.Dequeue()).To(Equal(1))
+		Expect(fifoQueue.Items()).To(Equal([]interface{}{2}))
 	})
 
-	It("Should return false for empty() for the current queue", func() {
-		Expect(queue.Empty()).To(Equal(false))
+	It("Should return false for empty() for the current fifoQueue", func() {
+		Expect(fifoQueue.isEmpty()).To(Equal(false))
 	})
-
 })
