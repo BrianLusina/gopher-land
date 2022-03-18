@@ -538,6 +538,9 @@
   * Indexedcapitalization
     * [Indexed Capitalization](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/indexedcapitalization/indexed_capitalization.go)
     * [Indexed Capitalization Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/indexedcapitalization/indexed_capitalization_test.go)
+  * Islongpressed
+    * [Is Long Pressed Name](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/islongpressed/is_long_pressed_name.go)
+    * [Is Long Pressed Name Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/islongpressed/is_long_pressed_name_test.go)
   * Isomorphic
     * [Isomorphic](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isomorphic/isomorphic.go)
     * [Isomorphic Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isomorphic/isomorphic_test.go)
@@ -549,6 +552,10 @@
   * Maximumtime
     * [Maximum Time](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time.go)
     * [Maximum Time Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time_test.go)
+  * Phonenumber
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/cases_test.go)
+    * [Phone Number](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/phone_number.go)
+    * [Phone Number Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/phone_number_test.go)
   * Points
     * [Points](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points.go)
     * [Points Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points_test.go)
