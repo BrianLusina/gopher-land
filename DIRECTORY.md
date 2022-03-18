@@ -376,8 +376,14 @@
     * [Lrucache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/lrucache.go)
   * Queues
     * Fifo
+      * Dlqueue
+        * [Double Linked Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/fifo/dlqueue/double_linked_queue.go)
+        * [Double Linked Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/fifo/dlqueue/double_linked_queue_test.go)
       * [Fifo Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/fifo/fifo_queue.go)
       * [Fifo Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/fifo/fifo_queue_test.go)
+    * Lifo
+      * [Lifo Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/lifo/lifo_queue.go)
+      * [Lifo Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/lifo/lifo_queue_test.go)
     * [Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/queue.go)
   * Stack
     * [Interface](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/interface.go)
