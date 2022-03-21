@@ -482,6 +482,10 @@
       * [Backwardsprimes](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/bakwardsreadprimes/backwardsprimes.go)
       * [Backwardsprimes Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/bakwardsreadprimes/backwardsprimes_test.go)
     * [Isprime](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/isprime.go)
+    * Prime Factors
+      * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/prime_factors/cases_test.go)
+      * [Prime Factors](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/prime_factors/prime_factors.go)
+      * [Prime Factors Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/prime_factors/prime_factors_test.go)
     * Sieveoferastothenes
       * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/sieveoferastothenes/cases_test.go)
       * [Sieve](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/sieveoferastothenes/sieve.go)
