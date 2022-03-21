@@ -517,6 +517,9 @@
     * [Annalyns Infiltration Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration_test.go)
   * Chessboardcellcolor
     * [Chessboardcellcolor](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/chessboardcellcolor/chessboardcellcolor.go)
+  * Easethestockbroker
+    * [Ease The Stockbroker](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/easethestockbroker/ease_the_stockbroker.go)
+    * [Ease The Stockbroker Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/easethestockbroker/ease_the_stockbroker_test.go)
   * Greenvalley
     * [Greenvalley](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/greenvalley/greenvalley.go)
   * Robotname
