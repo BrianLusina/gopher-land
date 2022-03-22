@@ -569,6 +569,10 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/cases_test.go)
     * [Phone Number](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/phone_number.go)
     * [Phone Number Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/phone_number_test.go)
+  * Piglatin
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/piglatin/cases_test.go)
+    * [Pig Latin](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/piglatin/pig_latin.go)
+    * [Pig Latin Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/piglatin/pig_latin_test.go)
   * Points
     * [Points](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points.go)
     * [Points Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points_test.go)
