@@ -583,6 +583,11 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/cases_test.go)
     * [Run Length Encoding](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/run_length_encoding.go)
     * [Run Length Encoding Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/run_length_encoding_test.go)
+  * Series
+    * [Asktoomuch Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/series/asktoomuch_test.go)
+    * [First Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/series/first_test.go)
+    * [Series](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/series/series.go)
+    * [Series Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/series/series_test.go)
   * Simplecipher
     * [Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/simplecipher/cipher.go)
     * [Simple Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/simplecipher/simple_cipher.go)
