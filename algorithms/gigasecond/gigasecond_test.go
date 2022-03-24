@@ -3,9 +3,9 @@ package gigasecond
 // Write a function AddGigasecond that works with time.Time.
 
 import (
-"os"
-"testing"
-"time"
+	"os"
+	"testing"
+	"time"
 )
 
 // date formats used in test data
@@ -56,4 +56,3 @@ func BenchmarkAddGigasecond(b *testing.B) {
 		AddGigasecond(time.Time{})
 	}
 }
-

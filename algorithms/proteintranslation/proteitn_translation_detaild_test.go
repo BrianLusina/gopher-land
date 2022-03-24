@@ -1,10 +1,11 @@
+//go:build detailed
 // +build detailed
 
 package protein
 
 import (
-"fmt"
-"testing"
+	"fmt"
+	"testing"
 )
 
 func BenchmarkCodonDetailed(b *testing.B) {

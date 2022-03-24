@@ -45,8 +45,8 @@ func FromCodon(codon string) (rna string, err error) {
 // FromRNA translates an RNA to codon
 func FromRNA(rna string) (proteins []string, err error) {
 
-	for i := 0; i < len(rna); i +=3 {
-		codon := rna[i: i+3]
+	for i := 0; i < len(rna); i += 3 {
+		codon := rna[i : i+3]
 		protein, err := FromCodon(codon)
 		switch err {
 		case ErrStop:

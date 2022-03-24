@@ -1,6 +1,5 @@
 package proverb
 
-
 type proverbTest struct {
 	description string
 	input       []string
