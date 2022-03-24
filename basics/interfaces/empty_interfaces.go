@@ -1,4 +1,4 @@
-// interfaces This showcases empty interfaces whereby an Empty Interface can be of any type & this shows how we can
+// Package interfaces interfaces This showcases empty interfaces whereby an Empty Interface can be of any type & this shows how we can
 // check which type it is before use. In this case, we are checking if the Empty Interface is of type string
 package interfaces
 
