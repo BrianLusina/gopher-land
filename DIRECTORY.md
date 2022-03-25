@@ -215,6 +215,8 @@
       * [Lasagna Master Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/lasagnamaster/lasagna_master_test.go)
     * Timer
       * [Timer](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/timer/timer.go)
+  * Generics
+    * [Generics](https://github.com/BrianLusina/gopher-land/blob/master/basics/generics/generics.go)
   * Interfaces
     * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
     * [Interface Example](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/interface_example.go)
@@ -238,6 +240,8 @@
       * [Election Day](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_day.go)
       * [Election Day Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_day_test.go)
       * [Election Result](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_result.go)
+  * Reflection
+    * [Maptostruct](https://github.com/BrianLusina/gopher-land/blob/master/basics/reflection/maptostruct.go)
   * Runes
     * Logslogslogs
       * [Logs Logs Logs](https://github.com/BrianLusina/gopher-land/blob/master/basics/runes/logslogslogs/logs_logs_logs.go)
