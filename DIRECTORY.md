@@ -218,6 +218,7 @@
   * Interfaces
     * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
     * [Interface Example](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/interface_example.go)
+    * [Miner Interface](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/miner_interface.go)
     * [Nil Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/nil_interfaces.go)
     * Thefarm
       * [The Farm](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/thefarm/the_farm.go)
@@ -255,6 +256,8 @@
       * [Welcome To Tech Palace](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/techpalace/welcome_to_tech_palace.go)
       * [Welcome To Tech Palace Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/strings/techpalace/welcome_to_tech_palace_test.go)
   * Structs
+    * Anonymous
+      * [Anonymous Fields](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/anonymous/anonymous_fields.go)
     * Needforspeed
       * [Need For Speed](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/needforspeed/need_for_speed.go)
       * [Need For Speed Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/needforspeed/need_for_speed_test.go)
