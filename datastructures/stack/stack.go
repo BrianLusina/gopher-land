@@ -1,61 +1,31 @@
 package stack
 
-type Stack struct {
-	Items    []interface{}
-	Capacity int
+import "errors"
+
+var (
+	ErrorEmptyStack = errors.New("stack is empty")
+	ErrorFullStack  = errors.New("stack is full")
+)
+
+// Stack describes the methods that are available to a stack
+type Stack interface {
+	// Push adds an item to the top of the stack
+	Push(interface{}) error
+
+	// Pop removes an item from the stop of the stack
+	Pop() (interface{}, error)
+
+	// Peek gets the top item from the stack without removing it
+	Peek() (interface{}, error)
 }
 
-// NewStack creates a new stack with a given capacity
-func NewStack(capacity int) Stack {
-	stack := []interface{}{}
-
-	return Stack{
-		Items:    stack,
-		Capacity: capacity,
-	}
+// MaxStack describes methods available to a MaxStack
+type MaxStack interface {
+	Stack
+	GetMax() int
 }
 
-// Push adds an item to the stack
-func (s *Stack) Push(val interface{}) {
-	if !s.isFull() {
-		s.Items = append(s.Items, val)
-	} else {
-		panic("Stack Max Capacity Reached")
-	}
-}
-
-// Pop removes the top item from the stack
-func (s *Stack) Pop() interface{} {
-	if s.isEmpty() {
-		panic("Stack is empty")
-	} else {
-		data := s.Items[s.size()-1]
-		stack := s.Items[:s.size()-1]
-
-		s.Items = stack
-		return data
-	}
-}
-
-// Peek checks on the top item in the stack without removing it
-func (s *Stack) Peek() interface{} {
-	if s.isEmpty() {
-		panic("Stack is empty")
-	}
-	return s.Items[s.size()-1]
-}
-
-// isFull checks if the stack has reached capacity
-func (s *Stack) isFull() bool {
-	return s.size() == s.Capacity
-}
-
-// isEmpty checks if the stack is empty
-func (s *Stack) isEmpty() bool {
-	return s.size() == 0
-}
-
-// size gets the current size of the stack
-func (s *Stack) size() int {
-	return len(s.Items)
+type MinStack interface {
+	Stack
+	GetMin() int
 }

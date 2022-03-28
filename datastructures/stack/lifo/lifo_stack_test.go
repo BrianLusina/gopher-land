@@ -8,19 +8,23 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestStack(t *testing.T) {
+func TestLifoStack(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Stack Test Suite")
+	RunSpecs(t, "LifoStack Test Suite")
 }
 
-var _ = Describe("Stack", func() {
-	stack := NewStack(10)
+var _ = Describe("LifoStack", func() {
+	stack := NewLifoStack(10)
 
 	It("Should add -2 to stack", func() {
-		stack.Push(-2)
+		err := stack.Push(-2)
+
+		if err != nil {
+			Expect(err).To(BeNil())
+		}
 
 		Expect(stack.Peek()).To(Equal(-2))
-		Expect(stack.Items).To(Equal([]interface{}{-2}))
+		Expect(stack.items).To(Equal([]interface{}{-2}))
 	})
 
 	It("Should correctly check on its size", func() {
@@ -30,10 +34,10 @@ var _ = Describe("Stack", func() {
 	})
 
 	It("Should add -3 to stack", func() {
-		stack.Push(-3)
+		_ = stack.Push(-3)
 
 		Expect(stack.Peek()).To(Equal(-3))
-		Expect(stack.Items).To(Equal([]interface{}{-2, -3}))
+		Expect(stack.items).To(Equal([]interface{}{-2, -3}))
 	})
 
 	It("Should correctly check on its size after adding -3", func() {
@@ -43,10 +47,10 @@ var _ = Describe("Stack", func() {
 	})
 
 	It("Should add 0 to stack", func() {
-		stack.Push(0)
+		_ = stack.Push(0)
 
 		Expect(stack.Peek()).To(Equal(0))
-		Expect(stack.Items).To(Equal([]interface{}{-2, -3, 0}))
+		Expect(stack.items).To(Equal([]interface{}{-2, -3, 0}))
 	})
 
 	It("Should correctly check on its size after adding 0", func() {
@@ -56,38 +60,45 @@ var _ = Describe("Stack", func() {
 	})
 
 	It("Should peek and return 0 without removing item", func() {
-		actual := stack.Peek()
+		actual, err := stack.Peek()
 
+		Expect(err).To(BeNil())
 		Expect(actual).To(Equal(0))
-		Expect(stack.Items).To(Equal([]interface{}{-2, -3, 0}))
+		Expect(stack.items).To(Equal([]interface{}{-2, -3, 0}))
 		Expect(stack.size()).To(Equal(3))
 	})
 
 	It("Should pop item & remove it & return it reducing size", func() {
-		actual := stack.Pop()
+		actual, err := stack.Pop()
 
+		Expect(err).To(BeNil())
 		Expect(actual).To(Equal(0))
-		Expect(stack.Items).To(Equal([]interface{}{-2, -3}))
+		Expect(stack.items).To(Equal([]interface{}{-2, -3}))
 		Expect(stack.size()).To(Equal(2))
 	})
 
 	It("Should pop another item & remove it & return it reducing size", func() {
-		actual := stack.Pop()
+		actual, err := stack.Pop()
 
+		Expect(err).To(BeNil())
 		Expect(actual).To(Equal(-3))
-		Expect(stack.Items).To(Equal([]interface{}{-2}))
+		Expect(stack.items).To(Equal([]interface{}{-2}))
 		Expect(stack.size()).To(Equal(1))
 	})
 
 	It("Should pop yet another item & remove it & return it reducing size", func() {
-		actual := stack.Pop()
+		actual, err := stack.Pop()
 
+		Expect(err).To(BeNil())
 		Expect(actual).To(Equal(-2))
-		Expect(stack.Items).To(Equal([]interface{}{}))
+		Expect(stack.items).To(Equal([]interface{}{}))
 		Expect(stack.size()).To(Equal(0))
 	})
 
 	It("Should fail to peek item as its now empty", func() {
-		assert.Panics(GinkgoT(), func() { stack.Peek() }, "Should panic as stack is empty")
+		actual, err := stack.Peek()
+
+		assert.Error(GinkgoT(), err)
+		Expect(actual).To(BeNil())
 	})
 })

@@ -12,24 +12,27 @@ func TestMaxStack(t *testing.T) {
 	RunSpecs(t, "MaxStack Suite")
 }
 
-var _ = Describe("MinStack", func() {
+var _ = Describe("MaxStack", func() {
 	maxStack := NewMaxStack(10)
 
 	It("Should add -2 to stack", func() {
-		maxStack.Push(-2)
+		err := maxStack.Push(-2)
 
+		Expect(err).To(BeNil())
 		Expect(maxStack.Peek()).To(Equal(-2))
 	})
 
 	It("Should add 0 to stack", func() {
-		maxStack.Push(0)
+		err := maxStack.Push(0)
 
+		Expect(err).To(BeNil())
 		Expect(maxStack.Peek()).To(Equal(0))
 	})
 
 	It("Should add -3 to stack", func() {
-		maxStack.Push(-3)
+		err := maxStack.Push(-3)
 
+		Expect(err).To(BeNil())
 		Expect(maxStack.Peek()).To(Equal(-3))
 	})
 
@@ -40,15 +43,17 @@ var _ = Describe("MinStack", func() {
 	})
 
 	It("Should pop() top item from stack", func() {
-		actual := maxStack.Pop()
+		actual, err := maxStack.Pop()
 
+		Expect(err).To(BeNil())
 		Expect(actual).To(Equal(-3))
 		Expect(maxStack.Peek()).To(Equal(0))
 	})
 
 	It("Should peek() top item from stack without removing it", func() {
-		actual := maxStack.Peek()
+		actual, err := maxStack.Peek()
 
+		Expect(err).To(BeNil())
 		Expect(actual).To(Equal(0))
 	})
 

@@ -19,20 +19,23 @@ var _ = Describe("MinStack", func() {
 		minStack := NewMinStack(10)
 
 		It("Should add -2 to stack", func() {
-			minStack.Push(-2)
+			err := minStack.Push(-2)
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(-2))
 		})
 
 		It("Should add 0 to stack", func() {
-			minStack.Push(0)
+			err := minStack.Push(0)
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(0))
 		})
 
 		It("Should add -3 to stack", func() {
-			minStack.Push(-3)
+			err := minStack.Push(-3)
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(-3))
 		})
 
@@ -43,14 +46,16 @@ var _ = Describe("MinStack", func() {
 		})
 
 		It("Should pop() top item from stack", func() {
-			minStack.Pop()
+			_, err := minStack.Pop()
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(0))
 		})
 
 		It("Should peek() top item from stack without removing it", func() {
-			actual := minStack.Peek()
+			actual, err := minStack.Peek()
 
+			Expect(err).To(BeNil())
 			Expect(actual).To(Equal(0))
 		})
 
@@ -66,26 +71,30 @@ var _ = Describe("MinStack", func() {
 		minStack := NewMinStack(10)
 
 		It("Should add 2 to stack", func() {
-			minStack.Push(2)
+			err := minStack.Push(2)
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(2))
 		})
 
 		It("Should add 0 to stack", func() {
-			minStack.Push(0)
+			err := minStack.Push(0)
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(0))
 		})
 
 		It("Should add 3 to stack", func() {
-			minStack.Push(3)
+			err := minStack.Push(3)
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(3))
 		})
 
 		It("Should add another 0 to stack", func() {
-			minStack.Push(0)
+			err := minStack.Push(0)
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(0))
 		})
 
@@ -96,8 +105,9 @@ var _ = Describe("MinStack", func() {
 		})
 
 		It("Should pop() top item from stack", func() {
-			minStack.Pop()
+			_, err := minStack.Pop()
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(3))
 		})
 
@@ -108,8 +118,9 @@ var _ = Describe("MinStack", func() {
 		})
 
 		It("Should pop() top item from stack", func() {
-			minStack.Pop()
+			_, err := minStack.Pop()
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(0))
 		})
 
@@ -120,8 +131,9 @@ var _ = Describe("MinStack", func() {
 		})
 
 		It("Should pop() top item from stack", func() {
-			minStack.Pop()
+			_, err := minStack.Pop()
 
+			Expect(err).To(BeNil())
 			Expect(minStack.Peek()).To(Equal(2))
 		})
 

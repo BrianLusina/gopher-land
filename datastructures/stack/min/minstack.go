@@ -1,61 +1,63 @@
 package stack
 
 import (
-	"gopherland/datastructures/stack"
+	lifoStack "gopherland/datastructures/stack/lifo"
 	"math"
 )
 
-type minStackInterface interface {
-	stack.StackInterface
-	GetMin() int
-}
-
 type MinStack struct {
-	stack.Stack
+	lifoStack.LifoStack
 	Minimum float64
 }
 
-// NewMinStack
-func NewMinStack(capacity int) minStackInterface {
-	items := []interface{}{}
+// NewMinStack creates a new MinStack
+func NewMinStack(capacity int) *MinStack {
 	min := math.Inf(1)
 
 	return &MinStack{
-		Stack: stack.Stack{
-			Items:    items,
-			Capacity: capacity,
-		},
-		Minimum: min,
+		LifoStack: lifoStack.NewLifoStack(capacity),
+		Minimum:   min,
 	}
 }
 
-func (s *MinStack) Push(val interface{}) {
-	s.Stack.Push(val)
+func (s *MinStack) Push(val interface{}) error {
+	err := s.LifoStack.Push(val)
+
+	if err != nil {
+		return err
+	}
+
 	if float64(val.(int)) < s.Minimum {
 		s.Minimum = float64(val.(int))
 	}
+
+	return nil
 }
 
-func (s *MinStack) Pop() interface{} {
-	data := s.Stack.Pop()
+func (s *MinStack) Pop() (interface{}, error) {
+	data, err := s.LifoStack.Pop()
+
+	if err != nil {
+		return nil, err
+	}
 
 	if s.size() == 0 {
 		s.Minimum = math.Inf(1)
 	} else if s.Minimum == float64(data.(int)) {
-		m := s.Stack.Items[0]
+		m := s.LifoStack.GetItems()[0]
 
-		for i, e := range s.Stack.Items {
+		for i, e := range s.LifoStack.GetItems() {
 			if i == 0 || e.(int) < m.(int) {
 				m = e
 			}
 		}
 		s.Minimum = float64(m.(int))
 	}
-	return data
+	return data, nil
 }
 
-func (s *MinStack) Peek() interface{} {
-	return s.Stack.Peek()
+func (s *MinStack) Peek() (interface{}, error) {
+	return s.LifoStack.Peek()
 }
 
 func (s *MinStack) GetMin() int {
@@ -63,5 +65,5 @@ func (s *MinStack) GetMin() int {
 }
 
 func (s *MinStack) size() int {
-	return len(s.Stack.Items)
+	return len(s.LifoStack.GetItems())
 }
