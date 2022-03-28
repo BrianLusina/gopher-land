@@ -301,6 +301,27 @@
     * [Variable Length Quantity](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/variablelengthquantity/variable_length_quantity.go)
     * [Variable Length Quantity Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/variablelengthquantity/variable_length_quantity_test.go)
 
+## Ciphers
+  * Atbashcipher
+    * [Atbash Cipher](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/atbashcipher/atbash_cipher.go)
+    * [Atbash Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/atbashcipher/atbash_cipher_test.go)
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/atbashcipher/cases_test.go)
+  * Piglatin
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/piglatin/cases_test.go)
+    * [Pig Latin](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/piglatin/pig_latin.go)
+    * [Pig Latin Test](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/piglatin/pig_latin_test.go)
+  * Railfence
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/railfence/cases_test.go)
+    * [Rail Fence Cipher](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/railfence/rail_fence_cipher.go)
+    * [Rail Fence Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/railfence/rail_fence_cipher_test.go)
+  * Rotationalcipher
+    * [Rotational Cipher](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/rotationalcipher/rotational_cipher.go)
+    * [Rotational Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/rotationalcipher/rotational_cipher_test.go)
+  * Simplecipher
+    * [Cipher](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/simplecipher/cipher.go)
+    * [Simple Cipher](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/simplecipher/simple_cipher.go)
+    * [Simple Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/ciphers/simplecipher/simple_cipher_test.go)
+
 ## Concurrency
   * Bankaccount
     * [Bank Account](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/bankaccount/bank_account.go)
@@ -543,10 +564,6 @@
     * [Tournament Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/tournament/tournament_test.go)
 
 ## Gostrings
-  * Atbashcipher
-    * [Atbash Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/atbashcipher/atbash_cipher.go)
-    * [Atbash Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/atbashcipher/atbash_cipher_test.go)
-    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/atbashcipher/cases_test.go)
   * Bandnamegenerator
     * [Band Name Generator](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/bandnamegenerator/band_name_generator.go)
     * [Band Name Generator Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/bandnamegenerator/band_name_generator_test.go)
@@ -582,16 +599,9 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/cases_test.go)
     * [Phone Number](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/phone_number.go)
     * [Phone Number Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/phone_number_test.go)
-  * Piglatin
-    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/piglatin/cases_test.go)
-    * [Pig Latin](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/piglatin/pig_latin.go)
-    * [Pig Latin Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/piglatin/pig_latin_test.go)
   * Points
     * [Points](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points.go)
     * [Points Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/points/points_test.go)
-  * Rotationalcipher
-    * [Rotational Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/rotationalcipher/rotational_cipher.go)
-    * [Rotational Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/rotationalcipher/rotational_cipher_test.go)
   * Runlengthencoding
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/cases_test.go)
     * [Run Length Encoding](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/run_length_encoding.go)
@@ -601,10 +611,6 @@
     * [First Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/series/first_test.go)
     * [Series](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/series/series.go)
     * [Series Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/series/series_test.go)
-  * Simplecipher
-    * [Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/simplecipher/cipher.go)
-    * [Simple Cipher](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/simplecipher/simple_cipher.go)
-    * [Simple Cipher Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/simplecipher/simple_cipher_test.go)
   * Squaredstrings
     * [Squared Strings](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings.go)
     * [Squared Strings Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings_test.go)
