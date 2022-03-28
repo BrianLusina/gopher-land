@@ -393,7 +393,9 @@
       * [Lifo Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/lifo/lifo_queue_test.go)
     * [Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/queue.go)
   * Stack
-    * [Interface](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/interface.go)
+    * Lifo
+      * [Lifo Stack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/lifo/lifo_stack.go)
+      * [Lifo Stack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/lifo/lifo_stack_test.go)
     * Max
       * [Maxstack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/max/maxstack.go)
       * [Maxstack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/max/maxstack_test.go)
@@ -401,7 +403,6 @@
       * [Minstack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/min/minstack.go)
       * [Minstack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/min/minstack_test.go)
     * [Stack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/stack.go)
-    * [Stack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/stack_test.go)
   * Trees
     * Binarytrees
       * [Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree.go)
@@ -529,6 +530,11 @@
     * [Ease The Stockbroker Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/easethestockbroker/ease_the_stockbroker_test.go)
   * Greenvalley
     * [Greenvalley](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/greenvalley/greenvalley.go)
+  * Ledger
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/ledger/cases_test.go)
+    * [Ledger](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/ledger/ledger.go)
+    * [Ledger Old](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/ledger/ledger_old.go)
+    * [Ledger Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/ledger/ledger_test.go)
   * Robotname
     * [Robot Name](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name.go)
     * [Robot Name Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name_test.go)
