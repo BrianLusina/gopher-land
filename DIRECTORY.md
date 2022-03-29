@@ -21,6 +21,10 @@
         * [Validpath Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/bfs/graph/findifpathexists/validpath_test.go)
   * Binary Gap
     * [Binary Gap](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binary_gap/binary_gap.go)
+  * Binarysearch
+    * [Binary Search](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/binary_search.go)
+    * [Binary Search Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/binary_search_test.go)
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/cases_test.go)
   * Climbstairs
     * [Climbstairs](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/climbstairs/climbstairs.go)
   * Climbstairsmincost
