@@ -1,14 +1,12 @@
-// dlqueue contains a fifo queue implementation using a double linked list
+// Package dlqueue dlqueue contains a fifo queue implementation using a double linked list
 package dlqueue
 
 import (
 	dll "gopherland/datastructures/linkedlist/doublylinked"
 	"gopherland/datastructures/queues"
-	"gopherland/datastructures/queues/fifo"
 )
 
 type LinkedListQueue struct {
-	fifo.FifoQueue
 	ll *dll.DoublyLinkedList
 }
 
