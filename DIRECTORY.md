@@ -240,6 +240,13 @@
       * [Election Day](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_day.go)
       * [Election Day Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_day_test.go)
       * [Election Result](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_result.go)
+  * Readwrite
+    * [Read File](https://github.com/BrianLusina/gopher-land/blob/master/basics/readwrite/read_file.go)
+    * [Read File Compressed](https://github.com/BrianLusina/gopher-land/blob/master/basics/readwrite/read_file_compressed.go)
+    * [Read File Fscan](https://github.com/BrianLusina/gopher-land/blob/master/basics/readwrite/read_file_fscan.go)
+    * [Read File Ioutil](https://github.com/BrianLusina/gopher-land/blob/master/basics/readwrite/read_file_ioutil.go)
+    * [Read Input Bufio](https://github.com/BrianLusina/gopher-land/blob/master/basics/readwrite/read_input_bufio.go)
+    * [Read Input From User](https://github.com/BrianLusina/gopher-land/blob/master/basics/readwrite/read_input_from_user.go)
   * Reflection
     * [Maptostruct](https://github.com/BrianLusina/gopher-land/blob/master/basics/reflection/maptostruct.go)
   * Runes
