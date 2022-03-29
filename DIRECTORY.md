@@ -465,6 +465,11 @@
     * [Parkingspot Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingspot_test.go)
     * [Parkingsystem](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingsystem.go)
     * [Vehicle](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/vehicle.go)
+  * Twitter
+    * [Tweet](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/tweet.go)
+    * [Twitter](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/twitter.go)
+    * [Twitter Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/twitter_test.go)
+    * [User](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/user.go)
 
 ## Goerrors
   * Erratum
