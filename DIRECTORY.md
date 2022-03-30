@@ -259,6 +259,10 @@
       * [Election Day](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_day.go)
       * [Election Day Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_day_test.go)
       * [Election Result](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_result.go)
+  * Random
+    * Chance
+      * [Animal Magic](https://github.com/BrianLusina/gopher-land/blob/master/basics/random/chance/animal_magic.go)
+      * [Animal Magic Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/random/chance/animal_magic_test.go)
   * Reflection
     * [Maptostruct](https://github.com/BrianLusina/gopher-land/blob/master/basics/reflection/maptostruct.go)
   * Runes
