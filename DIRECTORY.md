@@ -460,6 +460,10 @@
       * [Tree Building](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building.go)
       * [Tree Building Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building_test.go)
     * [Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree.go)
+    * Trie
+      * Prefix
+        * [Trie](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/trie/prefix/trie.go)
+        * [Trie Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/trie/prefix/trie_test.go)
 
 ## Designpatterns
   * Browserhistory
