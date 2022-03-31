@@ -232,7 +232,13 @@
       * [Types](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/thefarm/types.go)
   * Io
     * Cmd
+      * [Flags](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/flags.go)
       * [Greeting](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/greeting.go)
+      * [Scanning Inputs With Bufio Scan](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/scanning_inputs_with_bufio_scan.go)
+      * [Scanning Inputs With Bufio Split](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/scanning_inputs_with_bufio_split.go)
+      * [Scanning Inputs With Bufio Using Tokens](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/scanning_inputs_with_bufio_using_tokens.go)
+      * [Using Buffer](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/using_buffer.go)
+      * [Using Slices](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/using_slices.go)
     * Files
       * [Copy Files](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/files/copy_files.go)
       * [Read Book Products](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/files/read_book_products.go)
