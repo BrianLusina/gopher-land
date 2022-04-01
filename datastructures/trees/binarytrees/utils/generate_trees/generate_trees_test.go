@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"gopherland/datastructures/trees"
 	"testing"
 
 	. "gopherland/datastructures/trees/binarytrees"
@@ -16,7 +17,7 @@ func TestGenerateTrees(t *testing.T) {
 
 var _ = Describe("Generate Trees Utility function", func() {
 	It("should return tree with root node only for input of 1", func() {
-		expected := []*BinaryTreeNode{{Data: 1}}
+		expected := []*BinaryTreeNode{{TreeNode: trees.TreeNode{Data: 1}}}
 		actual := GenerateTrees(1)
 		Expect(actual).To(Equal(expected))
 	})
@@ -24,51 +25,75 @@ var _ = Describe("Generate Trees Utility function", func() {
 	It("should return 5 trees with input of 3", func() {
 		expected := []*BinaryTreeNode{
 			{
-				Data: 1,
-				Left: nil,
-				Right: &BinaryTreeNode{
-					Data: 2,
-					Left: nil,
-					Right: &BinaryTreeNode{
-						Data:  3,
-						Left:  nil,
-						Right: nil,
-					},
-				},
-			},
-			{
-				Data: 1,
-				Left: nil,
-				Right: &BinaryTreeNode{
-					Data: 3,
-					Left: &BinaryTreeNode{
-						Data:  2,
-						Left:  nil,
-						Right: nil,
-					},
-					Right: nil,
-				},
-			},
-			{
-				Data: 2,
-				Left: &BinaryTreeNode{
-					Data:  1,
-					Left:  nil,
-					Right: nil,
-				},
-				Right: &BinaryTreeNode{
-					Data:  3,
-					Left:  nil,
-					Right: nil,
-				},
-			},
-			{
-				Data: 3,
-				Left: &BinaryTreeNode{
+				TreeNode: trees.TreeNode{
 					Data: 1,
+				},
+				Left: nil,
+				Right: &BinaryTreeNode{
+					TreeNode: trees.TreeNode{
+						Data: 2,
+					},
 					Left: nil,
 					Right: &BinaryTreeNode{
-						Data:  2,
+						TreeNode: trees.TreeNode{
+							Data: 3,
+						},
+						Left:  nil,
+						Right: nil,
+					},
+				},
+			},
+			{
+				TreeNode: trees.TreeNode{
+					Data: 1,
+				},
+				Left: nil,
+				Right: &BinaryTreeNode{
+					TreeNode: trees.TreeNode{
+						Data: 3,
+					},
+					Left: &BinaryTreeNode{
+						TreeNode: trees.TreeNode{
+							Data: 2,
+						},
+						Left:  nil,
+						Right: nil,
+					},
+					Right: nil,
+				},
+			},
+			{
+				TreeNode: trees.TreeNode{
+					Data: 2,
+				},
+				Left: &BinaryTreeNode{
+					TreeNode: trees.TreeNode{
+						Data: 1,
+					},
+					Left:  nil,
+					Right: nil,
+				},
+				Right: &BinaryTreeNode{
+					TreeNode: trees.TreeNode{
+						Data: 3,
+					},
+					Left:  nil,
+					Right: nil,
+				},
+			},
+			{
+				TreeNode: trees.TreeNode{
+					Data: 3,
+				},
+				Left: &BinaryTreeNode{
+					TreeNode: trees.TreeNode{
+						Data: 1,
+					},
+					Left: nil,
+					Right: &BinaryTreeNode{
+						TreeNode: trees.TreeNode{
+							Data: 2,
+						},
 						Left:  nil,
 						Right: nil,
 					},
@@ -76,11 +101,17 @@ var _ = Describe("Generate Trees Utility function", func() {
 				Right: nil,
 			},
 			{
-				Data: 3,
+				TreeNode: trees.TreeNode{
+					Data: 3,
+				},
 				Left: &BinaryTreeNode{
-					Data: 2,
+					TreeNode: trees.TreeNode{
+						Data: 2,
+					},
 					Left: &BinaryTreeNode{
-						Data:  1,
+						TreeNode: trees.TreeNode{
+							Data: 1,
+						},
 						Left:  nil,
 						Right: nil,
 					},

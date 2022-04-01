@@ -1,30 +1,27 @@
 // Package binarytrees contains types and struct for Binary Trees
 package binarytrees
 
-import "strconv"
+import (
+	"gopherland/datastructures/trees"
+	"strconv"
+)
 
-// BinaryTreeNode represent a BinaryTreeNode in a BinarySearchTree
-// interface{} on Data is probably not the right choice here, but before Generics in Go is released, this is a feasible solution
-// when performing comparisons, it is important to cast this interface to a concrete type(same will apply when generics are released)
-type BinaryTreeNode struct {
-	Data  interface{}
-	Left  *BinaryTreeNode
-	Right *BinaryTreeNode
+// BinaryTree represents a binary tree
+type BinaryTree struct {
+	root *BinaryTreeNode
 }
 
 type BinaryTreeIterator struct {
 	stack []*BinaryTreeNode
 }
 
-// NewBinaryTree creates a new Binary Tree Node
-func (t *BinaryTreeNode) NewBinaryTree(data int) BinaryTreeNode {
-	return BinaryTreeNode{
-		Data: data,
-	}
+// NewBinaryTree creates a new binary tree with root as nil
+func NewBinaryTree() *BinaryTree {
+	return &BinaryTree{}
 }
 
 func (t *BinaryTreeNode) inorderTraversalIteravely() (result []interface{}) {
-	stack := []*BinaryTreeNode{}
+	var stack []*BinaryTreeNode
 	current := t
 
 	for current != nil || len(stack) != 0 {
@@ -64,13 +61,13 @@ func (t *BinaryTreeNode) inOrderMorrisTraversal() (result []interface{}) {
 		if current.Left == nil {
 			// add the current value of the node
 			result = append(result, current.Data)
-			// # Move to next right node
+			// # Move to next Right node
 			current = current.Right
 		} else {
-			// # we have a left subtree
+			// # we have a Left subtree
 			pre = current.Left
 
-			// # find rightmost
+			// # find Rightmost
 			for pre.Right != nil {
 				pre = pre.Right
 			}
@@ -81,7 +78,7 @@ func (t *BinaryTreeNode) inOrderMorrisTraversal() (result []interface{}) {
 			temp := current
 			// # move current to top of new tree
 			current = current.Left
-			// # original current left be None, avoid infinite loops
+			// # original current Left be None, avoid infinite loops
 			temp.Left = nil
 		}
 	}
@@ -102,10 +99,10 @@ func isBstRecursive(node *BinaryTreeNode, min, max interface{}) bool {
 }
 
 // IsValidBst checks if a binary tree is valid is a valid BST
-func (root *BinaryTreeNode) IsValidBst() bool {
+func (t *BinaryTreeNode) IsValidBst() bool {
 	max := 4294967296
 	min := -4294967296
-	return isBstRecursive(root, min, max)
+	return isBstRecursive(t, min, max)
 }
 
 // PreOrderTraversal of a binary tree, returns values of each node
@@ -115,7 +112,7 @@ func (t *BinaryTreeNode) PreOrderTraversal() (values []interface{}) {
 		return
 	}
 
-	stack := []*BinaryTreeNode{}
+	var stack []*BinaryTreeNode
 	current := t
 
 	for current != nil || len(stack) != 0 {
@@ -131,11 +128,11 @@ func (t *BinaryTreeNode) PreOrderTraversal() (values []interface{}) {
 	return
 }
 
-// PostorderTraversal of a binary tree, returns values of each node starting with left most subtree, uses 2 stacks
+// PostOrderTraversal of a binary tree, returns values of each node starting with Left most subtree, uses 2 stacks
 // to keep track of values of nodes and pops them from one stack adding them to the other
 func (t *BinaryTreeNode) PostOrderTraversal() (values []interface{}) {
-	stackOne := []*BinaryTreeNode{}
-	stackTwo := []*BinaryTreeNode{}
+	var stackOne []*BinaryTreeNode
+	var stackTwo []*BinaryTreeNode
 
 	if t == nil {
 		return
@@ -166,7 +163,7 @@ func (t *BinaryTreeNode) PostOrderTraversal() (values []interface{}) {
 	return
 }
 
-// SearchNode searches for a value in a BST by walking either left or right of the tree given the value is either
+// SearchNode searches for a value in a BST by walking either Left or Right of the tree given the value is either
 // less than or greater than current node respectively. This uses a recursive approach to find a node in a Tree
 // if found, returns the node which is the subtree with that value if not found, returns nil
 func (t *BinaryTreeNode) SearchNode(node *BinaryTreeNode, val interface{}) *BinaryTreeNode {
@@ -189,43 +186,44 @@ func (t *BinaryTreeNode) SearchNode(node *BinaryTreeNode, val interface{}) *Bina
 	return nil
 }
 
-// InsertNode inserts a BinaryTreeNode into the BST. Inserts it left if the val is less than the current root
-// inserts it right if the val is greater than the current root. This operation is repeated recursively
-func (root *BinaryTreeNode) InsertNode(val interface{}) *BinaryTreeNode {
-	if root == nil {
+// InsertNode inserts a BinaryTreeNode into the BST. Inserts it Left if the val is less than the current root
+// inserts it Right if the val is greater than the current root. This operation is repeated recursively
+func (t *BinaryTreeNode) InsertNode(val interface{}) *BinaryTreeNode {
+	if t == nil {
 		return &BinaryTreeNode{
-			Data: val,
+			Left:     nil,
+			TreeNode: trees.NewTreeNode(val),
 		}
 	}
 
-	if val.(int) < root.Data.(int) && root.Left != nil {
-		root.InsertNode(val)
-	} else if val.(int) <= root.Data.(int) {
-		root.Left = &BinaryTreeNode{
-			Data: val,
+	if val.(int) < t.Data.(int) && t.Left != nil {
+		t.InsertNode(val)
+	} else if val.(int) <= t.Data.(int) {
+		t.Left = &BinaryTreeNode{
+			TreeNode: trees.NewTreeNode(val),
 		}
-	} else if val.(int) > root.Data.(int) && root.Right != nil {
-		root.InsertNode(val)
+	} else if val.(int) > t.Data.(int) && t.Right != nil {
+		t.InsertNode(val)
 	} else {
-		root.Right = &BinaryTreeNode{
-			Data: val,
+		t.Right = &BinaryTreeNode{
+			TreeNode: trees.NewTreeNode(val),
 		}
 	}
-	return root
+	return t
 }
 
 // Height returns the height of the Binary Search Tree
-func (root *BinaryTreeNode) Height() int {
-	if root == nil {
+func (t *BinaryTreeNode) Height() int {
+	if t == nil {
 		return 0
 	}
 
-	if root.Left == nil && root.Right == nil {
+	if t.Left == nil && t.Right == nil {
 		return 0
 	}
 
 	height := 0
-	queue := []*BinaryTreeNode{}
+	var queue []*BinaryTreeNode
 
 	for true {
 		currentLevelNodes := len(queue)
@@ -256,8 +254,8 @@ func (root *BinaryTreeNode) Height() int {
 
 // LowestCommonAncestor returns the LCA of 2 nodes
 // Considering it is a BST, we can assume that this tree is a valid BST, we could also check for this
-// If both of the values in the 2 nodes provided are greater than the root node, then we move to the right.
-// if the nodes are less than the root node, we move to the left.
+// If both of the values in the 2 nodes provided are greater than the root node, then we move to the Right.
+// if the nodes are less than the root node, we move to the Left.
 // If there is no root node, then we exit and return None, as no common ancestor could exist in such a case with
 // no root node.
 //
@@ -270,43 +268,43 @@ func (root *BinaryTreeNode) Height() int {
 //
 // Space Complexity: O(1).
 // The space complexity of the above solution is constant.
-func (root *BinaryTreeNode) LowestCommonAncestor(nodeOne, nodeTwo BinaryTreeNode) *BinaryTreeNode {
-	if root == nil {
+func (t *BinaryTreeNode) LowestCommonAncestor(nodeOne, nodeTwo BinaryTreeNode) *BinaryTreeNode {
+	if t == nil {
 		return nil
 	}
 
 	// if any of the node values matches the data value for the root node, return the root node
-	if root.Data == nodeOne.Data || root.Data == nodeTwo.Data {
-		return root
+	if t.Data == nodeOne.Data || t.Data == nodeTwo.Data {
+		return t
 	}
 
-	for root != nil {
-		// if both node_one and node_two are smaller than root, then LCA lies in the left
-		if root.Data.(int) > nodeOne.Data.(int) && root.Data.(int) > nodeTwo.Data.(int) {
-			root = root.Left
-		} else if root.Data.(int) < nodeOne.Data.(int) && root.Data.(int) < nodeTwo.Data.(int) {
-			// if both node_one and node_two are greater than root, then LCA lies in the right
-			root = root.Right
+	for t != nil {
+		// if both node_one and node_two are smaller than root, then LCA lies in the Left
+		if t.Data.(int) > nodeOne.Data.(int) && t.Data.(int) > nodeTwo.Data.(int) {
+			t = t.Left
+		} else if t.Data.(int) < nodeOne.Data.(int) && t.Data.(int) < nodeTwo.Data.(int) {
+			// if both node_one and node_two are greater than root, then LCA lies in the Right
+			t = t.Right
 		} else {
 			break
 		}
 	}
 
-	return root
+	return t
 }
 
 // Paths returns all the paths of this binary tree from root to leaf node
-func (root *BinaryTreeNode) Paths() (res []string) {
+func (t *BinaryTreeNode) Paths() (res []string) {
 	type Pair struct {
 		node *BinaryTreeNode
 		path string
 	}
 
-	if root == nil {
+	if t == nil {
 		return res
 	}
 
-	stack := []Pair{{root, ""}}
+	stack := []Pair{{t, ""}}
 
 	for len(stack) != 0 {
 		item := stack[len(stack)-1]
@@ -332,13 +330,13 @@ func (root *BinaryTreeNode) Paths() (res []string) {
 }
 
 // Size returns the number of nodes in this Tree
-func (root *BinaryTreeNode) Size() (counter int) {
-	if root == nil {
+func (t *BinaryTreeNode) Size() (counter int) {
+	if t == nil {
 		return
 	}
 
 	counter++
-	stack := []*BinaryTreeNode{}
+	var stack []*BinaryTreeNode
 
 	for len(stack) != 0 {
 		node := stack[len(stack)-1]
