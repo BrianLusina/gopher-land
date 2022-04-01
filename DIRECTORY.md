@@ -239,6 +239,14 @@
       * [Scanning Inputs With Bufio Using Tokens](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/scanning_inputs_with_bufio_using_tokens.go)
       * [Using Buffer](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/using_buffer.go)
       * [Using Slices](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/using_slices.go)
+    * Data
+      * Json
+        * [Address](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/json/address.go)
+        * [Decode Aribitrary Data](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/json/decode_aribitrary_data.go)
+        * [Decoding Into Structs](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/json/decoding_into_structs.go)
+      * Xml
+        * [Parse Xml Data](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/xml/parse_xml_data.go)
+        * [Person Xml](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/xml/person_xml.go)
     * Files
       * [Copy Files](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/files/copy_files.go)
       * [Read Book Products](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/files/read_book_products.go)
@@ -456,6 +464,13 @@
   * Trees
     * Binarytrees
       * [Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree.go)
+      * [Binary Tree Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree_node.go)
+      * Binarysearchtree
+        * [Binary Search Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binarysearchtree/binary_search_tree.go)
+        * [Binary Search Tree Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binarysearchtree/binary_search_tree_test.go)
+        * Intbst
+          * [Int Bst](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binarysearchtree/intbst/int_bst.go)
+          * [Int Bst Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binarysearchtree/intbst/int_bst_test.go)
       * [Equivalent Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/equivalent_binary_tree.go)
       * [Merge Trees](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/merge_trees.go)
       * Utils
@@ -466,6 +481,7 @@
       * [Tree Building](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building.go)
       * [Tree Building Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building_test.go)
     * [Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree.go)
+    * [Tree Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree_node.go)
     * Trie
       * Prefix
         * [Trie](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/trie/prefix/trie.go)
