@@ -8,6 +8,10 @@ type Tree interface {
 	Capacity() int
 	// Size returns the size of the tree
 	Size() int
+	// Serialize serializes the tree
+	Serialize() string
+	// Deserialize deserializes the tree
+	Deserialize() *TreeNode
 	Insert(value interface{})
 	InorderTraversalIteratively()
 	InorderMorrisTraversal()

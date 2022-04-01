@@ -3,6 +3,7 @@ package binarysearchtree
 import (
 	"errors"
 	"gopherland/datastructures/trees/binarytrees"
+	"math"
 )
 
 // BinarySearchTree is a binary tree that satisfies the binary tree interface
@@ -15,6 +16,23 @@ func NewBinarySearchTree() *BinarySearchTree {
 	return &BinarySearchTree{}
 }
 
+// insert helper function to insert a new value in the binary search tree
+func insert(node *binarytrees.BinaryTreeNode, value any) {
+	if value.(int) <= node.Data.(int) {
+		if node.Left != nil {
+			insert(node.Left, value)
+		} else {
+			node.Left = binarytrees.NewBinaryTreeNode(value)
+		}
+	} else {
+		if node.Right != nil {
+			insert(node.Right, value)
+		} else {
+			node.Right = binarytrees.NewBinaryTreeNode(value)
+		}
+	}
+}
+
 // Insert inserts a new node with the value into the binary search tree
 func (bst *BinarySearchTree) Insert(value any) {
 	// we don't have a root
@@ -24,24 +42,7 @@ func (bst *BinarySearchTree) Insert(value any) {
 	}
 
 	rootNode := bst.root
-
-	if value.(int) <= rootNode.Data.(int) {
-		if rootNode.Left == nil {
-			newNode := binarytrees.NewBinaryTreeNode(value)
-			rootNode.Left = newNode
-			return
-		} else {
-			bst.Insert(value)
-		}
-	} else {
-		if rootNode.Right == nil {
-			newNode := binarytrees.NewBinaryTreeNode(value)
-			rootNode.Right = newNode
-			return
-		} else {
-			bst.Insert(value)
-		}
-	}
+	insert(rootNode, value)
 }
 
 func (bst *BinarySearchTree) Size() int {
@@ -77,3 +78,28 @@ func (bst *BinarySearchTree) Values() ([]interface{}, error) {
 
 	return result, nil
 }
+
+// calculateDepth helper function to calculate the depth of a tree
+func calculateDepth(node *binarytrees.BinaryTreeNode) int {
+	if node == nil {
+		return 0
+	}
+	return 1 + int(math.Max(float64(calculateDepth(node.Left)), float64(calculateDepth(node.Right))))
+}
+
+func (bst *BinarySearchTree) Depth() int {
+	if bst == nil || bst.root == nil {
+		return 0
+	}
+	return calculateDepth(bst.root)
+}
+
+//func (bst *BinarySearchTree) Serialize() String {
+//	var values []interface{}
+//	root := bst.root
+//
+//	if root != nil {
+//		return String{}
+//	}
+//
+//}

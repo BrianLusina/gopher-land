@@ -48,4 +48,21 @@ var _ = Describe("BinarySearchTree", func() {
 		// should return sorted values
 		Expect(bst.Values()).To(Equal([]interface{}{2, 4, 6}))
 	})
+
+	It("should correctly return depth of tree", func() {
+		bst := NewBinarySearchTree()
+		bst.Insert(4)
+		bst.Insert(2)
+		bst.Insert(1)
+		bst.Insert(6)
+		bst.Insert(3)
+		bst.Insert(5)
+		bst.Insert(7)
+
+		expected := 3
+		actual := bst.Depth()
+
+		// should return sorted values
+		Expect(actual).To(Equal(expected))
+	})
 })
