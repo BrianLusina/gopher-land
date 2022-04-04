@@ -209,6 +209,9 @@
   * Functions
     * Debug
       * [Debug](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/debug/debug.go)
+    * Expenses
+      * [Expenses](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/expenses/expenses.go)
+      * [Expenses Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/expenses/expenses_test.go)
     * Factories
       * [Factories](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/factories/factories.go)
     * Lasagna
