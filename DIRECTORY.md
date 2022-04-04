@@ -658,6 +658,9 @@
   * Maximumtime
     * [Maximum Time](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time.go)
     * [Maximum Time Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time_test.go)
+  * Maxlengthdifference
+    * [Maxlengthdiff](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maxlengthdifference/maxlengthdiff.go)
+    * [Maxlengthdiff Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maxlengthdifference/maxlengthdiff_test.go)
   * Phonenumber
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/cases_test.go)
     * [Phone Number](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/phone_number.go)
