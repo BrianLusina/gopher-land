@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-func TestBinarySearchTree(t *testing.T) {
+func TestPrinterErrors(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "PrinterError Suite")
 }
