@@ -240,6 +240,12 @@
       * [Using Buffer](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/using_buffer.go)
       * [Using Slices](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/cmd/using_slices.go)
     * Data
+      * Crypt
+        * [Crypt Example](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/crypt/crypt_example.go)
+      * Gob
+        * [Gob Read File](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/gob/gob_read_file.go)
+        * [Gob Sample](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/gob/gob_sample.go)
+        * [Gob Write File](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/gob/gob_write_file.go)
       * Json
         * [Address](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/json/address.go)
         * [Decode Aribitrary Data](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/data/json/decode_aribitrary_data.go)
