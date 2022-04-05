@@ -499,7 +499,10 @@
     * Trie
       * Prefix
         * [Trie](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/trie/prefix/trie.go)
+        * [Trie Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/trie/prefix/trie_node.go)
         * [Trie Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/trie/prefix/trie_test.go)
+      * [Trie](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/trie/trie.go)
+      * [Trie Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/trie/trie_node.go)
 
 ## Designpatterns
   * Browserhistory
@@ -526,6 +529,9 @@
     * [Twitter](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/twitter.go)
     * [Twitter Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/twitter_test.go)
     * [User](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/user.go)
+  * Worddictionary
+    * [Word Dictionary](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/worddictionary/word_dictionary.go)
+    * [Word Dictionary Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/worddictionary/word_dictionary_test.go)
 
 ## Goerrors
   * Erratum
