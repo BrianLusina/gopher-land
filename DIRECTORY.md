@@ -196,6 +196,11 @@
   * Datatypes
     * Organization
       * [Person](https://github.com/BrianLusina/gopher-land/blob/master/basics/datatypes/organization/person.go)
+  * Errors
+    * [Crazy Recover](https://github.com/BrianLusina/gopher-land/blob/master/basics/errors/crazy_recover.go)
+    * [External Cmd](https://github.com/BrianLusina/gopher-land/blob/master/basics/errors/external_cmd.go)
+    * [Parse](https://github.com/BrianLusina/gopher-land/blob/master/basics/errors/parse.go)
+    * [Recover Func](https://github.com/BrianLusina/gopher-land/blob/master/basics/errors/recover_func.go)
   * Flowcontrol
     * [Defer](https://github.com/BrianLusina/gopher-land/blob/master/basics/flowcontrol/defer.go)
     * Forloops
