@@ -8,7 +8,7 @@ import (
 
 func TestBinarySearchTree(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Trie Suite")
+	RunSpecs(t, "TrieNode Suite")
 }
 
 var _ = Describe("BinarySearchTree", func() {

@@ -13,7 +13,7 @@ func TestTrie(t *testing.T) {
 
 var _ = Describe("Trie", func() {
 	It("should correctly work for insert(apple) -> search(apple) -> startsWith(app) -> insert(app) -> search(app)", func() {
-		trie := NewTrie()
+		trie := NewPrefixTrieNode()
 		trie.Insert("apple")
 
 		// return True
