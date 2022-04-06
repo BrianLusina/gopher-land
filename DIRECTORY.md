@@ -592,6 +592,9 @@
       * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/prime_factors/cases_test.go)
       * [Prime Factors](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/prime_factors/prime_factors.go)
       * [Prime Factors Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/prime_factors/prime_factors_test.go)
+    * Primegap
+      * [Prime Gap](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/primegap/prime_gap.go)
+      * [Prime Gap Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/primegap/prime_gap_test.go)
     * Sieveoferastothenes
       * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/sieveoferastothenes/cases_test.go)
       * [Sieve](https://github.com/BrianLusina/gopher-land/blob/master/gomath/primes/sieveoferastothenes/sieve.go)
