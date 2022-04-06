@@ -551,6 +551,9 @@
     * [Armstrong Numbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/armstrong/armstrong_numbers.go)
     * [Armstrong Numbers Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/armstrong/armstrong_numbers_test.go)
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/armstrong/cases_test.go)
+  * Base7
+    * [Base7](https://github.com/BrianLusina/gopher-land/blob/master/gomath/base7/base7.go)
+    * [Base7 Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/base7/base7_test.go)
   * Circleofnumbers
     * [Circleofnumbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers.go)
     * [Circleofnumbers Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers_test.go)
