@@ -229,6 +229,9 @@
       * [Timer](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/timer/timer.go)
   * Generics
     * [Generics](https://github.com/BrianLusina/gopher-land/blob/master/basics/generics/generics.go)
+  * Goroutines
+    * [Long Short Wait](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/long_short_wait.go)
+    * [Using Wait Group](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/using_wait_group.go)
   * Interfaces
     * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
     * [Interface Example](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/interface_example.go)
