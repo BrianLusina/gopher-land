@@ -7,7 +7,7 @@ import (
 
 func TestSieve(t *testing.T) {
 	for _, tc := range testCases {
-		p := SieveOfEratosthenes(2, tc.limit)
+		p := Sieve(2, tc.limit)
 		if len(p) != 0 || len(tc.expected) != 0 {
 			if !reflect.DeepEqual(p, tc.expected) {
 				t.Fatalf("FAIL: %s\nSieve(%d)\nExpected %v\nActual  %v",
@@ -21,7 +21,7 @@ func TestSieve(t *testing.T) {
 func BenchmarkSieve(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		for _, tc := range testCases {
-			SieveOfEratosthenes(2, tc.limit)
+			Sieve(2, tc.limit)
 		}
 	}
 }

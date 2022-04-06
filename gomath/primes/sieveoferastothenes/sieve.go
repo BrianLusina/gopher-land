@@ -4,8 +4,9 @@ import (
 	"gopherland/gomath/primes"
 )
 
-func SieveOfEratosthenes(start int, limit int) (result []int) {
-	toSieve := []int{}
+// Sieve returns a slice of all primes from start to limit
+func Sieve(start int, limit int) (result []int) {
+	var toSieve []int
 
 	for i := start; i <= limit; i++ {
 		toSieve = append(toSieve, i)

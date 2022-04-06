@@ -8,7 +8,7 @@ import (
 
 func BackwardsPrime(start int, stop int) (result []int) {
 
-	sievedPrimes := sieveoferastothenes.SieveOfEratosthenes(start, stop)
+	sievedPrimes := sieveoferastothenes.Sieve(start, stop)
 
 	for _, prime := range sievedPrimes {
 		reversedPrime := utils.ReverseInt(prime)
