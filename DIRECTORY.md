@@ -230,6 +230,8 @@
   * Generics
     * [Generics](https://github.com/BrianLusina/gopher-land/blob/master/basics/generics/generics.go)
   * Goroutines
+    * [Block Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/block_goroutine.go)
+    * [Channels Intro](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channels_intro.go)
     * [Long Short Wait](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/long_short_wait.go)
     * [Using Wait Group](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/using_wait_group.go)
   * Interfaces
