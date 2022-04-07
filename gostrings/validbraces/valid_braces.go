@@ -11,7 +11,7 @@ var openers = map[rune]bool{'(': true, '{': true, '[': true, '<': true}
 var closers = map[rune]bool{')': true, '}': true, ']': true, '>': true}
 
 func ValidBraces(str string) bool {
-	stack := []rune{}
+	var stack []rune
 
 	for _, char := range str {
 		if openers[char] {

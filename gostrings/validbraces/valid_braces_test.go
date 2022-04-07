@@ -16,6 +16,27 @@ func TestValidBraces(t *testing.T) {
 }
 
 var _ = Describe("ValidBraces", func() {
+	It("should return true for complex latex expression", func() {
+		input := "\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)"
+		expected := true
+		actual := ValidBraces(input)
+		assert.Equal(GinkgoT(), expected, actual)
+	})
+
+	It("should return true for valid math expression", func() {
+		input := "(((185 + 223.85) * 15) - 543)/2"
+		expected := true
+		actual := ValidBraces(input)
+		assert.Equal(GinkgoT(), expected, actual)
+	})
+
+	It("should return true for empty strings", func() {
+		input := ""
+		expected := true
+		actual := ValidBraces(input)
+		assert.Equal(GinkgoT(), expected, actual)
+	})
+
 	It("should return true for (){}[]", func() {
 		input := "(){}[]"
 		expected := true
