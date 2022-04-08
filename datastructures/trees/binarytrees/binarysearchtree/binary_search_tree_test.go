@@ -3,6 +3,8 @@ package binarysearchtree
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+	"gopherland/datastructures/trees"
+	"gopherland/datastructures/trees/binarytrees"
 	"testing"
 )
 
@@ -64,5 +66,59 @@ var _ = Describe("BinarySearchTree", func() {
 
 		// should return sorted values
 		Expect(actual).To(Equal(expected))
+	})
+
+	It("should serialize and return nil if there are no nodes", func() {
+		bst := NewBinarySearchTree()
+
+		actual := bst.Serialize()
+		Expect(actual).To(BeNil())
+	})
+
+	It("should serialize and return slice of values ordered as inserted", func() {
+		bst := NewBinarySearchTree()
+		bst.Insert(4)
+		bst.Insert(2)
+		bst.Insert(6)
+
+		actual := bst.Serialize()
+		expected := []string{"4", "2", "6"}
+		Expect(actual).To(Equal(expected))
+	})
+
+	It("should deserialize and construct the tree with values", func() {
+		data := "4 2 6"
+		bst := NewBinarySearchTree()
+
+		bst.Deserialize(data)
+
+		expected := &BinarySearchTree{
+			root: &binarytrees.BinaryTreeNode{
+				TreeNode: trees.TreeNode{
+					Data: 4,
+				},
+				Left: &binarytrees.BinaryTreeNode{
+					TreeNode: trees.TreeNode{
+						Data: 2,
+					},
+				},
+				Right: &binarytrees.BinaryTreeNode{
+					TreeNode: trees.TreeNode{
+						Data: 6,
+					},
+				},
+			},
+		}
+
+		Expect(bst.root).To(Equal(expected.root))
+	})
+
+	It("should return nil root for empty data input when deserializing", func() {
+		data := ""
+		bst := NewBinarySearchTree()
+
+		bst.Deserialize(data)
+
+		Expect(bst.root).To(BeNil())
 	})
 })

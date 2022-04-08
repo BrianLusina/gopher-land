@@ -4,6 +4,8 @@ import (
 	"errors"
 	"gopherland/datastructures/trees/binarytrees"
 	"math"
+	"strconv"
+	"strings"
 )
 
 // BinarySearchTree is a binary tree that satisfies the binary tree interface
@@ -94,12 +96,119 @@ func (bst *BinarySearchTree) Depth() int {
 	return calculateDepth(bst.root)
 }
 
-//func (bst *BinarySearchTree) Serialize() String {
-//	var values []interface{}
-//	root := bst.root
-//
-//	if root != nil {
-//		return String{}
-//	}
-//
-//}
+// Serialize returns a string representation of the binary search tree
+func (bst *BinarySearchTree) Serialize() []string {
+	root := bst.root
+
+	var output []string
+
+	if root == nil {
+		return output
+	}
+
+	var values []any
+	var preOrderTraversal func(node *binarytrees.BinaryTreeNode)
+	preOrderTraversal = func(node *binarytrees.BinaryTreeNode) {
+		if node == nil {
+			return
+		}
+
+		values = append(values, node.Data)
+		preOrderTraversal(node.Left)
+		preOrderTraversal(node.Right)
+	}
+
+	preOrderTraversal(root)
+
+	for _, value := range values {
+		switch value.(type) {
+		case int:
+			v := strconv.Itoa(value.(int))
+			output = append(output, v)
+		case string:
+			output = append(output, value.(string))
+		}
+	}
+
+	return output
+}
+
+func buildTree(nodeData []any, min, max int32) *binarytrees.BinaryTreeNode {
+	startIndex := 0
+	if startIndex == len(nodeData) {
+		return nil
+	}
+
+	val := nodeData[startIndex].(int32)
+	if val < min || val > max {
+		return nil
+	}
+
+	node := binarytrees.NewBinaryTreeNode(val)
+	startIndex++
+	node.Left = buildTree(nodeData, min, val)
+	node.Right = buildTree(nodeData, val, max)
+
+	return node
+}
+
+func castToType(data any) interface{} {
+	switch data.(type) {
+	case string:
+		i, err := strconv.Atoi(data.(string))
+		if err == nil {
+			return i
+		}
+		return nil
+	case int:
+		return data.(int)
+	case int32:
+		return data.(int32)
+	case int64:
+		return data.(int64)
+	case float32:
+		return data.(float32)
+	case float64:
+		return data.(float64)
+	default:
+		return data
+	}
+}
+
+// Deserialize deserializes a string representation of a binary search tree
+func (bst *BinarySearchTree) Deserialize(data string) {
+	if len(data) == 0 {
+		return
+	}
+
+	var nodeValues []any
+	values := strings.Fields(data)
+	for _, value := range values {
+		nodeValues = append(nodeValues, value)
+	}
+
+	var buildTree func(nodeData []any, min, max int) *binarytrees.BinaryTreeNode
+	startIndex := 0
+	buildTree = func(nodeData []any, min, max int) *binarytrees.BinaryTreeNode {
+		if startIndex == len(nodeData) {
+			return nil
+		}
+
+		data := nodeData[startIndex]
+		val := castToType(data)
+
+		if val.(int) < min || val.(int) > max {
+			return nil
+		}
+
+		node := binarytrees.NewBinaryTreeNode(val)
+		startIndex++
+		node.Left = buildTree(nodeData, min, val.(int))
+		node.Right = buildTree(nodeData, val.(int), max)
+
+		return node
+	}
+
+	root := buildTree(nodeValues, math.MinInt, math.MaxInt)
+	bst.root = root
+}
