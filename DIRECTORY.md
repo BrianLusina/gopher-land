@@ -231,8 +231,10 @@
     * [Generics](https://github.com/BrianLusina/gopher-land/blob/master/basics/generics/generics.go)
   * Goroutines
     * [Block Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/block_goroutine.go)
+    * [Channel Factory](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channel_factory.go)
     * [Channels Intro](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channels_intro.go)
     * [Long Short Wait](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/long_short_wait.go)
+    * [Pipe Filter](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/pipe_filter.go)
     * [Using Wait Group](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/using_wait_group.go)
   * Interfaces
     * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
