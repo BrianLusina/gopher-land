@@ -239,6 +239,7 @@
     * [Long Short Wait](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/long_short_wait.go)
     * [Null Idiom](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/null_idiom.go)
     * [Pipe Filter](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/pipe_filter.go)
+    * [Random Ones Zeroes](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/random_ones_zeroes.go)
     * [Switching With Select](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/switching_with_select.go)
     * [Using Wait Group](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/using_wait_group.go)
   * Interfaces
@@ -616,6 +617,10 @@
   * Rotateformax
     * [Rotate For Max](https://github.com/BrianLusina/gopher-land/blob/master/gomath/rotateformax/rotate_for_max.go)
     * [Rotate For Max Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/rotateformax/rotate_for_max_test.go)
+  * Statistics
+    * Athleticassociation
+      * [Stats](https://github.com/BrianLusina/gopher-land/blob/master/gomath/statistics/athleticassociation/stats.go)
+      * [Stats Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/statistics/athleticassociation/stats_test.go)
   * Tanktruck
     * [Tanktruck](https://github.com/BrianLusina/gopher-land/blob/master/gomath/tanktruck/tanktruck.go)
     * [Tanktruck Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/tanktruck/tanktruck_test.go)
