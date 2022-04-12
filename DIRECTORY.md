@@ -460,9 +460,13 @@
     * Doublylinked
       * [Doublylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/doublylinkedlist.go)
       * [Doublylinkedlistnode](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/doublylinkedlistnode.go)
+      * [List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/list.go)
     * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/linkedlist.go)
     * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/node.go)
     * Singlylinked
+      * Simple
+        * [Simple Linked List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/simple/simple_linked_list.go)
+        * [Simple Linked List Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/simple/simple_linked_list_test.go)
       * [Singlylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/singlylinkedlist.go)
   * Lrucache
     * [Lrucache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/lrucache.go)
