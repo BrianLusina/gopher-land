@@ -2,17 +2,31 @@ package linkedlist
 
 import "errors"
 
-// iLinkedList is an interface for a linked list
+var (
+	ErrEmptyList = errors.New("list is empty")
+)
+
+// ILinkedList is an interface for a linked list
 type ILinkedList interface {
+	// Append adds a new element to the end of the list
 	Append(interface{})
+
+	// Prepend adds a new element to the beginning of the list
 	Prepend(interface{})
-	DeleteHead()
+
+	// Pop removes the last element of the list and returns it
+	Pop() (interface{}, error)
+
+	// Array returns the list as an array
+	Array() []interface{}
+
 	DeleteTail() (node interface{}, err error)
 	DeleteAtPosition(position int)
 	DeleteNode(node interface{})
 	DeleteNodeByData(data interface{})
 	SwapNodes(dataOne, dataTwo interface{})
 	SwapNodesAtKthAndKPlusOne(k int)
+	// Reverse reverses the list
 	Reverse()
 	String() string
 }
@@ -20,14 +34,6 @@ type ILinkedList interface {
 // LinkedList is a linked list
 type LinkedList struct {
 	Head *Node
-}
-
-var (
-	ErrEmptyList = errors.New("List is empty")
-)
-
-func NewNode(data interface{}) Node {
-	return Node{Data: data}
 }
 
 // NewLinkedList creates a new LinkedList

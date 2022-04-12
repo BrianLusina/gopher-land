@@ -1,4 +1,4 @@
-package linkedlist
+package singlylinkedlist
 
 import (
 	"errors"
@@ -6,79 +6,19 @@ import (
 	"gopherland/datastructures/linkedlist"
 )
 
-// iSinglyLinkedList is an interface for singly linked list
-type iSinglyLinkedList interface {
-	linkedlist.ILinkedList
-}
-
-// SinglyLinkedListNode of a Singly Linked List
-type SinglyLinkedListNode struct {
-	Data interface{}
-	Next *SinglyLinkedListNode
-}
-
 // SinglyLinkedList data structure
 type SinglyLinkedList struct {
-	Head *SinglyLinkedListNode
+	Head *linkedlist.Node
 }
 
-// NewSinglyLinkedListNode creates a new LinkedList Node
-func NewSinglyLinkedListNode(data interface{}) *SinglyLinkedListNode {
-	return &SinglyLinkedListNode{
-		Data: data,
-		Next: nil,
-	}
-}
-
-// NewSinglyLinkedListNode creates a new SinglyLinkedList
-func NewSinglyLinkedList() iSinglyLinkedList {
+// NewList creates a new SinglyLinkedList
+func NewList() *SinglyLinkedList {
 	return &SinglyLinkedList{}
-}
-
-func (l SinglyLinkedList) String() string {
-	return fmt.Sprintf("%s", l.Head.Data)
-}
-
-func (ll *SinglyLinkedList) DeleteNode(node interface{}) {}
-
-func (ll *SinglyLinkedList) DeleteNodeByData(data interface{}) {}
-
-func (ll *SinglyLinkedList) DeleteTail() (interface{}, error) {
-	panic("implement me")
-}
-
-func (ll *SinglyLinkedList) SwapNodesAtKthAndKPlusOne(k int) {
-	if ll.Head == nil || ll.Head.Next == nil {
-		return
-	}
-
-	current := ll.Head
-	next := current.Next
-
-	for i := 0; i < k; i++ {
-		current = current.Next
-		next = current.Next
-	}
-
-	if next == nil {
-		return
-	}
-
-	current.Next = next.Next
-	next.Next = current
-	ll.Head = next
-}
-
-// Prepend adds a new node to the beggining of the list
-func (sll *SinglyLinkedList) Prepend(val interface{}) {
-	node := NewSinglyLinkedListNode(val)
-	node.Next = sll.Head
-	sll.Head = node
 }
 
 // Append adds a new Node at the end of a linked list
 func (sll *SinglyLinkedList) Append(val interface{}) {
-	node := NewSinglyLinkedListNode(val)
+	node := linkedlist.NewNode(val)
 
 	if sll.Head == nil {
 		sll.Head = node
@@ -92,8 +32,76 @@ func (sll *SinglyLinkedList) Append(val interface{}) {
 	current.Next = node
 }
 
-func (sll *SinglyLinkedList) DeleteHead() {
+// Pop removes a node at the end of a linked list & returns its value.
+func (sll *SinglyLinkedList) Pop() (interface{}, error) {
+	if sll.Head == nil {
+		return nil, linkedlist.ErrEmptyList
+	}
 
+	current := sll.Head
+
+	if current.Next == nil {
+		data := current.Data
+		current = nil
+		return data, nil
+	}
+
+	for ; current.Next.Next != nil; current = current.Next {
+	}
+
+	data := current.Next.Data
+	current.Next = nil
+	return data, nil
+}
+
+func (sll *SinglyLinkedList) Array() []interface{} {
+	var values []interface{}
+	current := sll.Head
+	for ; current != nil; current = current.Next {
+		values = append(values, current.Data)
+	}
+	return values
+}
+
+func (sll SinglyLinkedList) String() string {
+	return fmt.Sprintf("%s", sll.Head.Data)
+}
+
+func (sll *SinglyLinkedList) DeleteNode(node interface{}) {}
+
+func (sll *SinglyLinkedList) DeleteNodeByData(data interface{}) {}
+
+func (sll *SinglyLinkedList) DeleteTail() (interface{}, error) {
+	panic("implement me")
+}
+
+func (sll *SinglyLinkedList) SwapNodesAtKthAndKPlusOne(k int) {
+	if sll.Head == nil || sll.Head.Next == nil {
+		return
+	}
+
+	current := sll.Head
+	next := current.Next
+
+	for i := 0; i < k; i++ {
+		current = current.Next
+		next = current.Next
+	}
+
+	if next == nil {
+		return
+	}
+
+	current.Next = next.Next
+	next.Next = current
+	sll.Head = next
+}
+
+// Prepend adds a new node to the begining of the list
+func (sll *SinglyLinkedList) Prepend(val interface{}) {
+	node := linkedlist.NewNode(val)
+	node.Next = sll.Head
+	sll.Head = node
 }
 
 // DeleteAtBeg removes a node at the beggining of a linked list & returns its value.
@@ -107,22 +115,6 @@ func (sll *SinglyLinkedList) DeleteAtBeg() interface{} {
 	sll.Head = current.Next
 
 	return current.Data
-}
-
-// DeleteAtEnd removes a node at the end of a linked list & returns its value.
-// Returns -1 if the list is empty
-func (sll *SinglyLinkedList) DeleteAtEnd() interface{} {
-	if sll.Head == nil {
-		return -1
-	}
-
-	current := sll.Head
-	for ; current.Next.Next != nil; current = current.Next {
-	}
-
-	data := current.Next.Data
-	current.Next = nil
-	return data
 }
 
 // Count counts the number of nodes in a Linked List
@@ -179,7 +171,7 @@ func (sll *SinglyLinkedList) IsPalindrome() bool {
 }
 
 // DetectCycle detects cycles in a LinkedList & returns the Node that contains a cycle
-func (sll *SinglyLinkedList) DetectCycle() *SinglyLinkedListNode {
+func (sll *SinglyLinkedList) DetectCycle() *linkedlist.Node {
 	if sll.Head == nil || sll.Head.Next == nil {
 		return nil
 	}
@@ -210,7 +202,7 @@ func (sll *SinglyLinkedList) DetectCycle() *SinglyLinkedListNode {
 }
 
 // GetNthNode gets the nth node in a linked list
-func (sll *SinglyLinkedList) GetNthNode(position int) (n *SinglyLinkedListNode, err error) {
+func (sll *SinglyLinkedList) GetNthNode(position int) (n *linkedlist.Node, err error) {
 	if position < 0 {
 		return nil, errors.New("Position less than 0")
 	}
@@ -235,7 +227,7 @@ func (sll *SinglyLinkedList) GetNthNode(position int) (n *SinglyLinkedListNode, 
 }
 
 // DeleteNodeAtPosition deletes a node at the specified position and returns the deleted node
-func (sll *SinglyLinkedList) DeleteNodeAtPosition(position int) (*SinglyLinkedListNode, error) {
+func (sll *SinglyLinkedList) DeleteNodeAtPosition(position int) (*linkedlist.Node, error) {
 	if position < 0 {
 		errMessage := fmt.Sprintf("Invalid Index position given. Index is {%d}, expected position >= 0", position)
 		return nil, errors.New(errMessage)
@@ -271,8 +263,8 @@ func (sll *SinglyLinkedList) DeleteNodeAtPosition(position int) (*SinglyLinkedLi
 	return node, nil
 }
 
-func (sll *SinglyLinkedList) DeleteNodesByData(data interface{}) *SinglyLinkedListNode {
-	dummyHead := &SinglyLinkedListNode{-1, nil}
+func (sll *SinglyLinkedList) DeleteNodesByData(data interface{}) *linkedlist.Node {
+	dummyHead := &linkedlist.Node{Data: -1}
 	current := dummyHead
 
 	for current.Next != nil {
@@ -289,7 +281,7 @@ func (sll *SinglyLinkedList) DeleteNodesByData(data interface{}) *SinglyLinkedLi
 
 // RemoveDuplicates removes duplicates from a SinglyLinkedList
 // This assumes the linked list is sorted in ascending order
-func (sll *SinglyLinkedList) RemoveDuplicates() *SinglyLinkedListNode {
+func (sll *SinglyLinkedList) RemoveDuplicates() *linkedlist.Node {
 	head := sll.Head
 
 	if head == nil || head.Next == nil {
@@ -319,7 +311,7 @@ func (sll *SinglyLinkedList) RemoveDuplicates() *SinglyLinkedListNode {
 // 1 -> 2 -> 3 -> 4
 // becomes
 // 2 -> 1 -> 4 -> 3
-func (sll *SinglyLinkedList) PairwiseSwap() *SinglyLinkedListNode {
+func (sll *SinglyLinkedList) PairwiseSwap() *linkedlist.Node {
 	head := sll.Head
 
 	// Nothing to do here
@@ -412,7 +404,7 @@ func (sll *SinglyLinkedList) Reverse() {
 		return
 	}
 
-	var prev, Next *SinglyLinkedListNode
+	var prev, Next *linkedlist.Node
 
 	var current = sll.Head
 
@@ -431,7 +423,7 @@ func (sll *SinglyLinkedList) DeleteAtPosition(position int) {
 		return
 	}
 
-	var prev, Next *SinglyLinkedListNode
+	var prev, Next *linkedlist.Node
 
 	var current = sll.Head
 

@@ -1,14 +1,14 @@
 package doublylinkedlist
 
-// DoublyLinkedListNode of a Doubly Linked List
-type DoublyLinkedListNode struct {
+// Node DoublyLinkedListNode of a Doubly Linked List
+type Node struct {
 	Data       interface{}
-	Next, Prev *DoublyLinkedListNode
+	Next, Prev *Node
 }
 
 // NewDoublyLinkedListNode creates a new DoublyLinkedList Node
-func NewDoublyLinkedListNode(data interface{}) *DoublyLinkedListNode {
-	return &DoublyLinkedListNode{
+func NewDoublyLinkedListNode(data interface{}) *Node {
+	return &Node{
 		Data: data,
 		Next: nil,
 		Prev: nil,
