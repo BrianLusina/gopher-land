@@ -233,8 +233,13 @@
     * [Block Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/block_goroutine.go)
     * [Channel Factory](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channel_factory.go)
     * [Channels Intro](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channels_intro.go)
+    * [Channels Sync](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channels_sync.go)
+    * [Deadlock Avoid Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/deadlock_avoid_goroutine.go)
+    * [Deadlock Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/deadlock_goroutine.go)
     * [Long Short Wait](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/long_short_wait.go)
+    * [Null Idiom](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/null_idiom.go)
     * [Pipe Filter](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/pipe_filter.go)
+    * [Switching With Select](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/switching_with_select.go)
     * [Using Wait Group](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/using_wait_group.go)
   * Interfaces
     * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
