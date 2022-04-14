@@ -455,6 +455,11 @@
       * [Max Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray_test.go)
     * Utils
       * [Sliceutils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/utils/sliceutils.go)
+  * Buffer
+    * Circularbuffer
+      * [Circular Buffer](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/circularbuffer/circular_buffer.go)
+      * [Circular Buffer Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/circularbuffer/circular_buffer_test.go)
+    * [Errors](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/errors.go)
   * Graphs
     * [Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/graph.go)
   * Hashmap
