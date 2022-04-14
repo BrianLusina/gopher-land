@@ -534,6 +534,10 @@
       * [Trie Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/trie/trie_node.go)
 
 ## Designpatterns
+  * Banksystem
+    * [Account](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/banksystem/account.go)
+    * [Bank System](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/banksystem/bank_system.go)
+    * [Bank System Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/banksystem/bank_system_test.go)
   * Browserhistory
     * [Browser History](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history.go)
     * [Browser History Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history_test.go)
