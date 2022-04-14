@@ -5,11 +5,11 @@ import (
 )
 
 type BrowserHistory struct {
-	CurrentNode *dl.DoublyLinkedListNode
+	CurrentNode *dl.Node
 }
 
 func Constructor(homepage string) *BrowserHistory {
-	currentNode := &dl.DoublyLinkedListNode{Data: homepage}
+	currentNode := &dl.Node{Data: homepage}
 	return &BrowserHistory{
 		CurrentNode: currentNode,
 	}
@@ -17,7 +17,7 @@ func Constructor(homepage string) *BrowserHistory {
 
 // Visit url from the current page. It clears up all the forward history.
 func (b *BrowserHistory) Visit(url string) {
-	node := &dl.DoublyLinkedListNode{Data: url}
+	node := &dl.Node{Data: url}
 	current := b.CurrentNode
 
 	if b.CurrentNode.Next == nil {
