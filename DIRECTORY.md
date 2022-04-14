@@ -230,6 +230,7 @@
   * Generics
     * [Generics](https://github.com/BrianLusina/gopher-land/blob/master/basics/generics/generics.go)
   * Goroutines
+    * [Anonymous Closure In Channel](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/anonymous_closure_in_channel.go)
     * [Block Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/block_goroutine.go)
     * [Channel Factory](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channel_factory.go)
     * [Channel Ticker](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channel_ticker.go)
@@ -237,7 +238,11 @@
     * [Channels Sync](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channels_sync.go)
     * [Deadlock Avoid Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/deadlock_avoid_goroutine.go)
     * [Deadlock Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/deadlock_goroutine.go)
+    * [Lazy Evaluator](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/lazy_evaluator.go)
+    * [Lazy Generator](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/lazy_generator.go)
     * [Long Short Wait](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/long_short_wait.go)
+    * [Multiplex Client Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/multiplex_client_server.go)
+    * [Multiplex Client Server Shutdown](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/multiplex_client_server_shutdown.go)
     * [Null Idiom](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/null_idiom.go)
     * [Pipe Filter](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/pipe_filter.go)
     * [Polar To Cartesian](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/polar_to_cartesian.go)
