@@ -721,6 +721,9 @@
   * Maxlengthdifference
     * [Maxlengthdiff](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maxlengthdifference/maxlengthdiff.go)
     * [Maxlengthdiff Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maxlengthdifference/maxlengthdiff_test.go)
+  * Parsinglogfiles
+    * [Parsing Log Files](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/parsinglogfiles/parsing_log_files.go)
+    * [Parsing Log Files Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/parsinglogfiles/parsing_log_files_test.go)
   * Phonenumber
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/cases_test.go)
     * [Phone Number](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/phone_number.go)
