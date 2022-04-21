@@ -310,7 +310,10 @@
       * [Elons Toys Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/methods/elonstoys/elons_toys_test.go)
   * Networking
     * [Simple Tcp Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/simple_tcp_server.go)
+    * [Simple Web App](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/simple_web_app.go)
+    * [Simple Web App Templates](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/simple_web_app_templates.go)
     * [Socket Conn](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/socket_conn.go)
+    * [Stats Web App](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/stats_web_app.go)
     * [Tcp Client](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/tcp_client.go)
     * [Tcp Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/tcp_server.go)
   * Pointers
@@ -487,10 +490,10 @@
     * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/linkedlist.go)
     * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/node.go)
     * Singlylinked
+      * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/linkedlist.go)
       * Simple
         * [Simple Linked List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/simple/simple_linked_list.go)
         * [Simple Linked List Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/simple/simple_linked_list_test.go)
-      * [Singlylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/singlylinkedlist.go)
   * Lrucache
     * [Lrucache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/lrucache.go)
   * Queues
