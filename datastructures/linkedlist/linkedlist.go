@@ -3,11 +3,12 @@ package linkedlist
 import "errors"
 
 var (
-	ErrEmptyList = errors.New("list is empty")
+	ErrEmptyList    = errors.New("list is empty")
+	ErrInvalidIndex = errors.New("invalid index")
 )
 
-// ILinkedList is an interface for a linked list
-type ILinkedList interface {
+// LinkedList is an interface for a linked list
+type LinkedList interface {
 	// Append adds a new element to the end of the list
 	Append(interface{})
 
@@ -22,6 +23,7 @@ type ILinkedList interface {
 
 	DeleteTail() (node interface{}, err error)
 	DeleteAtPosition(position int)
+	GetNthNode(position int) (node Node, err error)
 	DeleteNode(node interface{})
 	DeleteNodeByData(data interface{})
 	SwapNodes(dataOne, dataTwo interface{})
@@ -29,14 +31,6 @@ type ILinkedList interface {
 	// Reverse reverses the list
 	Reverse()
 	String() string
-}
-
-// LinkedList is a linked list
-type LinkedList struct {
-	Head *Node
-}
-
-// NewLinkedList creates a new LinkedList
-func NewLinkedList() LinkedList {
-	return LinkedList{}
+	// Length returns the length of the list
+	Length() int
 }
