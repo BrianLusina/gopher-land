@@ -309,9 +309,16 @@
       * [Elons Toys](https://github.com/BrianLusina/gopher-land/blob/master/basics/methods/elonstoys/elons_toys.go)
       * [Elons Toys Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/methods/elonstoys/elons_toys_test.go)
   * Networking
+    * Rpc
+      * [Basic Rpc Client](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/rpc/basic_rpc_client.go)
+      * [Basic Rpc Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/rpc/basic_rpc_server.go)
+      * Rpcobjects
+        * [Rpc Objs](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/rpc/rpcobjects/rpc_objs.go)
     * [Simple Tcp Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/simple_tcp_server.go)
     * [Simple Web App](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/simple_web_app.go)
     * [Simple Web App Templates](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/simple_web_app_templates.go)
+    * Smtp
+      * [Basic Smtp](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/smtp/basic_smtp.go)
     * [Socket Conn](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/socket_conn.go)
     * [Stats Web App](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/stats_web_app.go)
     * [Tcp Client](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/tcp_client.go)
@@ -350,6 +357,12 @@
     * Needforspeed
       * [Need For Speed](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/needforspeed/need_for_speed.go)
       * [Need For Speed Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/needforspeed/need_for_speed_test.go)
+  * Templates
+    * [Basic Person Tmpl](https://github.com/BrianLusina/gopher-land/blob/master/basics/templates/basic_person_tmpl.go)
+    * [Template Conditionals](https://github.com/BrianLusina/gopher-land/blob/master/basics/templates/template_conditionals.go)
+    * [Template Funcs](https://github.com/BrianLusina/gopher-land/blob/master/basics/templates/template_funcs.go)
+    * [With End](https://github.com/BrianLusina/gopher-land/blob/master/basics/templates/with_end.go)
+    * [With Variables](https://github.com/BrianLusina/gopher-land/blob/master/basics/templates/with_variables.go)
   * Time
     * Bookingupforbeauty
       * [Booking Up For Beauty](https://github.com/BrianLusina/gopher-land/blob/master/basics/time/bookingupforbeauty/booking_up_for_beauty.go)
