@@ -441,6 +441,9 @@
   * Diffiehellman
     * [Diffie Hellman](https://github.com/BrianLusina/gopher-land/blob/master/cryptography/diffiehellman/diffie_hellman.go)
     * [Diffie Hellman Test](https://github.com/BrianLusina/gopher-land/blob/master/cryptography/diffiehellman/diffie_hellman_test.go)
+  * Rot13
+    * [Rot13](https://github.com/BrianLusina/gopher-land/blob/master/cryptography/rot13/rot13.go)
+    * [Rot13 Test](https://github.com/BrianLusina/gopher-land/blob/master/cryptography/rot13/rot13_test.go)
 
 ## Datastructures
   * Arrays
@@ -504,6 +507,7 @@
     * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/node.go)
     * Singlylinked
       * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/linkedlist.go)
+      * [Linkedlist Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/linkedlist_test.go)
       * Simple
         * [Simple Linked List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/simple/simple_linked_list.go)
         * [Simple Linked List Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/simple/simple_linked_list_test.go)
