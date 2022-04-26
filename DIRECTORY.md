@@ -790,6 +790,10 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordcount/cases_test.go)
     * [Word Count](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordcount/word_count.go)
     * [Word Count Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordcount/word_count_test.go)
+  * Wordy
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordy/cases_test.go)
+    * [Wordy](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordy/wordy.go)
+    * [Wordy Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordy/wordy_test.go)
 
 ## Gostructs
   * [Semanticversion](https://github.com/BrianLusina/gopher-land/blob/master/gostructs/semanticversion.go)
