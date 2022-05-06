@@ -496,6 +496,7 @@
     * [Errors](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/errors.go)
   * Graphs
     * [Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/graph.go)
+    * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/utils.go)
   * Hashmap
     * [Hashmap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashmap/hashmap.go)
     * [Hashmap Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashmap/hashmap_test.go)
