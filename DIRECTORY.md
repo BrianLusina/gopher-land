@@ -142,6 +142,8 @@
       * [Mergeintervals Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergeintervals/mergeintervals_test.go)
     * Mergesort
       * [Mergesort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergesort/mergesort.go)
+      * [Mergesort Concurrent](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergesort/mergesort_concurrent.go)
+      * [Mergesort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergesort/mergesort_test.go)
     * Quicksort
       * [Quicksort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/quicksort/quicksort.go)
   * Space Age
