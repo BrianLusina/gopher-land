@@ -1,8 +1,10 @@
 package main
 
-import "fmt"
-import "os"
-import "strconv"
+import (
+	"fmt"
+	"os"
+	"strconv"
+)
 
 func iter(b int, c chan<- int) {
 	for i := 0; i < b; i++ {
