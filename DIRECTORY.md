@@ -252,12 +252,15 @@
     * [Long Short Wait](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/long_short_wait.go)
     * [Multiplex Client Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/multiplex_client_server.go)
     * [Multiplex Client Server Shutdown](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/multiplex_client_server_shutdown.go)
+    * [Multiplication Table](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/multiplication_table.go)
     * [Null Idiom](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/null_idiom.go)
     * [Parallelize Over Cpu](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/parallelize_over_cpu.go)
     * [Pipe Filter](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/pipe_filter.go)
     * [Polar To Cartesian](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/polar_to_cartesian.go)
     * [Random Ones Zeroes](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/random_ones_zeroes.go)
     * [Reflection To Listen To Chans](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/reflection_to_listen_to_chans.go)
+    * [Scoreboard With Channels](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/scoreboard_with_channels.go)
+    * [Scoreboard With Mutexes](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/scoreboard_with_mutexes.go)
     * [Switching With Select](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/switching_with_select.go)
     * [Using Wait Group](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/using_wait_group.go)
     * [Varying Vars](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/varying_vars.go)
@@ -623,6 +626,9 @@
   * Base7
     * [Base7](https://github.com/BrianLusina/gopher-land/blob/master/gomath/base7/base7.go)
     * [Base7 Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/base7/base7_test.go)
+  * Checkfactor
+    * [Check Factor](https://github.com/BrianLusina/gopher-land/blob/master/gomath/checkfactor/check_factor.go)
+    * [Check Factor Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/checkfactor/check_factor_test.go)
   * Circleofnumbers
     * [Circleofnumbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers.go)
     * [Circleofnumbers Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers_test.go)
