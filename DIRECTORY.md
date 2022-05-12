@@ -660,9 +660,12 @@
     * [Odd Count](https://github.com/BrianLusina/gopher-land/blob/master/gomath/oddcount/odd_count.go)
     * [Odd Count Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/oddcount/odd_count_test.go)
   * Palindrome
+    * Largest Palindrome
+      * [Largest Palindrome Product](https://github.com/BrianLusina/gopher-land/blob/master/gomath/palindrome/largest_palindrome/largest_palindrome_product.go)
+      * [Largest Palindrome Product Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/palindrome/largest_palindrome/largest_palindrome_product_test.go)
     * Palindrome Product
-      * [Largest Palindrome Product](https://github.com/BrianLusina/gopher-land/blob/master/gomath/palindrome/palindrome_product/largest_palindrome_product.go)
-      * [Largest Palindrome Product Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/palindrome/palindrome_product/largest_palindrome_product_test.go)
+      * [Palindrome Products](https://github.com/BrianLusina/gopher-land/blob/master/gomath/palindrome/palindrome_product/palindrome_products.go)
+      * [Palindrome Products Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/palindrome/palindrome_product/palindrome_products_test.go)
   * Perfectnumbers
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/perfectnumbers/cases_test.go)
     * [Perfect Numbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/perfectnumbers/perfect_numbers.go)
