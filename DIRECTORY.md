@@ -246,8 +246,10 @@
     * [Deadlock Avoid Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/deadlock_avoid_goroutine.go)
     * [Deadlock Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/deadlock_goroutine.go)
     * [Done Pattern](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/done_pattern.go)
+    * Generators
+      * [Generator](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/generators/generator.go)
+      * [Lazy Generator](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/generators/lazy_generator.go)
     * [Lazy Evaluator](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/lazy_evaluator.go)
-    * [Lazy Generator](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/lazy_generator.go)
     * [Limiting Requests](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/limiting_requests.go)
     * [Long Short Wait](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/long_short_wait.go)
     * [Multiplex Client Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/multiplex_client_server.go)
@@ -643,6 +645,8 @@
     * [Trailingzeros](https://github.com/BrianLusina/gopher-land/blob/master/gomath/factorial/trailingZeros.go)
   * Fibonacci
     * [Fibonacci](https://github.com/BrianLusina/gopher-land/blob/master/gomath/fibonacci/fibonacci.go)
+    * [Fibonacci Gen](https://github.com/BrianLusina/gopher-land/blob/master/gomath/fibonacci/fibonacci_gen.go)
+    * [Fibonacci Gen Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/fibonacci/fibonacci_gen_test.go)
     * [Tribonacci](https://github.com/BrianLusina/gopher-land/blob/master/gomath/fibonacci/tribonacci.go)
   * Kclosest
     * [Kclosest](https://github.com/BrianLusina/gopher-land/blob/master/gomath/kclosest/kclosest.go)
@@ -734,6 +738,9 @@
   * Pov
     * [Pov](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/pov/pov.go)
     * [Pov Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/pov/pov_test.go)
+  * Prefixsum
+    * [Prefix Sum](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/prefixsum/prefix_sum.go)
+    * [Prefix Sum Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/prefixsum/prefix_sum_test.go)
   * Robotname
     * [Robot Name](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name.go)
     * [Robot Name Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name_test.go)
