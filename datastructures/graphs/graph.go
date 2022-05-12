@@ -1,11 +1,10 @@
 package graphs
 
-type Node struct {
-	Value int
-}
-
-func (t *Node) NewNode(value int) Node {
-	return Node{
-		Value: value,
-	}
+type Graph interface {
+	// AddNode adds a new node to the graph
+	AddNode(nodeOne Node) error
+	// GetNode returns a node from the graph
+	GetNode(data any) *Node
+	// Size returns the number of nodes in the graph
+	Size() int
 }
