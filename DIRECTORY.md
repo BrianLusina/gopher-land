@@ -502,7 +502,17 @@
       * [Circular Buffer Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/circularbuffer/circular_buffer_test.go)
     * [Errors](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/errors.go)
   * Graphs
+    * Directed
+      * [Directed Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/directed/directed_graph.go)
+      * [Directed Graph Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/directed/directed_graph_test.go)
+      * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/directed/node.go)
+    * [Edge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edge.go)
+    * [Errors](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/errors.go)
     * [Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/graph.go)
+    * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/node.go)
+    * Undirected
+      * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/undirected/node.go)
+      * [Undirected Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/undirected/undirected_graph.go)
     * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/utils.go)
     * [Utils Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/utils_test.go)
   * Hashmap
