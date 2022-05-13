@@ -439,6 +439,9 @@
     * [Book](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/books/book.go)
     * [Main](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/books/main.go)
   * [Channels](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/channels.go)
+  * Faninfanout
+    * [Double Nums](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/faninfanout/double_nums.go)
+    * [Update Position](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/faninfanout/update_position.go)
   * [Fibonacci](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/fibonacci.go)
   * [Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/goroutine.go)
   * Parallelletterfrequency
@@ -446,6 +449,8 @@
     * [Parallel Letter Frequency Test](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/parallelletterfrequency/parallel_letter_frequency_test.go)
   * Pinger
     * [Pinger](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/pinger/pinger.go)
+  * Sequencing
+    * [Game Channel](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/sequencing/game_channel.go)
   * [Timeout](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/timeout.go)
 
 ## Cryptography
