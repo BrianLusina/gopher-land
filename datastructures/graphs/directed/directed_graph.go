@@ -18,14 +18,11 @@ func NewDirectedGraph() *DirectedGraph {
 }
 
 func (g *DirectedGraph) AddNode(node Node) error {
-	if g.root == nil {
-		g.root = &node
-	}
 	if g.nodes == nil {
 		g.nodes = make(map[any]*Node)
 	}
 
-	if _, ok := g.nodes[node.Data]; ok {
+	if g.nodeInGraph(node) {
 		return graphs.ErrNodeExists
 	} else {
 		g.nodes[node.Data] = &node
@@ -45,4 +42,9 @@ func (g *DirectedGraph) GetNode(data any) *Node {
 
 func (g *DirectedGraph) Size() int {
 	return g.count
+}
+
+func (g *DirectedGraph) nodeInGraph(node Node) bool {
+	_, ok := g.nodes[node.Data]
+	return ok
 }
