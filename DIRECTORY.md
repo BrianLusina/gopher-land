@@ -511,6 +511,11 @@
       * [Directed Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/directed/directed_graph.go)
       * [Directed Graph Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/directed/directed_graph_test.go)
       * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/directed/node.go)
+    * Disjoint Set
+      * [Disjoint Set](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/disjoint_set/disjoint_set.go)
+      * [Disjoint Set Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/disjoint_set/disjoint_set_test.go)
+      * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/disjoint_set/node.go)
+      * [Node Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/disjoint_set/node_test.go)
     * [Edge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edge.go)
     * [Errors](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/errors.go)
     * [Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/graph.go)
