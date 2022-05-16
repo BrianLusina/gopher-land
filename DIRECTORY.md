@@ -767,6 +767,9 @@
   * Robotname
     * [Robot Name](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name.go)
     * [Robot Name Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name_test.go)
+  * Slowestkey
+    * [Slowest Key](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key.go)
+    * [Slowest Key Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key_test.go)
   * Tournament
     * [Tournament](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/tournament/tournament.go)
     * [Tournament Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/tournament/tournament_test.go)
