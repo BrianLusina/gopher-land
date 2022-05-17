@@ -26,11 +26,13 @@ func (d *DisjointSet) Union(nodeOne, nodeTwo *Node) {
 	rootX := d.Find(nodeOne)
 	rootY := d.Find(nodeTwo)
 
-	if rootX.rank > rootY.rank {
-		rootY.parent = rootX
-	} else {
-		rootX.parent = rootY
-		if rootX.rank == rootY.rank {
+	if rootX != rootY {
+		if rootX.rank > rootY.rank {
+			rootY.parent = rootX
+		} else if rootX.rank < rootY.rank {
+			rootX.parent = rootY
+		} else {
+			rootX.parent = rootY
 			rootY.rank++
 		}
 	}
