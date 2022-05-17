@@ -32,4 +32,3 @@ We can use a function dfs to perform a floodfill on a target pixel.
 Time Complexity: O(N), where N is the number of pixels in the image. We might process every pixel.
 
 Space Complexity: O(N), the size of the implicit call stack when calling dfs.
-
