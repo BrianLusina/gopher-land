@@ -742,6 +742,9 @@
   * Easethestockbroker
     * [Ease The Stockbroker](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/easethestockbroker/ease_the_stockbroker.go)
     * [Ease The Stockbroker Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/easethestockbroker/ease_the_stockbroker_test.go)
+  * Floodfill
+    * [Flood Fill](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill.go)
+    * [Flood Fill Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill_test.go)
   * Greenvalley
     * [Greenvalley](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/greenvalley/greenvalley.go)
   * Jumpgame
