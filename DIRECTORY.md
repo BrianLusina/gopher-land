@@ -761,6 +761,9 @@
   * Numberofislands
     * [Number Of Islands](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofislands/number_of_islands.go)
     * [Number Of Islands Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofislands/number_of_islands_test.go)
+  * Numberofprovinces
+    * [Number Of Provinces](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofprovinces/number_of_provinces.go)
+    * [Number Of Provinces Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofprovinces/number_of_provinces_test.go)
   * Pov
     * [Pov](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/pov/pov.go)
     * [Pov Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/pov/pov_test.go)
