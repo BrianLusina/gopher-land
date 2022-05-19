@@ -517,6 +517,7 @@
       * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/disjoint_set/node.go)
       * [Node Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/disjoint_set/node_test.go)
     * [Edge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edge.go)
+    * [Edge Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edge_test.go)
     * [Errors](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/errors.go)
     * [Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/graph.go)
     * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/node.go)
@@ -758,6 +759,9 @@
   * Maxareaofisland
     * [Maxareaofisland](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/maxareaofisland/maxareaofisland.go)
     * [Maxareaofisland Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/maxareaofisland/maxareaofisland_test.go)
+  * Numberofclosedislands
+    * [Number Of Closed Islands](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofclosedislands/number_of_closed_islands.go)
+    * [Number Of Closed Islands Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofclosedislands/number_of_closed_islands_test.go)
   * Numberofislands
     * [Number Of Islands](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofislands/number_of_islands.go)
     * [Number Of Islands Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofislands/number_of_islands_test.go)
