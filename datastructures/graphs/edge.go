@@ -33,6 +33,10 @@ func NewEdge(nodeOne, nodeTwo *Node, weight int) *Edge {
 		}
 	}
 
+	// increment the degree of both nodes
+	nodeOne.Degree++
+	nodeTwo.Degree++
+
 	return &Edge{
 		NodeOne: nodeOne,
 		NodeTwo: nodeTwo,

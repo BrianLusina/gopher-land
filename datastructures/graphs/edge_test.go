@@ -22,6 +22,9 @@ var _ = Describe("Edge", func() {
 		Expect(edge).ToNot(BeNil())
 		Expect(edge.GetWeight()).To(Equal(0))
 		Expect(edge.GetNodes()).To(Equal([]*Node{nodeOne, nodeTwo}))
+
+		Expect(nodeOne.Degree).To(Equal(1))
+		Expect(nodeTwo.Degree).To(Equal(1))
 	})
 
 	It("should add multiple edges to existing edge to create a hyper edge", func() {
@@ -33,6 +36,8 @@ var _ = Describe("Edge", func() {
 		Expect(edgeOne).ToNot(BeNil())
 		Expect(edgeOne.GetWeight()).To(Equal(0))
 		Expect(edgeOne.GetNodes()).To(Equal([]*Node{nodeOne, nodeTwo}))
+		Expect(nodeOne.Degree).To(Equal(1))
+		Expect(nodeTwo.Degree).To(Equal(1))
 
 		nodeThree := NewNode(3)
 		nodeFour := NewNode(4)
@@ -42,6 +47,8 @@ var _ = Describe("Edge", func() {
 		Expect(edgeTwo).ToNot(BeNil())
 		Expect(edgeTwo.GetWeight()).To(Equal(0))
 		Expect(edgeTwo.GetNodes()).To(Equal([]*Node{nodeThree, nodeFour}))
+		Expect(nodeThree.Degree).To(Equal(1))
+		Expect(nodeFour.Degree).To(Equal(1))
 
 		edgeOne.AddEdge(edgeTwo)
 

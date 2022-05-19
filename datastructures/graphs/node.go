@@ -1,6 +1,6 @@
 package graphs
 
-// Node represents a node in a graph
+// Node represents a node/vertex in a graph
 type Node struct {
 	// Data of the node
 	Data any

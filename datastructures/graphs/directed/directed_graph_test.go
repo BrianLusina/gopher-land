@@ -16,7 +16,7 @@ var _ = Describe("DirectedGraph", func() {
 	It("should add a new node to the graph successfully", func() {
 		g := NewDirectedGraph()
 		node := NewNode(1)
-		g.AddNode(*node)
+		g.AddNode(node)
 
 		Expect(g.Size()).To(Equal(1))
 	})
@@ -26,10 +26,10 @@ var _ = Describe("DirectedGraph", func() {
 		nodeOne := NewNode(1)
 		nodeTwo := NewNode(1)
 
-		errOne := g.AddNode(*nodeOne)
+		errOne := g.AddNode(nodeOne)
 		Expect(errOne).To(BeNil())
 
-		errTwo := g.AddNode(*nodeTwo)
+		errTwo := g.AddNode(nodeTwo)
 		Expect(errTwo).ToNot(BeNil())
 
 		Expect(g.Size()).To(Equal(1))
@@ -41,9 +41,9 @@ var _ = Describe("DirectedGraph", func() {
 		nodeTwo := NewNode(2)
 		nodeThree := NewNode(3)
 
-		_ = g.AddNode(*nodeOne)
-		_ = g.AddNode(*nodeTwo)
-		_ = g.AddNode(*nodeThree)
+		_ = g.AddNode(nodeOne)
+		_ = g.AddNode(nodeTwo)
+		_ = g.AddNode(nodeThree)
 
 		Expect(g.Size()).To(Equal(3))
 	})
