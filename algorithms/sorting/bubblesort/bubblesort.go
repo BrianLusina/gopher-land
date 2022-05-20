@@ -1,6 +1,8 @@
 package bubblesort
 
-// BubbleSort sorts a slice of integers in ascending order using bubble sort algorithm
+import "gopherland/pkg/types"
+
+// BubbleSort sorts a slice of numbers in ascending order using bubble sort algorithm
 // Approach
 // 	select the first element of the array
 // 	compare it with its next element
@@ -14,7 +16,7 @@ package bubblesort
 //	O(n^2) Average performance
 //	Space Complexity
 //	O(1) Worst case
-func BubbleSort(arr []int) []int {
+func BubbleSort[T types.Number](arr []T) []T {
 	for i := 0; i < len(arr); i++ {
 		for j := 0; j < len(arr)-i-1; j++ {
 			if arr[j] > arr[j+1] {

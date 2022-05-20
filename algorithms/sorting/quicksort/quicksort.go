@@ -1,7 +1,9 @@
 package quicksort
 
+import "gopherland/pkg/types"
+
 // partitions a slice into 2 and returns the pivot index. Assumes the pivot is at the end of the slice
-func partition(theSlice []int, startIndex, endIndex int) int {
+func partition[T types.Number](theSlice []T, startIndex, endIndex int) int {
 
 	pivot := theSlice[endIndex]
 
@@ -34,7 +36,7 @@ func partition(theSlice []int, startIndex, endIndex int) int {
 }
 
 // quicksortSubSlice uses recurstion to sort each partition of the slice
-func quicksortSubSlice(theSlice []int, startIndex, endIndex int) {
+func quicksortSubSlice[T types.Number](theSlice []T, startIndex, endIndex int) {
 
 	// base case, list with 0 or 1 element
 	if startIndex >= endIndex {
@@ -50,7 +52,7 @@ func quicksortSubSlice(theSlice []int, startIndex, endIndex int) {
 }
 
 // Quicksort sorts a slice of integers using quicksort algorithm
-func Quicksort(theSlice []int) []int {
+func Quicksort[T types.Number](theSlice []T) []T {
 	length := len(theSlice)
 
 	// Nothing to sort here
