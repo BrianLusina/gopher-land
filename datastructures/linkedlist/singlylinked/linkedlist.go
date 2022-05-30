@@ -7,20 +7,20 @@ import (
 )
 
 // LinkedList data structure represents a singly linked list.
-type LinkedList struct {
+type LinkedList[T comparable] struct {
 	// Head of the list
-	Head *linkedlist.Node
+	Head *linkedlist.Node[T]
 	// size of the list
 	size int
 }
 
-// NewLinkedList creates a new LinkedList
-func NewLinkedList() *LinkedList {
-	return &LinkedList{}
+// NewLinkedList creates a new Singly LinkedList
+func NewLinkedList[T comparable]() *LinkedList[T] {
+	return new(LinkedList[T])
 }
 
 // Append adds a new Node at the end of a linked list
-func (sll *LinkedList) Append(val interface{}) {
+func (sll *LinkedList[T]) Append(val T) {
 	node := linkedlist.NewNode(val)
 
 	if sll.Head == nil {
@@ -36,14 +36,14 @@ func (sll *LinkedList) Append(val interface{}) {
 }
 
 // Prepend adds a new node to the beginning of the list
-func (sll *LinkedList) Prepend(val interface{}) {
+func (sll *LinkedList[T]) Prepend(val T) {
 	node := linkedlist.NewNode(val)
 	node.Next = sll.Head
 	sll.Head = node
 }
 
 // Pop removes a node at the end of a linked list & returns its value.
-func (sll *LinkedList) Pop() (interface{}, error) {
+func (sll *LinkedList[T]) Pop() (any, error) {
 	if sll.Head == nil {
 		return nil, linkedlist.ErrEmptyList
 	}
@@ -64,8 +64,8 @@ func (sll *LinkedList) Pop() (interface{}, error) {
 	return data, nil
 }
 
-func (sll *LinkedList) Array() []interface{} {
-	var values []interface{}
+func (sll *LinkedList[T]) Array() []any {
+	var values []any
 	current := sll.Head
 	for ; current != nil; current = current.Next {
 		values = append(values, current.Data)
@@ -73,19 +73,32 @@ func (sll *LinkedList) Array() []interface{} {
 	return values
 }
 
-func (sll LinkedList) String() string {
-	return fmt.Sprintf("%s", sll.Head.Data)
+func (sll LinkedList[T]) String() string {
+	current := sll.Head
+	result := ""
+
+	for current.Next != nil {
+		result += fmt.Sprintf("%v -> ", current.Data)
+	}
+
+	result += "nil"
+
+	return result
 }
 
-func (sll *LinkedList) DeleteNode(node interface{}) {}
-
-func (sll *LinkedList) DeleteNodeByData(data interface{}) {}
-
-func (sll *LinkedList) DeleteTail() (interface{}, error) {
+func (sll *LinkedList[T]) DeleteNode(node any) {
 	panic("implement me")
 }
 
-func (sll *LinkedList) SwapNodesAtKthAndKPlusOne(k int) {
+func (sll *LinkedList[T]) DeleteNodeByData(data any) {
+	panic("implement me")
+}
+
+func (sll *LinkedList[T]) DeleteTail() (any, error) {
+	panic("implement me")
+}
+
+func (sll *LinkedList[T]) SwapNodesAtKthAndKPlusOne(k int) {
 	if sll.Head == nil || sll.Head.Next == nil {
 		return
 	}
@@ -109,7 +122,7 @@ func (sll *LinkedList) SwapNodesAtKthAndKPlusOne(k int) {
 
 // DeleteAtBeg removes a node at the beggining of a linked list & returns its value.
 // Returns -1 if the list is empty
-func (sll *LinkedList) DeleteAtBeg() interface{} {
+func (sll *LinkedList[T]) DeleteAtBeg() any {
 	if sll.Head == nil {
 		return -1
 	}
@@ -121,7 +134,7 @@ func (sll *LinkedList) DeleteAtBeg() interface{} {
 }
 
 // Count counts the number of nodes in a Linked List
-func (sll *LinkedList) Count() (count int) {
+func (sll *LinkedList[T]) Count() (count int) {
 	current := sll.Head
 
 	for current != nil {
@@ -132,7 +145,7 @@ func (sll *LinkedList) Count() (count int) {
 }
 
 // Display prints out the elements of the list.
-func (sll *LinkedList) Display() {
+func (sll *LinkedList[T]) Display() {
 	for cur := sll.Head; cur != nil; cur = cur.Next {
 		fmt.Print(cur.Data, " ")
 	}
@@ -141,7 +154,7 @@ func (sll *LinkedList) Display() {
 }
 
 // IsPalindrome checks if a linked list is a palindrome
-func (sll *LinkedList) IsPalindrome() bool {
+func (sll *LinkedList[T]) IsPalindrome() bool {
 	if sll.Head == nil {
 		return false
 	}
@@ -151,7 +164,7 @@ func (sll *LinkedList) IsPalindrome() bool {
 	}
 
 	current := sll.Head
-	stack := []interface{}{}
+	stack := []any{}
 
 	for current != nil {
 		stack = append(stack, current.Data)
@@ -174,7 +187,7 @@ func (sll *LinkedList) IsPalindrome() bool {
 }
 
 // DetectCycle detects cycles in a LinkedList & returns the Node that contains a cycle
-func (sll *LinkedList) DetectCycle() *linkedlist.Node {
+func (sll *LinkedList[T]) DetectCycle() *linkedlist.Node[T] {
 	if sll.Head == nil || sll.Head.Next == nil {
 		return nil
 	}
@@ -205,7 +218,7 @@ func (sll *LinkedList) DetectCycle() *linkedlist.Node {
 }
 
 // GetNthNode gets the nth node in a linked list
-func (sll *LinkedList) GetNthNode(position int) (n *linkedlist.Node, err error) {
+func (sll *LinkedList[T]) GetNthNode(position int) (n *linkedlist.Node[T], err error) {
 	if position < 0 {
 		return nil, errors.New("position less than 0")
 	}
@@ -227,8 +240,24 @@ func (sll *LinkedList) GetNthNode(position int) (n *linkedlist.Node, err error) 
 	return current, nil
 }
 
-func (sll *LinkedList) DeleteNodesByData(data interface{}) *linkedlist.Node {
-	dummyHead := &linkedlist.Node{Data: -1}
+// GetMiddleNode returns the middle node of the list
+func (sll *LinkedList[T]) GetMiddleNode() (*linkedlist.Node[T], error) {
+	if sll.Head == nil {
+		return nil, linkedlist.ErrEmptyList
+	}
+
+	fast, slow := sll.Head, sll.Head
+
+	for fast != nil && fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+
+	return slow, nil
+}
+
+func (sll *LinkedList[T]) DeleteNodesByData(data any) *linkedlist.Node[T] {
+	dummyHead := &linkedlist.Node[T]{}
 	current := dummyHead
 
 	for current.Next != nil {
@@ -245,7 +274,7 @@ func (sll *LinkedList) DeleteNodesByData(data interface{}) *linkedlist.Node {
 
 // RemoveDuplicates removes duplicates from a LinkedList
 // This assumes the linked list is sorted in ascending order
-func (sll *LinkedList) RemoveDuplicates() *linkedlist.Node {
+func (sll *LinkedList[T]) RemoveDuplicates() *linkedlist.Node[T] {
 	head := sll.Head
 
 	if head == nil || head.Next == nil {
@@ -275,7 +304,7 @@ func (sll *LinkedList) RemoveDuplicates() *linkedlist.Node {
 // 1 -> 2 -> 3 -> 4
 // becomes
 // 2 -> 1 -> 4 -> 3
-func (sll *LinkedList) PairwiseSwap() *linkedlist.Node {
+func (sll *LinkedList[T]) PairwiseSwap() *linkedlist.Node[T] {
 	head := sll.Head
 
 	// Nothing to do here
@@ -309,7 +338,7 @@ func (sll *LinkedList) PairwiseSwap() *linkedlist.Node {
 // from the end (the list is 1-indexed).
 // E.g Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
 // Output: [7,9,6,6,8,7,3,0,9,5]
-func (sll *LinkedList) SwapNodesAtKthAndKPlus1(k int) *LinkedList {
+func (sll *LinkedList[T]) SwapNodesAtKthAndKPlus1(k int) *LinkedList[T] {
 	a, b := sll.Head, sll.Head
 
 	for i := 1; i < k; i++ {
@@ -335,7 +364,7 @@ func (sll *LinkedList) SwapNodesAtKthAndKPlus1(k int) *LinkedList {
 // If we can't find the first data item nor the second. No need to perform swap. If the 2 data items are similar
 // no need to perform swap as well.
 // If the LinkedList is empty (i.e. has no head node), return, no need to swap when we have no LinkedList :)
-func (sll *LinkedList) SwapNodes(dataOne, dataTwo interface{}) {
+func (sll *LinkedList[T]) SwapNodes(dataOne, dataTwo any) {
 	if sll.Head == nil {
 		return
 	}
@@ -363,12 +392,12 @@ func (sll *LinkedList) SwapNodes(dataOne, dataTwo interface{}) {
 }
 
 // Reverse a LinkedList. Making the head the tail and the tail the head
-func (sll *LinkedList) Reverse() {
+func (sll *LinkedList[T]) Reverse() {
 	if sll.Head == nil {
 		return
 	}
 
-	var prev, Next *linkedlist.Node
+	var prev, Next *linkedlist.Node[T]
 
 	var current = sll.Head
 
@@ -382,7 +411,7 @@ func (sll *LinkedList) Reverse() {
 	sll.Head = prev
 }
 
-func (sll *LinkedList) DeleteAtPosition(position int) (*linkedlist.Node, error) {
+func (sll *LinkedList[T]) DeleteAtPosition(position int) (*linkedlist.Node[T], error) {
 	if sll.Head == nil {
 		return nil, linkedlist.ErrEmptyList
 	}
@@ -424,7 +453,7 @@ func (sll *LinkedList) DeleteAtPosition(position int) (*linkedlist.Node, error) 
 // AddAtPosition adds a node at the specified position in the LinkedList.
 // if position is greater than the length of the LinkedList, the node should not be added
 // if the position is equal to the length of the LinkedList, the node should be added at the end of the LinkedList
-func (sll *LinkedList) AddAtPosition(position int, data interface{}) {
+func (sll *LinkedList[T]) AddAtPosition(position int, data T) {
 	node := linkedlist.NewNode(data)
 
 	if sll.Head == nil {
@@ -452,7 +481,7 @@ func (sll *LinkedList) AddAtPosition(position int, data interface{}) {
 	}
 
 	var current = sll.Head
-	var prev, next *linkedlist.Node
+	var prev, next *linkedlist.Node[T]
 
 	for current != nil && position != 0 {
 		next = current.Next
@@ -468,7 +497,7 @@ func (sll *LinkedList) AddAtPosition(position int, data interface{}) {
 	sll.Head = prev
 }
 
-func (sll LinkedList) Length() int {
+func (sll LinkedList[T]) Length() int {
 	if sll.Head == nil {
 		return 0
 	}

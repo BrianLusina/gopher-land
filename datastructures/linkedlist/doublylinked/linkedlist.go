@@ -6,51 +6,19 @@ import (
 	"gopherland/datastructures/linkedlist"
 )
 
-// DoublyLinkedList LinkedList data structure
-type DoublyLinkedList struct {
-	Head, Tail *Node
+// LinkedList LinkedList data structure
+type LinkedList[T comparable] struct {
+	Head, Tail *Node[T]
 	Len        int //current length of the list
 }
 
-func NewDoublyLinkedList() *DoublyLinkedList {
-	return new(DoublyLinkedList)
-}
-
-func (dll DoublyLinkedList) String() string {
-	return fmt.Sprintf("%s", dll.Head.Data)
-}
-
-// Size returns the size of the doubly linked list
-func (dll *DoublyLinkedList) Size() int {
-	return dll.Len
-}
-
-// Front returns the head of the linked list or nil if empty
-func (dll *DoublyLinkedList) Front() *Node {
-	if dll.Len == 0 {
-		return nil
-	}
-	return dll.Head
-}
-
-// Back returns the tail of the linked list or nil if empty
-func (dll *DoublyLinkedList) Back() *Node {
-	if dll.Len == 0 {
-		return nil
-	}
-	return dll.Tail
-}
-
-// Prepend adds a new node to the beggining of the list
-func (dll *DoublyLinkedList) Prepend(val interface{}) {
-	node := NewDoublyLinkedListNode(val)
-	node.Next = dll.Head
-	dll.Head = node
+func NewLinkedList[T comparable]() *LinkedList[T] {
+	return new(LinkedList[T])
 }
 
 // Append adds a new Node at the end of a linked list
-func (dll *DoublyLinkedList) Append(val interface{}) {
-	node := NewDoublyLinkedListNode(val)
+func (dll *LinkedList[T]) Append(val T) {
+	node := NewNode(val)
 	dll.Len++
 
 	if dll.Head == nil {
@@ -63,27 +31,121 @@ func (dll *DoublyLinkedList) Append(val interface{}) {
 	}
 
 	current.Next = node
+	node.Prev = current
 }
 
-func (dll *DoublyLinkedList) Pop() {
+func (dll *LinkedList[T]) String() string {
+	var s string
+	current := dll.Head
+
+	for current != nil {
+		s += fmt.Sprintf("%v <-> ", current.Data)
+		current = current.Next
+	}
+
+	s += "nil"
+
+	return s
+}
+
+// Size returns the size of the doubly linked list
+func (dll *LinkedList[T]) Size() int {
+	return dll.Len
+}
+
+// Front returns the head of the linked list or nil if empty
+func (dll *LinkedList[T]) Front() *Node[T] {
+	if dll.Len == 0 {
+		return nil
+	}
+	return dll.Head
+}
+
+// Back returns the tail of the linked list or nil if empty
+func (dll *LinkedList[T]) Back() *Node[T] {
+	if dll.Len == 0 {
+		return nil
+	}
+	return dll.Tail
+}
+
+// Prepend adds a new node to the beginning of the list
+func (dll *LinkedList[T]) Prepend(val T) {
+	node := NewNode(val)
+
+	if dll.Head == nil {
+		dll.Head = node
+	}
+
+	node.Next = dll.Head
+	dll.Head.Prev = node
+	dll.Head = node
+	dll.Len++
+}
+
+func (dll *LinkedList[T]) Pop() {
 
 }
 
-func (dll *DoublyLinkedList) DeleteNode(node interface{}) {}
+// DeleteNode removes a node from the list
+func (dll *LinkedList[T]) DeleteNode(node *Node[T]) {
+	if dll.Head == nil {
+		return
+	}
 
-func (dll *DoublyLinkedList) DeleteNodeByData(data interface{}) {}
+	current := dll.Head
 
-// DeleteTail removes the last node in a doubly linked list and returns it's value
-func (dll *DoublyLinkedList) DeleteTail() (interface{}, error) {
+	for current != nil {
+		if current.Data == node.Data {
+			if node.Next != nil {
+				current.Prev.Next = current.Next
+				current.Next.Prev = current.Prev
+			} else {
+				current.Prev.Next = nil
+			}
+
+			dll.Len--
+			return
+		}
+		current = current.Next
+	}
+}
+
+// DeleteNodeByData deletes a node by its data
+func (dll *LinkedList[T]) DeleteNodeByData(data any) {
+	if dll.Head == nil {
+		return
+	}
+
+	current := dll.Head
+
+	for current != nil {
+		if current.Data == data {
+			if current.Next != nil {
+				current.Prev.Next = current.Next
+				current.Next.Prev = current.Prev
+			} else {
+				current.Prev.Next = nil
+			}
+
+			dll.Len--
+			return
+		}
+		current = current.Next
+	}
+}
+
+// DeleteTail removes the last node in a doubly linked list and returns it
+func (dll *LinkedList[T]) DeleteTail() (*Node[T], error) {
 	switch {
 	case dll.Head == nil:
 		return nil, linkedlist.ErrEmptyList
 
 	case dll.Head.Next == nil:
-		data := dll.Head.Data
+		node := dll.Head
 		dll.Head = nil
 		dll.Len--
-		return data, nil
+		return node, nil
 	case dll.Head.Next != nil:
 		current := dll.Head
 
@@ -91,9 +153,11 @@ func (dll *DoublyLinkedList) DeleteTail() (interface{}, error) {
 			current = current.Next
 		}
 
-		data := current.Next.Data
+		dll.Len--
+		node := current.Next
+		node.Prev = nil
 		current.Next = nil
-		return data, nil
+		return node, nil
 	default:
 		return nil, errors.New("Failed to delete tail")
 	}
@@ -123,7 +187,7 @@ func (dll *DoublyLinkedList) DeleteTail() (interface{}, error) {
 	// 	}
 }
 
-func (dll *DoublyLinkedList) SwapNodesAtKthAndKPlusOne(k int) {
+func (dll *LinkedList[T]) SwapNodesAtKthAndKPlusOne(k int) {
 	if dll.Head == nil || dll.Head.Next == nil {
 		return
 	}
@@ -146,7 +210,7 @@ func (dll *DoublyLinkedList) SwapNodesAtKthAndKPlusOne(k int) {
 }
 
 // DeleteAtBeg removes a node at the beggining of a linked list & returns its value.
-func (dll *DoublyLinkedList) DeleteAtBeg() interface{} {
+func (dll *LinkedList[T]) DeleteAtBeg() any {
 	if dll.Head == nil {
 		return nil
 	}
@@ -160,7 +224,7 @@ func (dll *DoublyLinkedList) DeleteAtBeg() interface{} {
 
 // DeleteAtEnd removes a node at the end of a linked list & returns its value.
 // Returns -1 if the list is empty
-func (dll *DoublyLinkedList) DeleteAtEnd() interface{} {
+func (dll *LinkedList[T]) DeleteAtEnd() any {
 	if dll.Head == nil {
 		return nil
 	}
@@ -176,7 +240,7 @@ func (dll *DoublyLinkedList) DeleteAtEnd() interface{} {
 }
 
 // Count counts the number of nodes in a Linked List
-func (dll *DoublyLinkedList) Count() (count int) {
+func (dll *LinkedList[T]) Count() (count int) {
 	current := dll.Head
 
 	for current != nil {
@@ -187,7 +251,7 @@ func (dll *DoublyLinkedList) Count() (count int) {
 }
 
 // Display prints out the elements of the list.
-func (dll *DoublyLinkedList) Display() {
+func (dll *LinkedList[T]) Display() {
 	for cur := dll.Head; cur != nil; cur = cur.Next {
 		fmt.Print(cur.Data, " ")
 	}
@@ -196,7 +260,7 @@ func (dll *DoublyLinkedList) Display() {
 }
 
 // IsPalindrome
-func (dll *DoublyLinkedList) IsPalindrome() bool {
+func (dll *LinkedList[T]) IsPalindrome() bool {
 	if dll.Head == nil {
 		return false
 	}
@@ -206,7 +270,7 @@ func (dll *DoublyLinkedList) IsPalindrome() bool {
 	}
 
 	current := dll.Head
-	stack := []interface{}{}
+	stack := []any{}
 
 	for current != nil {
 		stack = append(stack, current.Data)
@@ -229,7 +293,7 @@ func (dll *DoublyLinkedList) IsPalindrome() bool {
 }
 
 // DetectCycle detects cycles in a LinkedList & returns the Node that contains a cycle
-func (dll *DoublyLinkedList) DetectCycle() *Node {
+func (dll *LinkedList[T]) DetectCycle() *Node[T] {
 	if dll.Head == nil || dll.Head.Next == nil {
 		return nil
 	}
@@ -260,7 +324,7 @@ func (dll *DoublyLinkedList) DetectCycle() *Node {
 }
 
 // GetNthNode gets the nth node in a linked list
-func (dll *DoublyLinkedList) GetNthNode(position int) (n *Node, err error) {
+func (dll *LinkedList[T]) GetNthNode(position int) (n *Node[T], err error) {
 	if position < 0 {
 		return nil, errors.New("Position less than 0")
 	}
@@ -284,8 +348,24 @@ func (dll *DoublyLinkedList) GetNthNode(position int) (n *Node, err error) {
 	return current, nil
 }
 
+// GetMiddleNode returns the middle node of the list
+func (sll *LinkedList[T]) GetMiddleNode() (*Node[T], error) {
+	if sll.Head == nil {
+		return nil, linkedlist.ErrEmptyList
+	}
+
+	fast, slow := sll.Head, sll.Head
+
+	for fast != nil && fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+
+	return slow, nil
+}
+
 // DeleteNodeAtPosition deletes a node at the specified position and returns the deleted node
-func (dll *DoublyLinkedList) DeleteNodeAtPosition(position int) (*Node, error) {
+func (dll *LinkedList[T]) DeleteNodeAtPosition(position int) (*Node[T], error) {
 	if position < 0 {
 		errMessage := fmt.Sprintf("Invalid Index position given. Index is {%d}, expected position >= 0", position)
 		return nil, errors.New(errMessage)
@@ -323,9 +403,9 @@ func (dll *DoublyLinkedList) DeleteNodeAtPosition(position int) (*Node, error) {
 	return node, nil
 }
 
-// RemoveDuplicates removes duplicates from a DoublyLinkedList
+// RemoveDuplicates removes duplicates from a LinkedList
 // This assumes the linked list is sorted in ascending order
-func (dll *DoublyLinkedList) RemoveDuplicates() *Node {
+func (dll *LinkedList[T]) RemoveDuplicates() *Node[T] {
 	head := dll.Head
 
 	if head == nil || head.Next == nil {
@@ -355,7 +435,7 @@ func (dll *DoublyLinkedList) RemoveDuplicates() *Node {
 // 1 -> 2 -> 3 -> 4
 // becomes
 // 2 -> 1 -> 4 -> 3
-func (dll *DoublyLinkedList) PairwiseSwap() *Node {
+func (dll *LinkedList[T]) PairwiseSwap() *Node[T] {
 	head := dll.Head
 
 	// Nothing to do here
@@ -389,7 +469,7 @@ func (dll *DoublyLinkedList) PairwiseSwap() *Node {
 // from the end (the list is 1-indexed).
 // E.g Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
 // Output: [7,9,6,6,8,7,3,0,9,5]
-func (dll *DoublyLinkedList) SwapNodesAtKthAndKPlus1(k int) *DoublyLinkedList {
+func (dll *LinkedList[T]) SwapNodesAtKthAndKPlus1(k int) *LinkedList[T] {
 	a, b := dll.Head, dll.Head
 
 	for i := 1; i < k; i++ {
@@ -415,7 +495,7 @@ func (dll *DoublyLinkedList) SwapNodesAtKthAndKPlus1(k int) *DoublyLinkedList {
 // If we can't find the first data item nor the second. No need to perform swap. If the 2 data items are similar
 // no need to perform swap as well.
 // If the LinkedList is empty (i.e. has no head node), return, no need to swap when we have no LinkedList :)
-func (dll *DoublyLinkedList) SwapNodes(dataOne, dataTwo interface{}) {
+func (dll *LinkedList[T]) SwapNodes(dataOne, dataTwo any) {
 	if dll.Head == nil {
 		return
 	}
@@ -443,12 +523,12 @@ func (dll *DoublyLinkedList) SwapNodes(dataOne, dataTwo interface{}) {
 }
 
 // Reverse a LinkedList. Making the head the tail and the tail the head
-func (dll *DoublyLinkedList) Reverse() {
+func (dll *LinkedList[T]) Reverse() {
 	if dll.Head == nil {
 		return
 	}
 
-	var prev, Next *Node
+	var prev, Next *Node[T]
 
 	var current = dll.Head
 
@@ -462,12 +542,12 @@ func (dll *DoublyLinkedList) Reverse() {
 	dll.Head = prev
 }
 
-func (dll *DoublyLinkedList) DeleteAtPosition(position int) {
+func (dll *LinkedList[T]) DeleteAtPosition(position int) {
 	if dll.Head == nil {
 		return
 	}
 
-	var prev, Next *Node
+	var prev, Next *Node[T]
 
 	var current = dll.Head
 

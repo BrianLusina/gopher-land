@@ -8,7 +8,7 @@ var (
 )
 
 // LinkedList is an interface for a linked list
-type LinkedList interface {
+type LinkedList[T comparable] interface {
 	// Append adds a new element to the end of the list
 	Append(interface{})
 
@@ -22,15 +22,28 @@ type LinkedList interface {
 	Array() []interface{}
 
 	DeleteTail() (node interface{}, err error)
+
 	DeleteAtPosition(position int)
-	GetNthNode(position int) (node Node, err error)
+
+	// GetNthNode returns the nth node in the list
+	GetNthNode(position int) (node Node[T], err error)
+
+	// GetMiddleNode returns the middle node of the list
+	GetMiddleNode() (node Node[T], err error)
+
 	DeleteNode(node interface{})
+
 	DeleteNodeByData(data interface{})
+
 	SwapNodes(dataOne, dataTwo interface{})
+
 	SwapNodesAtKthAndKPlusOne(k int)
+
 	// Reverse reverses the list
 	Reverse()
+
 	String() string
+
 	// Length returns the length of the list
 	Length() int
 }

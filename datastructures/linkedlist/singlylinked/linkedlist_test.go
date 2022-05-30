@@ -1,6 +1,7 @@
 package singlylinkedlist
 
 import (
+	"gopherland/datastructures/linkedlist"
 	"testing"
 
 	. "github.com/onsi/ginkgo"
@@ -14,7 +15,7 @@ func TestSinglyLinkedList(t *testing.T) {
 
 var _ = Describe("SinglyLinkedList", func() {
 	It("should handle \"Prepend(1)\" -> \"Append(3)\" -> \"AddAtPosition(1,2)\" -> \"GetNthNode(1)\" -> \"DeleteAtPosition(1)\" -> \"GetNthNode(1)\"", func() {
-		sll := NewLinkedList()
+		sll := NewLinkedList[int]()
 		sll.Prepend(1)
 		sll.Append(3)
 		// linked list: 1 -> 3
@@ -35,7 +36,7 @@ var _ = Describe("SinglyLinkedList", func() {
 	})
 
 	It("Prepend(7) -> Prepend(2) -> Prepend(1) -> AddAtPosition(3, 0) -> DeleteAtPosition(2) -> Prepend(6) -> Append(4) -> GetNtNode(4) -> Prepend(4) -> AddAtPosition(5, 0) -> Prepend(6) ", func() {
-		sll := NewLinkedList()
+		sll := NewLinkedList[int]()
 
 		sll.Prepend(7)
 		Expect(sll.Head.Data).To(Equal(7))
@@ -81,7 +82,7 @@ var _ = Describe("SinglyLinkedList", func() {
 	})
 
 	It("Prepend(7) -> Append(7) -> Prepend(9) -> Append(8) -> Prepend(6) -> Prepend(0) -> GetNthNode(5)-> Prepend(0) -> GetNthNode(2) -> GetNthNode(5) -> Append(4)", func() {
-		sll := NewLinkedList()
+		sll := NewLinkedList[int]()
 
 		sll.Prepend(7)
 		Expect(sll.Head.Data).To(Equal(7))
@@ -133,7 +134,7 @@ var _ = Describe("SinglyLinkedList", func() {
 	})
 
 	It("Prepend(2) -> DeleteAtPosition(1) -> Prepend(2) -> Prepend(7) -> Prepend(3) -> Prepend(2) -> Prepend(5)-> Append(5) -> GetNthNode(5) -> DeleteAtPosition(6) -> DeleteAtPosition(4)", func() {
-		sll := NewLinkedList()
+		sll := NewLinkedList[int]()
 
 		sll.Prepend(2)
 		Expect(sll.Head.Data).To(Equal(2))
@@ -192,7 +193,7 @@ var _ = Describe("SinglyLinkedList", func() {
 	})
 
 	It("Prepend(4) -> GetNthNode(1) -> Prepend(1) -> Prepend(5) -> DeleteAtPosition(3) -> Prepend(7) -> GetNthNode(3)-> GetNthNode(3) -> GetNthNode(3) -> Prepend(1) -> DeleteAtPosition(4)", func() {
-		sll := NewLinkedList()
+		sll := NewLinkedList[int]()
 
 		sll.Prepend(4)
 		Expect(sll.Head.Data).To(Equal(4))
@@ -251,7 +252,7 @@ var _ = Describe("SinglyLinkedList", func() {
 	})
 
 	It("Prepend(5) -> AddAtPosition(1, 2) -> GetNthNode(1) -> Prepend(6) -> Append(2) -> GetNthNode(3)-> Append(1) -> GetNthNode(5) -> Prepend(2) -> GetNthNode(2) -> Prepend(6)", func() {
-		sll := NewLinkedList()
+		sll := NewLinkedList[int]()
 
 		sll.Prepend(5)
 		Expect(sll.Head.Data).To(Equal(5))
@@ -308,5 +309,48 @@ var _ = Describe("SinglyLinkedList", func() {
 		Expect(sll.Head.Data).To(Equal(6))
 		Expect(sll.Length()).To(Equal(7))
 		// linked list: 6 -> 2 -> 6 -> 5 -> 2 -> 2 -> 1 -> nil
+	})
+
+	Context("GetMiddleNode", func() {
+		It("should return nil for an empty list", func() {
+			sll := NewLinkedList[int]()
+			val, err := sll.GetMiddleNode()
+
+			Expect(err).ToNot(BeNil())
+			Expect(val).To(BeNil())
+
+			Expect(err).To(Equal(linkedlist.ErrEmptyList))
+		})
+
+		It("should return 3 for linked list of 1 -> 2 -> 3 -> 4 -> 5", func() {
+			sll := NewLinkedList[int]()
+			sll.Append(1)
+			sll.Append(2)
+			sll.Append(3)
+			sll.Append(4)
+			sll.Append(5)
+
+			val, err := sll.GetMiddleNode()
+
+			Expect(err).To(BeNil())
+			Expect(val).ToNot(BeNil())
+			Expect(val.Data).To(Equal(3))
+		})
+
+		It("should return 7 for linked list of 2->4->6->7->5->1", func() {
+			sll := NewLinkedList[int]()
+			sll.Append(2)
+			sll.Append(4)
+			sll.Append(6)
+			sll.Append(7)
+			sll.Append(5)
+			sll.Append(1)
+
+			val, err := sll.GetMiddleNode()
+
+			Expect(err).To(BeNil())
+			Expect(val).ToNot(BeNil())
+			Expect(val.Data).To(Equal(7))
+		})
 	})
 })
