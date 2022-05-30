@@ -535,9 +535,10 @@
     * [Hashset Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashset/hashset_test.go)
   * Linkedlist
     * Doublylinked
-      * [Doublylinkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/doublylinkedlist.go)
-      * [Doublylinkedlistnode](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/doublylinkedlistnode.go)
+      * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/linkedlist.go)
+      * [Linkedlist Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/linkedlist_test.go)
       * [List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/list.go)
+      * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/node.go)
     * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/linkedlist.go)
     * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/node.go)
     * Singlylinked
