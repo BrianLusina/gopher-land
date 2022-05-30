@@ -146,6 +146,7 @@
       * [Mergesort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergesort/mergesort_test.go)
     * Quicksort
       * [Quicksort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/quicksort/quicksort.go)
+      * [Quicksort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/quicksort/quicksort_test.go)
   * Space Age
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/cases_test.go)
     * [Space Age](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/space_age.go)
@@ -819,6 +820,9 @@
   * Maxlengthdifference
     * [Maxlengthdiff](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maxlengthdifference/maxlengthdiff.go)
     * [Maxlengthdiff Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maxlengthdifference/maxlengthdiff_test.go)
+  * Meteorology
+    * [Meteorology](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/meteorology/meteorology.go)
+    * [Meteorology Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/meteorology/meteorology_test.go)
   * Parsinglogfiles
     * [Parsing Log Files](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/parsinglogfiles/parsing_log_files.go)
     * [Parsing Log Files Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/parsinglogfiles/parsing_log_files_test.go)
@@ -877,3 +881,7 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gotime/meetup/cases_test.go)
     * [Meetup](https://github.com/BrianLusina/gopher-land/blob/master/gotime/meetup/meetup.go)
     * [Meetup Test](https://github.com/BrianLusina/gopher-land/blob/master/gotime/meetup/meetup_test.go)
+
+## Pkg
+  * Types
+    * [Types](https://github.com/BrianLusina/gopher-land/blob/master/pkg/types/types.go)
