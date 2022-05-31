@@ -397,15 +397,20 @@ func (sll *LinkedList[T]) Reverse() {
 		return
 	}
 
-	var prev, Next *linkedlist.Node[T]
+	var prev, next *linkedlist.Node[T]
 
 	var current = sll.Head
 
 	for current != nil {
-		Next = current.Next
+		// get the next node
+		next = current.Next
+
+		// change next of current, where the actual reversing happens
 		current.Next = prev
+
+		// move prev and current one step forward
 		prev = current
-		current = Next
+		current = next
 	}
 
 	sll.Head = prev

@@ -353,4 +353,33 @@ var _ = Describe("SinglyLinkedList", func() {
 			Expect(val.Data).To(Equal(7))
 		})
 	})
+
+	Context("Reverse", func() {
+		It("should reverse a non empty linked list 1 -> 2 -> 3 -> 4 -> 5", func() {
+			sll := NewLinkedList[int]()
+			sll.Append(1)
+			sll.Append(2)
+			sll.Append(3)
+			sll.Append(4)
+			sll.Append(5)
+
+			sll.Reverse()
+
+			Expect(sll.Head.Data).To(Equal(5))
+		})
+
+		It("should reverse linked list of 2->4->6->7->5->1", func() {
+			sll := NewLinkedList[int]()
+			sll.Append(2)
+			sll.Append(4)
+			sll.Append(6)
+			sll.Append(7)
+			sll.Append(5)
+			sll.Append(1)
+
+			sll.Reverse()
+
+			Expect(sll.Head.Data).To(Equal(1))
+		})
+	})
 })

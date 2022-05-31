@@ -528,15 +528,21 @@ func (dll *LinkedList[T]) Reverse() {
 		return
 	}
 
-	var prev, Next *Node[T]
+	var prev *Node[T]
 
 	var current = dll.Head
 
 	for current != nil {
-		Next = current.Next
+		// copy pointer to next element before we overwrite current.Next
+		next := current.Next
+
+		// reverse the next pointer and previous
 		current.Next = prev
+		current.Prev = next
+
+		// move prev and current forward
 		prev = current
-		current = Next
+		current = next
 	}
 
 	dll.Head = prev
