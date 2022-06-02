@@ -382,4 +382,48 @@ var _ = Describe("SinglyLinkedList", func() {
 			Expect(sll.Head.Data).To(Equal(1))
 		})
 	})
+
+	Context("Rotate", func() {
+		It("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 when k=0", func() {
+			sll := NewLinkedList[int]()
+			sll.Append(10)
+			sll.Append(20)
+			sll.Append(30)
+			sll.Append(40)
+			sll.Append(50)
+			sll.Append(60)
+
+			sll.Rotate(0)
+
+			Expect(sll.Head.Data).To(Equal(10))
+		})
+
+		It("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=7 positions", func() {
+			sll := NewLinkedList[int]()
+			sll.Append(10)
+			sll.Append(20)
+			sll.Append(30)
+			sll.Append(40)
+			sll.Append(50)
+			sll.Append(60)
+
+			sll.Rotate(7)
+
+			Expect(sll.Head.Data).To(Equal(10))
+		})
+
+		It("should rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=4 positions", func() {
+			sll := NewLinkedList[int]()
+			sll.Append(10)
+			sll.Append(20)
+			sll.Append(30)
+			sll.Append(40)
+			sll.Append(50)
+			sll.Append(60)
+
+			sll.Rotate(4)
+
+			Expect(sll.Head.Data).To(Equal(50))
+		})
+	})
 })

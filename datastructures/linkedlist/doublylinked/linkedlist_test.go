@@ -149,4 +149,48 @@ var _ = Describe("DoublyLinkedList", func() {
 			Expect(sll.Head.Data).To(Equal(1))
 		})
 	})
+
+	Context("Rotate", func() {
+		It("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 when k=0", func() {
+			dll := NewLinkedList[int]()
+			dll.Append(10)
+			dll.Append(20)
+			dll.Append(30)
+			dll.Append(40)
+			dll.Append(50)
+			dll.Append(60)
+
+			dll.Rotate(0)
+
+			Expect(dll.Head.Data).To(Equal(10))
+		})
+
+		It("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=7 positions", func() {
+			dll := NewLinkedList[int]()
+			dll.Append(10)
+			dll.Append(20)
+			dll.Append(30)
+			dll.Append(40)
+			dll.Append(50)
+			dll.Append(60)
+
+			dll.Rotate(7)
+
+			Expect(dll.Head.Data).To(Equal(10))
+		})
+
+		It("should rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=4 positions", func() {
+			dll := NewLinkedList[int]()
+			dll.Append(10)
+			dll.Append(20)
+			dll.Append(30)
+			dll.Append(40)
+			dll.Append(50)
+			dll.Append(60)
+
+			dll.Rotate(4)
+
+			Expect(dll.Head.Data).To(Equal(50))
+		})
+	})
 })

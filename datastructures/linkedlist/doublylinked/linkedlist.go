@@ -465,7 +465,7 @@ func (dll *LinkedList[T]) PairwiseSwap() *Node[T] {
 	return head
 }
 
-// SwapNodes swaps head of the linked list after swapping the values of the kth node from the beginning and the kth node
+// SwapNodesAtKthAndKPlus1 swaps head of the linked list after swapping the values of the kth node from the beginning and the kth node
 // from the end (the list is 1-indexed).
 // E.g Input: head = [7,9,6,6,7,8,3,0,9,5], k = 5
 // Output: [7,9,6,6,8,7,3,0,9,5]
@@ -546,6 +546,52 @@ func (dll *LinkedList[T]) Reverse() {
 	}
 
 	dll.Head = prev
+}
+
+// Rotate rotates a linked list by k nodes counter-clockwise
+func (dll *LinkedList[T]) Rotate(k int) {
+	if k == 0 {
+		return
+	}
+
+	if dll.Head == nil {
+		return
+	}
+
+	current := dll.Head
+	count := 1
+
+	// move pointer k positions until we reach the kth node
+	for count < k && current != nil {
+		current = current.Next
+		count++
+	}
+
+	// if we don't have a kth node(current is nil), k is greather than or equal to
+	// count of nodes in linked list. So no need to rotate
+	if current == nil {
+		return
+	}
+
+	// store the kth node
+	kthNode := current
+
+	// move pointer to the end of the linked list
+	for current.Next != nil {
+		current = current.Next
+	}
+
+	// change next of current node to point to previous head
+	// and change previous pointer of previous head to point to current node
+	current.Next = dll.Head
+	dll.Head.Prev = current
+
+	// change head to k+1th node
+	dll.Head = kthNode.Next
+	dll.Head.Prev = nil
+
+	kthNode.Next = nil
+	kthNode.Prev = nil
 }
 
 func (dll *LinkedList[T]) DeleteAtPosition(position int) {

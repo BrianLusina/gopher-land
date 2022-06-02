@@ -42,6 +42,9 @@ type LinkedList[T comparable] interface {
 	// Reverse reverses the list
 	Reverse()
 
+	// Rotate rotates the list by k positions counter-clockwise
+	Rotate(k int)
+
 	String() string
 
 	// Length returns the length of the list

@@ -227,6 +227,10 @@ func (sll *LinkedList[T]) GetNthNode(position int) (n *linkedlist.Node[T], err e
 		return nil, linkedlist.ErrEmptyList
 	}
 
+	if position == 0 && sll.Head != nil {
+		return sll.Head, nil
+	}
+
 	current := sll.Head
 
 	for i := 0; i < position; i++ {
@@ -414,6 +418,48 @@ func (sll *LinkedList[T]) Reverse() {
 	}
 
 	sll.Head = prev
+}
+
+// Rotate rotates a linked list by k nodes counter-clockwise
+func (sll *LinkedList[T]) Rotate(k int) {
+	if k == 0 {
+		return
+	}
+
+	if sll.Head == nil {
+		return
+	}
+
+	current := sll.Head
+	count := 1
+
+	// move pointer k positions until we reach the kth node
+	for count < k && current != nil {
+		current = current.Next
+		count++
+	}
+
+	// if we don't have a kth node(current is nil), k is greather than or equal to
+	// count of nodes in linked list. So no need to rotate
+	if current == nil {
+		return
+	}
+
+	// store the kth node
+	kthNode := current
+
+	// move pointer to the end of the linked list
+	for current.Next != nil {
+		current = current.Next
+	}
+
+	// change next of current node to point to previous head
+	current.Next = sll.Head
+
+	// change head to k+1th node
+	sll.Head = kthNode.Next
+
+	kthNode.Next = nil
 }
 
 func (sll *LinkedList[T]) DeleteAtPosition(position int) (*linkedlist.Node[T], error) {
