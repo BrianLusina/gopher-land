@@ -500,6 +500,9 @@
     * Maxsubarray
       * [Max Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray.go)
       * [Max Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray_test.go)
+    * Multiplicationtable
+      * [Multiplication Table](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/multiplicationtable/multiplication_table.go)
+      * [Multiplication Table Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/multiplicationtable/multiplication_table_test.go)
     * Utils
       * [Sliceutils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/utils/sliceutils.go)
   * Buffer
@@ -837,6 +840,9 @@
   * Printererrors
     * [Printer Errors](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/printererrors/printer_errors.go)
     * [Printer Errors Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/printererrors/printer_errors_test.go)
+  * Reversewords
+    * [Reverse Words](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/reversewords/reverse_words.go)
+    * [Reverse Words Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/reversewords/reverse_words_test.go)
   * Runlengthencoding
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/cases_test.go)
     * [Run Length Encoding](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/run_length_encoding.go)
