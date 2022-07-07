@@ -467,6 +467,9 @@
     * Buildarrayfromperm
       * [Buildarrayfromperm](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/buildarrayfromperm/buildarrayfromperm.go)
       * [Buildarrayfromperm Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/buildarrayfromperm/buildarrayfromperm_test.go)
+    * Cascadingsubsets
+      * [Cascading Subsets](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/cascadingsubsets/cascading_subsets.go)
+      * [Cascading Subsets Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/cascadingsubsets/cascading_subsets_test.go)
     * Containsduplicates
       * [Contains Duplicates](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates.go)
       * [Contains Duplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates_test.go)
