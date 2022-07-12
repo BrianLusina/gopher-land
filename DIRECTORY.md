@@ -477,6 +477,9 @@
       * [Contains Nearby Almost Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_almost_duplicate_test.go)
       * [Contains Nearby Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicate.go)
       * [Contains Nearby Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicate_test.go)
+    * Findunique
+      * [Find Unique](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findunique/find_unique.go)
+      * [Find Unique Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findunique/find_unique_test.go)
     * Highestrank
       * [Highest Rank](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highestrank/highest_rank.go)
       * [Highest Rank Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highestrank/highest_rank_test.go)
@@ -796,6 +799,9 @@
   * Bandnamegenerator
     * [Band Name Generator](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/bandnamegenerator/band_name_generator.go)
     * [Band Name Generator Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/bandnamegenerator/band_name_generator_test.go)
+  * Charcodecalc
+    * [Char Code Calc](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/charcodecalc/char_code_calc.go)
+    * [Char Code Calc Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/charcodecalc/char_code_calc_test.go)
   * Cryptosquare
     * [Crypto Square](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/cryptosquare/crypto_square.go)
     * [Crypto Square Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/cryptosquare/crypto_square_test.go)
