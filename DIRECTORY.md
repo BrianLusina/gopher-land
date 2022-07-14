@@ -648,6 +648,11 @@
     * [Error Handling](https://github.com/BrianLusina/gopher-land/blob/master/goerrors/erratum/error_handling.go)
     * [Error Handling Test](https://github.com/BrianLusina/gopher-land/blob/master/goerrors/erratum/error_handling_test.go)
 
+## Gofunctional
+  * Functionaladd
+    * [Functional Add](https://github.com/BrianLusina/gopher-land/blob/master/gofunctional/functionaladd/functional_add.go)
+    * [Functional Add Test](https://github.com/BrianLusina/gopher-land/blob/master/gofunctional/functionaladd/functional_add_test.go)
+
 ## Gomath
   * Allyourbase
     * [All Your Base](https://github.com/BrianLusina/gopher-land/blob/master/gomath/allyourbase/all_your_base.go)
