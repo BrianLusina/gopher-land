@@ -648,6 +648,12 @@
     * [Error Handling](https://github.com/BrianLusina/gopher-land/blob/master/goerrors/erratum/error_handling.go)
     * [Error Handling Test](https://github.com/BrianLusina/gopher-land/blob/master/goerrors/erratum/error_handling_test.go)
 
+## Gofiles
+  * Grep
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gofiles/grep/cases_test.go)
+    * [Grep](https://github.com/BrianLusina/gopher-land/blob/master/gofiles/grep/grep.go)
+    * [Grep Test](https://github.com/BrianLusina/gopher-land/blob/master/gofiles/grep/grep_test.go)
+
 ## Gofunctional
   * Functionaladd
     * [Functional Add](https://github.com/BrianLusina/gopher-land/blob/master/gofunctional/functionaladd/functional_add.go)
