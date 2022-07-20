@@ -21,8 +21,8 @@ func Search(pattern string, flags, files []string) []string {
 	result := []string{}
 	opts := parseOptions(flags, len(files))
 
-	done := make(chan bool)
-	searchCh := make(chan []string)
+	// done := make(chan bool)
+	// searchCh := make(chan []string)
 
 	for _, file := range files {
 		// go func(f string) {
@@ -37,8 +37,8 @@ func Search(pattern string, flags, files []string) []string {
 		result = append(result, searchResult...)
 	}
 
-	result = append(result, <-searchCh...)
-	close(done)
+	// result = append(result, <-searchCh...)
+	// close(done)
 
 	return result
 }
