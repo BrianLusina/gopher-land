@@ -773,6 +773,9 @@
   * Jumpgame
     * [Jump Game Iv](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/jumpgame/jump_game_iv.go)
     * [Jump Game Iv Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/jumpgame/jump_game_iv_test.go)
+  * Kindergaten
+    * [Kindergarten Garden](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/kindergaten/kindergarten_garden.go)
+    * [Kindergarten Garden Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/kindergaten/kindergarten_garden_test.go)
   * Ledger
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/ledger/cases_test.go)
     * [Ledger](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/ledger/ledger.go)
