@@ -863,6 +863,9 @@
   * Reversewords
     * [Reverse Words](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/reversewords/reverse_words.go)
     * [Reverse Words Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/reversewords/reverse_words_test.go)
+  * Rockpaperscissors
+    * [Rps](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/rockpaperscissors/rps.go)
+    * [Rps Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/rockpaperscissors/rps_test.go)
   * Runlengthencoding
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/cases_test.go)
     * [Run Length Encoding](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/runlengthencoding/run_length_encoding.go)
