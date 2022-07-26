@@ -557,7 +557,8 @@
         * [Simple Linked List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/simple/simple_linked_list.go)
         * [Simple Linked List Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/simple/simple_linked_list_test.go)
   * Lrucache
-    * [Lrucache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/lrucache.go)
+    * [Cache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache.go)
+    * [Cache Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache_test.go)
   * Queues
     * Fifo
       * Dlqueue
