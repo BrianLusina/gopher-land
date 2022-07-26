@@ -462,6 +462,37 @@ func (sll *LinkedList[T]) Rotate(k int) {
 	kthNode.Next = nil
 }
 
+// ReverseGroup reverses a group of nodes in a linked list
+func (sll *LinkedList[T]) ReverseGroups(k int) {
+	if k == 0 {
+		return
+	}
+
+	if sll.Head == nil {
+		return
+	}
+
+	current := sll.Head
+	var next *linkedlist.Node[T]
+	var prev *linkedlist.Node[T]
+	count := 0
+
+	for current != nil && count < k {
+		next = current.Next
+		current.Next = prev
+		prev = current
+		current = next
+		count++
+	}
+
+	if next != nil {
+		sll.Head.Next = next
+	}
+
+	return
+
+}
+
 func (sll *LinkedList[T]) DeleteAtPosition(position int) (*linkedlist.Node[T], error) {
 	if sll.Head == nil {
 		return nil, linkedlist.ErrEmptyList

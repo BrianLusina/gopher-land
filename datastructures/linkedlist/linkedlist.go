@@ -45,6 +45,9 @@ type LinkedList[T comparable] interface {
 	// Rotate rotates the list by k positions counter-clockwise
 	Rotate(k int)
 
+	// ReverseGroups reverses the list in groups of k elements
+	ReverseGroups(k int)
+
 	String() string
 
 	// Length returns the length of the list
