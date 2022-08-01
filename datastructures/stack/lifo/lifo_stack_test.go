@@ -14,7 +14,7 @@ func TestLifoStack(t *testing.T) {
 }
 
 var _ = Describe("LifoStack", func() {
-	stack := NewLifoStack(10)
+	stack := NewLifoStack[int](10)
 
 	It("Should add -2 to stack", func() {
 		err := stack.Push(-2)
