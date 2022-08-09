@@ -14,6 +14,10 @@
     * Removeelement
       * [Removeelement](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeelement/removeelement.go)
       * [Removeelement Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeelement/removeelement_test.go)
+  * Backtracking
+    * Generateparenthesis
+      * [Generate Parenthesis](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/generateparenthesis/generate_parenthesis.go)
+      * [Generate Parenthesis Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/generateparenthesis/generate_parenthesis_test.go)
   * Bfs
     * Graph
       * Findifpathexists
