@@ -845,6 +845,7 @@
     * [Isomorphic Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isomorphic/isomorphic_test.go)
   * Longestsubstring
     * [Longestsubstring](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstring/longestsubstring.go)
+    * [Longestsubstring Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstring/longestsubstring_test.go)
   * Longestsubstringwithkchars
     * [Longestsubkchars](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstringwithkchars/longestsubkchars.go)
     * [Longestsubkchars Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstringwithkchars/longestsubkchars_test.go)
