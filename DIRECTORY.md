@@ -513,6 +513,9 @@
     * Multiplicationtable
       * [Multiplication Table](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/multiplicationtable/multiplication_table.go)
       * [Multiplication Table Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/multiplicationtable/multiplication_table_test.go)
+    * Pendulum
+      * [Pendulum](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/pendulum/pendulum.go)
+      * [Pendulum Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/pendulum/pendulum_test.go)
     * Utils
       * [Sliceutils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/utils/sliceutils.go)
   * Buffer
@@ -520,6 +523,9 @@
       * [Circular Buffer](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/circularbuffer/circular_buffer.go)
       * [Circular Buffer Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/circularbuffer/circular_buffer_test.go)
     * [Errors](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/errors.go)
+  * Containers
+    * [Containers](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/containers/containers.go)
+    * [Containers Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/containers/containers_test.go)
   * Graphs
     * Directed
       * [Directed Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/directed/directed_graph.go)
@@ -546,20 +552,20 @@
   * Hashset
     * [Hashset](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashset/hashset.go)
     * [Hashset Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashset/hashset_test.go)
-  * Linkedlist
+  * List
     * Doublylinked
-      * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/linkedlist.go)
-      * [Linkedlist Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/linkedlist_test.go)
-      * [List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/list.go)
-      * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/doublylinked/node.go)
-    * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/linkedlist.go)
-    * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/node.go)
+      * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/doublylinked/linkedlist.go)
+      * [Linkedlist Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/doublylinked/linkedlist_test.go)
+      * [List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/doublylinked/list.go)
+      * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/doublylinked/node.go)
+    * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/linkedlist.go)
+    * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/node.go)
     * Singlylinked
-      * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/linkedlist.go)
-      * [Linkedlist Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/linkedlist_test.go)
+      * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linkedlist.go)
+      * [Linkedlist Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linkedlist_test.go)
       * Simple
-        * [Simple Linked List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/simple/simple_linked_list.go)
-        * [Simple Linked List Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/linkedlist/singlylinked/simple/simple_linked_list_test.go)
+        * [Simple Linked List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/simple/simple_linked_list.go)
+        * [Simple Linked List Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/simple/simple_linked_list_test.go)
   * Lrucache
     * [Cache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache.go)
     * [Cache Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache_test.go)
@@ -573,6 +579,9 @@
     * Lifo
       * [Lifo Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/lifo/lifo_queue.go)
       * [Lifo Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/lifo/lifo_queue_test.go)
+    * Priority
+      * [Priority Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/priority/priority_queue.go)
+      * [Priority Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/priority/priority_queue_test.go)
     * [Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/queue.go)
   * Stack
     * Lifo
@@ -589,6 +598,7 @@
     * Binarytrees
       * [Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree.go)
       * [Binary Tree Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree_node.go)
+      * [Binary Tree Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree_test.go)
       * Binarysearchtree
         * [Binary Search Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binarysearchtree/binary_search_tree.go)
         * [Binary Search Tree Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binarysearchtree/binary_search_tree_test.go)
@@ -809,6 +819,7 @@
     * [Robot Name Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name_test.go)
   * Rpn
     * [Rpn](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rpn/rpn.go)
+    * [Rpn Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rpn/rpn_test.go)
   * Slowestkey
     * [Slowest Key](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key.go)
     * [Slowest Key Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key_test.go)
@@ -828,6 +839,9 @@
     * [Crypto Square Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/cryptosquare/crypto_square_test.go)
   * Deadfish
     * [Parse](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/deadfish/parse.go)
+  * Findpermutations
+    * [Find Perms](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findpermutations/find_perms.go)
+    * [Find Perms Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findpermutations/find_perms_test.go)
   * Fixstringcase
     * [Fix String Case](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/fixstringcase/fix_string_case.go)
     * [Fix String Case Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/fixstringcase/fix_string_case_test.go)
