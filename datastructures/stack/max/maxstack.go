@@ -2,43 +2,44 @@ package stack
 
 import (
 	lifoStack "gopherland/datastructures/stack/lifo"
+	"gopherland/pkg/utils"
 	"math"
 )
 
 // MaxStack is a stack that keeps track of the maximum value in the stack.
-type MaxStack struct {
-	lifoStack.LifoStack
-	Maximum float64
+type MaxStack[T comparable] struct {
+	lifoStack.LifoStack[T]
+	Maximum T
 }
 
 // NewMaxStack creates a new max stack
-func NewMaxStack(capacity int) *MaxStack {
+func NewMaxStack[T comparable](capacity int) *MaxStack[T] {
 	max := math.Inf(-1)
 
-	return &MaxStack{
-		LifoStack: lifoStack.NewLifoStack(capacity),
+	return &MaxStack[T]{
+		LifoStack: lifoStack.NewLifoStack[T](capacity),
 		Maximum:   max,
 	}
 }
 
 // Push adds a new item to the stop of the stack
-func (s *MaxStack) Push(val interface{}) error {
+func (s *MaxStack[T]) Push(val T) error {
 	err := s.LifoStack.Push(val)
 	if err != nil {
 		return err
 	}
-	if float64(val.(int)) > s.Maximum {
-		s.Maximum = float64(val.(int))
+	if val > s.Maximum {
+		s.Maximum = val
 	}
 	return nil
 }
 
 // Pop removes an item from the stop of the stack
-func (s *MaxStack) Pop() (interface{}, error) {
+func (s *MaxStack[T]) Pop() (T, error) {
 	data, err := s.LifoStack.Pop()
 
 	if err != nil {
-		return nil, err
+		return utils.Zero[T](), err
 	}
 
 	if len(s.LifoStack.GetItems()) == 0 {
@@ -57,11 +58,11 @@ func (s *MaxStack) Pop() (interface{}, error) {
 }
 
 // Peek retrieves the top item from the stack without removing it
-func (s *MaxStack) Peek() (interface{}, error) {
+func (s *MaxStack[T]) Peek() (T, error) {
 	return s.LifoStack.Peek()
 }
 
 // GetMax gets the max item in the stack
-func (s *MaxStack) GetMax() int {
+func (s *MaxStack[T]) GetMax() T {
 	return int(s.Maximum)
 }

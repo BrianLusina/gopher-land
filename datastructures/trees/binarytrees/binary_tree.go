@@ -2,8 +2,10 @@
 package binarytrees
 
 import (
+	"fmt"
 	"gopherland/datastructures/trees"
 	"strconv"
+	"strings"
 )
 
 // BinaryTree represents a binary tree
@@ -354,4 +356,57 @@ func (t *BinaryTreeNode) Size() (counter int) {
 	}
 
 	return
+}
+
+// Serialize converts this tree into string representation
+func (t *BinaryTree) Serialize() string {
+	if t.root == nil {
+		return ""
+	}
+
+	stack := []*BinaryTreeNode{}
+	stack = append(stack, t.root)
+	nodeValues := []any{}
+
+	for len(stack) != 0 {
+		node := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+
+		if node == nil {
+			nodeValues = append(nodeValues, nil)
+		} else {
+			nodeValues = append(nodeValues, node.Data)
+			stack = append(stack, node.Right)
+			stack = append(stack, node.Left)
+		}
+	}
+
+	joined := strings.Trim(strings.Join(strings.Fields(fmt.Sprint(nodeValues...)), ","), "[]")
+
+	return joined
+}
+
+// Deserialize converts string data into a binary tree
+func Deserialize(data string) *BinaryTreeNode {
+	if len(data) == 0 {
+		return nil
+	}
+
+	nodeValues := strings.Split(data, ",")
+
+	idx := 0
+	treeNode := deserializeHelper(&idx, nodeValues)
+	return treeNode
+}
+
+func deserializeHelper(idx *int, arr []string) *BinaryTreeNode {
+	if arr[*idx] == "#" {
+		return nil
+	}
+	root := NewBinaryTreeNode(arr[*idx])
+	*idx++
+	root.Left = deserializeHelper(idx, arr)
+	*idx++
+	root.Right = deserializeHelper(idx, arr)
+	return root
 }

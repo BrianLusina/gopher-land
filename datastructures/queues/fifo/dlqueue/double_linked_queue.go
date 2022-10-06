@@ -11,7 +11,7 @@ type LinkedListQueue struct {
 }
 
 func NewLinkedListQueue() *LinkedListQueue {
-	list := dll.NewDoublyLinkedList()
+	list := dll.NewLinkedList()
 	return &LinkedListQueue{
 		ll: list,
 	}

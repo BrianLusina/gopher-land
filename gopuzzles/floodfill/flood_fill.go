@@ -1,5 +1,12 @@
 package floodfill
 
+// floodFill performs the algorithm by painting the starting pixels, plus adjacent pixels of the same color, and so on.
+// Say 'color' is the color of the starting pixel. Let's floodfill the starting pixel: we change the color of that
+// pixel to the new color, then check the 4 neighboring pixels to make sure they are valid pixels of the same color,
+// and of the valid ones, we floodfill those, and so on. We can use a function dfs to perform a floodfill on a target pixel.
+// Complexity Analysis:
+// Time Complexity: O(N), where NN is the number of pixels in the image. We might process every pixel.
+// Space Complexity: O(N), the size of the implicit call stack when calling dfs.
 func floodFill(image [][]int, sr int, sc int, newColor int) [][]int {
 	if len(image) == 0 {
 		return image

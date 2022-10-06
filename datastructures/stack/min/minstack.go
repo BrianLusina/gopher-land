@@ -20,7 +20,7 @@ func NewMinStack(capacity int) *MinStack {
 	}
 }
 
-func (s *MinStack) Push(val interface{}) error {
+func (s *MinStack) Push(val any) error {
 	err := s.LifoStack.Push(val)
 
 	if err != nil {
@@ -34,7 +34,7 @@ func (s *MinStack) Push(val interface{}) error {
 	return nil
 }
 
-func (s *MinStack) Pop() (interface{}, error) {
+func (s *MinStack) Pop() (any, error) {
 	data, err := s.LifoStack.Pop()
 
 	if err != nil {
@@ -56,7 +56,7 @@ func (s *MinStack) Pop() (interface{}, error) {
 	return data, nil
 }
 
-func (s *MinStack) Peek() (interface{}, error) {
+func (s *MinStack) Peek() (any, error) {
 	return s.LifoStack.Peek()
 }
 
