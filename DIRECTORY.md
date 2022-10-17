@@ -777,6 +777,10 @@
     * [Annalyns Infiltration Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration_test.go)
   * Chessboardcellcolor
     * [Chessboardcellcolor](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/chessboardcellcolor/chessboardcellcolor.go)
+  * Diamond
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/diamond/cases_test.go)
+    * [Diamond](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/diamond/diamond.go)
+    * [Diamond Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/diamond/diamond_test.go)
   * Easethestockbroker
     * [Ease The Stockbroker](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/easethestockbroker/ease_the_stockbroker.go)
     * [Ease The Stockbroker Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/easethestockbroker/ease_the_stockbroker_test.go)
