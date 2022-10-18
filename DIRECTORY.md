@@ -812,6 +812,9 @@
   * Numberofprovinces
     * [Number Of Provinces](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofprovinces/number_of_provinces.go)
     * [Number Of Provinces Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofprovinces/number_of_provinces_test.go)
+  * Pascalstriangle
+    * [Pascals Triangle](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/pascalstriangle/pascals_triangle.go)
+    * [Pascals Triangle Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/pascalstriangle/pascals_triangle_test.go)
   * Pov
     * [Pov](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/pov/pov.go)
     * [Pov Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/pov/pov_test.go)
