@@ -15,3 +15,13 @@ func Zero[T any]() T {
 func IsZero[T comparable](v T) bool {
 	return v == *new(T)
 }
+
+// Range returns a slice of integers starting at start to end(exclusive), incremented by step
+func Range(start, end, step int) []int {
+	list := []int{}
+	for x := start; x < end && start < end; start += step {
+		list = append(list, start)
+		x++
+	}
+	return list
+}

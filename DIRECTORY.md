@@ -949,3 +949,4 @@
     * [Types](https://github.com/BrianLusina/gopher-land/blob/master/pkg/types/types.go)
   * Utils
     * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/utils.go)
+    * [Utils Test](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/utils_test.go)
