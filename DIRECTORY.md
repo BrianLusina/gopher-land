@@ -516,6 +516,9 @@
     * Pendulum
       * [Pendulum](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/pendulum/pendulum.go)
       * [Pendulum Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/pendulum/pendulum_test.go)
+    * Runningsum
+      * [Running Sum](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/runningsum/running_sum.go)
+      * [Running Sum Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/runningsum/running_sum_test.go)
     * Utils
       * [Sliceutils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/utils/sliceutils.go)
   * Buffer
