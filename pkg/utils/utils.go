@@ -25,3 +25,12 @@ func Range(start, end, step int) []int {
 	}
 	return list
 }
+
+// Sum returns the sum of a slice of integers
+func Sum(numbers []int) int {
+	result := 0
+	for _, number := range numbers {
+		result += number
+	}
+	return result
+}
