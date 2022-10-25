@@ -19,3 +19,19 @@ func TestIsomorphicStrings(t *testing.T) {
 
 	assert.False(IsIsomorphic("badc", "baba"))
 }
+
+func TestIsomorphicStringsV2(t *testing.T) {
+	assert := assert.New(t)
+
+	assert.False(isIsomorphic("aaab", "b"))
+
+	assert.True(isIsomorphic("aab", "xxy"))
+
+	assert.False(isIsomorphic("aab", "xyz"))
+
+	assert.True(isIsomorphic("egg", "add"))
+
+	assert.False(isIsomorphic("badc", "baba"))
+
+	assert.False(isIsomorphic("abcdefghijklmnopqrstuvwxyzva", "abcdefghijklmnopqrstuvwxyzck"))
+}
