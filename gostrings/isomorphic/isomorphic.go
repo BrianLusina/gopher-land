@@ -21,7 +21,7 @@ If s1 == s2, that implies the two input strings are isomorphic. Otherwise, they'
 
 Complexity Analysis
 
-Here NN is the length of each string (if the strings are not the same length, they cannot be isomorphic).
+Here N is the length of each string (if the strings are not the same length, they cannot be isomorphic).
 
 Time Complexity: O(N). We process each character in both the strings exactly once to determine if they are isomorphic.
 Space Complexity: O(N). We form two new strings returned by our transformation function. The size of ASCII character set is fixed and the keys in our dictionary are valid ASCII characters only. So the size of the map in the transform function doesn't contribute to the space complexity.
@@ -53,4 +53,37 @@ func IsIsomorphic(s string, t string) bool {
 	}
 
 	return transformString(s) == transformString(t)
+}
+
+func isIsomorphic(s string, t string) bool {
+	if len(s) != len(t) {
+		return false
+	}
+
+	mapS := make(map[byte]byte)
+	mapT := make(map[byte]byte)
+
+	for i := range s {
+
+		vS, vT := s[i], t[i]
+
+		if m, ok := mapS[vS]; ok {
+			if m != vT {
+				return false
+			}
+		} else {
+			mapS[vS] = vT
+		}
+
+		if m, ok := mapT[vT]; ok {
+			if m != vS {
+				return false
+			}
+		} else {
+			mapT[vT] = vS
+		}
+
+	}
+
+	return true
 }
