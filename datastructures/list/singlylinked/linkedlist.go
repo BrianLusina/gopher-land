@@ -594,3 +594,20 @@ func (sll LinkedList[T]) Length() int {
 
 	return count
 }
+
+// MiddleNode returns the middle node in the singly linked list
+func (sll LinkedList[T]) MiddleNode() *list.Node[T] {
+	if sll.Head == nil {
+		return nil
+	}
+
+	slow_pointer := sll.Head
+	fast_pointer := sll.Head
+
+	for fast_pointer != nil && fast_pointer.Next != nil {
+		slow_pointer = slow_pointer.Next
+		fast_pointer = fast_pointer.Next.Next
+	}
+
+	return slow_pointer
+}
