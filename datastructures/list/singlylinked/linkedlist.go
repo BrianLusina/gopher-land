@@ -3,13 +3,13 @@ package singlylinkedlist
 import (
 	"errors"
 	"fmt"
-	"gopherland/datastructures/linkedlist"
+	"gopherland/datastructures/list"
 )
 
 // LinkedList data structure represents a singly linked list.
 type LinkedList[T comparable] struct {
 	// Head of the list
-	Head *linkedlist.Node[T]
+	Head *list.Node[T]
 	// size of the list
 	size int
 }
@@ -21,7 +21,7 @@ func NewLinkedList[T comparable]() *LinkedList[T] {
 
 // Append adds a new Node at the end of a linked list
 func (sll *LinkedList[T]) Append(val T) {
-	node := linkedlist.NewNode(val)
+	node := list.NewNode(val)
 
 	if sll.Head == nil {
 		sll.Head = node
@@ -37,7 +37,7 @@ func (sll *LinkedList[T]) Append(val T) {
 
 // Prepend adds a new node to the beginning of the list
 func (sll *LinkedList[T]) Prepend(val T) {
-	node := linkedlist.NewNode(val)
+	node := list.NewNode(val)
 	node.Next = sll.Head
 	sll.Head = node
 }
@@ -45,7 +45,7 @@ func (sll *LinkedList[T]) Prepend(val T) {
 // Pop removes a node at the end of a linked list & returns its value.
 func (sll *LinkedList[T]) Pop() (any, error) {
 	if sll.Head == nil {
-		return nil, linkedlist.ErrEmptyList
+		return nil, list.ErrEmptyList
 	}
 
 	current := sll.Head
@@ -187,7 +187,7 @@ func (sll *LinkedList[T]) IsPalindrome() bool {
 }
 
 // DetectCycle detects cycles in a LinkedList & returns the Node that contains a cycle
-func (sll *LinkedList[T]) DetectCycle() *linkedlist.Node[T] {
+func (sll *LinkedList[T]) DetectCycle() *list.Node[T] {
 	if sll.Head == nil || sll.Head.Next == nil {
 		return nil
 	}
@@ -218,13 +218,13 @@ func (sll *LinkedList[T]) DetectCycle() *linkedlist.Node[T] {
 }
 
 // GetNthNode gets the nth node in a linked list
-func (sll *LinkedList[T]) GetNthNode(position int) (n *linkedlist.Node[T], err error) {
+func (sll *LinkedList[T]) GetNthNode(position int) (n *list.Node[T], err error) {
 	if position < 0 {
 		return nil, errors.New("position less than 0")
 	}
 
 	if sll.Head == nil {
-		return nil, linkedlist.ErrEmptyList
+		return nil, list.ErrEmptyList
 	}
 
 	if position == 0 && sll.Head != nil {
@@ -238,16 +238,16 @@ func (sll *LinkedList[T]) GetNthNode(position int) (n *linkedlist.Node[T], err e
 	}
 
 	if current == nil {
-		return nil, linkedlist.ErrInvalidIndex
+		return nil, list.ErrInvalidIndex
 	}
 
 	return current, nil
 }
 
 // GetMiddleNode returns the middle node of the list
-func (sll *LinkedList[T]) GetMiddleNode() (*linkedlist.Node[T], error) {
+func (sll *LinkedList[T]) GetMiddleNode() (*list.Node[T], error) {
 	if sll.Head == nil {
-		return nil, linkedlist.ErrEmptyList
+		return nil, list.ErrEmptyList
 	}
 
 	fast, slow := sll.Head, sll.Head
@@ -260,8 +260,8 @@ func (sll *LinkedList[T]) GetMiddleNode() (*linkedlist.Node[T], error) {
 	return slow, nil
 }
 
-func (sll *LinkedList[T]) DeleteNodesByData(data any) *linkedlist.Node[T] {
-	dummyHead := &linkedlist.Node[T]{}
+func (sll *LinkedList[T]) DeleteNodesByData(data any) *list.Node[T] {
+	dummyHead := &list.Node[T]{}
 	current := dummyHead
 
 	for current.Next != nil {
@@ -278,7 +278,7 @@ func (sll *LinkedList[T]) DeleteNodesByData(data any) *linkedlist.Node[T] {
 
 // RemoveDuplicates removes duplicates from a LinkedList
 // This assumes the linked list is sorted in ascending order
-func (sll *LinkedList[T]) RemoveDuplicates() *linkedlist.Node[T] {
+func (sll *LinkedList[T]) RemoveDuplicates() *list.Node[T] {
 	head := sll.Head
 
 	if head == nil || head.Next == nil {
@@ -308,7 +308,7 @@ func (sll *LinkedList[T]) RemoveDuplicates() *linkedlist.Node[T] {
 // 1 -> 2 -> 3 -> 4
 // becomes
 // 2 -> 1 -> 4 -> 3
-func (sll *LinkedList[T]) PairwiseSwap() *linkedlist.Node[T] {
+func (sll *LinkedList[T]) PairwiseSwap() *list.Node[T] {
 	head := sll.Head
 
 	// Nothing to do here
@@ -401,7 +401,7 @@ func (sll *LinkedList[T]) Reverse() {
 		return
 	}
 
-	var prev, next *linkedlist.Node[T]
+	var prev, next *list.Node[T]
 
 	var current = sll.Head
 
@@ -473,8 +473,8 @@ func (sll *LinkedList[T]) ReverseGroups(k int) {
 	}
 
 	current := sll.Head
-	var next *linkedlist.Node[T]
-	var prev *linkedlist.Node[T]
+	var next *list.Node[T]
+	var prev *list.Node[T]
 	count := 0
 
 	for current != nil && count < k {
@@ -493,9 +493,9 @@ func (sll *LinkedList[T]) ReverseGroups(k int) {
 
 }
 
-func (sll *LinkedList[T]) DeleteAtPosition(position int) (*linkedlist.Node[T], error) {
+func (sll *LinkedList[T]) DeleteAtPosition(position int) (*list.Node[T], error) {
 	if sll.Head == nil {
-		return nil, linkedlist.ErrEmptyList
+		return nil, list.ErrEmptyList
 	}
 
 	if position == 0 {
@@ -504,11 +504,11 @@ func (sll *LinkedList[T]) DeleteAtPosition(position int) (*linkedlist.Node[T], e
 	}
 
 	if position > sll.Length() {
-		return nil, linkedlist.ErrInvalidIndex
+		return nil, list.ErrInvalidIndex
 	}
 
 	if sll.Head.Next == nil {
-		return nil, linkedlist.ErrInvalidIndex
+		return nil, list.ErrInvalidIndex
 	}
 
 	index := 0
@@ -525,7 +525,7 @@ func (sll *LinkedList[T]) DeleteAtPosition(position int) (*linkedlist.Node[T], e
 	}
 
 	if current == nil {
-		return nil, linkedlist.ErrInvalidIndex
+		return nil, list.ErrInvalidIndex
 	}
 
 	prev.Next = next
@@ -536,7 +536,7 @@ func (sll *LinkedList[T]) DeleteAtPosition(position int) (*linkedlist.Node[T], e
 // if position is greater than the length of the LinkedList, the node should not be added
 // if the position is equal to the length of the LinkedList, the node should be added at the end of the LinkedList
 func (sll *LinkedList[T]) AddAtPosition(position int, data T) {
-	node := linkedlist.NewNode(data)
+	node := list.NewNode(data)
 
 	if sll.Head == nil {
 		sll.Head = node
@@ -563,7 +563,7 @@ func (sll *LinkedList[T]) AddAtPosition(position int, data T) {
 	}
 
 	var current = sll.Head
-	var prev, next *linkedlist.Node[T]
+	var prev, next *list.Node[T]
 
 	for current != nil && position != 0 {
 		next = current.Next

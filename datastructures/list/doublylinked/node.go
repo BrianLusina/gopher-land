@@ -2,18 +2,18 @@ package doublylinkedlist
 
 import (
 	"fmt"
-	"gopherland/datastructures/linkedlist"
+	"gopherland/datastructures/list"
 )
 
 // Node DoublyLinkedListNode of a Doubly Linked List
 type Node[T comparable] struct {
-	*linkedlist.Node[T]
+	*list.Node[T]
 	Next, Prev *Node[T]
 }
 
 // NewNode creates a new DoublyLinkedList Node
 func NewNode[T comparable](data T) *Node[T] {
-	node := linkedlist.NewNode(data)
+	node := list.NewNode(data)
 	return &Node[T]{
 		Node: node,
 		Next: nil,

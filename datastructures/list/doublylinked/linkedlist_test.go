@@ -2,7 +2,7 @@ package doublylinkedlist
 
 import (
 	"fmt"
-	"gopherland/datastructures/linkedlist"
+	"gopherland/datastructures/list"
 	"testing"
 
 	. "github.com/onsi/ginkgo"
@@ -86,7 +86,7 @@ var _ = Describe("DoublyLinkedList", func() {
 			Expect(err).ToNot(BeNil())
 			Expect(val).To(BeNil())
 
-			Expect(err).To(Equal(linkedlist.ErrEmptyList))
+			Expect(err).To(Equal(list.ErrEmptyList))
 		})
 
 		It("should return 3 for linked list of 1 -> 2 -> 3 -> 4 -> 5", func() {
