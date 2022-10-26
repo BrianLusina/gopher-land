@@ -3,7 +3,7 @@ package doublylinkedlist
 import (
 	"errors"
 	"fmt"
-	"gopherland/datastructures/linkedlist"
+	"gopherland/datastructures/list"
 )
 
 // LinkedList LinkedList data structure
@@ -139,7 +139,7 @@ func (dll *LinkedList[T]) DeleteNodeByData(data any) {
 func (dll *LinkedList[T]) DeleteTail() (*Node[T], error) {
 	switch {
 	case dll.Head == nil:
-		return nil, linkedlist.ErrEmptyList
+		return nil, list.ErrEmptyList
 
 	case dll.Head.Next == nil:
 		node := dll.Head
@@ -351,7 +351,7 @@ func (dll *LinkedList[T]) GetNthNode(position int) (n *Node[T], err error) {
 // GetMiddleNode returns the middle node of the list
 func (sll *LinkedList[T]) GetMiddleNode() (*Node[T], error) {
 	if sll.Head == nil {
-		return nil, linkedlist.ErrEmptyList
+		return nil, list.ErrEmptyList
 	}
 
 	fast, slow := sll.Head, sll.Head
