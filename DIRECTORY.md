@@ -829,6 +829,10 @@
   * Prefixsum
     * [Prefix Sum](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/prefixsum/prefix_sum.go)
     * [Prefix Sum Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/prefixsum/prefix_sum_test.go)
+  * Rectangles
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rectangles/cases_test.go)
+    * [Rectangles](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rectangles/rectangles.go)
+    * [Rectangles Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rectangles/rectangles_test.go)
   * Robotname
     * [Robot Name](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name.go)
     * [Robot Name Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name_test.go)
