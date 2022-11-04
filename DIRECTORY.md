@@ -522,6 +522,9 @@
     * Runningsum
       * [Running Sum](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/runningsum/running_sum.go)
       * [Running Sum Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/runningsum/running_sum_test.go)
+    * Topkfrequent
+      * [Top K Frequent](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/topkfrequent/top_k_frequent.go)
+      * [Top K Frequent Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/topkfrequent/top_k_frequent_test.go)
     * Utils
       * [Sliceutils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/utils/sliceutils.go)
   * Buffer
