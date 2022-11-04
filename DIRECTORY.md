@@ -659,6 +659,13 @@
     * [Parkingspot Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingspot_test.go)
     * [Parkingsystem](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingsystem.go)
     * [Vehicle](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/vehicle.go)
+  * Structural
+    * Composite
+      * Filetree
+        * [Component](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/composite/filetree/component.go)
+        * [File](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/composite/filetree/file.go)
+        * [Folder](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/composite/filetree/folder.go)
+        * [Main](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/composite/filetree/main.go)
   * Twitter
     * [Tweet](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/tweet.go)
     * [Twitter](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/twitter.go)
