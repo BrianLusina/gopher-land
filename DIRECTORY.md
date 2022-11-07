@@ -644,8 +644,8 @@
     * [Browser History](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history.go)
     * [Browser History Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history_test.go)
   * Iterator
+    * [Iterator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/iterator/iterator.go)
     * Peeking
-      * [Iterator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/iterator/peeking/iterator.go)
       * [Peeking Iterator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/iterator/peeking/peeking_iterator.go)
       * [Peeking Iterator Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/iterator/peeking/peeking_iterator_test.go)
   * Orderedstream
