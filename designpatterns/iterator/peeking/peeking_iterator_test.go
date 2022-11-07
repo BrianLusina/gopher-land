@@ -1,6 +1,9 @@
 package peeking
 
-import "testing"
+import (
+	"gopherland/designpatterns/iterator"
+	"testing"
+)
 
 type peekingIteratorTestCase struct {
 	description string
@@ -25,8 +28,8 @@ var peekingIteratorTestCases = []peekingIteratorTestCase{
 func TestPeekingIterator(t *testing.T) {
 	for _, tc := range peekingIteratorTestCases {
 		t.Run(tc.description, func(t *testing.T) {
-			iterator := Iterator[int]{
-				items: tc.items,
+			iterator := iterator.Iterator[int]{
+				Items: tc.items,
 			}
 
 			peekingIterator := NewPeekingIterator(&iterator)

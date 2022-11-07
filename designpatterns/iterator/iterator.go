@@ -1,22 +1,22 @@
-package peeking
+package iterator
 
 import "gopherland/pkg/utils"
 
 type Iterator[T comparable] struct {
 	index int
-	items []T
+	Items []T
 }
 
-func (i *Iterator[T]) hasNext() bool {
-	if i.index < len(i.items) {
+func (i *Iterator[T]) HasNext() bool {
+	if i.index < len(i.Items) {
 		return true
 	}
 	return false
 }
 
-func (i *Iterator[T]) next() T {
-	if i.hasNext() {
-		item := i.items[i.index]
+func (i *Iterator[T]) Next() T {
+	if i.HasNext() {
+		item := i.Items[i.index]
 		i.index++
 		return item
 	}
