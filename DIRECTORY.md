@@ -671,6 +671,15 @@
         * [File](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/composite/filetree/file.go)
         * [Folder](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/composite/filetree/folder.go)
         * [Main](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/composite/filetree/main.go)
+    * Facade
+      * Wallet
+        * [Account](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/account.go)
+        * [Client](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/client.go)
+        * [Ledger](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/ledger.go)
+        * [Notification](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/notification.go)
+        * [Security Code](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/security_code.go)
+        * [Wallet](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/wallet.go)
+        * [Wallet Facade](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/wallet_facade.go)
   * Twitter
     * [Tweet](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/tweet.go)
     * [Twitter](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/twitter.go)
