@@ -885,6 +885,9 @@
     * [Crypto Square Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/cryptosquare/crypto_square_test.go)
   * Deadfish
     * [Parse](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/deadfish/parse.go)
+  * Encodedecode
+    * [Encode Decode](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/encodedecode/encode_decode.go)
+    * [Encode Decode Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/encodedecode/encode_decode_test.go)
   * Findpermutations
     * [Find Perms](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findpermutations/find_perms.go)
     * [Find Perms Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findpermutations/find_perms_test.go)
