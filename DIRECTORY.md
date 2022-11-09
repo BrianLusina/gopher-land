@@ -494,6 +494,9 @@
       * [Intersectionone Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionOne_test.go)
       * [Intersectiontwo](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionTwo.go)
       * [Intersectiontwo Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionTwo_test.go)
+    * Longestconsecutiveseq
+      * [Longest Consecutive Seq](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/longestconsecutiveseq/longest_consecutive_seq.go)
+      * [Longest Consecutive Seq Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/longestconsecutiveseq/longest_consecutive_seq_test.go)
     * Matrix
       * Buildmatrix
         * [Matrix](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/buildmatrix/matrix.go)
