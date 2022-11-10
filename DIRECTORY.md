@@ -970,6 +970,9 @@
   * Validbraces
     * [Valid Braces](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/validbraces/valid_braces.go)
     * [Valid Braces Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/validbraces/valid_braces_test.go)
+  * Validpalindrome
+    * [Valid Palindrome](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/validpalindrome/valid_palindrome.go)
+    * [Valid Palindrome Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/validpalindrome/valid_palindrome_test.go)
   * Wordcount
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordcount/cases_test.go)
     * [Word Count](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordcount/word_count.go)
