@@ -1,23 +1,23 @@
 package browserhistory
 
 import (
-	dl "gopherland/datastructures/linkedlist/doublylinked"
+	dl "gopherland/datastructures/list/doublylinked"
 )
 
-type BrowserHistory struct {
-	CurrentNode *dl.Node
+type BrowserHistory[T string] struct {
+	CurrentNode *dl.Node[T]
 }
 
-func Constructor(homepage string) *BrowserHistory {
-	currentNode := &dl.Node{Data: homepage}
-	return &BrowserHistory{
+func Constructor[T string](homepage string) *BrowserHistory[T] {
+	currentNode := &dl.Node[T]{Data: homepage}
+	return &BrowserHistory[T]{
 		CurrentNode: currentNode,
 	}
 }
 
 // Visit url from the current page. It clears up all the forward history.
-func (b *BrowserHistory) Visit(url string) {
-	node := &dl.Node{Data: url}
+func (b *BrowserHistory[T]) Visit(url string) {
+	node := &dl.Node[T]{Data: url}
 	current := b.CurrentNode
 
 	if b.CurrentNode.Next == nil {
