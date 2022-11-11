@@ -689,6 +689,12 @@
         * [Security Code](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/security_code.go)
         * [Wallet](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/wallet.go)
         * [Wallet Facade](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/wallet_facade.go)
+    * Proxy
+      * Nginx
+        * [App](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/proxy/nginx/app.go)
+        * [Client](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/proxy/nginx/client.go)
+        * [Nginx](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/proxy/nginx/nginx.go)
+        * [Server](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/proxy/nginx/server.go)
   * Twitter
     * [Tweet](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/tweet.go)
     * [Twitter](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/twitter.go)
