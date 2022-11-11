@@ -474,6 +474,9 @@
     * Cascadingsubsets
       * [Cascading Subsets](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/cascadingsubsets/cascading_subsets.go)
       * [Cascading Subsets Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/cascadingsubsets/cascading_subsets_test.go)
+    * Containerwithmostwater
+      * [Container With Most Water](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containerwithmostwater/container_with_most_water.go)
+      * [Container With Most Water Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containerwithmostwater/container_with_most_water_test.go)
     * Containsduplicates
       * [Contains Duplicates](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates.go)
       * [Contains Duplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates_test.go)
