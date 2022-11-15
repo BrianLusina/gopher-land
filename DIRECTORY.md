@@ -652,6 +652,15 @@
     * [Account](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/banksystem/account.go)
     * [Bank System](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/banksystem/bank_system.go)
     * [Bank System Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/banksystem/bank_system_test.go)
+  * Behavioral
+    * Strategy
+      * Cache
+        * [Cache](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/cache.go)
+        * [Client](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/client.go)
+        * [Eviction](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/eviction.go)
+        * [Fifo](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/fifo.go)
+        * [Lfu](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/lfu.go)
+        * [Lru](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/lru.go)
   * Browserhistory
     * [Browser History](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history.go)
     * [Browser History Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history_test.go)
