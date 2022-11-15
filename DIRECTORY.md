@@ -484,6 +484,9 @@
       * [Contains Nearby Almost Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_almost_duplicate_test.go)
       * [Contains Nearby Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicate.go)
       * [Contains Nearby Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicate_test.go)
+    * Findduplicate
+      * [Find Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findduplicate/find_duplicate.go)
+      * [Find Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findduplicate/find_duplicate_test.go)
     * Findunique
       * [Find Unique](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findunique/find_unique.go)
       * [Find Unique Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findunique/find_unique_test.go)
