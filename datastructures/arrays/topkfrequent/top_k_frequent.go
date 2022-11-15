@@ -2,6 +2,7 @@ package topkfrequent
 
 import "container/heap"
 
+// topKFrequent uses a heap to find the top k most frequent elements in the integer slice
 func topKFrequent(numbers []int, k int) []int {
 	topK := []int{}
 

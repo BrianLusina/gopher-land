@@ -212,3 +212,45 @@ func (bst *BinarySearchTree) Deserialize(data string) {
 	root := buildTree(nodeValues, math.MinInt, math.MaxInt)
 	bst.root = root
 }
+
+func (bst *BinarySearchTree) IsValid() bool {
+	type Data struct {
+		lowerBound int
+		node       *binarytrees.BinaryTreeNode
+		upperBound int
+	}
+
+	if bst.root == nil {
+		return true
+	}
+
+	stack := []Data{}
+	stack = append(stack, Data{lowerBound: int(math.Inf(-1)), node: bst.root, upperBound: int(math.Inf(1))})
+
+	for len(stack) != 0 {
+		data := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
+
+		node := data.node
+		lowerBound := data.lowerBound
+		upperBound := data.upperBound
+
+		if node == nil {
+			continue
+		}
+
+		if node.Data.(int) <= lowerBound || node.Data.(int) >= upperBound {
+			return false
+		}
+
+		if node.Left != nil {
+			stack = append(stack, Data{lowerBound: lowerBound, node: node.Left, upperBound: node.Data.(int)})
+		}
+
+		if node.Right != nil {
+			stack = append(stack, Data{lowerBound: node.Data.(int), node: node.Right, upperBound: upperBound})
+		}
+	}
+
+	return true
+}

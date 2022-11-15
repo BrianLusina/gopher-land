@@ -36,3 +36,53 @@ var _ = Describe("MaxProfit Tests", func() {
 		Expect(MaxProfit(prices)).To(Equal(expected))
 	})
 })
+
+var _ = Describe("MaxProfit 2 Pointers Tests", func() {
+	It("Expected max profit from prices [7,1,5,3,6,4] to equal 5", func() {
+		prices := []int{7, 1, 5, 3, 6, 4}
+		expected := 5
+		Expect(MaxProfitTwoPointers(prices)).To(Equal(expected))
+	})
+
+	It("Expected max profit from prices [7,6,4,3,1] to equal 0", func() {
+		prices := []int{7, 6, 4, 3, 1}
+		expected := 0
+		Expect(MaxProfitTwoPointers(prices)).To(Equal(expected))
+	})
+
+	It("Expected max profit from prices [1,1,1,1,1] to equal 0", func() {
+		prices := []int{1, 1, 1, 1, 1}
+		expected := 0
+		Expect(MaxProfitTwoPointers(prices)).To(Equal(expected))
+	})
+	It("Expected max profit from prices [] to equal 0", func() {
+		prices := []int{}
+		expected := 0
+		Expect(MaxProfitTwoPointers(prices)).To(Equal(expected))
+	})
+})
+
+var _ = Describe("MaxProfit 2 Tests", func() {
+	It("Expected max profit from prices [7,1,5,3,6,4] to equal 7", func() {
+		prices := []int{7, 1, 5, 3, 6, 4}
+		expected := 7
+		Expect(MaxProfit2(prices)).To(Equal(expected))
+	})
+
+	It("Expected max profit from prices [7,6,4,3,1] to equal 0", func() {
+		prices := []int{7, 6, 4, 3, 1}
+		expected := 0
+		Expect(MaxProfit2(prices)).To(Equal(expected))
+	})
+
+	It("Expected max profit from prices [1,1,1,1,1] to equal 0", func() {
+		prices := []int{1, 1, 1, 1, 1}
+		expected := 0
+		Expect(MaxProfit2(prices)).To(Equal(expected))
+	})
+	It("Expected max profit from prices [] to equal 0", func() {
+		prices := []int{}
+		expected := 0
+		Expect(MaxProfit2(prices)).To(Equal(expected))
+	})
+})
