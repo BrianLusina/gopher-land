@@ -653,6 +653,14 @@
     * [Bank System](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/banksystem/bank_system.go)
     * [Bank System Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/banksystem/bank_system_test.go)
   * Behavioral
+    * Iterator
+      * User
+        * [Collection](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/iterator/user/collection.go)
+        * [Iterator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/iterator/user/iterator.go)
+        * [Main](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/iterator/user/main.go)
+        * [User](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/iterator/user/user.go)
+        * [User Collection](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/iterator/user/user_collection.go)
+        * [User Iterator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/iterator/user/user_iterator.go)
     * Strategy
       * Cache
         * [Cache](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/cache.go)
