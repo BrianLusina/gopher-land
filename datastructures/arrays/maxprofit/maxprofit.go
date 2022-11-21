@@ -71,3 +71,31 @@ func MaxProfit2(prices []int) int {
 
 	return currentMaxProfit
 }
+
+func MaxProfit3(prices []int) int {
+	n := len(prices)
+
+	if n < 2 {
+		return 0
+	}
+	forwardProfit, backwardProfit := make([]int, n), make([]int, n)
+	earliestPrice := prices[0]
+
+	for day := 1; day < n; day++ {
+		earliestPrice = int(math.Min(float64(prices[day]), float64(earliestPrice)))
+		forwardProfit[day] = int(math.Max(float64(forwardProfit[day-1]), float64(prices[day]-earliestPrice)))
+	}
+
+	latestPrice := prices[len(prices)-1]
+	for day := n - 2; day > 0; day-- {
+		latestPrice = int(math.Max(float64(latestPrice), float64(prices[day])))
+		backwardProfit[day] = int(math.Max(float64(backwardProfit[day+1]), float64(latestPrice-prices[day])))
+	}
+
+	profit := 0
+	for day := range prices {
+		profit = int(math.Max(float64(profit), float64(forwardProfit[day]+backwardProfit[day])))
+	}
+
+	return profit
+}
