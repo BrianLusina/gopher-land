@@ -944,6 +944,9 @@
   * Issubsequence
     * [Is Subsequence](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/issubsequence/is_subsequence.go)
     * [Is Subsequence Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/issubsequence/is_subsequence_test.go)
+  * Longestrepeatingcharreplacement
+    * [Longest Repeating Char Replacement](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestrepeatingcharreplacement/longest_repeating_char_replacement.go)
+    * [Longest Repeating Char Replacement Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestrepeatingcharreplacement/longest_repeating_char_replacement_test.go)
   * Longestsubstring
     * [Longestsubstring](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstring/longestsubstring.go)
     * [Longestsubstring Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstring/longestsubstring_test.go)
