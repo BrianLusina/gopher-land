@@ -661,6 +661,15 @@
         * [User](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/iterator/user/user.go)
         * [User Collection](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/iterator/user/user_collection.go)
         * [User Iterator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/iterator/user/user_iterator.go)
+    * State
+      * Vendingmachine
+        * [Has Item State](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/state/vendingmachine/has_item_state.go)
+        * [Has Money State](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/state/vendingmachine/has_money_state.go)
+        * [Item Requested State](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/state/vendingmachine/item_requested_state.go)
+        * [Main](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/state/vendingmachine/main.go)
+        * [No Item State](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/state/vendingmachine/no_item_state.go)
+        * [State](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/state/vendingmachine/state.go)
+        * [Vending Machine](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/state/vendingmachine/vending_machine.go)
     * Strategy
       * Cache
         * [Cache](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/cache.go)
