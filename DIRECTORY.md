@@ -653,6 +653,15 @@
     * [Bank System](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/banksystem/bank_system.go)
     * [Bank System Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/banksystem/bank_system_test.go)
   * Behavioral
+    * Chainofresponsibility
+      * Hospital
+        * [Cashier](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/chainofresponsibility/hospital/cashier.go)
+        * [Department](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/chainofresponsibility/hospital/department.go)
+        * [Doctor](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/chainofresponsibility/hospital/doctor.go)
+        * [Main](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/chainofresponsibility/hospital/main.go)
+        * [Medical](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/chainofresponsibility/hospital/medical.go)
+        * [Patient](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/chainofresponsibility/hospital/patient.go)
+        * [Reception](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/chainofresponsibility/hospital/reception.go)
     * Iterator
       * User
         * [Collection](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/iterator/user/collection.go)
