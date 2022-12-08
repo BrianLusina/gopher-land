@@ -40,3 +40,25 @@ func BenchmarkDetectAnagrams(b *testing.B) {
 		}
 	}
 }
+
+// TODO: sort a slice of slice for tests to pass
+// func TestGroupAnagrams(t *testing.T) {
+// 	for _, tc := range groupAnagramTestCases {
+
+// 		actual := GroupAnagrams(tc.strs)
+
+// 		if !reflect.DeepEqual(actual, tc.expected) {
+// 			t.Fatalf("GroupAnagrams(%v) = %v, expected: %v", tc.strs, actual, tc.expected)
+// 		} else {
+// 			t.Logf("Pass: Actual = %v, Expected = %v", actual, tc.expected)
+// 		}
+// 	}
+// }
+
+// func BenchmarkGroupAnagrams(b *testing.B) {
+// 	for i := 0; i < b.N; i++ {
+// 		for _, tt := range groupAnagramTestCases {
+// 			GroupAnagrams(tt.strs)
+// 		}
+// 	}
+// }

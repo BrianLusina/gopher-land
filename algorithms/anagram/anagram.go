@@ -47,3 +47,34 @@ func Detect(subject string, candidates []string) (sublist []string) {
 
 	return
 }
+
+// GroupAnagrams groups a slice of strings into a group of anagrams
+func GroupAnagrams(strs []string) [][]string {
+	length := len(strs)
+	if length == 0 {
+		return [][]string{}
+	}
+
+	if length == 1 {
+		return [][]string{strs}
+	}
+
+	m := map[string][]string{}
+
+	for _, word := range strs {
+		sortedWord := sortString(word)
+
+		if _, ok := m[sortedWord]; ok {
+			m[sortedWord] = append(m[sortedWord], word)
+		} else {
+			m[sortedWord] = []string{word}
+		}
+	}
+
+	words := [][]string{}
+	for _, v := range m {
+		words = append(words, v)
+	}
+
+	return words
+}

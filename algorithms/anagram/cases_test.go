@@ -1,9 +1,5 @@
 package anagram
 
-// Source: exercism/problem-specifications
-// Commit: baaf092 anagram: words are not anagrams of themselves
-// Problem Specifications Version: 1.4.0
-
 var testCases = []struct {
 	description string
 	subject     string
@@ -124,5 +120,23 @@ var testCases = []struct {
 			"Banana",
 			"banana"},
 		expected: []string{},
+	},
+}
+
+var groupAnagramTestCases = []struct {
+	strs     []string
+	expected [][]string
+}{
+	{
+		strs:     []string{"eat", "tea", "tan", "ate", "nat", "bat"},
+		expected: [][]string{{"bat"}, {"nat", "tan"}, {"ate", "eat", "tea"}},
+	},
+	{
+		strs:     []string{""},
+		expected: [][]string{{""}},
+	},
+	{
+		strs:     []string{"a"},
+		expected: [][]string{{"a"}},
 	},
 }
