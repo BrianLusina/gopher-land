@@ -29,6 +29,9 @@
     * [Binary Search](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/binary_search.go)
     * [Binary Search Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/binary_search_test.go)
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/cases_test.go)
+    * Rotatedsortedarray
+      * [Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/rotatedsortedarray/rotated_sorted_array.go)
+      * [Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/rotatedsortedarray/rotated_sorted_array_test.go)
   * Climbstairs
     * [Climbstairs](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/climbstairs/climbstairs.go)
   * Climbstairsmincost
