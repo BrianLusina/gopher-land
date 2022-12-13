@@ -1,5 +1,7 @@
 package twosum
 
+//TwoSum returns the indices of 2 numbers in a slice that add up to the target integer
+// Uses O(n) Space complexity as a map is used to store the seen integers
 func TwoSum(numbers []int, target int) [2]int {
 	seen := make(map[int]int)
 
