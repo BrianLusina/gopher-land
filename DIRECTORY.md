@@ -29,6 +29,9 @@
     * [Binary Search](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/binary_search.go)
     * [Binary Search Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/binary_search_test.go)
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/cases_test.go)
+    * Mininrotatedsortedarray
+      * [Min In Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/mininrotatedsortedarray/min_in_rotated_sorted_array.go)
+      * [Min In Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/mininrotatedsortedarray/min_in_rotated_sorted_array_test.go)
     * Rotatedsortedarray
       * [Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/rotatedsortedarray/rotated_sorted_array.go)
       * [Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/rotatedsortedarray/rotated_sorted_array_test.go)
@@ -944,6 +947,9 @@
   * Encodedecode
     * [Encode Decode](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/encodedecode/encode_decode.go)
     * [Encode Decode Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/encodedecode/encode_decode_test.go)
+  * Findcapitals
+    * [Find Capitals](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findcapitals/find_capitals.go)
+    * [Find Capitals Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findcapitals/find_capitals_test.go)
   * Findpermutations
     * [Find Perms](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findpermutations/find_perms.go)
     * [Find Perms Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findpermutations/find_perms_test.go)
