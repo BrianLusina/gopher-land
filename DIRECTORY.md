@@ -490,6 +490,9 @@
       * [Contains Nearby Almost Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_almost_duplicate_test.go)
       * [Contains Nearby Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicate.go)
       * [Contains Nearby Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_nearby_duplicate_test.go)
+    * Dynamicarray
+      * [Dynamic Array](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/dynamicarray/dynamic_array.go)
+      * [Dynamic Array Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/dynamicarray/dynamic_array_test.go)
     * Findduplicate
       * [Find Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findduplicate/find_duplicate.go)
       * [Find Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findduplicate/find_duplicate_test.go)
