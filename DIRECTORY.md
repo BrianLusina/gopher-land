@@ -701,6 +701,16 @@
         * [Fifo](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/fifo.go)
         * [Lfu](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/lfu.go)
         * [Lru](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/lru.go)
+    * Visitor
+      * Concept
+        * [Area Calculator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/visitor/concept/area_calculator.go)
+        * [Circle](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/visitor/concept/circle.go)
+        * [Client](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/visitor/concept/client.go)
+        * [Middle Coordinates](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/visitor/concept/middle_coordinates.go)
+        * [Rectangle](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/visitor/concept/rectangle.go)
+        * [Shape](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/visitor/concept/shape.go)
+        * [Square](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/visitor/concept/square.go)
+        * [Visitor](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/visitor/concept/visitor.go)
   * Browserhistory
     * [Browser History](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history.go)
     * [Browser History Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history_test.go)
