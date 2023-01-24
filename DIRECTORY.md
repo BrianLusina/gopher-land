@@ -893,6 +893,9 @@
   * Easethestockbroker
     * [Ease The Stockbroker](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/easethestockbroker/ease_the_stockbroker.go)
     * [Ease The Stockbroker Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/easethestockbroker/ease_the_stockbroker_test.go)
+  * Findrotationpoint
+    * [Find Rotation Point](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/findrotationpoint/find_rotation_point.go)
+    * [Find Rotation Point Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/findrotationpoint/find_rotation_point_test.go)
   * Floodfill
     * [Flood Fill](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill.go)
     * [Flood Fill Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill_test.go)
