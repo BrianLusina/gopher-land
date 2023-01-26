@@ -701,6 +701,12 @@
         * [Fifo](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/fifo.go)
         * [Lfu](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/lfu.go)
         * [Lru](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/strategy/cache/lru.go)
+    * Template
+      * Otp
+        * [Client](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/template/otp/client.go)
+        * [Email](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/template/otp/email.go)
+        * [Otp](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/template/otp/otp.go)
+        * [Sms](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/template/otp/sms.go)
     * Visitor
       * Concept
         * [Area Calculator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/behavioral/visitor/concept/area_calculator.go)
