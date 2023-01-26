@@ -890,6 +890,9 @@
   * Annalyn
     * [Annalyns Infiltration](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration.go)
     * [Annalyns Infiltration Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration_test.go)
+  * Bouncingballs
+    * [Bouncing Ball](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/bouncingballs/bouncing_ball.go)
+    * [Bouncing Ball Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/bouncingballs/bouncing_ball_test.go)
   * Chessboardcellcolor
     * [Chessboardcellcolor](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/chessboardcellcolor/chessboardcellcolor.go)
   * Diamond
