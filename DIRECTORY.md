@@ -961,6 +961,11 @@
   * Tournament
     * [Tournament](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/tournament/tournament.go)
     * [Tournament Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/tournament/tournament_test.go)
+  * Twobucket
+    * [Bonus Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/twobucket/bonus_test.go)
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/twobucket/cases_test.go)
+    * [Two Bucket](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/twobucket/two_bucket.go)
+    * [Two Bucket Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/twobucket/two_bucket_test.go)
 
 ## Gostrings
   * Bandnamegenerator
