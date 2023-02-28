@@ -720,6 +720,20 @@
   * Browserhistory
     * [Browser History](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history.go)
     * [Browser History Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/browserhistory/browser_history_test.go)
+  * Creational
+    * Factory
+      * Guns
+        * [Ak47](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/guns/ak47.go)
+        * [Gun](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/guns/gun.go)
+        * [Gun Factory](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/guns/gun_factory.go)
+        * [Main](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/guns/main.go)
+        * [Musket](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/guns/musket.go)
+      * Storage
+        * [Client](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/storage/client.go)
+        * [Disk Storage](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/storage/disk_storage.go)
+        * [Memory Storage](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/storage/memory_storage.go)
+        * [Store](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/storage/store.go)
+        * [Temp Storage](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/storage/temp_storage.go)
   * Iterator
     * [Iterator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/iterator/iterator.go)
     * Peeking
