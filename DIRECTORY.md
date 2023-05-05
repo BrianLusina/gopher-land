@@ -8,6 +8,9 @@
     * [Anagram Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/anagram/anagram_test.go)
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/anagram/cases_test.go)
   * Arrays
+    * Maxsubarray
+      * [Max Subarray](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/maxsubarray/max_subarray.go)
+      * [Max Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/maxsubarray/max_subarray_test.go)
     * Removeduplicates
       * [Removeduplicates](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeduplicates/removeduplicates.go)
       * [Removeduplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeduplicates/removeduplicates_test.go)
