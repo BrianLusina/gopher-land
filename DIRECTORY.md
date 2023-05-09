@@ -160,6 +160,9 @@
     * Quicksort
       * [Quicksort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/quicksort/quicksort.go)
       * [Quicksort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/quicksort/quicksort_test.go)
+    * Selectionsort
+      * [Selection Sort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/selectionsort/selection_sort.go)
+      * [Selection Sort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/selectionsort/selection_sort_test.go)
   * Space Age
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/cases_test.go)
     * [Space Age](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/space_age.go)
