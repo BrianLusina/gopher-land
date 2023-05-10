@@ -1,4 +1,4 @@
-package selectionsort
+package insertionsort
 
 import (
 	"fmt"
@@ -24,21 +24,21 @@ var testCaseInts = []testCase[int]{
 	},
 }
 
-func TestSelectionSortInts(t *testing.T) {
+func TestInsertionSortInts(t *testing.T) {
 	for _, tc := range testCaseInts {
-		actual := SelectionSort(tc.input)
+		actual := InsertionSort(tc.input)
 
-		assert.Equal(t, tc.expected, actual, fmt.Sprintf("SelectionSort(%v) = %v, expected = %v", tc.input, actual, tc.expected))
+		assert.Equal(t, tc.expected, actual, fmt.Sprintf("InsertionSort(%v) = %v, expected = %v", tc.input, actual, tc.expected))
 	}
 }
-func BenchmarkSelectionSortInts(b *testing.B) {
+func BenchmarkInsertionSortInts(b *testing.B) {
 	if testing.Short() {
 		b.Skip()
 	}
 
 	for i := 0; i < b.N; i++ {
 		for _, tc := range testCaseInts {
-			SelectionSort(tc.input)
+			InsertionSort(tc.input)
 		}
 	}
 }
@@ -50,22 +50,22 @@ var testCaseFloats = []testCase[float64]{
 	},
 }
 
-func TestSelectionSortFloats(t *testing.T) {
+func TestInsertionSortFloats(t *testing.T) {
 	for _, tc := range testCaseFloats {
-		actual := SelectionSort(tc.input)
+		actual := InsertionSort(tc.input)
 
-		assert.Equal(t, tc.expected, actual, fmt.Sprintf("SelectionSort(%v) = %v, expected = %v", tc.input, actual, tc.expected))
+		assert.Equal(t, tc.expected, actual, fmt.Sprintf("InsertionSort(%v) = %v, expected = %v", tc.input, actual, tc.expected))
 	}
 }
 
-func BenchmarkSelectionSortFloats(b *testing.B) {
+func BenchmarkInsertionSortFloats(b *testing.B) {
 	if testing.Short() {
 		b.Skip()
 	}
 
 	for i := 0; i < b.N; i++ {
 		for _, tc := range testCaseFloats {
-			SelectionSort(tc.input)
+			InsertionSort(tc.input)
 		}
 	}
 }
@@ -81,22 +81,22 @@ var testCaseStrings = []testCase[string]{
 	},
 }
 
-func TestSelectionSortStrings(t *testing.T) {
+func TestInsertionSortStrings(t *testing.T) {
 	for _, tc := range testCaseStrings {
-		actual := SelectionSort(tc.input)
+		actual := InsertionSort(tc.input)
 
-		assert.Equal(t, tc.expected, actual, fmt.Sprintf("SelectionSort(%v) = %v, expected = %v", tc.input, actual, tc.expected))
+		assert.Equal(t, tc.expected, actual, fmt.Sprintf("InsertionSort(%v) = %v, expected = %v", tc.input, actual, tc.expected))
 	}
 }
 
-func BenchmarkSelectionSortStrings(b *testing.B) {
+func BenchmarkInsertionSortStrings(b *testing.B) {
 	if testing.Short() {
 		b.Skip()
 	}
 
 	for i := 0; i < b.N; i++ {
 		for _, tc := range testCaseStrings {
-			SelectionSort(tc.input)
+			InsertionSort(tc.input)
 		}
 	}
 }
