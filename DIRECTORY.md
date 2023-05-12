@@ -150,6 +150,9 @@
     * Bubblesort
       * [Bubblesort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/bubblesort/bubblesort.go)
       * [Bubblesort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/bubblesort/bubblesort_test.go)
+    * Insertionsort
+      * [Insertion Sort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/insertionsort/insertion_sort.go)
+      * [Insertion Sort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/insertionsort/insertion_sort_test.go)
     * Mergeintervals
       * [Mergeintervals](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergeintervals/mergeintervals.go)
       * [Mergeintervals Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergeintervals/mergeintervals_test.go)
