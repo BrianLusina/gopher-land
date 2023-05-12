@@ -1,22 +1,15 @@
 package intersectionofarrays
 
-func intersectTwo(nums1 []int, nums2 []int) []int {
-	counts := make(map[int]int)
-	result := []int{}
+import "gopherland/pkg/types"
 
-	for _, num := range nums1 {
-		if _, ok := counts[num]; !ok {
-			counts[num] = 1
-		} else {
-			counts[num] += 1
-		}
-	}
+func intersectTwo[T types.Comparable](a []T, b []T) []T {
+	result := []T{}
 
-	for _, num := range nums2 {
-		if _, ok := counts[num]; ok {
-			if counts[num] > 0 {
-				result = append(result, num)
-				counts[num] -= 1
+	for x, val1 := range a {
+		for y, _ := range b {
+			if a[x] == b[y] {
+				result = append(result, val1)
+				break
 			}
 		}
 	}
