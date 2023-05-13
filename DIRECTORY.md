@@ -153,9 +153,6 @@
     * Insertionsort
       * [Insertion Sort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/insertionsort/insertion_sort.go)
       * [Insertion Sort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/insertionsort/insertion_sort_test.go)
-    * Mergeintervals
-      * [Mergeintervals](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergeintervals/mergeintervals.go)
-      * [Mergeintervals Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergeintervals/mergeintervals_test.go)
     * Mergesort
       * [Mergesort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergesort/mergesort.go)
       * [Mergesort Concurrent](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/mergesort/mergesort_concurrent.go)
@@ -518,6 +515,13 @@
       * [Intersectionone Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionOne_test.go)
       * [Intersectiontwo](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionTwo.go)
       * [Intersectiontwo Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionTwo_test.go)
+    * Intervals
+      * Mergeintervals
+        * [Mergeintervals](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intervals/mergeintervals/mergeintervals.go)
+        * [Mergeintervals Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intervals/mergeintervals/mergeintervals_test.go)
+      * Nonoverlapping
+        * [Min Removals Of Non Overlapping Intervals](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intervals/nonoverlapping/min_removals_of_non_overlapping_intervals.go)
+        * [Min Removals Of Non Overlapping Intervals Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intervals/nonoverlapping/min_removals_of_non_overlapping_intervals_test.go)
     * Longestconsecutiveseq
       * [Longest Consecutive Seq](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/longestconsecutiveseq/longest_consecutive_seq.go)
       * [Longest Consecutive Seq Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/longestconsecutiveseq/longest_consecutive_seq_test.go)
@@ -625,9 +629,7 @@
       * [Priority Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/priority/priority_queue_test.go)
     * [Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/queue.go)
   * Stack
-    * Lifo
-      * [Lifo Stack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/lifo/lifo_stack.go)
-      * [Lifo Stack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/lifo/lifo_stack_test.go)
+    * [Interface](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/interface.go)
     * Max
       * [Maxstack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/max/maxstack.go)
       * [Maxstack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/max/maxstack_test.go)
@@ -635,6 +637,7 @@
       * [Minstack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/min/minstack.go)
       * [Minstack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/min/minstack_test.go)
     * [Stack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/stack.go)
+    * [Stack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/stack_test.go)
   * Trees
     * Binarytrees
       * [Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree.go)
