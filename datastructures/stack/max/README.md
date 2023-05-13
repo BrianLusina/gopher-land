@@ -10,6 +10,7 @@ void pop() removes the element on the top of the stack.
 int top() gets the top element of the stack.
 int getMax() retrieves the minimum element in the stack.
 
+```plain
 Example 1:
 
 Input
@@ -28,3 +29,4 @@ maxStack.getMax(); // return 0
 maxStack.pop();
 maxStack.top();    // return 0
 maxStack.getMax(); // return 0
+```

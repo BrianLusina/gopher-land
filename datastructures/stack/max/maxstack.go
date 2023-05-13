@@ -1,68 +1,75 @@
 package stack
 
 import (
-	lifoStack "gopherland/datastructures/stack/lifo"
+	stack "gopherland/datastructures/stack"
 	"gopherland/pkg/utils"
-	"math"
+
+	"golang.org/x/exp/constraints"
 )
 
 // MaxStack is a stack that keeps track of the maximum value in the stack.
-type MaxStack[T comparable] struct {
-	lifoStack.LifoStack[T]
-	Maximum T
+type MaxStack[T constraints.Ordered] struct {
+	stack.Stack[T]
+	currentMax T
 }
 
 // NewMaxStack creates a new max stack
-func NewMaxStack[T comparable](capacity int) *MaxStack[T] {
-	max := math.Inf(-1)
-
+func NewMaxStack[T constraints.Ordered](capacity int) *MaxStack[T] {
 	return &MaxStack[T]{
-		LifoStack: lifoStack.NewLifoStack[T](capacity),
-		Maximum:   max,
+		Stack: stack.NewStack[T](capacity),
 	}
 }
 
 // Push adds a new item to the stop of the stack
-func (s *MaxStack[T]) Push(val T) error {
-	err := s.LifoStack.Push(val)
+func (ms *MaxStack[T]) Push(val T) error {
+	err := ms.Stack.Push(val)
 	if err != nil {
 		return err
 	}
-	if val > s.Maximum {
-		s.Maximum = val
+	if val > ms.currentMax {
+		ms.currentMax = val
 	}
 	return nil
 }
 
 // Pop removes an item from the stop of the stack
 func (s *MaxStack[T]) Pop() (T, error) {
-	data, err := s.LifoStack.Pop()
+	data, err := s.Stack.Pop()
 
 	if err != nil {
 		return utils.Zero[T](), err
 	}
 
-	if len(s.LifoStack.GetItems()) == 0 {
-		s.Maximum = math.Inf(1)
-	} else if s.Maximum == float64(data.(int)) {
-		m := s.LifoStack.GetItems()[0]
+	if s.Stack.Size() == 0 {
+		s.currentMax = utils.GetZeroValue[T]()
+	} else if s.currentMax == data {
+		tempMax, err := s.Peek()
 
-		for i, e := range s.LifoStack.GetItems() {
-			if i == 0 || e.(int) > m.(int) {
-				m = e
+		if err != nil {
+			return utils.GetZeroValue[T](), err
+		}
+
+		for _, item := range s.GetItems() {
+			if item > tempMax {
+				tempMax = item
 			}
 		}
-		s.Maximum = float64(m.(int))
+
+		s.currentMax = tempMax
 	}
 	return data, nil
 }
 
 // Peek retrieves the top item from the stack without removing it
 func (s *MaxStack[T]) Peek() (T, error) {
-	return s.LifoStack.Peek()
+	return s.Stack.Peek()
 }
 
 // GetMax gets the max item in the stack
 func (s *MaxStack[T]) GetMax() T {
-	return int(s.Maximum)
+	return s.currentMax
+}
+
+func (s *MaxStack[T]) Size() int {
+	return s.Stack.Size()
 }

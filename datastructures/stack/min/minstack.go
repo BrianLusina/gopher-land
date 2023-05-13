@@ -1,69 +1,80 @@
 package stack
 
 import (
-	lifoStack "gopherland/datastructures/stack/lifo"
-	"math"
+	"gopherland/datastructures/stack"
+	"gopherland/pkg/utils"
+
+	"golang.org/x/exp/constraints"
 )
 
-type MinStack struct {
-	lifoStack.LifoStack
-	Minimum float64
+type MinStack[T constraints.Ordered] struct {
+	stack.Stack[T]
+	currentMinimum T
 }
 
 // NewMinStack creates a new MinStack
-func NewMinStack(capacity int) *MinStack {
-	min := math.Inf(1)
-
-	return &MinStack{
-		LifoStack: lifoStack.NewLifoStack(capacity),
-		Minimum:   min,
+func NewMinStack[T constraints.Ordered](capacity int) *MinStack[T] {
+	return &MinStack[T]{
+		Stack:          stack.NewStack[T](capacity),
+		currentMinimum: utils.Zero[T](),
 	}
 }
 
-func (s *MinStack) Push(val any) error {
-	err := s.LifoStack.Push(val)
+// Push adds an item to the top of the stack
+func (s *MinStack[T]) Push(val T) error {
+	err := s.Stack.Push(val)
 
 	if err != nil {
 		return err
 	}
 
-	if float64(val.(int)) < s.Minimum {
-		s.Minimum = float64(val.(int))
+	if val < s.currentMinimum {
+		s.currentMinimum = val
 	}
 
 	return nil
 }
 
-func (s *MinStack) Pop() (any, error) {
-	data, err := s.LifoStack.Pop()
+// Pop removes an item from the top of the stack. If no item is in the stack an error is returned
+func (s *MinStack[T]) Pop() (T, error) {
+	data, err := s.Stack.Pop()
 
 	if err != nil {
-		return nil, err
+		return utils.Zero[T](), err
 	}
 
 	if s.size() == 0 {
-		s.Minimum = math.Inf(1)
-	} else if s.Minimum == float64(data.(int)) {
-		m := s.LifoStack.GetItems()[0]
+		s.currentMinimum = utils.Zero[T]()
+	} else if s.currentMinimum == data {
+		tempMin, err := s.Peek()
 
-		for i, e := range s.LifoStack.GetItems() {
-			if i == 0 || e.(int) < m.(int) {
-				m = e
+		if err != nil {
+			return utils.Zero[T](), err
+		}
+
+		for _, item := range s.GetItems() {
+			if item < tempMin {
+				tempMin = item
 			}
 		}
-		s.Minimum = float64(m.(int))
+
+		s.currentMinimum = tempMin
 	}
+
 	return data, nil
 }
 
-func (s *MinStack) Peek() (any, error) {
-	return s.LifoStack.Peek()
+// Peek check for the top of the item in the stack without removing it, Returns an error if the stack is empty
+func (s *MinStack[T]) Peek() (T, error) {
+	return s.Stack.Peek()
 }
 
-func (s *MinStack) GetMin() int {
-	return int(s.Minimum)
+// GetMin returns the minimum value in the stack
+func (s *MinStack[T]) GetMin() T {
+	return s.currentMinimum
 }
 
-func (s *MinStack) size() int {
-	return len(s.LifoStack.GetItems())
+// size returns the current size of the stack
+func (s *MinStack[T]) size() int {
+	return s.Stack.Size()
 }
