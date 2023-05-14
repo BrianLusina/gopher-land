@@ -15,4 +15,5 @@ type Queue[T any] interface {
 	IsEmpty() bool
 	IsFull() bool
 	Peek() (T, error)
+	Size() int
 }
