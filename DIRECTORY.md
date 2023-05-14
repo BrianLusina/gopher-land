@@ -615,15 +615,15 @@
     * [Cache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache.go)
     * [Cache Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache_test.go)
   * Queues
+    * Circular
+      * [Circular Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/circular/circular_queue.go)
+      * [Circular Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/circular/circular_queue_test.go)
     * Fifo
       * Dlqueue
         * [Double Linked Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/fifo/dlqueue/double_linked_queue.go)
         * [Double Linked Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/fifo/dlqueue/double_linked_queue_test.go)
       * [Fifo Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/fifo/fifo_queue.go)
       * [Fifo Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/fifo/fifo_queue_test.go)
-    * Lifo
-      * [Lifo Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/lifo/lifo_queue.go)
-      * [Lifo Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/lifo/lifo_queue_test.go)
     * Priority
       * [Priority Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/priority/priority_queue.go)
       * [Priority Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/priority/priority_queue_test.go)
