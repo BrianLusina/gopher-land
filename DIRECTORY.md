@@ -611,6 +611,7 @@
     * [Cache Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache_test.go)
   * Queues
     * Circular
+      * [Circular Linked List Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/circular/circular_linked_list_queue.go)
       * [Circular Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/circular/circular_queue.go)
       * [Circular Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/circular/circular_queue_test.go)
     * Fifo
