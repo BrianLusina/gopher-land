@@ -15,3 +15,13 @@ func ClimbStairs(n int) int {
 
 	return second
 }
+
+func ClimbStaircase(steps int) int {
+	if steps < 0 {
+		return 0
+	}
+	if steps == 1 || steps == 0 {
+		return 1
+	}
+	return ClimbStaircase(steps-1) + ClimbStaircase(steps-2)
+}
