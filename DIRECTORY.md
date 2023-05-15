@@ -38,11 +38,6 @@
     * Rotatedsortedarray
       * [Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/rotatedsortedarray/rotated_sorted_array.go)
       * [Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/rotatedsortedarray/rotated_sorted_array_test.go)
-  * Climbstairs
-    * [Climbstairs](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/climbstairs/climbstairs.go)
-  * Climbstairsmincost
-    * [Climbstairsmincost](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/climbstairsmincost/climbstairsmincost.go)
-    * [Climbstairsmincost Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/climbstairsmincost/climbstairsmincost_test.go)
   * Cycle
     * [Cycle](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/cycle/cycle.go)
   * Diffsquares
@@ -955,6 +950,12 @@
     * [Bouncing Ball Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/bouncingballs/bouncing_ball_test.go)
   * Chessboardcellcolor
     * [Chessboardcellcolor](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/chessboardcellcolor/chessboardcellcolor.go)
+  * Climbstairs
+    * [Climbstairs](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/climbstairs/climbstairs.go)
+    * [Climbstairs Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/climbstairs/climbstairs_test.go)
+  * Climbstairsmincost
+    * [Climbstairsmincost](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/climbstairsmincost/climbstairsmincost.go)
+    * [Climbstairsmincost Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/climbstairsmincost/climbstairsmincost_test.go)
   * Diamond
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/diamond/cases_test.go)
     * [Diamond](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/diamond/diamond.go)
