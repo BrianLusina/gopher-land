@@ -10,8 +10,6 @@ import (
 type LinkedList[T comparable] struct {
 	// Head of the list
 	Head *list.Node[T]
-	// size of the list
-	size int
 }
 
 // NewLinkedList creates a new Singly LinkedList
@@ -73,7 +71,7 @@ func (sll *LinkedList[T]) Array() []any {
 	return values
 }
 
-func (sll LinkedList[T]) String() string {
+func (sll *LinkedList[T]) String() string {
 	current := sll.Head
 	result := ""
 
@@ -488,9 +486,6 @@ func (sll *LinkedList[T]) ReverseGroups(k int) {
 	if next != nil {
 		sll.Head.Next = next
 	}
-
-	return
-
 }
 
 func (sll *LinkedList[T]) DeleteAtPosition(position int) (*list.Node[T], error) {
@@ -579,7 +574,7 @@ func (sll *LinkedList[T]) AddAtPosition(position int, data T) {
 	sll.Head = prev
 }
 
-func (sll LinkedList[T]) Length() int {
+func (sll *LinkedList[T]) Length() int {
 	if sll.Head == nil {
 		return 0
 	}
@@ -596,7 +591,7 @@ func (sll LinkedList[T]) Length() int {
 }
 
 // MiddleNode returns the middle node in the singly linked list
-func (sll LinkedList[T]) MiddleNode() *list.Node[T] {
+func (sll *LinkedList[T]) MiddleNode() *list.Node[T] {
 	if sll.Head == nil {
 		return nil
 	}
@@ -610,4 +605,45 @@ func (sll LinkedList[T]) MiddleNode() *list.Node[T] {
 	}
 
 	return slow_pointer
+}
+
+// KthToLastNode returns the kth to the last node in the linked list
+//
+// For example given a linked list of:
+// a -> b -> c -> d
+//
+// if k is the number 1 then d should be returned
+// if k is the number 2 then c should be returned
+// if k is the number 3 then b should be returned
+// if k is the number 4 then a should be returned
+// if k exceeds the size of the list then nil and an error are returned
+//
+// Complexity analysis:
+//
+// Time Complexity: O(n) where n is the number of nodes in the linked list. We traverse the linked list to get to the the Kth to the last node.
+// We are using 2 pointers 1 to keep track of the end node and the other that will be a distance of k from the first pointer. Since we have to
+// traverse up to the last node, the worst case is O(n) as k could be the very last position of the last node.
+//
+// Space complexity is O(1), no extra memory is being used other than the pointers on the linked list
+func (sll *LinkedList[T]) KthToLastNode(k int) (*list.Node[T], error) {
+	if k < 1 {
+		return nil, fmt.Errorf("k %d is less than 1", k)
+	}
+
+	leftNode := sll.Head
+	rightNode := sll.Head
+
+	for i := 0; i < k-1; i++ {
+		if rightNode.Next == nil {
+			return nil, fmt.Errorf("k %d is larger than the length of the linked list", k)
+		}
+		rightNode = rightNode.Next
+	}
+
+	for rightNode.Next != nil {
+		leftNode = leftNode.Next
+		rightNode = rightNode.Next
+	}
+
+	return leftNode, nil
 }
