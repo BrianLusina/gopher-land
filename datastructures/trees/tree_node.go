@@ -1,14 +1,17 @@
 package trees
 
+import "gopherland/pkg/types"
+
 // TreeNode represent a Node in a Tree
-type TreeNode struct {
-	Data     any
-	Children []*TreeNode
+type TreeNode[T types.Comparable] struct {
+	Data     T
+	Children []*TreeNode[T]
 }
 
 // NewTreeNode returns a new TreeNode
-func NewTreeNode(data interface{}) TreeNode {
-	return TreeNode{
-		Data: data,
+func NewTreeNode[T types.Comparable](data T) *TreeNode[T] {
+	return &TreeNode[T]{
+		Data:     data,
+		Children: nil,
 	}
 }
