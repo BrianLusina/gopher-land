@@ -3,10 +3,6 @@
   * Accumulate
     * [Accumulate](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/accumulate/accumulate.go)
     * [Accumulate Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/accumulate/accumulate_test.go)
-  * Anagram
-    * [Anagram](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/anagram/anagram.go)
-    * [Anagram Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/anagram/anagram_test.go)
-    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/anagram/cases_test.go)
   * Arrays
     * Maxsubarray
       * [Max Subarray](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/maxsubarray/max_subarray.go)
@@ -481,9 +477,6 @@
     * Cascadingsubsets
       * [Cascading Subsets](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/cascadingsubsets/cascading_subsets.go)
       * [Cascading Subsets Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/cascadingsubsets/cascading_subsets_test.go)
-    * Containerwithmostwater
-      * [Container With Most Water](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containerwithmostwater/container_with_most_water.go)
-      * [Container With Most Water Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containerwithmostwater/container_with_most_water_test.go)
     * Containsduplicates
       * [Contains Duplicates](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates.go)
       * [Contains Duplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/containsduplicates/contains_duplicates_test.go)
@@ -943,6 +936,10 @@
     * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/utils.go)
 
 ## Gopuzzles
+  * Anagram
+    * [Anagram](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/anagram/anagram.go)
+    * [Anagram Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/anagram/anagram_test.go)
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/anagram/cases_test.go)
   * Annalyn
     * [Annalyns Infiltration](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration.go)
     * [Annalyns Infiltration Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration_test.go)
@@ -957,6 +954,9 @@
   * Climbstairsmincost
     * [Climbstairsmincost](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/climbstairsmincost/climbstairsmincost.go)
     * [Climbstairsmincost Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/climbstairsmincost/climbstairsmincost_test.go)
+  * Containerwithmostwater
+    * [Container With Most Water](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/containerwithmostwater/container_with_most_water.go)
+    * [Container With Most Water Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/containerwithmostwater/container_with_most_water_test.go)
   * Diamond
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/diamond/cases_test.go)
     * [Diamond](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/diamond/diamond.go)
