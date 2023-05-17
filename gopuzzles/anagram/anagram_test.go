@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"sort"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func equal(a, b []string) bool {
@@ -62,3 +64,30 @@ func BenchmarkDetectAnagrams(b *testing.B) {
 // 		}
 // 	}
 // }
+
+func TestGroupAnagrams(t *testing.T) {
+	for _, tc := range generateAnagramTestCases {
+		t.Run(tc.name, func(t *testing.T) {
+			actual := GenerateAnagrams(tc.word)
+			if !assert.Equal(t, tc.expected, actual) {
+				msg := `FAIL: %s
+				Word %s
+				Expected %q
+				Got %q
+							`
+				t.Fatalf(msg, tc.word, tc.expected, actual)
+			} else {
+				t.Logf("PASS: %s", tc.word)
+			}
+
+		})
+	}
+}
+
+func BenchmarkGroupAnagrams(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		for _, tc := range generateAnagramTestCases {
+			GenerateAnagrams(tc.word)
+		}
+	}
+}

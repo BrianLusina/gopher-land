@@ -4,22 +4,26 @@ Problem Statement
 Given an unsorted array of n elements, write a function to sort the array
 
 Approach
-select the first element of the array
-compare it with its next element
-if it is larger than the next element then swap them
-else do nothing
-keep doing this for every index of the array
-repeat the above process n times.
 
-Time Complexity
-O(n^2) Worst case performance
+1. select the first element of the array
+2. compare it with its next element
+3. if it is larger than the next element then swap them, else do nothing
+4. keep doing this for every index of the array
+5. repeat the above process n times.
 
-O(n) Best-case performance
+## Complexity
 
-O(n^2) Average performance
+1. Time Complexity
 
-Space Complexity
-O(1) Worst case
+    O(n^2) Worst case performance as we find the collection is in decreasing order
 
-Founder's Name
+    O(n) Best-case performance, the list is already sorted
+
+    O(n^2) Average performance
+
+2. Space Complexity
+    O(1) Worst case as we sort the collection in place and no new collection is used to store the sorted elements
+
+## Founder's Name
+
 The term “Bubble Sort” was first used by Iverson, K in 1962.

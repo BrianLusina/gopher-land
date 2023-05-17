@@ -140,3 +140,25 @@ var groupAnagramTestCases = []struct {
 		expected: [][]string{{"a"}},
 	},
 }
+
+var generateAnagramTestCases = []struct {
+	name     string
+	word     string
+	expected []string
+}{
+	{
+		name:     "Empty string",
+		word:     "",
+		expected: []string{},
+	},
+	{
+		name:     "Single character",
+		word:     "a",
+		expected: []string{"a"},
+	},
+	{
+		name:     "3 Letter word 'abc'",
+		word:     "abc",
+		expected: []string{"abc", "acb", "bac", "bca", "cab", "cba"},
+	},
+}

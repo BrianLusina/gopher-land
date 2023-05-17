@@ -34,3 +34,20 @@ func BenchmarkContainerWithMostWater(b *testing.B) {
 		}
 	}
 }
+
+func TestContainerWithMostWaterBruteForce(t *testing.T) {
+	for _, tc := range testCases {
+		actual := maxAreaBruteForce(tc.heights)
+		if actual != tc.expected {
+			t.Fatalf("maxArea(%v) = %d, expected= %d", tc.heights, actual, tc.expected)
+		}
+	}
+}
+
+func BenchmarkContainerWithMostWaterBruteForce(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		for _, tc := range testCases {
+			maxAreaBruteForce(tc.heights)
+		}
+	}
+}
