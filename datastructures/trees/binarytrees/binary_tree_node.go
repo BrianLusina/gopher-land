@@ -8,7 +8,6 @@ import (
 )
 
 // BinaryTreeNode represent a Binary Tree Node in a Binary Tree
-// when performing comparisons, it is important to cast this interface to a concrete type
 type BinaryTreeNode[T types.Comparable] struct {
 	trees.TreeNode[T]
 	Left, Right *BinaryTreeNode[T]
@@ -16,7 +15,7 @@ type BinaryTreeNode[T types.Comparable] struct {
 
 // NewBinaryTreeNode creates a new BinaryTreeNode
 func NewBinaryTreeNode[T types.Comparable](data T) *BinaryTreeNode[T] {
-	node := trees.NewTreeNode[T](data)
+	node := trees.NewTreeNode(data)
 
 	return &BinaryTreeNode[T]{
 		TreeNode: *node,
@@ -93,7 +92,7 @@ func (t *BinaryTreeNode[T]) InorderTraversalRecurse(root *BinaryTreeNode[T]) (re
 	return
 }
 
-func (t *BinaryTreeNode[T]) inOrderMorrisTraversal() (result []T) {
+func (t *BinaryTreeNode[T]) InOrderMorrisTraversal() (result []T) {
 	current := t
 	var pre *BinaryTreeNode[T]
 
@@ -253,7 +252,7 @@ func (t *BinaryTreeNode[T]) Height() int {
 	height := 0
 	var queue []*BinaryTreeNode[T]
 
-	for true {
+	for {
 		currentLevelNodes := len(queue)
 
 		if currentLevelNodes == 0 {
@@ -277,7 +276,6 @@ func (t *BinaryTreeNode[T]) Height() int {
 			currentLevelNodes--
 		}
 	}
-	return 0
 }
 
 // LowestCommonAncestor returns the LCA of 2 nodes
@@ -382,6 +380,34 @@ func (t *BinaryTreeNode[T]) Size() (counter int) {
 	}
 
 	return
+}
+
+// IsFull checks if a binary tree is a full binary tree.
+// A Full Binary tree has a parent or internal nodes who have either 2 or 0 children
+func (t *BinaryTreeNode[T]) IsFull() bool {
+	var isFullHelper func(root *BinaryTreeNode[T]) bool
+
+	isFullHelper = func(root *BinaryTreeNode[T]) bool {
+		// if root is nil, this is subtree is not a full binary tree and a this point this is the base case
+
+		if root == nil {
+			return false
+		}
+
+		// if this root node of this subtree has neither a left nor a right node, then by definition this
+		// binary subtree is a full binary tree
+		if root.Left == nil && root.Right == nil {
+			return true
+		}
+
+		if root.Left != nil && root.Right != nil {
+			return isFullHelper(root.Left) && isFullHelper(root.Right)
+		}
+
+		return false
+	}
+
+	return isFullHelper(t)
 }
 
 // Deserialize converts string data into a binary tree

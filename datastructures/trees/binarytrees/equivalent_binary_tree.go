@@ -1,25 +1,25 @@
 package binarytrees
 
 // Walk walks the tree and sends all values to the channel intChannel
-func Walk(tree *BinaryTreeNode, intChannel chan int) {
+func Walk(tree *BinaryTreeNode[int], intChannel chan int) {
 	recursivelyWalk(tree, intChannel)
 	close(intChannel)
 }
 
 // recursivelyWalk recursively walks down a tree and pushes values to the channel
-func recursivelyWalk(tree *BinaryTreeNode, intChannel chan int) {
+func recursivelyWalk(tree *BinaryTreeNode[int], intChannel chan int) {
 	if tree != nil {
 		// walk to the left first and send left part to the channel
 		recursivelyWalk(tree.Left, intChannel)
 		// send value to channel
-		intChannel <- tree.Data.(int)
+		intChannel <- tree.Data
 		// walk to the right
 		recursivelyWalk(tree.Right, intChannel)
 	}
 }
 
 // AreTreesSame determines whether 2 trees are the same
-func AreTreesSame(tree1, tree2 *BinaryTreeNode) bool {
+func AreTreesSame(tree1, tree2 *BinaryTreeNode[int]) bool {
 	channel1 := make(chan int)
 	channel2 := make(chan int)
 

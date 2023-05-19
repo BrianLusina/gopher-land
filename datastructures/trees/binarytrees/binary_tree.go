@@ -12,10 +12,6 @@ type BinaryTree[T types.Comparable] struct {
 	root *BinaryTreeNode[T]
 }
 
-type BinaryTreeIterator[T types.Comparable] struct {
-	stack []*BinaryTreeNode[T]
-}
-
 // NewBinaryTree creates a new binary tree with root as nil
 func NewBinaryTree[T types.Comparable]() *BinaryTree[T] {
 	return &BinaryTree[T]{}
@@ -34,13 +30,13 @@ func NewBinaryTree[T types.Comparable]() *BinaryTree[T] {
 // }
 
 // Serialize converts this tree into string representation
-func (t *BinaryTree[T]) Serialize() string {
-	if t.root == nil {
+func (tree *BinaryTree[T]) Serialize() string {
+	if tree.root == nil {
 		return ""
 	}
 
 	stack := []*BinaryTreeNode[T]{}
-	stack = append(stack, t.root)
+	stack = append(stack, tree.root)
 	nodeValues := []any{}
 
 	for len(stack) != 0 {
@@ -59,4 +55,32 @@ func (t *BinaryTree[T]) Serialize() string {
 	joined := strings.Trim(strings.Join(strings.Fields(fmt.Sprint(nodeValues...)), ","), "[]")
 
 	return joined
+}
+
+// IsFull checks if a binary tree is a full binary tree.
+// A Full Binary tree has a parent or internal nodes who have either 2 or 0 children
+func (root *BinaryTree[T]) IsFull() bool {
+	var isFullHelper func(root *BinaryTreeNode[T]) bool
+
+	isFullHelper = func(root *BinaryTreeNode[T]) bool {
+		// if root is nil, this is subtree is not a full binary tree and a this point this is the base case
+
+		if root == nil {
+			return false
+		}
+
+		// if this root node of this subtree has neither a left nor a right node, then by definition this
+		// binary subtree is a full binary tree
+		if root.Left == nil && root.Right == nil {
+			return true
+		}
+
+		if root.Left != nil && root.Right != nil {
+			return isFullHelper(root.Left) && isFullHelper(root.Right)
+		}
+
+		return false
+	}
+
+	return isFullHelper(root.root)
 }
