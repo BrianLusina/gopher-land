@@ -1021,6 +1021,9 @@
   * Slowestkey
     * [Slowest Key](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key.go)
     * [Slowest Key Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key_test.go)
+  * Studentlunch
+    * [Student Lunch](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/studentlunch/student_lunch.go)
+    * [Student Lunch Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/studentlunch/student_lunch_test.go)
   * Tournament
     * [Tournament](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/tournament/tournament.go)
     * [Tournament Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/tournament/tournament_test.go)
