@@ -520,9 +520,6 @@
       * Reshapematrix
         * [Reshapematrix](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/reshapematrix/reshapematrix.go)
         * [Reshapematrix Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/reshapematrix/reshapematrix_test.go)
-    * Maxlencontiguoussubarray
-      * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
-      * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
     * Maxprofit
       * [Maxprofit](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxprofit/maxprofit.go)
       * [Maxprofit Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxprofit/maxprofit_test.go)
@@ -944,6 +941,10 @@
   * Annalyn
     * [Annalyns Infiltration](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration.go)
     * [Annalyns Infiltration Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration_test.go)
+  * Arrays
+    * Maxlencontiguoussubarray
+      * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
+      * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
   * Bouncingballs
     * [Bouncing Ball](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/bouncingballs/bouncing_ball.go)
     * [Bouncing Ball Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/bouncingballs/bouncing_ball_test.go)
