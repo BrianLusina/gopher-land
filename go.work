@@ -4,4 +4,6 @@ use (
 	./algorithms
 	./datastructures
 	./pkg
+	./gomath
+	./gopuzzles
 )

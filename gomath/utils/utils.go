@@ -21,3 +21,12 @@ func Min(a, b int) int {
 	}
 	return b
 }
+
+// Sum returns the sum of a slice of integers
+func Sum(numbers []int) int {
+	result := 0
+	for _, number := range numbers {
+		result += number
+	}
+	return result
+}
