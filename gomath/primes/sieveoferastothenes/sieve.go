@@ -1,7 +1,7 @@
 package sieveoferastothenes
 
 import (
-	"gopherland/gomath/primes"
+	"gopherland/math/primes"
 )
 
 // Sieve returns a slice of all primes from start to limit

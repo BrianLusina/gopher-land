@@ -2,7 +2,7 @@ package clock
 
 import (
 	"fmt"
-	"gopherland/gomath/utils"
+	"gopherland/math/utils"
 )
 
 // Define the Clock type here.

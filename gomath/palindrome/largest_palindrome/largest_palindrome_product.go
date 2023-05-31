@@ -1,7 +1,7 @@
 package palindromeproduct
 
 import (
-	"gopherland/gostrings/utils"
+	"gopherland/strings/utils"
 	"strconv"
 )
 

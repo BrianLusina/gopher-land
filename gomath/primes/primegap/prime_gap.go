@@ -1,8 +1,8 @@
 package primegap
 
 import (
-	"gopherland/gomath/primes"
-	"gopherland/gomath/primes/sieveoferastothenes"
+	"gopherland/math/primes"
+	"gopherland/math/primes/sieveoferastothenes"
 )
 
 // Gap returns the first pair of prime numbers in the range [m, n] that are a g distance apart.

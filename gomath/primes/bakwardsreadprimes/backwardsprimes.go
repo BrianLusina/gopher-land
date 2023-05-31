@@ -1,9 +1,9 @@
 package bakwardsreadprimes
 
 import (
-	"gopherland/gomath/primes"
-	"gopherland/gomath/primes/sieveoferastothenes"
-	"gopherland/gomath/utils"
+	"gopherland/math/primes"
+	"gopherland/math/primes/sieveoferastothenes"
+	"gopherland/math/utils"
 )
 
 func BackwardsPrime(start int, stop int) (result []int) {

@@ -1,7 +1,7 @@
 package containerwithmostwater
 
 import (
-	"gopherland/gomath/utils"
+	"gopherland/math/utils"
 )
 
 // maxArea gets the maximum area of a container that can contain water in linear time
