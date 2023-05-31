@@ -3,40 +3,40 @@ package quicksort
 import "gopherland/pkg/types"
 
 // partitions a slice into 2 and returns the pivot index. Assumes the pivot is at the end of the slice
-func partition[T types.Number](theSlice []T, startIndex, endIndex int) int {
+func partition[T types.Number](collection []T, startIndex, endIndex int) int {
 
-	pivot := theSlice[endIndex]
+	pivot := collection[endIndex]
 
-	leftIndex := startIndex
-	rightIndex := endIndex - 1
+	leftPointer := startIndex
+	rightPointer := endIndex - 1
 
-	for leftIndex <= rightIndex {
+	for leftPointer <= rightPointer {
 		// walk until we find something on the left side that belongs on the right (less than the pivot)
-		for leftIndex <= endIndex && theSlice[leftIndex] < pivot {
-			leftIndex++
+		for leftPointer <= endIndex && collection[leftPointer] < pivot {
+			leftPointer++
 		}
 
 		// walk until we find something on the right side that belongs on the left(greater than or equal to the pivot)
-		for rightIndex >= startIndex && theSlice[rightIndex] >= pivot {
-			rightIndex--
+		for rightPointer >= startIndex && collection[rightPointer] >= pivot {
+			rightPointer--
 		}
 
-		if leftIndex < rightIndex {
-			// swap the items at the left_index and right_index, moving the element that's smaller than the pivot to the left
-			// # half and the element that's larger than the pivot to the right half
-			theSlice[rightIndex], theSlice[leftIndex] = theSlice[leftIndex], theSlice[rightIndex]
+		if leftPointer < rightPointer {
+			// swap the items at the left_pinter and right_pointer, moving the element that's smaller than the pivot to the left
+			// half and the element that's larger than the pivot to the right half
+			collection[rightPointer], collection[leftPointer] = collection[leftPointer], collection[rightPointer]
 		} else {
 			// unless we have looked at all the elements in the list and are done partitioning. In that case, move the pivot element
 			// into it's final position
-			theSlice[endIndex], theSlice[leftIndex] = theSlice[leftIndex], theSlice[endIndex]
+			collection[endIndex], collection[leftPointer] = collection[leftPointer], collection[endIndex]
 		}
 	}
 
-	return leftIndex
+	return leftPointer
 }
 
-// quicksortSubSlice uses recurstion to sort each partition of the slice
-func quicksortSubSlice[T types.Number](theSlice []T, startIndex, endIndex int) {
+// quicksortSubSlice uses recursion to sort each partition of the slice
+func quicksortSubSlice[T types.Number](collection []T, startIndex, endIndex int) {
 
 	// base case, list with 0 or 1 element
 	if startIndex >= endIndex {
@@ -44,22 +44,22 @@ func quicksortSubSlice[T types.Number](theSlice []T, startIndex, endIndex int) {
 	}
 
 	// divide the list into 2 smaller sublists
-	pivotIndex := partition(theSlice, startIndex, endIndex)
+	pivotIndex := partition(collection, startIndex, endIndex)
 
 	// Recursively sort each sublist
-	quicksortSubSlice(theSlice, startIndex, pivotIndex-1)
-	quicksortSubSlice(theSlice, pivotIndex+1, endIndex)
+	quicksortSubSlice(collection, startIndex, pivotIndex-1)
+	quicksortSubSlice(collection, pivotIndex+1, endIndex)
 }
 
 // Quicksort sorts a slice of integers using quicksort algorithm
-func Quicksort[T types.Number](theSlice []T) []T {
-	length := len(theSlice)
+func Quicksort[T types.Number](collection []T) []T {
+	length := len(collection)
 
 	// Nothing to sort here
 	if length <= 1 {
-		return theSlice
+		return collection
 	}
 
-	quicksortSubSlice(theSlice, 0, length-1)
-	return theSlice
+	quicksortSubSlice(collection, 0, length-1)
+	return collection
 }
