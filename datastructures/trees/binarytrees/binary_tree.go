@@ -59,7 +59,7 @@ func (tree *BinaryTree[T]) Serialize() string {
 
 // IsFull checks if a binary tree is a full binary tree.
 // A Full Binary tree has a parent or internal nodes who have either 2 or 0 children
-func (root *BinaryTree[T]) IsFull() bool {
+func (tree *BinaryTree[T]) IsFull() bool {
 	var isFullHelper func(root *BinaryTreeNode[T]) bool
 
 	isFullHelper = func(root *BinaryTreeNode[T]) bool {
@@ -82,5 +82,32 @@ func (root *BinaryTree[T]) IsFull() bool {
 		return false
 	}
 
-	return isFullHelper(root.root)
+	return isFullHelper(tree.root)
+}
+
+// IsComplete checks if a binary tree is a complete binary tree
+func (tree *BinaryTree[T]) IsComplete() bool {
+	if tree.root == nil {
+		return true
+	}
+
+	nodeCount := tree.root.Size()
+
+	var isCompleteHelper func(root *BinaryTreeNode[T], index int) bool
+
+	isCompleteHelper = func(root *BinaryTreeNode[T], index int) bool {
+		if root == nil {
+			return true
+		}
+
+		if index >= nodeCount {
+			return false
+		}
+
+		return isCompleteHelper(root.Left, 2*index+1) && isCompleteHelper(root.Right, 2*index+2)
+	}
+
+	index := 0
+
+	return isCompleteHelper(tree.root, index)
 }

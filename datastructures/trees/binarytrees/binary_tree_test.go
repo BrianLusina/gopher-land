@@ -103,4 +103,76 @@ var _ = Describe("Binary Tree", func() {
 			})
 		})
 	})
+
+	Context("IsComplete", func() {
+		When("Binary Tree contains nodes with data of type int", func() {
+			It("should return true for binary tree with no root", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				actual := binaryTree.IsComplete()
+
+				Expect(actual).To(Equal(true))
+			})
+
+			It("should return false for binary tree with no root efficiently", func() {
+				experiment := gmeasure.NewExperiment("IsFull binary check on no root")
+
+				//Register the experiment as a ReportEntry - this will cause Ginkgo's reporter infrastructure
+				//to print out the experiment's report and to include the experiment in any generated reports
+				// AddReportEntry(experiment.Name, experiment)
+
+				experiment.SampleDuration("IsFull", func(idx int) {
+					binaryTree := NewBinaryTree[int]()
+					actual := binaryTree.IsFull()
+
+					Expect(actual).To(Equal(false))
+
+				}, gmeasure.SamplingConfig{N: 20})
+			})
+
+			It("should return true for binary tree with root with no children", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				root := NewBinaryTreeNode(1)
+
+				binaryTree.root = root
+
+				actual := binaryTree.IsComplete()
+
+				Expect(actual).To(Equal(true))
+			})
+
+			It("should return true for binary tree with root with 2 children", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				root := NewBinaryTreeNode(1)
+				root.Left = NewBinaryTreeNode(2)
+				root.Right = NewBinaryTreeNode(3)
+
+				binaryTree.root = root
+
+				actual := binaryTree.IsComplete()
+
+				Expect(actual).To(Equal(true))
+			})
+
+			It("should return true for binary tree with root with 2 children, & 3 grandchildren", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				root := NewBinaryTreeNode(1)
+				root.Left = NewBinaryTreeNode(2)
+				root.Right = NewBinaryTreeNode(3)
+				root.Left.Left = NewBinaryTreeNode(4)
+				root.Left.Right = NewBinaryTreeNode(5)
+				root.Right.Left = NewBinaryTreeNode(6)
+
+				binaryTree.root = root
+
+				actual := binaryTree.IsComplete()
+
+				Expect(actual).To(Equal(true))
+			})
+		})
+	})
+
 })

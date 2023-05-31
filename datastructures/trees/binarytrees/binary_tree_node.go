@@ -356,13 +356,13 @@ func (t *BinaryTreeNode[T]) Paths() (res []string) {
 }
 
 // Size returns the number of nodes in this Tree
-func (t *BinaryTreeNode[T]) Size() (counter int) {
-	if t == nil {
+func (treeNode *BinaryTreeNode[T]) Size() (counter int) {
+	if treeNode == nil {
 		return
 	}
 
 	counter++
-	var stack []*BinaryTreeNode[T]
+	stack := []*BinaryTreeNode[T]{treeNode}
 
 	for len(stack) != 0 {
 		node := stack[len(stack)-1]

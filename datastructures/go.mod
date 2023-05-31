@@ -1,4 +1,4 @@
-module gopherland/algorithms
+module gopherland/datastructures
 
 go 1.18
 

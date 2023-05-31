@@ -1,4 +1,4 @@
-module gopherland/algorithms
+module gopherland/pkg
 
 go 1.18
 
