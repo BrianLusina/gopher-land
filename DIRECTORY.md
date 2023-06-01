@@ -1088,6 +1088,9 @@
   * Maxlengthdifference
     * [Maxlengthdiff](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maxlengthdifference/maxlengthdiff.go)
     * [Maxlengthdiff Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maxlengthdifference/maxlengthdiff_test.go)
+  * Mergestrings
+    * [Merge Strings Alternatively](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/mergestrings/merge_strings_alternatively.go)
+    * [Merge Strings Alternatively Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/mergestrings/merge_strings_alternatively_test.go)
   * Meteorology
     * [Meteorology](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/meteorology/meteorology.go)
     * [Meteorology Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/meteorology/meteorology_test.go)
