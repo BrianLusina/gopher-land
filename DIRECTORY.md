@@ -1058,6 +1058,9 @@
   * Fixstringcase
     * [Fix String Case](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/fixstringcase/fix_string_case.go)
     * [Fix String Case Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/fixstringcase/fix_string_case_test.go)
+  * Gcdofstrings
+    * [Gcd Of Strings](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/gcdofstrings/gcd_of_strings.go)
+    * [Gcd Of Strings Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/gcdofstrings/gcd_of_strings_test.go)
   * Highestandlowest
     * [Higest Lowest](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/highestandlowest/higest_lowest.go)
     * [Highest Lowest Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/highestandlowest/highest_lowest_test.go)
