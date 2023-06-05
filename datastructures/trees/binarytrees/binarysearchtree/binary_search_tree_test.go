@@ -1,11 +1,12 @@
 package binarysearchtree
 
 import (
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
 	"gopherland/datastructures/trees"
 	"gopherland/datastructures/trees/binarytrees"
 	"testing"
+
+	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/gomega"
 )
 
 func TestBinarySearchTree(t *testing.T) {
@@ -93,17 +94,17 @@ var _ = Describe("BinarySearchTree", func() {
 		bst.Deserialize(data)
 
 		expected := &BinarySearchTree{
-			root: &binarytrees.BinaryTreeNode{
-				TreeNode: trees.TreeNode{
+			root: &binarytrees.BinaryTreeNode[int]{
+				TreeNode: trees.TreeNode[int]{
 					Data: 4,
 				},
-				Left: &binarytrees.BinaryTreeNode{
-					TreeNode: trees.TreeNode{
+				Left: &binarytrees.BinaryTreeNode[int]{
+					TreeNode: trees.TreeNode[int]{
 						Data: 2,
 					},
 				},
-				Right: &binarytrees.BinaryTreeNode{
-					TreeNode: trees.TreeNode{
+				Right: &binarytrees.BinaryTreeNode[int]{
+					TreeNode: trees.TreeNode[int]{
 						Data: 6,
 					},
 				},

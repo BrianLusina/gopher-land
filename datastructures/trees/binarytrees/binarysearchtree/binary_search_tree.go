@@ -3,24 +3,26 @@ package binarysearchtree
 import (
 	"errors"
 	"gopherland/datastructures/trees/binarytrees"
+	"gopherland/math/utils"
+	"gopherland/pkg/types"
 	"math"
 	"strconv"
 	"strings"
 )
 
 // BinarySearchTree is a binary tree that satisfies the binary tree interface
-type BinarySearchTree struct {
-	root *binarytrees.BinaryTreeNode
+type BinarySearchTree[T types.Comparable] struct {
+	root *binarytrees.BinaryTreeNode[T]
 }
 
 // NewBinarySearchTree returns a new binary search tree
-func NewBinarySearchTree() *BinarySearchTree {
-	return &BinarySearchTree{}
+func NewBinarySearchTree[T types.Comparable]() *BinarySearchTree[T] {
+	return &BinarySearchTree[T]{}
 }
 
 // insert helper function to insert a new value in the binary search tree
-func insert(node *binarytrees.BinaryTreeNode, value any) {
-	if value.(int) <= node.Data.(int) {
+func insert[T types.Comparable](node *binarytrees.BinaryTreeNode[T], value T) {
+	if value <= node.Data {
 		if node.Left != nil {
 			insert(node.Left, value)
 		} else {
@@ -36,7 +38,7 @@ func insert(node *binarytrees.BinaryTreeNode, value any) {
 }
 
 // Insert inserts a new node with the value into the binary search tree
-func (bst *BinarySearchTree) Insert(value any) {
+func (bst *BinarySearchTree[T]) Insert(value T) {
 	// we don't have a root
 	if bst.root == nil {
 		bst.root = binarytrees.NewBinaryTreeNode(value)
@@ -47,7 +49,7 @@ func (bst *BinarySearchTree) Insert(value any) {
 	insert(rootNode, value)
 }
 
-func (bst *BinarySearchTree) Size() int {
+func (bst *BinarySearchTree[T]) Size() int {
 	if bst == nil {
 		return 0
 	} else {
@@ -56,8 +58,8 @@ func (bst *BinarySearchTree) Size() int {
 }
 
 // getValues is a helper function that returns a slice of all the values in the tree
-func getValues(node *binarytrees.BinaryTreeNode) []any {
-	var result []interface{}
+func getValues[T types.Comparable](node *binarytrees.BinaryTreeNode[T]) []T {
+	var result []T
 	if node.Left != nil {
 		result = append(getValues(node.Left), result...)
 	}
@@ -69,8 +71,8 @@ func getValues(node *binarytrees.BinaryTreeNode) []any {
 }
 
 // Values returns a slice of all the values in the tree
-func (bst *BinarySearchTree) Values() ([]interface{}, error) {
-	var result []interface{}
+func (bst *BinarySearchTree[T]) Values() ([]T, error) {
+	var result []T
 	if bst == nil || bst.root == nil {
 		return result, errors.New("tree is empty")
 	}
@@ -82,14 +84,14 @@ func (bst *BinarySearchTree) Values() ([]interface{}, error) {
 }
 
 // calculateDepth helper function to calculate the depth of a tree
-func calculateDepth(node *binarytrees.BinaryTreeNode) int {
+func calculateDepth[T types.Comparable](node *binarytrees.BinaryTreeNode[T]) int {
 	if node == nil {
 		return 0
 	}
-	return 1 + int(math.Max(float64(calculateDepth(node.Left)), float64(calculateDepth(node.Right))))
+	return 1 + utils.Max(calculateDepth(node.Left), calculateDepth(node.Right))
 }
 
-func (bst *BinarySearchTree) Depth() int {
+func (bst *BinarySearchTree[T]) Depth() int {
 	if bst == nil || bst.root == nil {
 		return 0
 	}
@@ -97,7 +99,7 @@ func (bst *BinarySearchTree) Depth() int {
 }
 
 // Serialize returns a string representation of the binary search tree
-func (bst *BinarySearchTree) Serialize() []string {
+func (bst *BinarySearchTree[T]) Serialize() []string {
 	root := bst.root
 
 	var output []string
@@ -107,8 +109,8 @@ func (bst *BinarySearchTree) Serialize() []string {
 	}
 
 	var values []any
-	var preOrderTraversal func(node *binarytrees.BinaryTreeNode)
-	preOrderTraversal = func(node *binarytrees.BinaryTreeNode) {
+	var preOrderTraversal func(node *binarytrees.BinaryTreeNode[T])
+	preOrderTraversal = func(node *binarytrees.BinaryTreeNode[T]) {
 		if node == nil {
 			return
 		}
@@ -133,13 +135,13 @@ func (bst *BinarySearchTree) Serialize() []string {
 	return output
 }
 
-func buildTree(nodeData []any, min, max int32) *binarytrees.BinaryTreeNode {
+func buildTree[T types.Comparable](nodeData []T, min, max int32) *binarytrees.BinaryTreeNode[T] {
 	startIndex := 0
 	if startIndex == len(nodeData) {
 		return nil
 	}
 
-	val := nodeData[startIndex].(int32)
+	val := nodeData[startIndex]
 	if val < min || val > max {
 		return nil
 	}
@@ -152,31 +154,8 @@ func buildTree(nodeData []any, min, max int32) *binarytrees.BinaryTreeNode {
 	return node
 }
 
-func castToType(data any) interface{} {
-	switch data.(type) {
-	case string:
-		i, err := strconv.Atoi(data.(string))
-		if err == nil {
-			return i
-		}
-		return nil
-	case int:
-		return data.(int)
-	case int32:
-		return data.(int32)
-	case int64:
-		return data.(int64)
-	case float32:
-		return data.(float32)
-	case float64:
-		return data.(float64)
-	default:
-		return data
-	}
-}
-
 // Deserialize deserializes a string representation of a binary search tree
-func (bst *BinarySearchTree) Deserialize(data string) {
+func (bst *BinarySearchTree[T]) Deserialize(data string) {
 	if len(data) == 0 {
 		return
 	}
@@ -187,24 +166,23 @@ func (bst *BinarySearchTree) Deserialize(data string) {
 		nodeValues = append(nodeValues, value)
 	}
 
-	var buildTree func(nodeData []any, min, max int) *binarytrees.BinaryTreeNode
+	var buildTree func(nodeData []T, min, max int) *binarytrees.BinaryTreeNode[T]
 	startIndex := 0
-	buildTree = func(nodeData []any, min, max int) *binarytrees.BinaryTreeNode {
+	buildTree = func(nodeData []T, min, max int) *binarytrees.BinaryTreeNode[T] {
 		if startIndex == len(nodeData) {
 			return nil
 		}
 
 		data := nodeData[startIndex]
-		val := castToType(data)
 
-		if val.(int) < min || val.(int) > max {
+		if data < min || data > max {
 			return nil
 		}
 
-		node := binarytrees.NewBinaryTreeNode(val)
+		node := binarytrees.NewBinaryTreeNode(data)
 		startIndex++
-		node.Left = buildTree(nodeData, min, val.(int))
-		node.Right = buildTree(nodeData, val.(int), max)
+		node.Left = buildTree(nodeData, min, data)
+		node.Right = buildTree(nodeData, data, max)
 
 		return node
 	}
@@ -213,10 +191,10 @@ func (bst *BinarySearchTree) Deserialize(data string) {
 	bst.root = root
 }
 
-func (bst *BinarySearchTree) IsValid() bool {
+func (bst *BinarySearchTree[T]) IsValid() bool {
 	type Data struct {
 		lowerBound int
-		node       *binarytrees.BinaryTreeNode
+		node       *binarytrees.BinaryTreeNode[T]
 		upperBound int
 	}
 
@@ -239,16 +217,16 @@ func (bst *BinarySearchTree) IsValid() bool {
 			continue
 		}
 
-		if node.Data.(int) <= lowerBound || node.Data.(int) >= upperBound {
+		if node.Data <= lowerBound || node.Data >= upperBound {
 			return false
 		}
 
 		if node.Left != nil {
-			stack = append(stack, Data{lowerBound: lowerBound, node: node.Left, upperBound: node.Data.(int)})
+			stack = append(stack, Data{lowerBound: lowerBound, node: node.Left, upperBound: node.Data})
 		}
 
 		if node.Right != nil {
-			stack = append(stack, Data{lowerBound: node.Data.(int), node: node.Right, upperBound: upperBound})
+			stack = append(stack, Data{lowerBound: node.Data, node: node.Right, upperBound: upperBound})
 		}
 	}
 
