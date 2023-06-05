@@ -30,3 +30,11 @@ func Sum(numbers []int) int {
 	}
 	return result
 }
+
+// Gcd obtains the Greatest Common Divisor of 2 numbers
+func Gcd(x, y int) int {
+	if y == 0 {
+		return x
+	}
+	return Gcd(y, x%y)
+}
