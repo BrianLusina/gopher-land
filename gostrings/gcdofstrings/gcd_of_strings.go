@@ -29,3 +29,13 @@ func gcdOfStringsBruteForce(str1 string, str2 string) string {
 
 	return ""
 }
+
+func gcdOfStringsGcd(str1 string, str2 string) string {
+	if str1+str2 != str2+str1 {
+		return ""
+	}
+
+	len1, len2 := len(str1), len(str2)
+	maxLength := utils.Gcd(len1, len2)
+	return str1[:maxLength]
+}

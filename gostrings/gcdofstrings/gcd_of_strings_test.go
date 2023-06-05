@@ -56,3 +56,33 @@ func BenchmarkGcdOfStringsBruteForce(b *testing.B) {
 		}
 	}
 }
+
+func TestGcdOfStringsGcd(t *testing.T) {
+	for _, tc := range testCases {
+		t.Run(fmt.Sprintf("should return %s from str1=%s and str2=%s", tc.expected, tc.word1, tc.word2), func(t *testing.T) {
+			actual := gcdOfStringsGcd(tc.word1, tc.word2)
+			if actual != tc.expected {
+				t.Logf("Expected %s, got: %s", tc.expected, actual)
+				t.Fail()
+			}
+		})
+	}
+}
+
+func BenchmarkGcdOfStringsGcd(b *testing.B) {
+	if testing.Short() {
+		b.Skip()
+	}
+
+	for i := 0; i < b.N; i++ {
+		for _, tc := range testCases {
+			b.Run(fmt.Sprintf("should return %s from str1=%s and str2=%s", tc.expected, tc.word1, tc.word2), func(b *testing.B) {
+				actual := gcdOfStringsGcd(tc.word1, tc.word2)
+				if actual != tc.expected {
+					b.Logf("Expected %s, got: %s", tc.expected, actual)
+					b.Fail()
+				}
+			})
+		}
+	}
+}
