@@ -942,6 +942,9 @@
     * [Annalyns Infiltration](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration.go)
     * [Annalyns Infiltration Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration_test.go)
   * Arrays
+    * Canplaceflowers
+      * [Can Place Flowers](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/canplaceflowers/can_place_flowers.go)
+      * [Can Place Flowers Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/canplaceflowers/can_place_flowers_test.go)
     * Maxlencontiguoussubarray
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
