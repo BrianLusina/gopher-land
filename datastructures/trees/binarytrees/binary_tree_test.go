@@ -175,4 +175,77 @@ var _ = Describe("Binary Tree", func() {
 		})
 	})
 
+	Context("IsPerfect", func() {
+		When("Binary Tree contains nodes with data of type int", func() {
+			It("should return false for binary tree with no root", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				actual := binaryTree.IsPerfect()
+
+				Expect(actual).To(Equal(false))
+			})
+
+			It("should return true for binary tree with root with no children", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				root := NewBinaryTreeNode(1)
+
+				binaryTree.root = root
+
+				actual := binaryTree.IsPerfect()
+
+				Expect(actual).To(Equal(true))
+			})
+
+			It("should return true for binary tree with root with 2 children", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				root := NewBinaryTreeNode(1)
+				root.Left = NewBinaryTreeNode(2)
+				root.Right = NewBinaryTreeNode(3)
+
+				binaryTree.root = root
+
+				actual := binaryTree.IsPerfect()
+
+				Expect(actual).To(Equal(true))
+			})
+
+			It("should return true for binary tree with root with 2 children, & 4 grandchildren", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				root := NewBinaryTreeNode(1)
+				root.Left = NewBinaryTreeNode(2)
+				root.Right = NewBinaryTreeNode(3)
+				root.Left.Left = NewBinaryTreeNode(4)
+				root.Left.Right = NewBinaryTreeNode(5)
+				root.Right.Left = NewBinaryTreeNode(6)
+				root.Right.Right = NewBinaryTreeNode(7)
+
+				binaryTree.root = root
+
+				actual := binaryTree.IsPerfect()
+
+				Expect(actual).To(Equal(true))
+			})
+
+			It("should return false for binary tree with root with 2 children, & 3 grandchildren", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				root := NewBinaryTreeNode(1)
+				root.Left = NewBinaryTreeNode(2)
+				root.Right = NewBinaryTreeNode(3)
+				root.Left.Left = NewBinaryTreeNode(4)
+				root.Left.Right = NewBinaryTreeNode(5)
+				root.Right.Left = NewBinaryTreeNode(6)
+
+				binaryTree.root = root
+
+				actual := binaryTree.IsPerfect()
+
+				Expect(actual).To(Equal(false))
+			})
+		})
+	})
+
 })

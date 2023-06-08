@@ -111,3 +111,48 @@ func (tree *BinaryTree[T]) IsComplete() bool {
 
 	return isCompleteHelper(tree.root, index)
 }
+
+// GetDepth returns the depth of the tree
+func (tree *BinaryTree[T]) GetDepth() int {
+	depth := 0
+	node := tree.root
+	for node != nil {
+		depth++
+		node = node.Left
+	}
+
+	return depth
+}
+
+// IsPerfect checks if a binary tree is perfect
+func (tree *BinaryTree[T]) IsPerfect() bool {
+	if tree.root == nil {
+		return false
+	}
+
+	if tree.root.Left == nil && tree.root.Right == nil {
+		return true
+	}
+
+	depth := tree.GetDepth()
+
+	var isPerfectHelper func(root *BinaryTreeNode[T], level int) bool
+
+	isPerfectHelper = func(root *BinaryTreeNode[T], level int) bool {
+		if root == nil {
+			return true
+		}
+
+		if root.Left == nil && root.Right == nil {
+			return depth == level+1
+		}
+
+		if root.Left == nil || root.Right == nil {
+			return false
+		}
+
+		return isPerfectHelper(root.Left, level+1) && isPerfectHelper(root.Right, level+1)
+	}
+
+	return isPerfectHelper(tree.root, 0)
+}
