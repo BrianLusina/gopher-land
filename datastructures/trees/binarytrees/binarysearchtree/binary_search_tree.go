@@ -2,12 +2,11 @@ package binarysearchtree
 
 import (
 	"errors"
+	"fmt"
 	"gopherland/datastructures/trees/binarytrees"
 	"gopherland/math/utils"
 	"gopherland/pkg/types"
-	"math"
 	"strconv"
-	"strings"
 )
 
 // BinarySearchTree is a binary tree that satisfies the binary tree interface
@@ -20,23 +19,6 @@ func NewBinarySearchTree[T types.Comparable]() *BinarySearchTree[T] {
 	return &BinarySearchTree[T]{}
 }
 
-// insert helper function to insert a new value in the binary search tree
-func insert[T types.Comparable](node *binarytrees.BinaryTreeNode[T], value T) {
-	if value <= node.Data {
-		if node.Left != nil {
-			insert(node.Left, value)
-		} else {
-			node.Left = binarytrees.NewBinaryTreeNode(value)
-		}
-	} else {
-		if node.Right != nil {
-			insert(node.Right, value)
-		} else {
-			node.Right = binarytrees.NewBinaryTreeNode(value)
-		}
-	}
-}
-
 // Insert inserts a new node with the value into the binary search tree
 func (bst *BinarySearchTree[T]) Insert(value T) {
 	// we don't have a root
@@ -45,8 +27,90 @@ func (bst *BinarySearchTree[T]) Insert(value T) {
 		return
 	}
 
+	// insert helper function to insert a new value in the binary search tree
+	var insert func(node *binarytrees.BinaryTreeNode[T], value T)
+
+	insert = func(node *binarytrees.BinaryTreeNode[T], value T) {
+		if value <= node.Data {
+			if node.Left != nil {
+				insert(node.Left, value)
+			} else {
+				node.Left = binarytrees.NewBinaryTreeNode(value)
+			}
+		} else {
+			if node.Right != nil {
+				insert(node.Right, value)
+			} else {
+				node.Right = binarytrees.NewBinaryTreeNode(value)
+			}
+		}
+	}
+
 	rootNode := bst.root
 	insert(rootNode, value)
+}
+
+// Delete deletes a value from the BinarySearchTree
+func (bst *BinarySearchTree[T]) Delete(value T) error {
+	if bst.root == nil {
+		return fmt.Errorf("tree has no root, can not delete value %v", value)
+	}
+
+	var lift func(node, nodeToDelete *binarytrees.BinaryTreeNode[T]) *binarytrees.BinaryTreeNode[T]
+	lift = func(node, nodeToDelete *binarytrees.BinaryTreeNode[T]) *binarytrees.BinaryTreeNode[T] {
+		// if the current node has a left child, we recursively call this function to continue down the left subtree to find the successor node
+		if node.Left != nil {
+			node.Left = lift(node.Left, nodeToDelete)
+			return node
+		} else {
+			// if the current node has no left child, that means the current node of this function is the successor node, and we take it value
+			// and make it the new value of the node that we are deleting
+			nodeToDelete.Data = node.Data
+			// we return the successor node's right child to be now used as it's parent's left child
+			return node.Right
+		}
+	}
+
+	// delete is a helper function that recurses over the subtrees of the root node to delete the value provided
+	var delete func(val T, node *binarytrees.BinaryTreeNode[T]) *binarytrees.BinaryTreeNode[T]
+
+	delete = func(val T, node *binarytrees.BinaryTreeNode[T]) *binarytrees.BinaryTreeNode[T] {
+		// base case is when we have hit the bottom of the tree, and the parent node has no children
+		if node == nil {
+			return nil
+		} else if val < node.Data {
+			// if the value we are deleting is less than the current node's value, we set the left child to be
+			// the return value of a recursive call
+			node.Left = delete(val, node.Left)
+
+			// we return the current node and it's subtree if existent to be use as the new value of it's parent's left child
+			return node
+		} else if val > node.Data {
+			// if the value we are deleting is greater than the current node's value, we set the right child to be
+			// the return value of a recursive call
+			node.Right = delete(val, node.Right)
+			return node
+		} else if val == node.Data {
+			// the current node contains the value we want to delete
+			if node.Left == nil {
+				// if the current node has no left child, we delete it by returning the right child and it's subtree if existent to be its parents
+				// new subtree
+				return node.Right
+			} else if node.Right == nil {
+				// if the current node has no left or right child, this ends up being nil as per the first line of this function
+				return node.Left
+			} else {
+				// if the current node has 2 childre, we delte the current node by calling the lift function. which changes the current node's
+				// value to the value of it's successor node
+				node.Right = lift(node.Right, node)
+				return node
+			}
+		}
+		return nil
+	}
+
+	delete(value, bst.root)
+	return nil
 }
 
 func (bst *BinarySearchTree[T]) Size() int {
@@ -135,100 +199,103 @@ func (bst *BinarySearchTree[T]) Serialize() []string {
 	return output
 }
 
-func buildTree[T types.Comparable](nodeData []T, min, max int32) *binarytrees.BinaryTreeNode[T] {
-	startIndex := 0
-	if startIndex == len(nodeData) {
-		return nil
-	}
+// func buildTree[T types.Comparable](nodeData []T, min, max int32) *binarytrees.BinaryTreeNode[T] {
+// 	startIndex := 0
+// 	if startIndex == len(nodeData) {
+// 		return nil
+// 	}
 
-	val := nodeData[startIndex]
-	if val < min || val > max {
-		return nil
-	}
+// 	val := nodeData[startIndex]
+// 	if val < min || val > max {
+// 		return nil
+// 	}
 
-	node := binarytrees.NewBinaryTreeNode(val)
-	startIndex++
-	node.Left = buildTree(nodeData, min, val)
-	node.Right = buildTree(nodeData, val, max)
+// 	node := binarytrees.NewBinaryTreeNode(val)
+// 	startIndex++
+// 	node.Left = buildTree(nodeData, min, val)
+// 	node.Right = buildTree(nodeData, val, max)
 
-	return node
-}
+// 	return node
+// }
 
+// TODO: deserialize and serialize binary search tree
 // Deserialize deserializes a string representation of a binary search tree
-func (bst *BinarySearchTree[T]) Deserialize(data string) {
-	if len(data) == 0 {
-		return
-	}
+// func (bst *BinarySearchTree[T]) Deserialize(data string) {
+// 	if len(data) == 0 {
+// 		return
+// 	}
 
-	var nodeValues []any
-	values := strings.Fields(data)
-	for _, value := range values {
-		nodeValues = append(nodeValues, value)
-	}
+// 	var nodeValues []T
+// 	values := strings.Fields(data)
+// 	for _, value := range values {
+// 		nodeValues = append(nodeValues, value)
+// 	}
 
-	var buildTree func(nodeData []T, min, max int) *binarytrees.BinaryTreeNode[T]
-	startIndex := 0
-	buildTree = func(nodeData []T, min, max int) *binarytrees.BinaryTreeNode[T] {
-		if startIndex == len(nodeData) {
-			return nil
-		}
+// 	var buildTree func(nodeData []T, min, max int) *binarytrees.BinaryTreeNode[T]
+// 	startIndex := 0
+// 	buildTree = func(nodeData []T, min, max int) *binarytrees.BinaryTreeNode[T] {
+// 		if startIndex == len(nodeData) {
+// 			return nil
+// 		}
 
-		data := nodeData[startIndex]
+// 		data := nodeData[startIndex]
 
-		if data < min || data > max {
-			return nil
-		}
+// 		if data < min || data > max {
+// 			return nil
+// 		}
 
-		node := binarytrees.NewBinaryTreeNode(data)
-		startIndex++
-		node.Left = buildTree(nodeData, min, data)
-		node.Right = buildTree(nodeData, data, max)
+// 		node := binarytrees.NewBinaryTreeNode(data)
+// 		startIndex++
+// 		node.Left = buildTree(nodeData, min, data)
+// 		node.Right = buildTree(nodeData, data, max)
 
-		return node
-	}
+// 		return node
+// 	}
 
-	root := buildTree(nodeValues, math.MinInt, math.MaxInt)
-	bst.root = root
-}
+// 	root := buildTree(nodeValues, math.MinInt, math.MaxInt)
+// 	bst.root = root
+// }
 
-func (bst *BinarySearchTree[T]) IsValid() bool {
-	type Data struct {
-		lowerBound int
-		node       *binarytrees.BinaryTreeNode[T]
-		upperBound int
-	}
+// FIXME: check validity of a binary search tree
+// IsValid checks if a binary search tree is valid
+// func (bst *BinarySearchTree[T]) IsValid() bool {
+// 	type Data struct {
+// 		lowerBound T
+// 		node       *binarytrees.BinaryTreeNode[T]
+// 		upperBound T
+// 	}
 
-	if bst.root == nil {
-		return true
-	}
+// 	if bst.root == nil {
+// 		return true
+// 	}
 
-	stack := []Data{}
-	stack = append(stack, Data{lowerBound: int(math.Inf(-1)), node: bst.root, upperBound: int(math.Inf(1))})
+// 	stack := []Data{}
+// 	stack = append(stack, Data{lowerBound: math.Inf(-1), node: bst.root, upperBound: math.Inf(1)})
 
-	for len(stack) != 0 {
-		data := stack[len(stack)-1]
-		stack = stack[:len(stack)-1]
+// 	for len(stack) != 0 {
+// 		data := stack[len(stack)-1]
+// 		stack = stack[:len(stack)-1]
 
-		node := data.node
-		lowerBound := data.lowerBound
-		upperBound := data.upperBound
+// 		node := data.node
+// 		lowerBound := data.lowerBound
+// 		upperBound := data.upperBound
 
-		if node == nil {
-			continue
-		}
+// 		if node == nil {
+// 			continue
+// 		}
 
-		if node.Data <= lowerBound || node.Data >= upperBound {
-			return false
-		}
+// 		if node.Data <= lowerBound || node.Data >= upperBound {
+// 			return false
+// 		}
 
-		if node.Left != nil {
-			stack = append(stack, Data{lowerBound: lowerBound, node: node.Left, upperBound: node.Data})
-		}
+// 		if node.Left != nil {
+// 			stack = append(stack, Data{lowerBound: lowerBound, node: node.Left, upperBound: node.Data})
+// 		}
 
-		if node.Right != nil {
-			stack = append(stack, Data{lowerBound: node.Data, node: node.Right, upperBound: upperBound})
-		}
-	}
+// 		if node.Right != nil {
+// 			stack = append(stack, Data{lowerBound: node.Data, node: node.Right, upperBound: upperBound})
+// 		}
+// 	}
 
-	return true
-}
+// 	return true
+// }
