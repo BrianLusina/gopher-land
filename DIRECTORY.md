@@ -1113,6 +1113,9 @@
   * Printererrors
     * [Printer Errors](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/printererrors/printer_errors.go)
     * [Printer Errors Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/printererrors/printer_errors_test.go)
+  * Reversevowels
+    * [Reverse Vowels](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/reversevowels/reverse_vowels.go)
+    * [Reverse Vowels Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/reversevowels/reverse_vowels_test.go)
   * Reversewords
     * [Reverse Words](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/reversewords/reverse_words.go)
     * [Reverse Words Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/reversewords/reverse_words_test.go)
