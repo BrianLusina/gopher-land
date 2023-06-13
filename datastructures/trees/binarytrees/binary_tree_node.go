@@ -319,18 +319,19 @@ func (t *BinaryTreeNode[T]) LowestCommonAncestor(nodeOne, nodeTwo BinaryTreeNode
 	return t
 }
 
+type pair[T types.Comparable] struct {
+	node *BinaryTreeNode[T]
+	path string
+}
+
 // Paths returns all the paths of this binary tree from root to leaf node
 func (t *BinaryTreeNode[T]) Paths() (res []string) {
-	type Pair struct {
-		node *BinaryTreeNode[T]
-		path string
-	}
 
 	if t == nil {
 		return res
 	}
 
-	stack := []Pair{{t, ""}}
+	stack := []pair[T]{{t, ""}}
 
 	for len(stack) != 0 {
 		item := stack[len(stack)-1]
@@ -344,11 +345,11 @@ func (t *BinaryTreeNode[T]) Paths() (res []string) {
 		}
 
 		if node.Left != nil {
-			stack = append(stack, Pair{node.Left, path + fmt.Sprintf("%v", node.Data) + "->"})
+			stack = append(stack, pair[T]{node.Left, path + fmt.Sprintf("%v", node.Data) + "->"})
 		}
 
 		if node.Right != nil {
-			stack = append(stack, Pair{node.Right, path + fmt.Sprintf("%v", node.Data) + "->"})
+			stack = append(stack, pair[T]{node.Right, path + fmt.Sprintf("%v", node.Data) + "->"})
 		}
 	}
 

@@ -248,4 +248,58 @@ var _ = Describe("Binary Tree", func() {
 		})
 	})
 
+	Context("IsBalanced", func() {
+		When("Binary Tree contains nodes with data of type int", func() {
+			It("should return true for binary tree with no root", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				actual := binaryTree.IsBalanced()
+
+				Expect(actual).To(Equal(true))
+			})
+
+			It("should return true for binary tree with root with no children", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				root := NewBinaryTreeNode(1)
+
+				binaryTree.root = root
+
+				actual := binaryTree.IsBalanced()
+
+				Expect(actual).To(Equal(true))
+			})
+
+			It("should return true for binary tree with root with 2 children", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				root := NewBinaryTreeNode(1)
+				root.Left = NewBinaryTreeNode(2)
+				root.Right = NewBinaryTreeNode(3)
+
+				binaryTree.root = root
+
+				actual := binaryTree.IsBalanced()
+
+				Expect(actual).To(Equal(true))
+			})
+
+			It("should return true for binary tree with root with 2 children, & 4 grandchildren", func() {
+				binaryTree := NewBinaryTree[int]()
+
+				root := NewBinaryTreeNode(1)
+				root.Left = NewBinaryTreeNode(2)
+				root.Right = NewBinaryTreeNode(3)
+				root.Left.Left = NewBinaryTreeNode(4)
+				root.Left.Right = NewBinaryTreeNode(5)
+
+				binaryTree.root = root
+
+				actual := binaryTree.IsBalanced()
+
+				Expect(actual).To(Equal(true))
+			})
+		})
+	})
+
 })

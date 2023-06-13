@@ -3,6 +3,7 @@ package binarytrees
 
 import (
 	"fmt"
+	"gopherland/math/utils"
 	"gopherland/pkg/types"
 	"strings"
 )
@@ -155,4 +156,33 @@ func (tree *BinaryTree[T]) IsPerfect() bool {
 	}
 
 	return isPerfectHelper(tree.root, 0)
+}
+
+// IsBalanced checks if a binary tree is balanced.
+func (tree *BinaryTree[T]) IsBalanced() bool {
+	if tree.root == nil {
+		return true
+	}
+
+	var isBalancedHelper func(root *BinaryTreeNode[T]) bool
+
+	isBalancedHelper = func(root *BinaryTreeNode[T]) bool {
+		leftHeight := 0
+		rightHeight := 0
+
+		if root == nil {
+			return true
+		}
+
+		l := isBalancedHelper(root.Left)
+		r := isBalancedHelper(root.Right)
+
+		if utils.AbsDiff(leftHeight, rightHeight) <= 1 {
+			return l && r
+		}
+
+		return false
+	}
+
+	return isBalancedHelper(tree.root)
 }
