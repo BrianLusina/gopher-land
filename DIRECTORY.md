@@ -948,6 +948,9 @@
     * Maxlencontiguoussubarray
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
+    * Productexceptself
+      * [Product Of Array Except Self](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/productexceptself/product_of_array_except_self.go)
+      * [Product Of Array Except Self Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/productexceptself/product_of_array_except_self_test.go)
   * Bouncingballs
     * [Bouncing Ball](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/bouncingballs/bouncing_ball.go)
     * [Bouncing Ball Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/bouncingballs/bouncing_ball_test.go)
@@ -1009,9 +1012,6 @@
   * Prefixsum
     * [Prefix Sum](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/prefixsum/prefix_sum.go)
     * [Prefix Sum Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/prefixsum/prefix_sum_test.go)
-  * Productexceptself
-    * [Product Of Array Except Self](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/productexceptself/product_of_array_except_self.go)
-    * [Product Of Array Except Self Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/productexceptself/product_of_array_except_self_test.go)
   * Rectangles
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rectangles/cases_test.go)
     * [Rectangles](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rectangles/rectangles.go)
