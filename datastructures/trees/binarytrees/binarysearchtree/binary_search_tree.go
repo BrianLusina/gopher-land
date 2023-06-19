@@ -46,8 +46,7 @@ func (bst *BinarySearchTree[T]) Insert(value T) {
 		}
 	}
 
-	rootNode := bst.root
-	insert(rootNode, value)
+	insert(bst.root, value)
 }
 
 // Delete deletes a value from the BinarySearchTree
