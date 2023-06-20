@@ -948,6 +948,9 @@
     * Maxlencontiguoussubarray
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
+    * Movezeroes
+      * [Move Zeroes](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/movezeroes/move_zeroes.go)
+      * [Move Zeroes Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/movezeroes/move_zeroes_test.go)
     * Productexceptself
       * [Product Of Array Except Self](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/productexceptself/product_of_array_except_self.go)
       * [Product Of Array Except Self Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/productexceptself/product_of_array_except_self_test.go)
@@ -1134,6 +1137,9 @@
   * Squaredstrings
     * [Squared Strings](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings.go)
     * [Squared Strings Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings_test.go)
+  * Stringcompression
+    * [Compression](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/stringcompression/compression.go)
+    * [Compression Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/stringcompression/compression_test.go)
   * Sumofintegers
     * [Sum Of Integers](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/sumofintegers/sum_of_integers.go)
     * [Sum Of Integers Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/sumofintegers/sum_of_integers_test.go)
