@@ -945,6 +945,9 @@
     * Canplaceflowers
       * [Can Place Flowers](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/canplaceflowers/can_place_flowers.go)
       * [Can Place Flowers Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/canplaceflowers/can_place_flowers_test.go)
+    * Containerwithmostwater
+      * [Container With Most Water](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/containerwithmostwater/container_with_most_water.go)
+      * [Container With Most Water Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/containerwithmostwater/container_with_most_water_test.go)
     * Maxlencontiguoussubarray
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
@@ -965,9 +968,6 @@
   * Climbstairsmincost
     * [Climbstairsmincost](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/climbstairsmincost/climbstairsmincost.go)
     * [Climbstairsmincost Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/climbstairsmincost/climbstairsmincost_test.go)
-  * Containerwithmostwater
-    * [Container With Most Water](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/containerwithmostwater/container_with_most_water.go)
-    * [Container With Most Water Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/containerwithmostwater/container_with_most_water_test.go)
   * Diamond
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/diamond/cases_test.go)
     * [Diamond](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/diamond/diamond.go)
