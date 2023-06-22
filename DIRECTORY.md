@@ -959,6 +959,9 @@
     * Maxlencontiguoussubarray
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
+    * Maxnumberofksumpairs
+      * [Max Operations](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxnumberofksumpairs/max_operations.go)
+      * [Max Operations Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxnumberofksumpairs/max_operations_test.go)
     * Movezeroes
       * [Move Zeroes](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/movezeroes/move_zeroes.go)
       * [Move Zeroes Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/movezeroes/move_zeroes_test.go)
