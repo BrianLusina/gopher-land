@@ -625,23 +625,31 @@
     * [Stack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/stack.go)
     * [Stack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/stack_test.go)
   * Trees
-    * Binarytrees
-      * [Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree.go)
-      * [Binary Tree Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree_node.go)
-      * [Binary Tree Node Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree_node_test.go)
-      * [Binary Tree Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binary_tree_test.go)
-      * Binarysearchtree
-        * [Binary Search Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binarysearchtree/binary_search_tree.go)
-        * [Binary Search Tree Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binarysearchtree/binary_search_tree_test.go)
+    * Binary
+      * [Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree.go)
+      * [Binary Tree Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_node.go)
+      * [Binary Tree Node Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_node_test.go)
+      * [Binary Tree Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_test.go)
+      * Bst
+        * [Binary Search Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/bst/binary_search_tree.go)
+        * [Binary Search Tree Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/bst/binary_search_tree_test.go)
         * Intbst
-          * [Int Bst](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binarysearchtree/intbst/int_bst.go)
-          * [Int Bst Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/binarysearchtree/intbst/int_bst_test.go)
-      * [Equivalent Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/equivalent_binary_tree.go)
-      * [Merge Trees](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/merge_trees.go)
+          * [Int Bst](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/bst/intbst/int_bst.go)
+          * [Int Bst Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/bst/intbst/int_bst_test.go)
+      * [Equivalent Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/equivalent_binary_tree.go)
+      * [Merge Trees](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/merge_trees.go)
       * Utils
         * Generate Trees
-          * [Generate Trees](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/utils/generate_trees/generate_trees.go)
-          * [Generate Trees Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binarytrees/utils/generate_trees/generate_trees_test.go)
+          * [Generate Trees](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/utils/generate_trees/generate_trees.go)
+          * [Generate Trees Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/utils/generate_trees/generate_trees_test.go)
+    * Heap
+      * [Array Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/array_heap.go)
+      * Binary
+        * Maxheap
+          * [Max Array Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/binary/maxheap/max_array_heap.go)
+      * [Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/heap.go)
+      * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/node.go)
+      * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/utils.go)
     * Tree-Building
       * [Tree Building](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building.go)
       * [Tree Building Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building_test.go)
