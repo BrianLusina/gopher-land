@@ -1,4 +1,4 @@
-package binarysearchtree
+package bst
 
 import (
 	"testing"

@@ -2,12 +2,12 @@ package utils
 
 import (
 	"gopherland/datastructures/trees"
-	"gopherland/datastructures/trees/binarytrees"
+	"gopherland/datastructures/trees/binary"
 )
 
 // generator generates all possible Binary Trees given a range of numbers
-func generator[T int](start, end int) []*binarytrees.BinaryTreeNode[int] {
-	var bsts []*binarytrees.BinaryTreeNode[int]
+func generator[T int](start, end int) []*binary.BinaryTreeNode[int] {
+	var bsts []*binary.BinaryTreeNode[int]
 
 	if start > end {
 		bsts = append(bsts, nil)
@@ -15,7 +15,7 @@ func generator[T int](start, end int) []*binarytrees.BinaryTreeNode[int] {
 	}
 
 	if start == end {
-		node := &binarytrees.BinaryTreeNode[int]{
+		node := &binary.BinaryTreeNode[int]{
 			TreeNode: *trees.NewTreeNode(start),
 		}
 		bsts = append(bsts, node)
@@ -31,7 +31,7 @@ func generator[T int](start, end int) []*binarytrees.BinaryTreeNode[int] {
 
 			for k := range rightSubtree {
 				right := rightSubtree[k]
-				node := &binarytrees.BinaryTreeNode[int]{
+				node := &binary.BinaryTreeNode[int]{
 					TreeNode: *trees.NewTreeNode(i),
 				}
 				node.Left = left
@@ -44,6 +44,6 @@ func generator[T int](start, end int) []*binarytrees.BinaryTreeNode[int] {
 }
 
 // GenerateTrees Generates n Unique Binary Search Trees given a number n
-func GenerateTrees[T int](n int) []*binarytrees.BinaryTreeNode[int] {
+func GenerateTrees[T int](n int) []*binary.BinaryTreeNode[int] {
 	return generator[int](1, n)
 }

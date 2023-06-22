@@ -1,4 +1,4 @@
-package binarytrees
+package binary
 
 // Walk walks the tree and sends all values to the channel intChannel
 func Walk(tree *BinaryTreeNode[int], intChannel chan int) {

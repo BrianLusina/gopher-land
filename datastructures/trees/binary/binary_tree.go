@@ -1,5 +1,5 @@
-// Package binarytrees contains types and struct for Binary Trees
-package binarytrees
+// package binary contains types and struct for Binary Trees
+package binary
 
 import (
 	"fmt"
