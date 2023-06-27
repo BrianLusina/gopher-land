@@ -1,4 +1,4 @@
-package maxheap
+package minheap
 
 import (
 	"errors"
@@ -7,31 +7,31 @@ import (
 	"gopherland/pkg/utils"
 )
 
-// MaxArrayHeap represents a max heap with an array/slice as the underlying data structure
-type MaxArrayHeap[T types.Comparable] struct {
+// MinArrayHeap represents a min heap with an array/slice as the underlying data structure
+type MinArrayHeap[T types.Comparable] struct {
 	*heap.ArrayHeap[T]
 }
 
-// NewMaxArrayHeap creates a new max heap with an array as the underlying data structure
-func NewMaxArrayHeap[T types.Comparable]() *MaxArrayHeap[T] {
-	return &MaxArrayHeap[T]{
+// NewMinArrayHeap creates a new min heap with an array as the underlying data structure
+func NewMinArrayHeap[T types.Comparable]() *MinArrayHeap[T] {
+	return &MinArrayHeap[T]{
 		&heap.ArrayHeap[T]{
 			Data: []T{},
 		},
 	}
 }
 
-// Insert adds data to the MaxArrayHeap
-func (mah *MaxArrayHeap[T]) Insert(data T) {
+// Insert adds data to the MinArrayHeap
+func (mah *MinArrayHeap[T]) Insert(data T) {
 	// add the value into the last node
-	mah.ArrayHeap.Data = append(mah.ArrayHeap.Data, data)
+	mah.Data = append(mah.Data, data)
 
 	// keep track of the index of the newly inserted node
-	newNodeIndex := len(mah.ArrayHeap.Data) - 1
+	newNodeIndex := len(mah.Data) - 1
 
 	// the following executes the "trickle up" algorithm. If the new node is not in the root position and it's greater
 	// than its parent node
-	for newNodeIndex > 0 && mah.ArrayHeap.Data[newNodeIndex] > mah.ArrayHeap.Data[heap.GetParentIndex(newNodeIndex)] {
+	for newNodeIndex > 0 && mah.Data[newNodeIndex] > mah.Data[heap.GetParentIndex(newNodeIndex)] {
 		// swap the new node with the parent node
 		mah.swap(heap.GetParentIndex(newNodeIndex), newNodeIndex)
 
@@ -41,7 +41,7 @@ func (mah *MaxArrayHeap[T]) Insert(data T) {
 }
 
 // Delete removes the maximum element from the heap
-func (mah *MaxArrayHeap[T]) Delete() (T, error) {
+func (mah *MinArrayHeap[T]) Delete() (T, error) {
 	if len(mah.Data) == 0 {
 		return utils.Zero[T](), errors.New("heap is empty")
 	}
@@ -60,20 +60,20 @@ func (mah *MaxArrayHeap[T]) Delete() (T, error) {
 
 	// the following loop executes the "trickle down" algorithm: We run the loop as long as the trickle node has a
 	// child that is greater than it.
-	for mah.hasGreaterChild(trickleNodeIndex) {
-		largerChildIndex := mah.calculateLargerChildIndex(trickleNodeIndex)
+	for mah.hasSmallerChild(trickleNodeIndex) {
+		smallerChildIndex := mah.calculateSmallerChildIndex(trickleNodeIndex)
 
 		// swap the trickle node with its larger child
-		mah.swap(trickleNodeIndex, largerChildIndex)
+		mah.swap(trickleNodeIndex, smallerChildIndex)
 
-		trickleNodeIndex = largerChildIndex
+		trickleNodeIndex = smallerChildIndex
 	}
 
 	return rootNode, nil
 }
 
-// hasGreaterChild checks whether the node at index has left and right children and if either of those children are greater than the node at the index.
-func (mah *MaxArrayHeap[T]) hasGreaterChild(index int) bool {
+// hasSmallerChild checks whether the node at index has left and right children and if either of those children are greater than the node at the index.
+func (mah *MinArrayHeap[T]) hasSmallerChild(index int) bool {
 	leftChildIndex := heap.GetLeftChildIndex(index)
 	rightChildIndex := heap.GetRightChildIndex(index)
 
@@ -84,20 +84,20 @@ func (mah *MaxArrayHeap[T]) hasGreaterChild(index int) bool {
 		leftChild := mah.Data[leftChildIndex]
 		rightChild := mah.Data[rightChildIndex]
 
-		return leftChild > mah.Data[index] || rightChild > mah.Data[index]
+		return leftChild < mah.Data[index] || rightChild < mah.Data[index]
 	} else if leftChildExists && !rightChildExists {
 		leftChild := mah.Data[leftChildIndex]
-		return leftChild > mah.Data[index]
+		return leftChild < mah.Data[index]
 	} else if rightChildExists && !leftChildExists {
 		rightChild := mah.Data[rightChildIndex]
-		return rightChild > mah.Data[index]
+		return rightChild < mah.Data[index]
 	} else {
 		return false
 	}
 }
 
 // CalculateLargerChildIndex calculates the index of the larger child of the index of the node
-func (mah *MaxArrayHeap[T]) calculateLargerChildIndex(index int) int {
+func (mah *MinArrayHeap[T]) calculateSmallerChildIndex(index int) int {
 
 	// if there is no right child
 	if mah.Data[heap.GetRightChildIndex(index)] == utils.GetZeroValue[T]() {
@@ -107,14 +107,14 @@ func (mah *MaxArrayHeap[T]) calculateLargerChildIndex(index int) int {
 
 	// if right child value is greater than left child value
 	if mah.Data[heap.GetRightChildIndex(index)] > mah.Data[heap.GetLeftChildIndex(index)] {
-		// return the right child index
-		return heap.GetRightChildIndex(index)
-	} else {
+		// return the left child index
 		return heap.GetLeftChildIndex(index)
+	} else {
+		return heap.GetRightChildIndex(index)
 	}
 }
 
 // swap swaps 2 elements' positions. Element at index i is moved to element at index j and vice versa
-func (mah *MaxArrayHeap[T]) swap(i, j int) {
+func (mah *MinArrayHeap[T]) swap(i, j int) {
 	mah.Data[i], mah.Data[j] = mah.Data[j], mah.Data[i]
 }

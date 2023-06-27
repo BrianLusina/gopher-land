@@ -1,4 +1,4 @@
-package maxheap
+package minheap
 
 import (
 	"testing"
@@ -8,14 +8,14 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMaxArrayHeap(t *testing.T) {
+func TestMinArrayHeap(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "MaxArrayHeap Test Suite")
+	RunSpecs(t, "MinArrayHeap Test Suite")
 }
 
-var _ = Describe("MaxArrayHeap", func() {
-	Context("Int Max Heap", func() {
-		heap := NewMaxArrayHeap[int]()
+var _ = Describe("MinArrayHeap", func() {
+	Context("Int Min Heap", func() {
+		heap := NewMinArrayHeap[int]()
 		data := []int{100, 88, 25, 87, 16, 8, 12, 86, 50, 2, 15, 3}
 
 		When("inserting new data", func() {
@@ -27,13 +27,13 @@ var _ = Describe("MaxArrayHeap", func() {
 				actualRoot, err := heap.RootNode()
 				assert.NoError(GinkgoT(), err)
 
-				expectedRoot := 100
+				expectedRoot := 2
 				Expect(actualRoot, expectedRoot)
 
 				actualLast, err := heap.LastNode()
 				assert.NoError(GinkgoT(), err)
 
-				expectedLast := 3
+				expectedLast := 100
 				Expect(actualLast, expectedLast)
 			})
 		})

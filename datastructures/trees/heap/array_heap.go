@@ -12,7 +12,7 @@ type ArrayHeap[T types.Comparable] struct {
 }
 
 // returns the root node value in a heap
-func (a ArrayHeap[T]) RootNode() (T, error) {
+func (a *ArrayHeap[T]) RootNode() (T, error) {
 	if len(a.Data) == 0 {
 		return utils.Zero[T](), errors.New("heap is empty")
 	}
@@ -20,7 +20,7 @@ func (a ArrayHeap[T]) RootNode() (T, error) {
 }
 
 // LastNode returns the last node in a Heap
-func (a ArrayHeap[T]) LastNode() (T, error) {
+func (a *ArrayHeap[T]) LastNode() (T, error) {
 	if len(a.Data) == 0 {
 		return utils.Zero[T](), errors.New("heap is empty")
 	}
