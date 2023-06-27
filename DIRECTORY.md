@@ -647,6 +647,10 @@
       * Binary
         * Maxheap
           * [Max Array Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/binary/maxheap/max_array_heap.go)
+          * [Max Array Heap Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/binary/maxheap/max_array_heap_test.go)
+        * Minheap
+          * [Min Array Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/binary/minheap/min_array_heap.go)
+          * [Min Array Heap Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/binary/minheap/min_array_heap_test.go)
       * [Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/heap.go)
       * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/node.go)
       * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/utils.go)
