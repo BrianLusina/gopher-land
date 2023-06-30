@@ -960,6 +960,9 @@
     * Containerwithmostwater
       * [Container With Most Water](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/containerwithmostwater/container_with_most_water.go)
       * [Container With Most Water Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/containerwithmostwater/container_with_most_water_test.go)
+    * Maxaveragesubarray
+      * [Max Average Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxaveragesubarray/max_average_subarray.go)
+      * [Max Average Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxaveragesubarray/max_average_subarray_test.go)
     * Maxlencontiguoussubarray
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
