@@ -963,6 +963,9 @@
     * Maxaveragesubarray
       * [Max Average Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxaveragesubarray/max_average_subarray.go)
       * [Max Average Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxaveragesubarray/max_average_subarray_test.go)
+    * Maxconsecutiveones
+      * [Max Consecutive Ones](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxconsecutiveones/max_consecutive_ones.go)
+      * [Max Consecutive Ones Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxconsecutiveones/max_consecutive_ones_test.go)
     * Maxlencontiguoussubarray
       * [Maxlen Contiguous Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray.go)
       * [Maxlen Contiguous Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxlencontiguoussubarray/maxlen_contiguous_subarray_test.go)
