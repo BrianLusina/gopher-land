@@ -1,10 +1,14 @@
 package graphs
 
-type Graph interface {
+import "gopherland/pkg/types"
+
+type Graph[T types.Comparable] interface {
 	// AddNode adds a new node to the graph
-	AddNode(nodeOne Node) error
+	AddVertex(nodeOne Vertex[T]) error
+
 	// GetNode returns a node from the graph
-	GetNode(data any) *Node
+	GetVertex(data any) *Vertex[T]
+
 	// Size returns the number of nodes in the graph
 	Size() int
 }
