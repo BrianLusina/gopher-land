@@ -564,16 +564,20 @@
       * [Disjoint Set Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/disjoint_set/disjoint_set_test.go)
       * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/disjoint_set/node.go)
       * [Node Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/disjoint_set/node_test.go)
-    * [Edge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edge.go)
-    * [Edge Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edge_test.go)
+    * Edges
+      * [Directed Edge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/directed_edge.go)
+      * [Edge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/edge.go)
+      * [Edge Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/edge_test.go)
+      * [Hyperedge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/hyperedge.go)
+      * [Undirected Edge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/undirected_edge.go)
     * [Errors](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/errors.go)
     * [Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/graph.go)
-    * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/node.go)
     * Undirected
       * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/undirected/node.go)
       * [Undirected Graph](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/undirected/undirected_graph.go)
     * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/utils.go)
     * [Utils Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/utils_test.go)
+    * [Vertex](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/vertex.go)
   * Hashmap
     * [Hashmap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashmap/hashmap.go)
     * [Hashmap Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashmap/hashmap_test.go)
@@ -960,6 +964,9 @@
     * Containerwithmostwater
       * [Container With Most Water](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/containerwithmostwater/container_with_most_water.go)
       * [Container With Most Water Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/containerwithmostwater/container_with_most_water_test.go)
+    * Longestsubarrayofones
+      * [Longest Subarray Of Ones](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/longestsubarrayofones/longest_subarray_of_ones.go)
+      * [Longest Subarray Of Ones Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/longestsubarrayofones/longest_subarray_of_ones_test.go)
     * Maxaveragesubarray
       * [Max Average Subarray](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxaveragesubarray/max_average_subarray.go)
       * [Max Average Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxaveragesubarray/max_average_subarray_test.go)
