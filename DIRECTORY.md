@@ -566,8 +566,8 @@
       * [Node Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/disjoint_set/node_test.go)
     * Edges
       * [Directed Edge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/directed_edge.go)
+      * [Directed Edge Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/directed_edge_test.go)
       * [Edge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/edge.go)
-      * [Edge Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/edge_test.go)
       * [Hyperedge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/hyperedge.go)
       * [Undirected Edge](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/edges/undirected_edge.go)
     * [Errors](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/graphs/errors.go)
