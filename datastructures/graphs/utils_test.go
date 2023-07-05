@@ -15,15 +15,15 @@ func TestGraphUtils(t *testing.T) {
 
 var _ = Describe("CloneGraph", func() {
 	It("should clone a graph and return a new graph", func() {
-		nodeOne := NewNode(1)
-		nodeTwo := NewNode(2)
-		nodeThree := NewNode(3)
-		nodeFour := NewNode(4)
+		nodeOne := NewVertex(1)
+		// nodeTwo := NewVertex(2)
+		// nodeThree := NewVertex(3)
+		// nodeFour := NewVertex(4)
 
-		nodeOne.Neighbors = map[any]*Node{nodeTwo.Data: nodeTwo, nodeFour.Data: nodeFour}
-		nodeTwo.Neighbors = map[any]*Node{nodeThree.Data: nodeThree, nodeOne.Data: nodeOne}
-		nodeThree.Neighbors = map[any]*Node{nodeFour.Data: nodeFour, nodeTwo.Data: nodeTwo}
-		nodeFour.Neighbors = map[any]*Node{nodeOne.Data: nodeOne, nodeThree.Data: nodeThree}
+		// nodeOne.Neighbors = map[any]*Node{nodeTwo.Data: nodeTwo, nodeFour.Data: nodeFour}
+		// nodeTwo.Neighbors = map[any]*Node{nodeThree.Data: nodeThree, nodeOne.Data: nodeOne}
+		// nodeThree.Neighbors = map[any]*Node{nodeFour.Data: nodeFour, nodeTwo.Data: nodeTwo}
+		// nodeFour.Neighbors = map[any]*Node{nodeOne.Data: nodeOne, nodeThree.Data: nodeThree}
 
 		actual := CloneGraph(nodeOne)
 

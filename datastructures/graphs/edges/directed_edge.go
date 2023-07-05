@@ -18,7 +18,11 @@ type Directed[T types.Comparable] struct {
 }
 
 // NewDirectedEdge creates a new directed edge between two nodes with a weight
-func NewDirectedEdge[T types.Comparable](source, destination *graphs.Vertex[T], weight int) *Directed[T] {
+func NewDirectedEdge[T types.Comparable](source, destination *graphs.Vertex[T], weight int) Edge[T] {
+
+	source.AddAdjacentVertex(*destination)
+	destination.AddAdjacentVertex(*source)
+
 	return &Directed[T]{
 		Source:      source,
 		Destination: destination,
@@ -28,16 +32,21 @@ func NewDirectedEdge[T types.Comparable](source, destination *graphs.Vertex[T], 
 
 // IsSelfEdge returns true if an edge's 2 nodes are the same
 func (e *Directed[T]) IsSelfEdge() bool {
-	return e.NodeOne == e.NodeTwo
+	return e.Source == e.Destination
 }
 
 // GetNodes returns the nodes connected by the edge
 // this includes the nodes in the edges if any
 func (e *Directed[T]) GetNodes() []*graphs.Vertex[T] {
-	return []*graphs.Vertex[T]{e.NodeOne, e.NodeTwo}
+	return []*graphs.Vertex[T]{e.Source, e.Destination}
 }
 
 // IsWeighted returns true if the edge has a weight
 func (e *Directed[T]) IsWeighted() bool {
 	return e.Weight != 0
+}
+
+// IsWeighted returns true if the edge has a weight
+func (e *Directed[T]) GetWeight() int {
+	return e.Weight
 }
