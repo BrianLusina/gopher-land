@@ -964,6 +964,9 @@
     * Containerwithmostwater
       * [Container With Most Water](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/containerwithmostwater/container_with_most_water.go)
       * [Container With Most Water Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/containerwithmostwater/container_with_most_water_test.go)
+    * Highestaltitude
+      * [Higest Altitude](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/highestaltitude/higest_altitude.go)
+      * [Highest Altitude Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/highestaltitude/highest_altitude_test.go)
     * Longestsubarrayofones
       * [Longest Subarray Of Ones](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/longestsubarrayofones/longest_subarray_of_ones.go)
       * [Longest Subarray Of Ones Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/longestsubarrayofones/longest_subarray_of_ones_test.go)
