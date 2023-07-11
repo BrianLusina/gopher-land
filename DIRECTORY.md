@@ -532,9 +532,6 @@
     * Pendulum
       * [Pendulum](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/pendulum/pendulum.go)
       * [Pendulum Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/pendulum/pendulum_test.go)
-    * Pivotindex
-      * [Pivot Index](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/pivotindex/pivot_index.go)
-      * [Pivot Index Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/pivotindex/pivot_index_test.go)
     * Runningsum
       * [Running Sum](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/runningsum/running_sum.go)
       * [Running Sum Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/runningsum/running_sum_test.go)
@@ -988,6 +985,9 @@
     * Movezeroes
       * [Move Zeroes](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/movezeroes/move_zeroes.go)
       * [Move Zeroes Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/movezeroes/move_zeroes_test.go)
+    * Pivotindex
+      * [Pivot Index](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/pivotindex/pivot_index.go)
+      * [Pivot Index Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/pivotindex/pivot_index_test.go)
     * Productexceptself
       * [Product Of Array Except Self](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/productexceptself/product_of_array_except_self.go)
       * [Product Of Array Except Self Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/productexceptself/product_of_array_except_self_test.go)
