@@ -8,6 +8,7 @@ If the index is on the left edge of the array, then the left sum is 0 because th
 
 Return the leftmost pivot index. If no such index exists, return -1.
 
+```plain
 Example 1:
 
 Input: nums = [1,7,3,6,5,6]
@@ -30,3 +31,9 @@ Explanation:
 The pivot index is 0.
 Left sum = 0 (no elements to the left of index 0)
 Right sum = nums[1] + nums[2] = 1 + -1 = 0
+```
+
+## Related Topics
+
+- Array
+- Prefix Sum
