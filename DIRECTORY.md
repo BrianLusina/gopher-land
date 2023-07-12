@@ -1017,6 +1017,10 @@
     * [Flood Fill Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill_test.go)
   * Greenvalley
     * [Greenvalley](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/greenvalley/greenvalley.go)
+  * Hashmap
+    * Uniqueoccurences
+      * [Unique Occurrences](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/hashmap/uniqueoccurences/unique_occurrences.go)
+      * [Unique Occurrences Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/hashmap/uniqueoccurences/unique_occurrences_test.go)
   * Jumpgame
     * [Jump Game Iv](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/jumpgame/jump_game_iv.go)
     * [Jump Game Iv Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/jumpgame/jump_game_iv_test.go)
