@@ -447,6 +447,9 @@
     * [Book](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/books/book.go)
     * [Main](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/books/main.go)
   * [Channels](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/channels.go)
+  * Counter
+    * [Counter](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/counter/counter.go)
+    * [Counter Test](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/counter/counter_test.go)
   * Faninfanout
     * [Double Nums](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/faninfanout/double_nums.go)
     * [Update Position](https://github.com/BrianLusina/gopher-land/blob/master/concurrency/faninfanout/update_position.go)
