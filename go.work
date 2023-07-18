@@ -8,4 +8,5 @@ use (
 	./gomath
 	./gopuzzles
 	./gostrings
+	./designpatterns
 )
