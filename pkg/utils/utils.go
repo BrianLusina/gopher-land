@@ -1,5 +1,10 @@
 package utils
 
+import (
+	"fmt"
+	"strings"
+)
+
 // GetZero Value returns the zero value for a generic typ
 func GetZeroValue[T any]() T {
 	var result T
@@ -24,4 +29,9 @@ func Range(start, end, step int) []int {
 		x++
 	}
 	return list
+}
+
+// SliceToString converts an slice of any type to it's string representation
+func SliceToString[T any](slice []T, delim string) string {
+	return strings.Trim(strings.Join(strings.Split(fmt.Sprint(slice), " "), delim), "[]")
 }
