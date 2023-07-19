@@ -1024,6 +1024,9 @@
     * Closestrings
       * [Close Strings](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/hashmap/closestrings/close_strings.go)
       * [Close Strings Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/hashmap/closestrings/close_strings_test.go)
+    * Equalrowandcols
+      * [Equal Pairs](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/hashmap/equalrowandcols/equal_pairs.go)
+      * [Equal Pairs Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/hashmap/equalrowandcols/equal_pairs_test.go)
     * Uniqueoccurences
       * [Unique Occurrences](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/hashmap/uniqueoccurences/unique_occurrences.go)
       * [Unique Occurrences Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/hashmap/uniqueoccurences/unique_occurrences_test.go)
