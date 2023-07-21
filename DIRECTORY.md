@@ -1075,6 +1075,10 @@
   * Slowestkey
     * [Slowest Key](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key.go)
     * [Slowest Key Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key_test.go)
+  * Stack
+    * Removingstars
+      * [Remove Stars](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/removingstars/remove_stars.go)
+      * [Remove Stars Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/removingstars/remove_stars_test.go)
   * Studentlunch
     * [Student Lunch](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/studentlunch/student_lunch.go)
     * [Student Lunch Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/studentlunch/student_lunch_test.go)
