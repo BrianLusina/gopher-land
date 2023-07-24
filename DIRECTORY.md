@@ -1076,6 +1076,9 @@
     * [Slowest Key](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key.go)
     * [Slowest Key Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key_test.go)
   * Stack
+    * Asteroidcollision
+      * [Asteroid Collision](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/asteroidcollision/asteroid_collision.go)
+      * [Asteroid Collision Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/asteroidcollision/asteroid_collision_test.go)
     * Removingstars
       * [Remove Stars](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/removingstars/remove_stars.go)
       * [Remove Stars Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/removingstars/remove_stars_test.go)
