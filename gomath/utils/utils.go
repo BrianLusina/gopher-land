@@ -48,3 +48,11 @@ func AbsDiff[T constraints.Integer](x, y T) T {
 	}
 	return x - y
 }
+
+// Abs gets the absolute value of an integer
+func Abs(x int) int {
+	if x < 1 {
+		return x * -1
+	}
+	return x
+}
