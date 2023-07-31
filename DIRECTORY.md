@@ -1079,6 +1079,9 @@
     * Asteroidcollision
       * [Asteroid Collision](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/asteroidcollision/asteroid_collision.go)
       * [Asteroid Collision Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/asteroidcollision/asteroid_collision_test.go)
+    * Decodestring
+      * [Decode String](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/decodestring/decode_string.go)
+      * [Decode String Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/decodestring/decode_string_test.go)
     * Removingstars
       * [Remove Stars](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/removingstars/remove_stars.go)
       * [Remove Stars Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/removingstars/remove_stars_test.go)
