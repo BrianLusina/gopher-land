@@ -1062,6 +1062,10 @@
   * Prefixsum
     * [Prefix Sum](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/prefixsum/prefix_sum.go)
     * [Prefix Sum Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/prefixsum/prefix_sum_test.go)
+  * Queue
+    * Recentcounter
+      * [Recent Counter](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/queue/recentcounter/recent_counter.go)
+      * [Recent Counter Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/queue/recentcounter/recent_counter_test.go)
   * Rectangles
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rectangles/cases_test.go)
     * [Rectangles](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rectangles/rectangles.go)
