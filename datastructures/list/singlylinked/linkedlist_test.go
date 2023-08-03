@@ -478,4 +478,107 @@ var _ = Describe("SinglyLinkedList", func() {
 			})
 		})
 	})
+
+	Context("DeleteMiddleNode", func() {
+
+		Context("Using 2 Passes", func() {
+			When("linked list is [1,3,4,7,1,2,6]", func() {
+				values := []int{1, 3, 4, 7, 1, 2, 6}
+				linkedList := NewLinkedList[int]()
+				for _, v := range values {
+					linkedList.Append(v)
+				}
+
+				expected := list.NewNode(7)
+
+				It("should return 7 as the middle node and delete it from linked list", func() {
+					actual := linkedList.DeleteMiddle()
+
+					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+				})
+			})
+
+			When("linked list is [1,2,3,4]", func() {
+				values := []int{1, 2, 3, 4}
+				linkedList := NewLinkedList[int]()
+				for _, v := range values {
+					linkedList.Append(v)
+				}
+
+				expected := list.NewNode(3)
+
+				It("should return 3 as the middle node and delete it from linked list", func() {
+					actual := linkedList.DeleteMiddle()
+
+					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+				})
+			})
+
+			When("linked list is [2, 1]", func() {
+				values := []int{2, 1}
+				linkedList := NewLinkedList[int]()
+				for _, v := range values {
+					linkedList.Append(v)
+				}
+
+				expected := list.NewNode(1)
+
+				It("should return 1 as the middle node and delete it from linked list", func() {
+					actual := linkedList.DeleteMiddle()
+
+					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+				})
+			})
+		})
+
+		Context("Using 2 Pointers", func() {
+			When("linked list is [1,3,4,7,1,2,6]", func() {
+				values := []int{1, 3, 4, 7, 1, 2, 6}
+				linkedList := NewLinkedList[int]()
+				for _, v := range values {
+					linkedList.Append(v)
+				}
+
+				expected := list.NewNode(7)
+
+				It("should return 7 as the middle node and delete it from linked list", func() {
+					actual := linkedList.DeleteMiddle2Pointers()
+
+					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+				})
+			})
+
+			When("linked list is [1,2,3,4]", func() {
+				values := []int{1, 2, 3, 4}
+				linkedList := NewLinkedList[int]()
+				for _, v := range values {
+					linkedList.Append(v)
+				}
+
+				expected := list.NewNode(3)
+
+				It("should return 3 as the middle node and delete it from linked list", func() {
+					actual := linkedList.DeleteMiddle2Pointers()
+
+					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+				})
+			})
+
+			When("linked list is [2, 1]", func() {
+				values := []int{2, 1}
+				linkedList := NewLinkedList[int]()
+				for _, v := range values {
+					linkedList.Append(v)
+				}
+
+				expected := list.NewNode(1)
+
+				It("should return 1 as the middle node and delete it from linked list", func() {
+					actual := linkedList.DeleteMiddle2Pointers()
+
+					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+				})
+			})
+		})
+	})
 })

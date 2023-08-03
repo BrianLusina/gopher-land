@@ -35,6 +35,8 @@ type LinkedList[T comparable] interface {
 
 	DeleteNodeByData(data interface{})
 
+	DeleteMiddle() (any, error)
+
 	SwapNodes(dataOne, dataTwo interface{})
 
 	SwapNodesAtKthAndKPlusOne(k int)

@@ -96,6 +96,44 @@ func (sll *LinkedList[T]) DeleteTail() (any, error) {
 	panic("implement me")
 }
 
+func (sll *LinkedList[T]) DeleteMiddle() *list.Node[T] {
+	if sll.Head == nil || sll.Head.Next == nil {
+		return nil
+	}
+
+	nodeCount := sll.Length()
+	middleIndex := nodeCount / 2
+
+	current := sll.Head
+
+	for i := 0; i < middleIndex-1; i++ {
+		current = current.Next
+	}
+
+	middleNode := current.Next
+	current.Next = current.Next.Next
+
+	return middleNode
+}
+
+func (sll *LinkedList[T]) DeleteMiddle2Pointers() *list.Node[T] {
+	if sll.Head == nil || sll.Head.Next == nil {
+		return nil
+	}
+
+	slowPointer, fastPointer := sll.Head, sll.Head.Next.Next
+
+	for fastPointer != nil && fastPointer.Next != nil {
+		slowPointer = slowPointer.Next
+		fastPointer = fastPointer.Next.Next
+	}
+
+	middleNode := slowPointer.Next
+	slowPointer.Next = slowPointer.Next.Next
+
+	return middleNode
+}
+
 func (sll *LinkedList[T]) SwapNodesAtKthAndKPlusOne(k int) {
 	if sll.Head == nil || sll.Head.Next == nil {
 		return
