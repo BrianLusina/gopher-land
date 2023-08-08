@@ -2,12 +2,14 @@ package utils
 
 import (
 	"fmt"
+	"gopherland/pkg/types"
 	"math/rand"
 	"testing"
 	"time"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestRangeSuite(t *testing.T) {
@@ -110,3 +112,67 @@ var _ = Describe("Range Test Cases", func() {
 		})
 	}
 })
+
+type zipTestCase[T types.Comparable] struct {
+	a        []T
+	b        []T
+	expected []ZipPair[T, T]
+	err      error
+}
+
+var intZipTestCases = []zipTestCase[int]{
+	{
+		a:        []int{1, 2, 3, 4},
+		b:        []int{5, 6, 7, 8},
+		expected: []ZipPair[int, int]{{1, 5}, {2, 6}, {3, 7}, {4, 8}},
+		err:      nil,
+	},
+	{
+		a:        []int{10, 12, 14, 16},
+		b:        []int{11, 13, 15, 17},
+		expected: []ZipPair[int, int]{{10, 11}, {12, 13}, {14, 15}, {16, 17}},
+		err:      nil,
+	},
+}
+
+func TestZipIntPairs(t *testing.T) {
+	for _, tc := range intZipTestCases {
+		t.Run(fmt.Sprintf("Zip(%v, %v)", tc.a, tc.b), func(t *testing.T) {
+			actualPairs, actualErr := Zip(tc.a, tc.b)
+
+			if actualErr != nil && tc.err == nil {
+				t.Fatalf("expected no error, but error %v was returned", actualErr)
+			}
+
+			if tc.err != nil && actualErr == nil {
+				t.Fatalf("expected error %v, but nil error was returned", tc.err)
+			}
+
+			assert.ElementsMatch(t, actualPairs, tc.expected)
+		})
+	}
+}
+
+func BenchmarkZipIntPairs(b *testing.B) {
+	if testing.Short() {
+		b.Skip()
+	}
+
+	for i := 0; i < b.N; i++ {
+		for _, tc := range intZipTestCases {
+			b.Run(fmt.Sprintf("Zip(%v, %v)", tc.a, tc.b), func(b *testing.B) {
+				actualPairs, actualErr := Zip(tc.a, tc.b)
+
+				if actualErr != nil && tc.err == nil {
+					b.Fatalf("expected no error, but error %v was returned", actualErr)
+				}
+
+				if tc.err != nil && actualErr == nil {
+					b.Fatalf("expected error %v, but nil error was returned", tc.err)
+				}
+
+				assert.ElementsMatch(b, actualPairs, tc.expected)
+			})
+		}
+	}
+}

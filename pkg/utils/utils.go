@@ -2,6 +2,7 @@ package utils
 
 import (
 	"fmt"
+	"gopherland/pkg/types"
 	"strings"
 )
 
@@ -34,4 +35,65 @@ func Range(start, end, step int) []int {
 // SliceToString converts an slice of any type to it's string representation
 func SliceToString[T any](slice []T, delim string) string {
 	return strings.Trim(strings.Join(strings.Split(fmt.Sprint(slice), " "), delim), "[]")
+}
+
+// MinMax returns the minimum and maximum of 2 values
+// For example MinMax(1, 2) returns (1, 2)
+func MinMax[T types.Comparable](x, y T) (min T, max T) {
+	if x < y {
+		return x, y
+	}
+	return y, x
+}
+
+//ZipPair is a tuple of 2 elements from 2 different slices
+type ZipPair[T, U any] struct {
+	A T
+	B U
+}
+
+// Zip returns a slice of pairs/tuples of a & b in the form of []Pair{{a[0], b[0]}, ..., {a[i], b[i]}} where i is the index
+// This assumes that the length of the 2 slices are equal. If there are not, an error is returned
+func Zip[T, U any](a []T, b []U) ([]ZipPair[T, U], error) {
+	if len(a) != len(b) {
+		return nil, fmt.Errorf("Zip: arguments must be of same length")
+	}
+
+	pairs := make([]ZipPair[T, U], len(a), len(b))
+
+	for index := range a {
+		pairs[index] = ZipPair[T, U]{a[index], b[index]}
+	}
+
+	return pairs, nil
+}
+
+// ZipDiff zips slices of different lengths by leaving the Pair field to it's Zero value
+func ZipDiff[T, U any](a []T, b []U) []ZipPair[T, U] {
+	// identify the minimum and the maximum lengths
+	lmin, lmax := MinMax(len(a), len(b))
+
+	pairs := make([]ZipPair[T, U], lmax)
+
+	// build tuples up to the minimum length
+	for i := 0; i < lmin; i++ {
+		pairs[i] = ZipPair[T, U]{a[i], b[i]}
+	}
+
+	if lmin == lmax {
+		return pairs
+	}
+
+	// build tuples with one zero value for [lmin, lmax] range
+	for i := lmin; i < lmax; i++ {
+		p := ZipPair[T, U]{}
+		if len(a) == lmax {
+			p.A = a[i]
+		} else {
+			p.B = b[i]
+		}
+		pairs[i] = p
+	}
+
+	return pairs
 }
