@@ -44,6 +44,9 @@ type LinkedList[T comparable] interface {
 	// Reverse reverses the list
 	Reverse()
 
+	// OddEvenList returns the linked list grouping all nodes with odd indices together followed by nodes with even indices
+	OddEvenList() *Node[T]
+
 	// Rotate rotates the list by k positions counter-clockwise
 	Rotate(k int)
 

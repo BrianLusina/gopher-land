@@ -2,6 +2,7 @@ package singlylinkedlist
 
 import (
 	"gopherland/datastructures/list"
+	"gopherland/pkg/utils"
 	"testing"
 
 	. "github.com/onsi/ginkgo"
@@ -578,6 +579,48 @@ var _ = Describe("SinglyLinkedList", func() {
 
 					assert.Equal(GinkgoT(), expected.Data, actual.Data)
 				})
+			})
+		})
+	})
+
+	Context("OddEventList", func() {
+		runTest := func(data, expected []int) {
+			linkedList := NewLinkedList[int]()
+			for _, v := range data {
+				linkedList.Append(v)
+			}
+
+			actualHead := linkedList.OddEvenList()
+			actualNodes := []int{}
+
+			for actualHead != nil {
+				actualNodes = append(actualNodes, actualHead.Data)
+				actualHead = actualHead.Next
+			}
+
+			zipped, err := utils.Zip[int, int](actualNodes, expected)
+			assert.NoError(GinkgoT(), err)
+
+			for _, zipPair := range zipped {
+				assert.Equal(GinkgoT(), zipPair.A, zipPair.B)
+			}
+		}
+
+		When("linked list is [1, 2, 3, 4, 5]", func() {
+			data := []int{1, 2, 3, 4, 5}
+			expected := []int{1, 3, 5, 2, 4}
+
+			It("should return [1, 3, 5, 2, 4] as the new list", func() {
+				runTest(data, expected)
+			})
+		})
+
+		When("linked list is [2, 1, 3, 5, 6, 4, 7]", func() {
+			data := []int{2, 1, 3, 5, 6, 4, 7}
+			expected := []int{2, 3, 6, 7, 1, 5, 4}
+
+			It("should return [2, 3, 6, 7, 1, 5, 4] as the new list", func() {
+				runTest(data, expected)
 			})
 		})
 	})

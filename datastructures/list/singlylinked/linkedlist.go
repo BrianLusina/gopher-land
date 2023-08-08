@@ -685,3 +685,23 @@ func (sll *LinkedList[T]) KthToLastNode(k int) (*list.Node[T], error) {
 
 	return leftNode, nil
 }
+
+// OddEvenList returns the linked list grouping all nodes with odd indices together followed by nodes with even indices
+func (sll *LinkedList[T]) OddEvenList() *list.Node[T] {
+	if sll.Head == nil || sll.Head.Next == nil {
+		return sll.Head
+	}
+
+	odd := sll.Head
+	even := sll.Head.Next
+	evenHead := even
+
+	for even != nil && even.Next != nil {
+		odd.Next = even.Next
+		odd = odd.Next
+		even.Next = odd.Next
+		even = even.Next
+	}
+	odd.Next = evenHead
+	return sll.Head
+}
