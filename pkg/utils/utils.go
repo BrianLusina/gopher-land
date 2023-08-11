@@ -37,6 +37,22 @@ func SliceToString[T any](slice []T, delim string) string {
 	return strings.Trim(strings.Join(strings.Split(fmt.Sprint(slice), " "), delim), "[]")
 }
 
+// Max returns the maximum value of 2 comparable types
+func Max[T types.Comparable](a, b T) T {
+	if a < b {
+		return b
+	}
+	return a
+}
+
+// Min returns the minimum value of 2 comparable types
+func Min[T types.Comparable](a, b T) T {
+	if a < b {
+		return a
+	}
+	return b
+}
+
 // MinMax returns the minimum and maximum of 2 values
 // For example MinMax(1, 2) returns (1, 2)
 func MinMax[T types.Comparable](x, y T) (min T, max T) {
