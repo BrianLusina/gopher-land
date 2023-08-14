@@ -302,4 +302,55 @@ var _ = Describe("Binary Tree", func() {
 		})
 	})
 
+	Context("Height", func() {
+		When("Binary Tree contains nodes with data of type int", func() {
+			It("should return 0 for no root", func() {
+				tree := NewBinaryTree[int]()
+				actual := tree.Height()
+				Expect(actual).To(Equal(0))
+			})
+
+			It("should return 1 if the binary tree has a root, but no left nor right subtrees", func() {
+				root := NewBinaryTreeNode(1)
+				tree := NewBinaryTree[int]()
+				tree.root = root
+				actual := tree.Height()
+				Expect(actual).To(Equal(1))
+			})
+
+			It("should return 3 for tree of 3,9,20,null,null,15,7", func() {
+				left := NewBinaryTreeNode(9)
+				rightLeft := NewBinaryTreeNode(15)
+				rightRight := NewBinaryTreeNode(7)
+
+				right := NewBinaryTreeNode(20)
+				right.Left = rightLeft
+				right.Right = rightRight
+
+				root := NewBinaryTreeNode(3)
+				root.Left = left
+				root.Right = right
+
+				tree := NewBinaryTree[int]()
+				tree.root = root
+
+				actual := tree.Height()
+				Expect(actual).To(Equal(3))
+			})
+
+			It("should return 1 for tree of 1,null,2", func() {
+				right := NewBinaryTreeNode(2)
+
+				root := NewBinaryTreeNode(1)
+				root.Right = right
+
+				tree := NewBinaryTree[int]()
+				tree.root = root
+
+				actual := tree.Height()
+
+				Expect(actual).To(Equal(2))
+			})
+		})
+	})
 })

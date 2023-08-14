@@ -186,3 +186,16 @@ func (tree *BinaryTree[T]) IsBalanced() bool {
 
 	return isBalancedHelper(tree.root)
 }
+
+// Height Returns the height of a Tree or the maximum depth of the tree. A Tree's height is the number of links from its root to the furthest leaf
+func (tree *BinaryTree[T]) Height() int {
+	var heightHelper func(root *BinaryTreeNode[T]) int
+	heightHelper = func(root *BinaryTreeNode[T]) int {
+		if root == nil {
+			return 0
+		}
+		return utils.Max(heightHelper(root.Left), heightHelper(root.Right)) + 1
+	}
+
+	return heightHelper(tree.root)
+}
