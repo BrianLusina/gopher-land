@@ -113,3 +113,17 @@ func ZipDiff[T, U any](a []T, b []U) []ZipPair[T, U] {
 
 	return pairs
 }
+
+// Equal compares 2 slices and checks them for equality, returning true if they are equal false otherwise
+func EqualSlices[T types.Comparable](a, b []T) bool {
+	if len(a) != len(b) {
+		return false
+	}
+
+	for idx, value := range a {
+		if value != b[idx] {
+			return false
+		}
+	}
+	return true
+}

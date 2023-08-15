@@ -176,3 +176,62 @@ func BenchmarkZipIntPairs(b *testing.B) {
 		}
 	}
 }
+
+type equalSlicesTestCase[T types.Comparable] struct {
+	a        []T
+	b        []T
+	expected bool
+}
+
+var equalSlicesTestCases = []equalSlicesTestCase[int]{
+	{
+		a:        []int{1, 2, 3, 4},
+		b:        []int{5, 6, 7, 8},
+		expected: false,
+	},
+	{
+		a:        []int{10, 12, 14, 16},
+		b:        []int{11, 13, 15, 17},
+		expected: false,
+	},
+	{
+		a:        []int{1, 2, 3},
+		b:        []int{1, 3, 2},
+		expected: false,
+	},
+	{
+		a:        []int{6, 7, 4, 9, 8},
+		b:        []int{6, 7, 4, 9, 8},
+		expected: true,
+	},
+}
+
+func TestEqualSlices(t *testing.T) {
+	for _, tc := range equalSlicesTestCases {
+		t.Run(fmt.Sprintf("EqualSlices(%v, %v)", tc.a, tc.b), func(t *testing.T) {
+			actual := EqualSlices(tc.a, tc.b)
+
+			if tc.expected != actual {
+				t.Fatalf("expected %v, but got %v was returned", tc.expected, actual)
+			}
+		})
+	}
+}
+
+func BenchmarkEqualSlices(b *testing.B) {
+	if testing.Short() {
+		b.Skip()
+	}
+
+	for i := 0; i < b.N; i++ {
+		for _, tc := range equalSlicesTestCases {
+			b.Run(fmt.Sprintf("EqualSlices(%v, %v)", tc.a, tc.b), func(b *testing.B) {
+				actual := EqualSlices(tc.a, tc.b)
+
+				if tc.expected != actual {
+					b.Fatalf("expected %v, but got %v was returned", tc.expected, actual)
+				}
+			})
+		}
+	}
+}
