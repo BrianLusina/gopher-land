@@ -18,8 +18,8 @@ var isFullTestCases = []struct {
 			root := NewBinaryTreeNode(1)
 			left := NewBinaryTreeNode(2)
 			right := NewBinaryTreeNode(3)
-			root.Left = left
-			root.Right = right
+			root.left = left
+			root.right = right
 			return root
 		}(),
 		expected: true,
@@ -29,7 +29,7 @@ var isFullTestCases = []struct {
 		node: func() *BinaryTreeNode[int] {
 			root := NewBinaryTreeNode(1)
 			left := NewBinaryTreeNode(2)
-			root.Left = left
+			root.left = left
 			return root
 		}(),
 		expected: false,

@@ -7,23 +7,67 @@ import (
 	"strings"
 )
 
-// BinaryTreeNode represent a Binary Tree Node in a Binary Tree
-type BinaryTreeNode[T types.Comparable] struct {
-	trees.TreeNode[T]
-	Left, Right *BinaryTreeNode[T]
-}
+// BinaryTreeNodeOption allows setting options to a Binary TreeNode
+type BinaryTreeNodeOption[T types.Comparable] func(*BinaryTreeNode[T])
 
-// NewBinaryTreeNode creates a new BinaryTreeNode
-func NewBinaryTreeNode[T types.Comparable](data T) *BinaryTreeNode[T] {
-	node := trees.NewTreeNode(data)
-
-	return &BinaryTreeNode[T]{
-		TreeNode: *node,
-		Left:     nil,
-		Right:    nil,
+// Left sets the left node
+func Left[T types.Comparable](left *BinaryTreeNode[T]) BinaryTreeNodeOption[T] {
+	return func(node *BinaryTreeNode[T]) {
+		node.left = left
 	}
 }
 
+// Right sets the right node
+func Right[T types.Comparable](right *BinaryTreeNode[T]) BinaryTreeNodeOption[T] {
+	return func(node *BinaryTreeNode[T]) {
+		node.right = right
+	}
+}
+
+// BinaryTreeNode represent a Binary Tree Node in a Binary Tree
+type BinaryTreeNode[T types.Comparable] struct {
+	trees.TreeNode[T]
+	left, right *BinaryTreeNode[T]
+}
+
+// NewBinaryTreeNode creates a new BinaryTreeNode
+func NewBinaryTreeNode[T types.Comparable](data T, opts ...BinaryTreeNodeOption[T]) *BinaryTreeNode[T] {
+	node := trees.NewTreeNode(data)
+
+	binaryTreeNode := &BinaryTreeNode[T]{
+		TreeNode: *node,
+		left:     nil,
+		right:    nil,
+	}
+
+	for _, opt := range opts {
+		opt(binaryTreeNode)
+	}
+
+	return binaryTreeNode
+}
+
+// Left retrieves the left node of a binary tree node
+func (node *BinaryTreeNode[T]) Left() *BinaryTreeNode[T] {
+	return node.left
+}
+
+// SetLeft sets the left node of a binary tree node
+func (node *BinaryTreeNode[T]) SetLeft(n *BinaryTreeNode[T]) {
+	node.left = n
+}
+
+// Right retrieves the right node of a binary tree node
+func (node *BinaryTreeNode[T]) Right() *BinaryTreeNode[T] {
+	return node.right
+}
+
+// SetRight sets the right node of a binary tree node
+func (node *BinaryTreeNode[T]) SetRight(n *BinaryTreeNode[T]) {
+	node.right = n
+}
+
+// Serialize serializes a node into a string
 func (node *BinaryTreeNode[T]) Serialize() string {
 	if node == nil {
 		return ""
@@ -35,14 +79,14 @@ func (node *BinaryTreeNode[T]) Serialize() string {
 	for len(stack) > 0 {
 		l := len(stack)
 		for i := 0; i < l; i++ {
-			if stack[i].Left != nil {
-				stack = append(stack, stack[i].Left)
+			if stack[i].left != nil {
+				stack = append(stack, stack[i].left)
 			}
-			if stack[i].Right != nil {
-				stack = append(stack, stack[i].Right)
+			if stack[i].right != nil {
+				stack = append(stack, stack[i].right)
 			}
-			add(&nodeValues, stack[i].Left)
-			add(&nodeValues, stack[i].Right)
+			add(&nodeValues, stack[i].left)
+			add(&nodeValues, stack[i].right)
 		}
 		stack = stack[l:]
 	}
@@ -59,66 +103,66 @@ func add[T types.Comparable](c *[]any, node *BinaryTreeNode[T]) {
 	}
 }
 
-func (t *BinaryTreeNode[T]) InorderTraversalIteravely() (result []T) {
+func (node *BinaryTreeNode[T]) InorderTraversalIteravely() (result []T) {
 	var stack []*BinaryTreeNode[T]
-	current := t
+	current := node
 
 	for current != nil || len(stack) != 0 {
 		for current != nil {
 			stack = append(stack, current)
-			current = current.Left
+			current = current.left
 		}
 
 		current, stack = stack[len(stack)-1], stack[:len(stack)-1]
 		result = append(result, current.Data)
-		current = current.Right
+		current = current.right
 	}
 	return
 }
 
-func (t *BinaryTreeNode[T]) InorderTraversalRecurse(root *BinaryTreeNode[T]) (result []T) {
+func (node *BinaryTreeNode[T]) InorderTraversalRecurse(root *BinaryTreeNode[T]) (result []T) {
 	if root != nil {
-		if root.Left != nil {
-			t.InorderTraversalRecurse(t.Left)
+		if root.left != nil {
+			node.InorderTraversalRecurse(node.left)
 		}
 
 		result = append(result, root.Data)
 
-		if root.Right != nil {
-			t.InorderTraversalRecurse(t.Right)
+		if root.right != nil {
+			node.InorderTraversalRecurse(node.right)
 		}
 	}
 
 	return
 }
 
-func (t *BinaryTreeNode[T]) InOrderMorrisTraversal() (result []T) {
-	current := t
+func (node *BinaryTreeNode[T]) InOrderMorrisTraversal() (result []T) {
+	current := node
 	var pre *BinaryTreeNode[T]
 
 	for current != nil {
-		if current.Left == nil {
+		if current.left == nil {
 			// add the current value of the node
 			result = append(result, current.Data)
 			// # Move to next Right node
-			current = current.Right
+			current = current.right
 		} else {
 			// # we have a Left subtree
-			pre = current.Left
+			pre = current.left
 
 			// # find Rightmost
-			for pre.Right != nil {
-				pre = pre.Right
+			for pre.right != nil {
+				pre = pre.right
 			}
 
 			// # put current after the pre node
-			pre.Right = current
+			pre.right = current
 			// # store current node
 			temp := current
 			// # move current to top of new tree
-			current = current.Left
+			current = current.left
 			// # original current Left be None, avoid infinite loops
-			temp.Left = nil
+			temp.left = nil
 		}
 	}
 
@@ -126,30 +170,30 @@ func (t *BinaryTreeNode[T]) InOrderMorrisTraversal() (result []T) {
 }
 
 // // IsValidBst checks if a binary tree is valid is a valid BST
-// func (t *BinaryTreeNode[T]) IsValidBst() bool {
+// func (node *BinaryTreeNode[T]) IsValidBst() bool {
 // 	max := 4294967296
 // 	min := -4294967296
 // 	return IsBstRecursive(t, min, max)
 // }
 
 // PreOrderTraversal of a binary tree, returns values of each node
-func (t *BinaryTreeNode[T]) PreOrderTraversal() (values []T) {
+func (node *BinaryTreeNode[T]) PreOrderTraversal() (values []T) {
 
-	if t == nil {
+	if node == nil {
 		return
 	}
 
 	var stack []*BinaryTreeNode[T]
-	current := t
+	current := node
 
 	for current != nil || len(stack) != 0 {
 		for current != nil {
-			values = append(values, t.Data)
-			stack = append(stack, t)
-			current = t.Left
+			values = append(values, node.Data)
+			stack = append(stack, node)
+			current = node.left
 		}
 		current, stack = stack[len(stack)-1], stack[:len(stack)-1]
-		current = current.Right
+		current = current.right
 	}
 
 	return
@@ -157,27 +201,27 @@ func (t *BinaryTreeNode[T]) PreOrderTraversal() (values []T) {
 
 // PostOrderTraversal of a binary tree, returns values of each node starting with Left most subtree, uses 2 stacks
 // to keep track of values of nodes and pops them from one stack adding them to the other
-func (t *BinaryTreeNode[T]) PostOrderTraversal() (values []T) {
+func (node *BinaryTreeNode[T]) PostOrderTraversal() (values []T) {
 	var stackOne []*BinaryTreeNode[T]
 	var stackTwo []*BinaryTreeNode[T]
 
-	if t == nil {
+	if node == nil {
 		return
 	}
 
-	stackOne = append(stackOne, t)
+	stackOne = append(stackOne, node)
 
 	for len(stackOne) != 0 {
 		node := stackOne[len(stackOne)-1]
 		stackOne = stackOne[:len(stackOne)-1]
 		stackTwo = append(stackTwo, node)
 
-		if node.Left != nil {
-			stackOne = append(stackOne, node.Left)
+		if node.left != nil {
+			stackOne = append(stackOne, node.left)
 		}
 
-		if node.Right != nil {
-			stackOne = append(stackOne, node.Right)
+		if node.right != nil {
+			stackOne = append(stackOne, node.right)
 		}
 	}
 
@@ -193,7 +237,7 @@ func (t *BinaryTreeNode[T]) PostOrderTraversal() (values []T) {
 // SearchNode searches for a value in a BST by walking either Left or Right of the tree given the value is either
 // less than or greater than current node respectively. This uses a recursive approach to find a node in a Tree
 // if found, returns the node which is the subtree with that value if not found, returns nil
-func (t *BinaryTreeNode[T]) SearchNode(node *BinaryTreeNode[T], val T) *BinaryTreeNode[T] {
+func (node *BinaryTreeNode[T]) SearchNode(n *BinaryTreeNode[T], val T) *BinaryTreeNode[T] {
 	if node == nil {
 		return nil
 	}
@@ -202,12 +246,12 @@ func (t *BinaryTreeNode[T]) SearchNode(node *BinaryTreeNode[T], val T) *BinaryTr
 		return node
 	}
 
-	if val < node.Data && node.Left != nil {
-		return t.SearchNode(node.Left, val)
+	if val < node.Data && node.left != nil {
+		return node.SearchNode(node.left, val)
 	}
 
-	if val > node.Data && node.Right != nil {
-		return t.SearchNode(node.Right, val)
+	if val > node.Data && node.right != nil {
+		return node.SearchNode(node.right, val)
 	}
 
 	return nil
@@ -215,37 +259,37 @@ func (t *BinaryTreeNode[T]) SearchNode(node *BinaryTreeNode[T], val T) *BinaryTr
 
 // InsertNode inserts a BinaryTreeNode into the BST. Inserts it Left if the val is less than the current root
 // inserts it Right if the val is greater than the current root. This operation is repeated recursively
-func (t *BinaryTreeNode[T]) InsertNode(val T) *BinaryTreeNode[T] {
-	if t == nil {
+func (node *BinaryTreeNode[T]) InsertNode(val T) *BinaryTreeNode[T] {
+	if node == nil {
 		return &BinaryTreeNode[T]{
-			Left:     nil,
+			left:     nil,
 			TreeNode: *trees.NewTreeNode(val),
 		}
 	}
 
-	if val < t.Data && t.Left != nil {
-		t.InsertNode(val)
-	} else if val <= t.Data {
-		t.Left = &BinaryTreeNode[T]{
+	if val < node.Data && node.left != nil {
+		node.InsertNode(val)
+	} else if val <= node.Data {
+		node.left = &BinaryTreeNode[T]{
 			TreeNode: *trees.NewTreeNode(val),
 		}
-	} else if val > t.Data && t.Right != nil {
-		t.InsertNode(val)
+	} else if val > node.Data && node.right != nil {
+		node.InsertNode(val)
 	} else {
-		t.Right = &BinaryTreeNode[T]{
+		node.right = &BinaryTreeNode[T]{
 			TreeNode: *trees.NewTreeNode(val),
 		}
 	}
-	return t
+	return node
 }
 
 // Height returns the height of the Binary Search Tree
-func (t *BinaryTreeNode[T]) Height() int {
-	if t == nil {
+func (node *BinaryTreeNode[T]) Height() int {
+	if node == nil {
 		return 0
 	}
 
-	if t.Left == nil && t.Right == nil {
+	if node.left == nil && node.right == nil {
 		return 0
 	}
 
@@ -265,12 +309,12 @@ func (t *BinaryTreeNode[T]) Height() int {
 			node := queue[0]
 			queue = queue[1 : len(queue)-1]
 
-			if node.Left != nil {
-				queue = append(queue, node.Left)
+			if node.left != nil {
+				queue = append(queue, node.left)
 			}
 
-			if node.Right != nil {
-				queue = append(queue, node.Right)
+			if node.right != nil {
+				queue = append(queue, node.right)
 			}
 
 			currentLevelNodes--
@@ -294,29 +338,29 @@ func (t *BinaryTreeNode[T]) Height() int {
 //
 // Space Complexity: O(1).
 // The space complexity of the above solution is constant.
-func (t *BinaryTreeNode[T]) LowestCommonAncestor(nodeOne, nodeTwo BinaryTreeNode[T]) *BinaryTreeNode[T] {
-	if t == nil {
+func (node *BinaryTreeNode[T]) LowestCommonAncestor(nodeOne, nodeTwo BinaryTreeNode[T]) *BinaryTreeNode[T] {
+	if node == nil {
 		return nil
 	}
 
 	// if any of the node values matches the data value for the root node, return the root node
-	if t.Data == nodeOne.Data || t.Data == nodeTwo.Data {
-		return t
+	if node.Data == nodeOne.Data || node.Data == nodeTwo.Data {
+		return node
 	}
 
-	for t != nil {
+	for node != nil {
 		// if both node_one and node_two are smaller than root, then LCA lies in the Left
-		if t.Data > nodeOne.Data && t.Data > nodeTwo.Data {
-			t = t.Left
-		} else if t.Data < nodeOne.Data && t.Data < nodeTwo.Data {
+		if node.Data > nodeOne.Data && node.Data > nodeTwo.Data {
+			node = node.left
+		} else if node.Data < nodeOne.Data && node.Data < nodeTwo.Data {
 			// if both node_one and node_two are greater than root, then LCA lies in the Right
-			t = t.Right
+			node = node.right
 		} else {
 			break
 		}
 	}
 
-	return t
+	return node
 }
 
 type pair[T types.Comparable] struct {
@@ -325,13 +369,13 @@ type pair[T types.Comparable] struct {
 }
 
 // Paths returns all the paths of this binary tree from root to leaf node
-func (t *BinaryTreeNode[T]) Paths() (res []string) {
+func (node *BinaryTreeNode[T]) Paths() (res []string) {
 
-	if t == nil {
+	if node == nil {
 		return res
 	}
 
-	stack := []pair[T]{{t, ""}}
+	stack := []pair[T]{{node, ""}}
 
 	for len(stack) != 0 {
 		item := stack[len(stack)-1]
@@ -340,16 +384,16 @@ func (t *BinaryTreeNode[T]) Paths() (res []string) {
 		node := item.node
 		path := item.path
 
-		if !(node.Left != nil || node.Right != nil) {
+		if !(node.left != nil || node.right != nil) {
 			res = append(res, path+fmt.Sprintf("%v", node.Data))
 		}
 
-		if node.Left != nil {
-			stack = append(stack, pair[T]{node.Left, path + fmt.Sprintf("%v", node.Data) + "->"})
+		if node.left != nil {
+			stack = append(stack, pair[T]{node.left, path + fmt.Sprintf("%v", node.Data) + "->"})
 		}
 
-		if node.Right != nil {
-			stack = append(stack, pair[T]{node.Right, path + fmt.Sprintf("%v", node.Data) + "->"})
+		if node.right != nil {
+			stack = append(stack, pair[T]{node.right, path + fmt.Sprintf("%v", node.Data) + "->"})
 		}
 	}
 
@@ -369,14 +413,14 @@ func (treeNode *BinaryTreeNode[T]) Size() (counter int) {
 		node := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 
-		if node.Left != nil {
+		if node.left != nil {
 			counter++
-			stack = append(stack, node.Left)
+			stack = append(stack, node.left)
 		}
 
-		if node.Right != nil {
+		if node.right != nil {
 			counter++
-			stack = append(stack, node.Right)
+			stack = append(stack, node.right)
 		}
 	}
 
@@ -385,7 +429,7 @@ func (treeNode *BinaryTreeNode[T]) Size() (counter int) {
 
 // IsFull checks if a binary tree is a full binary tree.
 // A Full Binary tree has a parent or internal nodes who have either 2 or 0 children
-func (t *BinaryTreeNode[T]) IsFull() bool {
+func (node *BinaryTreeNode[T]) IsFull() bool {
 	var isFullHelper func(root *BinaryTreeNode[T]) bool
 
 	isFullHelper = func(root *BinaryTreeNode[T]) bool {
@@ -397,18 +441,18 @@ func (t *BinaryTreeNode[T]) IsFull() bool {
 
 		// if this root node of this subtree has neither a left nor a right node, then by definition this
 		// binary subtree is a full binary tree
-		if root.Left == nil && root.Right == nil {
+		if root.left == nil && root.right == nil {
 			return true
 		}
 
-		if root.Left != nil && root.Right != nil {
-			return isFullHelper(root.Left) && isFullHelper(root.Right)
+		if root.left != nil && root.right != nil {
+			return isFullHelper(root.left) && isFullHelper(root.right)
 		}
 
 		return false
 	}
 
-	return isFullHelper(t)
+	return isFullHelper(node)
 }
 
 // Deserialize converts string data into a binary tree
@@ -430,8 +474,8 @@ func deserializeHelper[T string](idx *int, arr []string) *BinaryTreeNode[string]
 	}
 	root := NewBinaryTreeNode(arr[*idx])
 	*idx++
-	root.Left = deserializeHelper(idx, arr)
+	root.left = deserializeHelper(idx, arr)
 	*idx++
-	root.Right = deserializeHelper(idx, arr)
+	root.right = deserializeHelper(idx, arr)
 	return root
 }

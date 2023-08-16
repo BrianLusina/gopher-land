@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"gopherland/math/utils"
 	"gopherland/pkg/types"
+	pkgUtils "gopherland/pkg/utils"
 	"strings"
 )
 
@@ -14,7 +15,12 @@ type BinaryTree[T types.Comparable] struct {
 }
 
 // NewBinaryTree creates a new binary tree with root as nil
-func NewBinaryTree[T types.Comparable]() *BinaryTree[T] {
+func NewBinaryTree[T types.Comparable](root *BinaryTreeNode[T]) *BinaryTree[T] {
+	if root != nil {
+		return &BinaryTree[T]{
+			root: root,
+		}
+	}
 	return &BinaryTree[T]{}
 }
 
@@ -27,7 +33,7 @@ func NewBinaryTree[T types.Comparable]() *BinaryTree[T] {
 // 		return false
 // 	}
 
-// 	return IsBstRecursive(node.Left, min, node.Data-1) && IsBstRecursive(node.Right, node.Data+1, max)
+// 	return IsBstRecursive(node.left, min, node.Data-1) && IsBstRecursive(node.right, node.Data+1, max)
 // }
 
 // Serialize converts this tree into string representation
@@ -48,8 +54,8 @@ func (tree *BinaryTree[T]) Serialize() string {
 			nodeValues = append(nodeValues, nil)
 		} else {
 			nodeValues = append(nodeValues, node.Data)
-			stack = append(stack, node.Right)
-			stack = append(stack, node.Left)
+			stack = append(stack, node.right)
+			stack = append(stack, node.left)
 		}
 	}
 
@@ -72,12 +78,12 @@ func (tree *BinaryTree[T]) IsFull() bool {
 
 		// if this root node of this subtree has neither a left nor a right node, then by definition this
 		// binary subtree is a full binary tree
-		if root.Left == nil && root.Right == nil {
+		if root.left == nil && root.right == nil {
 			return true
 		}
 
-		if root.Left != nil && root.Right != nil {
-			return isFullHelper(root.Left) && isFullHelper(root.Right)
+		if root.left != nil && root.right != nil {
+			return isFullHelper(root.left) && isFullHelper(root.right)
 		}
 
 		return false
@@ -105,7 +111,7 @@ func (tree *BinaryTree[T]) IsComplete() bool {
 			return false
 		}
 
-		return isCompleteHelper(root.Left, 2*index+1) && isCompleteHelper(root.Right, 2*index+2)
+		return isCompleteHelper(root.left, 2*index+1) && isCompleteHelper(root.right, 2*index+2)
 	}
 
 	index := 0
@@ -119,7 +125,7 @@ func (tree *BinaryTree[T]) GetDepth() int {
 	node := tree.root
 	for node != nil {
 		depth++
-		node = node.Left
+		node = node.left
 	}
 
 	return depth
@@ -131,7 +137,7 @@ func (tree *BinaryTree[T]) IsPerfect() bool {
 		return false
 	}
 
-	if tree.root.Left == nil && tree.root.Right == nil {
+	if tree.root.left == nil && tree.root.right == nil {
 		return true
 	}
 
@@ -144,15 +150,15 @@ func (tree *BinaryTree[T]) IsPerfect() bool {
 			return true
 		}
 
-		if root.Left == nil && root.Right == nil {
+		if root.left == nil && root.right == nil {
 			return depth == level+1
 		}
 
-		if root.Left == nil || root.Right == nil {
+		if root.left == nil || root.right == nil {
 			return false
 		}
 
-		return isPerfectHelper(root.Left, level+1) && isPerfectHelper(root.Right, level+1)
+		return isPerfectHelper(root.left, level+1) && isPerfectHelper(root.right, level+1)
 	}
 
 	return isPerfectHelper(tree.root, 0)
@@ -174,8 +180,8 @@ func (tree *BinaryTree[T]) IsBalanced() bool {
 			return true
 		}
 
-		l := isBalancedHelper(root.Left)
-		r := isBalancedHelper(root.Right)
+		l := isBalancedHelper(root.left)
+		r := isBalancedHelper(root.right)
 
 		if utils.AbsDiff(leftHeight, rightHeight) <= 1 {
 			return l && r
@@ -194,8 +200,35 @@ func (tree *BinaryTree[T]) Height() int {
 		if root == nil {
 			return 0
 		}
-		return utils.Max(heightHelper(root.Left), heightHelper(root.Right)) + 1
+		return utils.Max(heightHelper(root.left), heightHelper(root.right)) + 1
 	}
 
 	return heightHelper(tree.root)
+}
+
+// LeafSimilar returns true if this tree has similar leaf value sequence to another tree.
+// For example: If this tree has nodes = [3,5,1,6,2,9,8,null,null,7,4] and other tree has nodes =
+// [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]. Then the leaf value sequence of both is [6,7,4,9,8] which is similar
+func (tree *BinaryTree[T]) LeafSimilar(other *BinaryTree[T]) bool {
+	if (tree.root == nil && other.root != nil) || (tree.root != nil && other.root == nil) {
+		return false
+	}
+
+	leaves1 := []T{}
+	leaves2 := []T{}
+
+	var dfs func(node *BinaryTreeNode[T], leafValues *[]T)
+	dfs = func(node *BinaryTreeNode[T], leafValues *[]T) {
+		if node != nil {
+			if node.left == nil && node.right == nil {
+				*leafValues = append(*leafValues, node.Data)
+			}
+			dfs(node.left, leafValues)
+			dfs(node.right, leafValues)
+		}
+	}
+
+	dfs(tree.root, &leaves1)
+	dfs(other.root, &leaves2)
+	return pkgUtils.EqualSlices(leaves1, leaves2)
 }

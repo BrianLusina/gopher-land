@@ -31,8 +31,8 @@ var _ = Describe("BinarySearchTree", func() {
 		// root should not be nil
 		Expect(bst.root).To(Not(BeNil()))
 		Expect(bst.root.Data).To(Equal(4))
-		Expect(bst.root.Left.Data).To(Equal(2))
-		Expect(bst.root.Right.Data).To(Equal(6))
+		Expect(bst.root.Left().Data).To(Equal(2))
+		Expect(bst.root.Right().Data).To(Equal(6))
 	})
 
 	It("should correctly return values in sorted order", func() {
@@ -44,8 +44,8 @@ var _ = Describe("BinarySearchTree", func() {
 		// root should not be nil
 		Expect(bst.root).To(Not(BeNil()))
 		Expect(bst.root.Data).To(Equal(4))
-		Expect(bst.root.Left.Data).To(Equal(2))
-		Expect(bst.root.Right.Data).To(Equal(6))
+		Expect(bst.root.Left().Data).To(Equal(2))
+		Expect(bst.root.Right().Data).To(Equal(6))
 
 		// should return sorted values
 		Expect(bst.Values()).To(Equal([]int{2, 4, 6}))
@@ -113,35 +113,35 @@ var _ = Describe("BinarySearchTree", func() {
 			Expect(bst.root.Data).To(Equal(50))
 
 			// 2nd level check, left should be 25 and right should be 75
-			Expect(bst.root.Left.Data).To(Equal(25))
-			Expect(bst.root.Right.Data).To(Equal(75))
+			Expect(bst.root.Left().Data).To(Equal(25))
+			Expect(bst.root.Right().Data).To(Equal(75))
 
 			// 3rd level checks
 
 			// check left subtree with root 25
-			Expect(bst.root.Left.Left.Data).To(Equal(10))
-			Expect(bst.root.Left.Right.Data).To(Equal(33))
+			Expect(bst.root.Left().Left().Data).To(Equal(10))
+			Expect(bst.root.Left().Right().Data).To(Equal(33))
 
 			// check left node 10
 			// what we actually deleted is a left child of node 10
-			Expect(bst.root.Left.Left.Left).To(BeNil())
-			Expect(bst.root.Left.Left.Right.Data).To(Equal(11))
+			Expect(bst.root.Left().Left().Left).To(BeNil())
+			Expect(bst.root.Left().Left().Right().Data).To(Equal(11))
 
 			// check right node 33
-			Expect(bst.root.Left.Right.Left.Data).To(Equal(30))
-			Expect(bst.root.Left.Right.Right.Data).To(Equal(40))
+			Expect(bst.root.Left().Right().Left().Data).To(Equal(30))
+			Expect(bst.root.Left().Right().Right().Data).To(Equal(40))
 
 			// check node 75 from 2nd level
-			Expect(bst.root.Right.Left.Data).To(Equal(56))
-			Expect(bst.root.Right.Right.Data).To(Equal(89))
+			Expect(bst.root.Right().Left().Data).To(Equal(56))
+			Expect(bst.root.Right().Right().Data).To(Equal(89))
 
 			// check the node 56 (left child of node 75)
-			Expect(bst.root.Right.Left.Left.Data).To(Equal(52))
-			Expect(bst.root.Right.Left.Right.Data).To(Equal(61))
+			Expect(bst.root.Right().Left().Left().Data).To(Equal(52))
+			Expect(bst.root.Right().Left().Right().Data).To(Equal(61))
 
 			// check the node 89, right child of 75
-			Expect(bst.root.Right.Right.Left.Data).To(Equal(82))
-			Expect(bst.root.Right.Right.Right.Data).To(Equal(95))
+			Expect(bst.root.Right().Right().Left().Data).To(Equal(82))
+			Expect(bst.root.Right().Right().Right().Data).To(Equal(95))
 		})
 	})
 

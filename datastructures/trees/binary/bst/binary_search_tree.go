@@ -33,15 +33,15 @@ func (bst *BinarySearchTree[T]) Insert(value T) {
 	insert = func(node *binary.BinaryTreeNode[T], value T) {
 		if value <= node.Data {
 			if node.Left != nil {
-				insert(node.Left, value)
+				insert(node.Left(), value)
 			} else {
-				node.Left = binary.NewBinaryTreeNode(value)
+				node.SetLeft(binary.NewBinaryTreeNode(value))
 			}
 		} else {
 			if node.Right != nil {
-				insert(node.Right, value)
+				insert(node.Right(), value)
 			} else {
-				node.Right = binary.NewBinaryTreeNode(value)
+				node.SetRight(binary.NewBinaryTreeNode(value))
 			}
 		}
 	}
@@ -59,14 +59,14 @@ func (bst *BinarySearchTree[T]) Delete(value T) error {
 	lift = func(node, nodeToDelete *binary.BinaryTreeNode[T]) *binary.BinaryTreeNode[T] {
 		// if the current node has a left child, we recursively call this function to continue down the left subtree to find the successor node
 		if node.Left != nil {
-			node.Left = lift(node.Left, nodeToDelete)
+			node.SetLeft(lift(node.Left(), nodeToDelete))
 			return node
 		} else {
 			// if the current node has no left child, that means the current node of this function is the successor node, and we take it value
 			// and make it the new value of the node that we are deleting
 			nodeToDelete.Data = node.Data
 			// we return the successor node's right child to be now used as it's parent's left child
-			return node.Right
+			return node.Right()
 		}
 	}
 
@@ -80,28 +80,28 @@ func (bst *BinarySearchTree[T]) Delete(value T) error {
 		} else if val < node.Data {
 			// if the value we are deleting is less than the current node's value, we set the left child to be
 			// the return value of a recursive call
-			node.Left = delete(val, node.Left)
+			node.SetLeft(delete(val, node.Left()))
 
 			// we return the current node and it's subtree if existent to be use as the new value of it's parent's left child
 			return node
 		} else if val > node.Data {
 			// if the value we are deleting is greater than the current node's value, we set the right child to be
 			// the return value of a recursive call
-			node.Right = delete(val, node.Right)
+			node.SetRight(delete(val, node.Right()))
 			return node
 		} else if val == node.Data {
 			// the current node contains the value we want to delete
 			if node.Left == nil {
 				// if the current node has no left child, we delete it by returning the right child and it's subtree if existent to be its parents
 				// new subtree
-				return node.Right
+				return node.Right()
 			} else if node.Right == nil {
 				// if the current node has no left or right child, this ends up being nil as per the first line of this function
-				return node.Left
+				return node.Left()
 			} else {
 				// if the current node has 2 childre, we delte the current node by calling the lift function. which changes the current node's
 				// value to the value of it's successor node
-				node.Right = lift(node.Right, node)
+				node.SetRight(lift(node.Right(), node))
 				return node
 			}
 		}
@@ -116,7 +116,7 @@ func (bst *BinarySearchTree[T]) Size() int {
 	if bst == nil {
 		return 0
 	} else {
-		return 1 + bst.root.Left.Size() + bst.root.Right.Size()
+		return 1 + bst.root.Left().Size() + bst.root.Right().Size()
 	}
 }
 
@@ -124,11 +124,11 @@ func (bst *BinarySearchTree[T]) Size() int {
 func getValues[T types.Comparable](node *binary.BinaryTreeNode[T]) []T {
 	var result []T
 	if node.Left != nil {
-		result = append(getValues(node.Left), result...)
+		result = append(getValues(node.Left()), result...)
 	}
 	result = append(result, node.Data)
 	if node.Right != nil {
-		result = append(result, getValues(node.Right)...)
+		result = append(result, getValues(node.Right())...)
 	}
 	return result
 }
@@ -151,7 +151,7 @@ func calculateDepth[T types.Comparable](node *binary.BinaryTreeNode[T]) int {
 	if node == nil {
 		return 0
 	}
-	return 1 + utils.Max(calculateDepth(node.Left), calculateDepth(node.Right))
+	return 1 + utils.Max(calculateDepth(node.Left()), calculateDepth(node.Right()))
 }
 
 func (bst *BinarySearchTree[T]) Depth() int {
@@ -179,8 +179,8 @@ func (bst *BinarySearchTree[T]) Serialize() []string {
 		}
 
 		values = append(values, node.Data)
-		preOrderTraversal(node.Left)
-		preOrderTraversal(node.Right)
+		preOrderTraversal(node.Left())
+		preOrderTraversal(node.Right())
 	}
 
 	preOrderTraversal(root)

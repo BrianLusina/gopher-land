@@ -29,7 +29,7 @@ var _ = Describe("Generate Trees Utility function", func() {
 					Data: 1,
 				},
 				Left: nil,
-				Right: &binary.BinaryTreeNode[int]{
+				Right: &binary.NewBinaryTreeNode[int]{
 					TreeNode: trees.TreeNode[int]{
 						Data: 2,
 					},

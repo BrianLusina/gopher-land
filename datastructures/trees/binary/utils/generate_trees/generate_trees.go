@@ -34,8 +34,8 @@ func generator[T int](start, end int) []*binary.BinaryTreeNode[int] {
 				node := &binary.BinaryTreeNode[int]{
 					TreeNode: *trees.NewTreeNode(i),
 				}
-				node.Left = left
-				node.Right = right
+				node.SetLeft(left)
+				node.SetRight(right)
 				bsts = append(bsts, node)
 			}
 		}

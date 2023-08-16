@@ -17,8 +17,8 @@ func MergeTrees[T types.Comparable](root1 *BinaryTreeNode[T], root2 *BinaryTreeN
 
 	r1 += r2
 
-	root1.Left = MergeTrees(root1.Left, root2.Left)
-	root1.Right = MergeTrees(root1.Right, root2.Right)
+	root1.left = MergeTrees(root1.left, root2.left)
+	root1.right = MergeTrees(root1.right, root2.right)
 
 	return root1
 }
