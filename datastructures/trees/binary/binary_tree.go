@@ -232,3 +232,30 @@ func (tree *BinaryTree[T]) LeafSimilar(other *BinaryTree[T]) bool {
 	dfs(other.root, &leaves2)
 	return pkgUtils.EqualSlices(leaves1, leaves2)
 }
+
+// Finds the number of good nodes in a tree. A good node is a node in which in the path from root to the node there
+// are no nodes with a value greater than it
+func (tree *BinaryTree[T]) CountGoodNodes() int {
+	if tree.root == nil {
+		return 0
+	}
+
+	// root is regarded as good
+	if tree.root.left == nil && tree.root.right == nil {
+		return 1
+	}
+
+	var goodNodesHelper func(node *BinaryTreeNode[T], data T) int
+	goodNodesHelper = func(node *BinaryTreeNode[T], data T) int {
+		if node != nil {
+			nodeCount := goodNodesHelper(node.left, pkgUtils.Max[T](data, node.Data)) + goodNodesHelper(node.right, pkgUtils.Max[T](data, node.Data))
+			if node.Data >= data {
+				nodeCount++
+			}
+			return nodeCount
+		}
+		return 0
+	}
+
+	return goodNodesHelper(tree.root, tree.root.Data)
+}

@@ -372,4 +372,43 @@ var _ = Describe("Binary Tree", func() {
 			})
 		})
 	})
+
+	Context("CountGoodNodes", func() {
+		When("Binary Tree contains nodes with data of type int", func() {
+			It("should return 0 for tree having no root", func() {
+				tree := NewBinaryTree[int](nil)
+
+				actual := tree.CountGoodNodes()
+				Expect(actual).To(Equal(0))
+			})
+
+			It("should return 1 for tree having root, but no children", func() {
+				root := NewBinaryTreeNode(1)
+				tree := NewBinaryTree(root)
+
+				actual := tree.CountGoodNodes()
+				Expect(actual).To(Equal(1))
+			})
+
+			It("should return 4 for tree=(3,1,4,3,null,1,5)", func() {
+				root := NewBinaryTreeNode(3, Left(NewBinaryTreeNode(1, Left(NewBinaryTreeNode(3)))),
+					Right(NewBinaryTreeNode(4, Left(NewBinaryTreeNode(1)), Right(NewBinaryTreeNode(5)))))
+
+				tree := NewBinaryTree(root)
+
+				actual := tree.CountGoodNodes()
+
+				Expect(actual).To(Equal(4))
+			})
+
+			It("should return 3 for tree=(3,3,null,4,2)", func() {
+				root := NewBinaryTreeNode(3, Left(NewBinaryTreeNode(3, Right(NewBinaryTreeNode(2)), Left(NewBinaryTreeNode(4)))))
+				tree := NewBinaryTree(root)
+
+				actual := tree.CountGoodNodes()
+
+				Expect(actual).To(Equal(3))
+			})
+		})
+	})
 })
