@@ -994,6 +994,9 @@
     * Productexceptself
       * [Product Of Array Except Self](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/productexceptself/product_of_array_except_self.go)
       * [Product Of Array Except Self Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/productexceptself/product_of_array_except_self_test.go)
+    * Trappedrain
+      * [Trapped Rain](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/trappedrain/trapped_rain.go)
+      * [Trapped Rain Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/trappedrain/trapped_rain_test.go)
   * Bouncingballs
     * [Bouncing Ball](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/bouncingballs/bouncing_ball.go)
     * [Bouncing Ball Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/bouncingballs/bouncing_ball_test.go)
