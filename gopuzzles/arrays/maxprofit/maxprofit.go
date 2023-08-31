@@ -1,6 +1,8 @@
 package maxprofit
 
-import "math"
+import (
+	"gopherland/math/utils"
+)
 
 func MaxProfit(prices []int) int {
 	if len(prices) < 2 {
@@ -11,8 +13,8 @@ func MaxProfit(prices []int) int {
 	maxProfit := 0
 
 	for _, price := range prices[1:] {
-		minPrice = int(math.Min(float64(minPrice), float64(price)))
-		maxProfit = int(math.Max(float64(maxProfit), float64(price-minPrice)))
+		minPrice = utils.Min(minPrice, price)
+		maxProfit = utils.Max(maxProfit, price-minPrice)
 	}
 
 	return maxProfit
@@ -34,7 +36,7 @@ func MaxProfitTwoPointers(prices []int) int {
 		low, high := prices[left], prices[right]
 		if low < high {
 			profit := high - low
-			currentMaxProfit = int(math.Max(float64(currentMaxProfit), float64(profit)))
+			currentMaxProfit = utils.Max(currentMaxProfit, profit)
 		} else {
 			// We shift the left pointer to the right pointers position because at this point we know the right pointer
 			// is at the lowest possible profit, shifting left by 1 will always give us negative profit. However,
@@ -82,19 +84,19 @@ func MaxProfit3(prices []int) int {
 	earliestPrice := prices[0]
 
 	for day := 1; day < n; day++ {
-		earliestPrice = int(math.Min(float64(prices[day]), float64(earliestPrice)))
-		forwardProfit[day] = int(math.Max(float64(forwardProfit[day-1]), float64(prices[day]-earliestPrice)))
+		earliestPrice = utils.Min(prices[day], earliestPrice)
+		forwardProfit[day] = utils.Max(forwardProfit[day-1], prices[day]-earliestPrice)
 	}
 
 	latestPrice := prices[len(prices)-1]
 	for day := n - 2; day > 0; day-- {
-		latestPrice = int(math.Max(float64(latestPrice), float64(prices[day])))
-		backwardProfit[day] = int(math.Max(float64(backwardProfit[day+1]), float64(latestPrice-prices[day])))
+		latestPrice = utils.Max(latestPrice, prices[day])
+		backwardProfit[day] = utils.Max(backwardProfit[day+1], latestPrice-prices[day])
 	}
 
 	profit := 0
 	for day := range prices {
-		profit = int(math.Max(float64(profit), float64(forwardProfit[day]+backwardProfit[day])))
+		profit = utils.Max(profit, forwardProfit[day]+backwardProfit[day])
 	}
 
 	return profit
