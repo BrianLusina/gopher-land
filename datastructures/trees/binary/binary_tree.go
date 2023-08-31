@@ -259,3 +259,39 @@ func (tree *BinaryTree[T]) CountGoodNodes() int {
 
 	return goodNodesHelper(tree.root, tree.root.Data)
 }
+
+// RightSideView returns a slice of nodes that can be seen from the right side
+func (tree *BinaryTree[T]) RightSideView() []T {
+	if tree.root == nil {
+		return []T{}
+	}
+
+	// root is available, but no left nor right subtrees
+	if tree.root.left == nil && tree.root.right == nil {
+		return []T{tree.root.Data}
+	}
+
+	result := []T{}
+	queue := []*BinaryTreeNode[T]{tree.root}
+
+	for len(queue) != 0 {
+		levelLength := len(queue)
+
+		result = append(result, queue[0].Data)
+
+		for i := 0; i < levelLength; i++ {
+			node := queue[0]
+			queue = queue[1:]
+
+			if node.right != nil {
+				queue = append(queue, node.right)
+			}
+
+			if node.left != nil {
+				queue = append(queue, node.left)
+			}
+		}
+	}
+
+	return result
+}

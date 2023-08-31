@@ -20,6 +20,9 @@ type Vertex[T types.Comparable] struct {
 
 	// adjacentVertices is a slice of this vertices neighbors
 	adjacentVertices map[T]*Vertex[T]
+
+	// TODO: add field to keep track of nth degree neighbors of this vertex, for example, 2nd degree neighbor, which means that in order to get to
+	// the 2nd degree vertex, one has to move through 1 other vertex so, A->B->C, where C is a 2nd degree neighbor of A & vice versa.
 }
 
 // NewVertex creates a new node with the given data
