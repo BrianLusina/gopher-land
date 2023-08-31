@@ -970,6 +970,9 @@
     * Highestaltitude
       * [Higest Altitude](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/highestaltitude/higest_altitude.go)
       * [Highest Altitude Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/highestaltitude/highest_altitude_test.go)
+    * Longestincreasingsubsequence
+      * [Longest Increasing Subsequence](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/longestincreasingsubsequence/longest_increasing_subsequence.go)
+      * [Longest Increasing Subsequence Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/longestincreasingsubsequence/longest_increasing_subsequence_test.go)
     * Longestsubarrayofones
       * [Longest Subarray Of Ones](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/longestsubarrayofones/longest_subarray_of_ones.go)
       * [Longest Subarray Of Ones Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/longestsubarrayofones/longest_subarray_of_ones_test.go)
