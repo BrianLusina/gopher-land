@@ -523,9 +523,6 @@
       * Reshapematrix
         * [Reshapematrix](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/reshapematrix/reshapematrix.go)
         * [Reshapematrix Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/reshapematrix/reshapematrix_test.go)
-    * Maxprofit
-      * [Maxprofit](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxprofit/maxprofit.go)
-      * [Maxprofit Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxprofit/maxprofit_test.go)
     * Maxsubarray
       * [Max Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray.go)
       * [Max Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray_test.go)
@@ -988,6 +985,9 @@
     * Maxnumberofksumpairs
       * [Max Operations](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxnumberofksumpairs/max_operations.go)
       * [Max Operations Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxnumberofksumpairs/max_operations_test.go)
+    * Maxprofit
+      * [Maxprofit](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxprofit/maxprofit.go)
+      * [Maxprofit Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxprofit/maxprofit_test.go)
     * Movezeroes
       * [Move Zeroes](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/movezeroes/move_zeroes.go)
       * [Move Zeroes Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/movezeroes/move_zeroes_test.go)
