@@ -628,6 +628,7 @@
   * Trees
     * Binary
       * [Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree.go)
+      * [Binary Tree New Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_new_test.go)
       * [Binary Tree Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_node.go)
       * [Binary Tree Node Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_node_test.go)
       * [Binary Tree Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_test.go)
