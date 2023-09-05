@@ -3,6 +3,7 @@ package binary
 
 import (
 	"fmt"
+	"gopherland/datastructures/trees"
 	"gopherland/math/utils"
 	"gopherland/pkg/types"
 	pkgUtils "gopherland/pkg/utils"
@@ -22,6 +23,55 @@ func NewBinaryTree[T types.Comparable](root *BinaryTreeNode[T]) *BinaryTree[T] {
 		}
 	}
 	return &BinaryTree[T]{}
+}
+
+// NewBinaryTreeFromSlice creates a binary tree from a slice
+func NewBinaryTreeFromSlice[T types.Comparable](data []T) *BinaryTree[T] {
+	if len(data) == 0 {
+		return &BinaryTree[T]{}
+	}
+
+	// root node is the first value at index 0
+	root := &BinaryTreeNode[T]{
+		TreeNode: trees.TreeNode[T]{
+			Data: data[0],
+		},
+	}
+
+	var createTree func(node *BinaryTreeNode[T], index int, data []T)
+	createTree = func(node *BinaryTreeNode[T], index int, data []T) {
+		if node != nil {
+			leftChildPosition := 2*index + 1
+			rightChildPosition := 2*index + 2
+
+			if leftChildPosition < len(data) {
+				leftChildValue := data[leftChildPosition]
+				if pkgUtils.IsZero[T](leftChildValue) {
+					node.left = nil
+				} else {
+					node.left = NewBinaryTreeNode[T](leftChildValue)
+				}
+
+				createTree(node.left, leftChildPosition, data)
+			}
+
+			if rightChildPosition < len(data) {
+				rightChildValue := data[rightChildPosition]
+				if pkgUtils.IsZero[T](rightChildValue) {
+					node.right = nil
+				} else {
+					node.right = NewBinaryTreeNode[T](rightChildValue)
+				}
+
+				createTree(node.right, rightChildPosition, data)
+			}
+		}
+	}
+
+	createTree(root, 0, data)
+	return &BinaryTree[T]{
+		root: root,
+	}
 }
 
 // func IsBstRecursive[T types.Comparable](node *BinaryTreeNode[T], min, max T) bool {
@@ -294,4 +344,48 @@ func (tree *BinaryTree[T]) RightSideView() []T {
 	}
 
 	return result
+}
+
+// MaxLevelSum Returns the smallest level x such that the sum of all the values of nodes at level x is maximal Returns Int maximum value at level x
+func (tree *BinaryTree[T]) MaxLevelSum() int {
+	if tree.root == nil {
+		return 0
+	}
+
+	if tree.root.left == nil && tree.root.right == nil {
+		return 1
+	}
+
+	maximumSum := tree.root.Data
+	level := 0
+	smallestLevel := 0
+
+	levels := []*BinaryTreeNode[T]{tree.root}
+
+	for len(levels) != 0 {
+		level++
+		sumAtCurrentLevel := pkgUtils.Zero[T]()
+
+		for range levels {
+			node := levels[0]
+			levels = levels[1:]
+
+			sumAtCurrentLevel += node.Data
+
+			if node.left != nil {
+				levels = append(levels, node.left)
+			}
+
+			if node.right != nil {
+				levels = append(levels, node.right)
+			}
+		}
+
+		if sumAtCurrentLevel > maximumSum {
+			maximumSum = sumAtCurrentLevel
+			smallestLevel = level
+		}
+	}
+
+	return smallestLevel
 }
