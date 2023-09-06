@@ -154,6 +154,9 @@
     * Selectionsort
       * [Selection Sort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/selectionsort/selection_sort.go)
       * [Selection Sort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/selectionsort/selection_sort_test.go)
+    * Shellsort
+      * [Shell Sort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/shellsort/shell_sort.go)
+      * [Shell Sort Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/shellsort/shell_sort_test.go)
   * Space Age
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/cases_test.go)
     * [Space Age](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/space_age.go)
