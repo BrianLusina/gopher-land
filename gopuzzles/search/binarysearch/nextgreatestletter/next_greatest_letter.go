@@ -14,6 +14,15 @@ func nextGreatestLetter(letters []byte, target byte) byte {
 		}
 	}
 
+	// When left > right, left denotes the index of the smallest character that is lexicographically greater than target.
+	// This is because all characters at indices greater than right would be greater than target and character immediately next
+	// to index right would be left (or right + 1) after the completion of binary search algorithm.
+	// At the end of the binary search algorithm, left will store the index of the smallest character that is lexicographically
+	// greater than target.
+
+	// If left == letters.length, it means there is no character in letters that is lexicographically greater than target.
+	// We return letters[0]. Otherwise, we return letters[left] as left holds the smallest character greater than target.
+
 	if left == len(letters) {
 		return letters[0]
 	} else {
