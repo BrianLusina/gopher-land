@@ -1025,6 +1025,10 @@
   * Floodfill
     * [Flood Fill](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill.go)
     * [Flood Fill Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill_test.go)
+  * Graph
+    * Keysandrooms
+      * [Keys Rooms](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/keysandrooms/keys_rooms.go)
+      * [Keys Rooms Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/keysandrooms/keys_rooms_test.go)
   * Greenvalley
     * [Greenvalley](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/greenvalley/greenvalley.go)
   * Hashmap
@@ -1094,6 +1098,9 @@
       * Nextgreatestletter
         * [Next Greatest Letter](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/nextgreatestletter/next_greatest_letter.go)
         * [Next Greatest Letter Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/nextgreatestletter/next_greatest_letter_test.go)
+      * Peakmountainarray
+        * [Peak Mountain Array](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/peakmountainarray/peak_mountain_array.go)
+        * [Peak Mountain Array Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/peakmountainarray/peak_mountain_array_test.go)
       * Rotatedsortedarray
         * [Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/rotatedsortedarray/rotated_sorted_array.go)
         * [Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/rotatedsortedarray/rotated_sorted_array_test.go)
