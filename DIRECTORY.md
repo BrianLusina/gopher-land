@@ -24,16 +24,6 @@
         * [Validpath Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/bfs/graph/findifpathexists/validpath_test.go)
   * Binary Gap
     * [Binary Gap](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binary_gap/binary_gap.go)
-  * Binarysearch
-    * [Binary Search](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/binary_search.go)
-    * [Binary Search Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/binary_search_test.go)
-    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/cases_test.go)
-    * Mininrotatedsortedarray
-      * [Min In Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/mininrotatedsortedarray/min_in_rotated_sorted_array.go)
-      * [Min In Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/mininrotatedsortedarray/min_in_rotated_sorted_array_test.go)
-    * Rotatedsortedarray
-      * [Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/rotatedsortedarray/rotated_sorted_array.go)
-      * [Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binarysearch/rotatedsortedarray/rotated_sorted_array_test.go)
   * Cycle
     * [Cycle](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/cycle/cycle.go)
   * Diffsquares
@@ -137,6 +127,13 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/scrabble-score/cases_test.go)
     * [Scrabble Score](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/scrabble-score/scrabble_score.go)
     * [Scrabble Score Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/scrabble-score/scrabble_score_test.go)
+  * Search
+    * Binarysearch
+      * [Binary Search](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/search/binarysearch/binary_search.go)
+      * [Binary Search Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/search/binarysearch/binary_search_test.go)
+      * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/search/binarysearch/cases_test.go)
+    * Interpolation
+      * [Interpolation Search](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/search/interpolation/interpolation_search.go)
   * Sorting
     * Bubblesort
       * [Bubblesort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/bubblesort/bubblesort.go)
@@ -1091,9 +1088,18 @@
       * Firstboundary
         * [Find Boundary](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/firstboundary/find_boundary.go)
         * [First Boundary Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/firstboundary/first_boundary_test.go)
+      * Mininrotatedsortedarray
+        * [Min In Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/mininrotatedsortedarray/min_in_rotated_sorted_array.go)
+        * [Min In Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/mininrotatedsortedarray/min_in_rotated_sorted_array_test.go)
       * Nextgreatestletter
         * [Next Greatest Letter](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/nextgreatestletter/next_greatest_letter.go)
         * [Next Greatest Letter Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/nextgreatestletter/next_greatest_letter_test.go)
+      * Rotatedsortedarray
+        * [Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/rotatedsortedarray/rotated_sorted_array.go)
+        * [Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/rotatedsortedarray/rotated_sorted_array_test.go)
+      * Sqrtestimate
+        * [Sqrt Estimate](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate.go)
+        * [Sqrt Estimate Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate_test.go)
   * Slowestkey
     * [Slowest Key](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key.go)
     * [Slowest Key Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key_test.go)
