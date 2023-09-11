@@ -1086,6 +1086,11 @@
   * Rpn
     * [Rpn](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rpn/rpn.go)
     * [Rpn Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rpn/rpn_test.go)
+  * Search
+    * Binarysearch
+      * Firstboundary
+        * [Find Boundary](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/firstboundary/find_boundary.go)
+        * [First Boundary Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/firstboundary/first_boundary_test.go)
   * Slowestkey
     * [Slowest Key](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key.go)
     * [Slowest Key Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key_test.go)
