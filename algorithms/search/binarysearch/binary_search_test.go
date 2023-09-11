@@ -8,7 +8,7 @@ import (
 
 func TestSearchInts(t *testing.T) {
 	for _, test := range testCases {
-		if x := SearchInts(test.slice, test.key); x != test.x {
+		if x := Search(test.slice, test.key); x != test.x {
 			t.Fatalf("FAIL: %s\nSearchInts(%#v, %d) = %d, want %d",
 				test.description, test.slice, test.key, x, test.x)
 		}
@@ -29,7 +29,7 @@ func newQuery(n int) (query, error) {
 		q.slice[i] = i
 	}
 	q.x = rand.Intn(n)
-	if res := SearchInts(q.slice, q.x); res != q.x {
+	if res := Search(q.slice, q.x); res != q.x {
 		return q, fmt.Errorf("Search of %d values gave different answer", n)
 	}
 	return q, nil
@@ -45,7 +45,7 @@ func runBenchmark(n int, b *testing.B) {
 	}
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		SearchInts(q.slice, q.x)
+		Search(q.slice, q.x)
 	}
 }
 
