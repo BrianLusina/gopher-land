@@ -1091,6 +1091,9 @@
       * Firstboundary
         * [Find Boundary](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/firstboundary/find_boundary.go)
         * [First Boundary Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/firstboundary/first_boundary_test.go)
+      * Nextgreatestletter
+        * [Next Greatest Letter](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/nextgreatestletter/next_greatest_letter.go)
+        * [Next Greatest Letter Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/nextgreatestletter/next_greatest_letter_test.go)
   * Slowestkey
     * [Slowest Key](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key.go)
     * [Slowest Key Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key_test.go)
