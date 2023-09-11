@@ -36,7 +36,7 @@ func generateTests() []testCase {
 func TestSqrtEstimate(t *testing.T) {
 	for _, tc := range generateTests() {
 		t.Run(fmt.Sprintf("sqrtEstimate(%d)", tc.n), func(t *testing.T) {
-			actual := sqrt_estimate(tc.n)
+			actual := sqrtEstimate(tc.n)
 
 			if actual != tc.expected {
 				t.Fatalf("expected %d, got %d", tc.expected, actual)
@@ -53,7 +53,7 @@ func BenchmarkSqrtEstimate(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		for _, tc := range generateTests() {
 			b.Run(fmt.Sprintf("sqrtEstimate(%d)", tc.n), func(b *testing.B) {
-				actual := sqrt_estimate(tc.n)
+				actual := sqrtEstimate(tc.n)
 
 				if actual != tc.expected {
 					b.Fatalf("expected %d, got %d", tc.expected, actual)

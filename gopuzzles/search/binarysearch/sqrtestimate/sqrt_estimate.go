@@ -1,6 +1,6 @@
 package sqrtestimate
 
-func sqrt_estimate(x int) int {
+func sqrtEstimate(x int) int {
 	if x == 0 {
 		return 0
 	}
