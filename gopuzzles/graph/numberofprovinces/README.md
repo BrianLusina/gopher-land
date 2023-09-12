@@ -20,3 +20,10 @@ Output: 2
 Example 2:
 Input: isConnected = [[1,0,0],[0,1,0],[0,0,1]]
 Output: 3
+
+## Related Topics
+
+- Depth First Search
+- Breadth First Search
+- Union Find
+- Graph
