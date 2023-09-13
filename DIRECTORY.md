@@ -1092,6 +1092,9 @@
       * Firstboundary
         * [Find Boundary](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/firstboundary/find_boundary.go)
         * [First Boundary Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/firstboundary/first_boundary_test.go)
+      * Kokoeatingbananas
+        * [Koko Eating Bananas](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/kokoeatingbananas/koko_eating_bananas.go)
+        * [Koko Eating Bananas Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/kokoeatingbananas/koko_eating_bananas_test.go)
       * Mininrotatedsortedarray
         * [Min In Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/mininrotatedsortedarray/min_in_rotated_sorted_array.go)
         * [Min In Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/mininrotatedsortedarray/min_in_rotated_sorted_array_test.go)
