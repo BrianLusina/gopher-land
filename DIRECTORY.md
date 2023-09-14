@@ -998,6 +998,9 @@
     * Productexceptself
       * [Product Of Array Except Self](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/productexceptself/product_of_array_except_self.go)
       * [Product Of Array Except Self Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/productexceptself/product_of_array_except_self_test.go)
+    * Threepointers
+      * [Minimize](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/threepointers/minimize.go)
+      * [Minimize Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/threepointers/minimize_test.go)
     * Trappedrain
       * [Trapped Rain](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/trappedrain/trapped_rain.go)
       * [Trapped Rain Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/trappedrain/trapped_rain_test.go)
@@ -1029,9 +1032,21 @@
     * Keysandrooms
       * [Keys Rooms](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/keysandrooms/keys_rooms.go)
       * [Keys Rooms Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/keysandrooms/keys_rooms_test.go)
+    * Maxareaofisland
+      * [Maxareaofisland](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/maxareaofisland/maxareaofisland.go)
+      * [Maxareaofisland Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/maxareaofisland/maxareaofisland_test.go)
+    * Numberofclosedislands
+      * [Number Of Closed Islands](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/numberofclosedislands/number_of_closed_islands.go)
+      * [Number Of Closed Islands Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/numberofclosedislands/number_of_closed_islands_test.go)
+    * Numberofislands
+      * [Number Of Islands](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/numberofislands/number_of_islands.go)
+      * [Number Of Islands Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/numberofislands/number_of_islands_test.go)
     * Numberofprovinces
       * [Number Of Provinces](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/numberofprovinces/number_of_provinces.go)
       * [Number Of Provinces Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/numberofprovinces/number_of_provinces_test.go)
+    * Reorderroutes
+      * [Reorder Routes](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/reorderroutes/reorder_routes.go)
+      * [Reorder Routes Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/reorderroutes/reorder_routes_test.go)
   * Greenvalley
     * [Greenvalley](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/greenvalley/greenvalley.go)
   * Hashmap
@@ -1055,15 +1070,6 @@
     * [Ledger](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/ledger/ledger.go)
     * [Ledger Old](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/ledger/ledger_old.go)
     * [Ledger Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/ledger/ledger_test.go)
-  * Maxareaofisland
-    * [Maxareaofisland](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/maxareaofisland/maxareaofisland.go)
-    * [Maxareaofisland Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/maxareaofisland/maxareaofisland_test.go)
-  * Numberofclosedislands
-    * [Number Of Closed Islands](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofclosedislands/number_of_closed_islands.go)
-    * [Number Of Closed Islands Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofclosedislands/number_of_closed_islands_test.go)
-  * Numberofislands
-    * [Number Of Islands](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofislands/number_of_islands.go)
-    * [Number Of Islands Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/numberofislands/number_of_islands_test.go)
   * Pascalstriangle
     * [Pascals Triangle](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/pascalstriangle/pascals_triangle.go)
     * [Pascals Triangle Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/pascalstriangle/pascals_triangle_test.go)
