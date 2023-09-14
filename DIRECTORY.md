@@ -1113,6 +1113,9 @@
       * Rotatedsortedarray
         * [Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/rotatedsortedarray/rotated_sorted_array.go)
         * [Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/rotatedsortedarray/rotated_sorted_array_test.go)
+      * Searchrange
+        * [Search Range](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/searchrange/search_range.go)
+        * [Search Range Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/searchrange/search_range_test.go)
       * Sqrtestimate
         * [Sqrt Estimate](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate.go)
         * [Sqrt Estimate Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate_test.go)
