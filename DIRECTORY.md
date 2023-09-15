@@ -1129,6 +1129,9 @@
     * Decodestring
       * [Decode String](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/decodestring/decode_string.go)
       * [Decode String Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/decodestring/decode_string_test.go)
+    * Nextgreater
+      * [Next Greater](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/nextgreater/next_greater.go)
+      * [Next Greater Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/nextgreater/next_greater_test.go)
     * Removingstars
       * [Remove Stars](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/removingstars/remove_stars.go)
       * [Remove Stars Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/removingstars/remove_stars_test.go)
