@@ -31,7 +31,7 @@ func (mah *MinArrayHeap[T]) Insert(data T) {
 
 	// the following executes the "trickle up" algorithm. If the new node is not in the root position and it's greater
 	// than its parent node
-	for newNodeIndex > 0 && mah.Data[newNodeIndex] > mah.Data[heap.GetParentIndex(newNodeIndex)] {
+	for newNodeIndex > 0 && mah.Data[newNodeIndex] < mah.Data[heap.GetParentIndex(newNodeIndex)] {
 		// swap the new node with the parent node
 		mah.swap(heap.GetParentIndex(newNodeIndex), newNodeIndex)
 
