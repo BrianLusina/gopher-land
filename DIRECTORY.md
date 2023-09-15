@@ -1116,6 +1116,9 @@
       * Searchrange
         * [Search Range](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/searchrange/search_range.go)
         * [Search Range Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/searchrange/search_range_test.go)
+      * Singlenonduplicate
+        * [Single Non Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/singlenonduplicate/single_non_duplicate.go)
+        * [Single Non Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/singlenonduplicate/single_non_duplicate_test.go)
       * Sqrtestimate
         * [Sqrt Estimate](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate.go)
         * [Sqrt Estimate Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate_test.go)
