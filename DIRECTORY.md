@@ -1122,6 +1122,9 @@
       * Singlenonduplicate
         * [Single Non Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/singlenonduplicate/single_non_duplicate.go)
         * [Single Non Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/singlenonduplicate/single_non_duplicate_test.go)
+      * Snapshotarray
+        * [Snapshot Array](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/snapshotarray/snapshot_array.go)
+        * [Snapshot Array Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/snapshotarray/snapshot_array_test.go)
       * Sqrtestimate
         * [Sqrt Estimate](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate.go)
         * [Sqrt Estimate Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate_test.go)
