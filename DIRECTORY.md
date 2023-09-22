@@ -1113,6 +1113,9 @@
       * Peakmountainarray
         * [Peak Mountain Array](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/peakmountainarray/peak_mountain_array.go)
         * [Peak Mountain Array Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/peakmountainarray/peak_mountain_array_test.go)
+      * Platesbetweencandles
+        * [Plates Candles](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/platesbetweencandles/plates_candles.go)
+        * [Plates Candles Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/platesbetweencandles/plates_candles_test.go)
       * Rotatedsortedarray
         * [Rotated Sorted Array](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/rotatedsortedarray/rotated_sorted_array.go)
         * [Rotated Sorted Array Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/rotatedsortedarray/rotated_sorted_array_test.go)
