@@ -802,6 +802,9 @@
     * [Parkingspot Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingspot_test.go)
     * [Parkingsystem](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingsystem.go)
     * [Vehicle](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/vehicle.go)
+  * Snapshotarray
+    * [Snapshot Array](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/snapshotarray/snapshot_array.go)
+    * [Snapshot Array Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/snapshotarray/snapshot_array_test.go)
   * Structural
     * Composite
       * Filetree
@@ -824,6 +827,9 @@
         * [Client](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/proxy/nginx/client.go)
         * [Nginx](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/proxy/nginx/nginx.go)
         * [Server](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/proxy/nginx/server.go)
+  * Timemap
+    * [Time Map](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/timemap/time_map.go)
+    * [Time Map Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/timemap/time_map_test.go)
   * Twitter
     * [Tweet](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/tweet.go)
     * [Twitter](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/twitter.go)
@@ -1125,9 +1131,6 @@
       * Singlenonduplicate
         * [Single Non Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/singlenonduplicate/single_non_duplicate.go)
         * [Single Non Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/singlenonduplicate/single_non_duplicate_test.go)
-      * Snapshotarray
-        * [Snapshot Array](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/snapshotarray/snapshot_array.go)
-        * [Snapshot Array Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/snapshotarray/snapshot_array_test.go)
       * Sqrtestimate
         * [Sqrt Estimate](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate.go)
         * [Sqrt Estimate Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate_test.go)
