@@ -17,11 +17,6 @@
     * Generateparenthesis
       * [Generate Parenthesis](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/generateparenthesis/generate_parenthesis.go)
       * [Generate Parenthesis Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/generateparenthesis/generate_parenthesis_test.go)
-  * Bfs
-    * Graph
-      * Findifpathexists
-        * [Validpath](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/bfs/graph/findifpathexists/validpath.go)
-        * [Validpath Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/bfs/graph/findifpathexists/validpath_test.go)
   * Binary Gap
     * [Binary Gap](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/binary_gap/binary_gap.go)
   * Cycle
@@ -1035,6 +1030,9 @@
     * [Flood Fill](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill.go)
     * [Flood Fill Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill_test.go)
   * Graph
+    * Findifpathexists
+      * [Validpath](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/findifpathexists/validpath.go)
+      * [Validpath Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/findifpathexists/validpath_test.go)
     * Keysandrooms
       * [Keys Rooms](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/keysandrooms/keys_rooms.go)
       * [Keys Rooms Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/keysandrooms/keys_rooms_test.go)
@@ -1053,6 +1051,9 @@
     * Reorderroutes
       * [Reorder Routes](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/reorderroutes/reorder_routes.go)
       * [Reorder Routes Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/reorderroutes/reorder_routes_test.go)
+    * Rottingoranges
+      * [Rotting Oranges](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/rottingoranges/rotting_oranges.go)
+      * [Rotting Oranges Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/rottingoranges/rotting_oranges_test.go)
   * Greenvalley
     * [Greenvalley](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/greenvalley/greenvalley.go)
   * Hashmap
