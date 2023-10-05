@@ -635,6 +635,7 @@
           * [Int Bst Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/bst/intbst/int_bst_test.go)
       * [Equivalent Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/equivalent_binary_tree.go)
       * [Merge Trees](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/merge_trees.go)
+      * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/utils.go)
       * Utils
         * Generate Trees
           * [Generate Trees](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/utils/generate_trees/generate_trees.go)
