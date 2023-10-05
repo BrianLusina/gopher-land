@@ -16,24 +16,85 @@ func TestBinaryTree(t *testing.T) {
 var _ = Describe("Binary Tree", func() {
 	Context("Deserialize & Serialize", func() {
 		Describe("Serialize", func() {
-			// FIXME: skipped test
-			XIt("should return [1,2,3,nil,nil,4,5] for binary tree", func() {
+			It("should return [nil] for binary tree with no root", func() {
+				binaryTree := NewBinaryTree[int](nil)
 
-				root := NewBinaryTreeNode(1)
-				root.left = NewBinaryTreeNode(2)
-				root.right = NewBinaryTreeNode(3)
+				actual := binaryTree.Serialize()
+				expected := "nil"
 
-				root.right.left = NewBinaryTreeNode(4)
-				root.right.right = NewBinaryTreeNode(5)
+				Expect(actual).To(Equal(expected))
+			})
 
+			It("should return 10 86 nil nil 100 nil nil for root(10, left(86), right(100)", func() {
+				root := NewBinaryTreeNode(10, Left(NewBinaryTreeNode(86)), Right(NewBinaryTreeNode(100)))
 				binaryTree := NewBinaryTree[int](root)
 
 				actual := binaryTree.Serialize()
-				expected := "1,2,3,nil,nil,4,5"
+				expected := "10,86,nil,nil,100,nil,nil"
+
+				Expect(actual).To(Equal(expected))
+			})
+
+			It("should return 1 2 nil nil 3 x x for root(1, left(2), right(3) for binary tree", func() {
+				root := NewBinaryTreeNode(1, Left(NewBinaryTreeNode(2)), Right(NewBinaryTreeNode(3)))
+
+				binaryTree := NewBinaryTree(root)
+
+				actual := binaryTree.Serialize()
+				expected := "1,2,nil,nil,3,nil,nil"
+
+				Expect(actual).To(Equal(expected))
+			})
+
+			It("should return 6 4 3 nil nil 5 nil nil 8 nil nil for root(6, left(4, left(3), right(5)), right(8)", func() {
+				root := NewBinaryTreeNode(6, Left(NewBinaryTreeNode(4, Left(NewBinaryTreeNode(3)), Right(NewBinaryTreeNode(5)))), Right(NewBinaryTreeNode(8)))
+
+				binaryTree := NewBinaryTree(root)
+
+				actual := binaryTree.Serialize()
+				expected := "6,4,3,nil,nil,5,nil,nil,8,nil,nil"
 
 				Expect(actual).To(Equal(expected))
 			})
 		})
+
+		Describe("Deserialize", func() {
+			It("should return nil for a tree [nil]", func() {
+				binaryTree := "nil"
+
+				actual := Deserialize(binaryTree)
+
+				Expect(actual).To(BeNil())
+			})
+
+			It("should return root(10, left(86), right(100) for [10,86,nil,nil,100,nil,nil]", func() {
+				binaryTree := "10,86,nil,nil,100,nil,nil"
+				actual := Deserialize(binaryTree)
+
+				expected := NewBinaryTreeNode("10", Left(NewBinaryTreeNode("86")), Right(NewBinaryTreeNode("100")))
+
+				Expect(actual).To(Equal(expected))
+			})
+
+			It("should return root(1, left(2), right(3) for [1,2,nil,nil,3,nil,nil]", func() {
+				binaryTree := "1,2,nil,nil,3,nil,nil"
+
+				actual := Deserialize(binaryTree)
+				expected := NewBinaryTreeNode("1", Left(NewBinaryTreeNode("2")), Right(NewBinaryTreeNode("3")))
+
+				Expect(actual).To(Equal(expected))
+			})
+
+			It("should return root(6, left(4, left(3), right(5)), right(8) for [6,4,3,nil,nil,5,nil,nil,8,nil,nil]", func() {
+				binaryTree := "6,4,3,nil,nil,5,nil,nil,8,nil,nil"
+
+				actual := Deserialize(binaryTree)
+				expected := NewBinaryTreeNode("6", Left(NewBinaryTreeNode("4", Left(NewBinaryTreeNode("3")), Right(NewBinaryTreeNode("5")))), Right(NewBinaryTreeNode("8")))
+
+				Expect(actual).To(Equal(expected))
+			})
+		})
+
 	})
 
 	Context("IsFull", func() {

@@ -88,30 +88,23 @@ func NewBinaryTreeFromSlice[T types.Comparable](data []T) *BinaryTree[T] {
 
 // Serialize converts this tree into string representation
 func (tree *BinaryTree[T]) Serialize() string {
-	if tree.root == nil {
-		return ""
-	}
+	nodeValues := []string{}
 
-	stack := []*BinaryTreeNode[T]{}
-	stack = append(stack, tree.root)
-	nodeValues := []any{}
-
-	for len(stack) != 0 {
-		node := stack[len(stack)-1]
-		stack = stack[:len(stack)-1]
-
+	var dfs func(node *BinaryTreeNode[T])
+	dfs = func(node *BinaryTreeNode[T]) {
 		if node == nil {
-			nodeValues = append(nodeValues, nil)
-		} else {
-			nodeValues = append(nodeValues, node.Data)
-			stack = append(stack, node.right)
-			stack = append(stack, node.left)
+			nodeValues = append(nodeValues, "nil")
+			return
 		}
+
+		nodeValues = append(nodeValues, fmt.Sprint(node.Data))
+		dfs(node.left)
+		dfs(node.right)
 	}
 
-	joined := strings.Trim(strings.Join(strings.Fields(fmt.Sprint(nodeValues...)), ","), "[]")
+	dfs(tree.root)
 
-	return joined
+	return strings.Join(nodeValues, ",")
 }
 
 // IsFull checks if a binary tree is a full binary tree.
