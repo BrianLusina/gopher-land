@@ -23,6 +23,10 @@ var testCases = []testCase{
 		grid:     [][]int{{0, 2}},
 		expected: 0,
 	},
+	{
+		grid:     [][]int{{2, 1, 1}, {1, 1, 1}, {0, 1, 2}},
+		expected: 2,
+	},
 }
 
 func TestRottingOranges(t *testing.T) {

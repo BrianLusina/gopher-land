@@ -2,26 +2,28 @@ package peeking
 
 import "gopherland/designpatterns/iterator"
 
-type PeekingIterator[T int] struct {
+type PeekingIterator[T comparable] struct {
 	iterator *iterator.Iterator[T]
 	stack    []T
 }
 
-func NewPeekingIterator(iter *iterator.Iterator[int]) *PeekingIterator[int] {
-	return &PeekingIterator[int]{
+func NewPeekingIterator[T comparable](data []T) *PeekingIterator[T] {
+	iter := iterator.New(data)
+
+	return &PeekingIterator[T]{
 		iterator: iter,
-		stack:    make([]int, 0),
+		stack:    make([]T, 0),
 	}
 }
 
-func (pi *PeekingIterator[int]) hasNext() bool {
+func (pi *PeekingIterator[T]) hasNext() bool {
 	if len(pi.stack) > 0 || pi.iterator.HasNext() {
 		return true
 	}
 	return false
 }
 
-func (pi *PeekingIterator[int]) next() int {
+func (pi *PeekingIterator[T]) next() T {
 	if len(pi.stack) > 0 {
 		top := pi.stack[0]
 		pi.stack = pi.stack[1:]
@@ -31,7 +33,7 @@ func (pi *PeekingIterator[int]) next() int {
 	return item
 }
 
-func (pi *PeekingIterator[int]) peek() int {
+func (pi *PeekingIterator[T]) peek() T {
 	if len(pi.stack) == 0 {
 		pi.stack = append(pi.stack, pi.iterator.Next())
 	}
