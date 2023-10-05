@@ -454,28 +454,3 @@ func (node *BinaryTreeNode[T]) IsFull() bool {
 
 	return isFullHelper(node)
 }
-
-// Deserialize converts string data into a binary tree
-func Deserialize[T string](data string) *BinaryTreeNode[string] {
-	if len(data) == 0 {
-		return nil
-	}
-
-	nodeValues := strings.Split(data, ",")
-
-	idx := 0
-	treeNode := deserializeHelper(&idx, nodeValues)
-	return treeNode
-}
-
-func deserializeHelper[T string](idx *int, arr []string) *BinaryTreeNode[string] {
-	if arr[*idx] == "#" {
-		return nil
-	}
-	root := NewBinaryTreeNode(arr[*idx])
-	*idx++
-	root.left = deserializeHelper(idx, arr)
-	*idx++
-	root.right = deserializeHelper(idx, arr)
-	return root
-}
