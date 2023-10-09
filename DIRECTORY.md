@@ -797,6 +797,10 @@
     * [Parkingspot Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingspot_test.go)
     * [Parkingsystem](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingsystem.go)
     * [Vehicle](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/vehicle.go)
+  * Smallestinfiniteset
+    * [Smallest Infinite Set](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/smallestinfiniteset/smallest_infinite_set.go)
+    * [Smallest Infinite Set Heap](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/smallestinfiniteset/smallest_infinite_set_heap.go)
+    * [Smallest Infinite Set Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/smallestinfiniteset/smallest_infinite_set_test.go)
   * Snapshotarray
     * [Snapshot Array](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/snapshotarray/snapshot_array.go)
     * [Snapshot Array Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/snapshotarray/snapshot_array_test.go)
