@@ -643,6 +643,7 @@
     * Heap
       * [Array Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/array_heap.go)
       * Binary
+        * [Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/binary/heap.go)
         * Maxheap
           * [Max Array Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/binary/maxheap/max_array_heap.go)
           * [Max Array Heap Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/binary/maxheap/max_array_heap_test.go)
@@ -1071,6 +1072,10 @@
     * Uniqueoccurences
       * [Unique Occurrences](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/hashmap/uniqueoccurences/unique_occurrences.go)
       * [Unique Occurrences Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/hashmap/uniqueoccurences/unique_occurrences_test.go)
+  * Heap
+    * Costtohirekworkers
+      * [Total Cost K Workers](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/heap/costtohirekworkers/total_cost_k_workers.go)
+      * [Total Cost K Workers Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/heap/costtohirekworkers/total_cost_k_workers_test.go)
   * Jumpgame
     * [Jump Game Iv](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/jumpgame/jump_game_iv.go)
     * [Jump Game Iv Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/jumpgame/jump_game_iv_test.go)
