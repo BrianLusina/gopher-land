@@ -653,6 +653,11 @@
       * [Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/heap.go)
       * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/node.go)
       * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/heap/utils.go)
+    * Ternary
+      * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/ternary/node.go)
+      * [Node Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/ternary/node_test.go)
+      * [Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/ternary/tree.go)
+      * [Tree Paths Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/ternary/tree_paths_test.go)
     * Tree-Building
       * [Tree Building](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building.go)
       * [Tree Building Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building_test.go)
