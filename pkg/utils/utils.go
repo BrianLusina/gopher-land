@@ -62,7 +62,7 @@ func MinMax[T types.Comparable](x, y T) (min T, max T) {
 	return y, x
 }
 
-//ZipPair is a tuple of 2 elements from 2 different slices
+// ZipPair is a tuple of 2 elements from 2 different slices
 type ZipPair[T, U any] struct {
 	A T
 	B U
@@ -126,4 +126,26 @@ func EqualSlices[T types.Comparable](a, b []T) bool {
 		}
 	}
 	return true
+}
+
+// All returns tree if all the elements in the slice match the given predicate, returns false otherwise
+func All[T any](elements []T, predicate func(data T) bool) bool {
+	for _, element := range elements {
+		if !predicate(element) {
+			return false
+		}
+	}
+
+	return true
+}
+
+// Any returns tree if any of the elements in the slice match the given predicate, returns false otherwise
+func Any[T any](elements []T, predicate func(data T) bool) bool {
+	for _, element := range elements {
+		if predicate(element) {
+			return true
+		}
+	}
+
+	return false
 }
