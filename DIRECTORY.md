@@ -1117,6 +1117,9 @@
     * [Rpn Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rpn/rpn_test.go)
   * Search
     * Binarysearch
+      * Findpeakelement
+        * [Find Peak Element](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/findpeakelement/find_peak_element.go)
+        * [Find Peak Element Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/findpeakelement/find_peak_element_test.go)
       * Firstboundary
         * [Find Boundary](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/firstboundary/find_boundary.go)
         * [First Boundary Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/firstboundary/first_boundary_test.go)
