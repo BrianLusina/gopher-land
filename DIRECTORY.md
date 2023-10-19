@@ -1150,6 +1150,9 @@
       * Sqrtestimate
         * [Sqrt Estimate](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate.go)
         * [Sqrt Estimate Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/sqrtestimate/sqrt_estimate_test.go)
+      * Successfulpairsspellspotions
+        * [Successful Pairs](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/successfulpairsspellspotions/successful_pairs.go)
+        * [Successful Pairs Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/search/binarysearch/successfulpairsspellspotions/successful_pairs_test.go)
   * Slowestkey
     * [Slowest Key](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key.go)
     * [Slowest Key Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key_test.go)
