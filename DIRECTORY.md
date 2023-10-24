@@ -26,6 +26,10 @@
     * [Difference Of Squares Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/diffsquares/difference_of_squares_test.go)
   * Duplicate-Chars
     * [Duplicate Chars](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/duplicate-chars/duplicate_chars.go)
+  * Dynamicprogramming
+    * Houserobber
+      * [Rob](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/houserobber/rob.go)
+      * [Rob Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/houserobber/rob_test.go)
   * Etl
     * [Etl](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/etl/etl.go)
     * [Etl Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/etl/etl_test.go)
