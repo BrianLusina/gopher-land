@@ -27,6 +27,9 @@
   * Duplicate-Chars
     * [Duplicate Chars](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/duplicate-chars/duplicate_chars.go)
   * Dynamicprogramming
+    * Dominotrominotiling
+      * [Num Tiles](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/dominotrominotiling/num_tiles.go)
+      * [Num Tiles Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/dominotrominotiling/num_tiles_test.go)
     * Houserobber
       * [Rob](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/houserobber/rob.go)
       * [Rob Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/houserobber/rob_test.go)
