@@ -33,6 +33,9 @@
     * Houserobber
       * [Rob](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/houserobber/rob.go)
       * [Rob Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/houserobber/rob_test.go)
+    * Uniquepaths
+      * [Unique Paths](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/uniquepaths/unique_paths.go)
+      * [Unique Paths Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/uniquepaths/unique_paths_test.go)
   * Etl
     * [Etl](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/etl/etl.go)
     * [Etl Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/etl/etl_test.go)
@@ -1335,5 +1338,6 @@
   * Types
     * [Types](https://github.com/BrianLusina/gopher-land/blob/master/pkg/types/types.go)
   * Utils
+    * [Slice Utils](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/slice_utils.go)
     * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/utils.go)
     * [Utils Test](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/utils_test.go)
