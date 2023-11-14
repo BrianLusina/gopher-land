@@ -17,6 +17,9 @@
     * Generateparenthesis
       * [Generate Parenthesis](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/generateparenthesis/generate_parenthesis.go)
       * [Generate Parenthesis Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/generateparenthesis/generate_parenthesis_test.go)
+    * Generatepermutations
+      * [Generate Perms](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/generatepermutations/generate_perms.go)
+      * [Generate Perms Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/generatepermutations/generate_perms_test.go)
     * Lettercombinations
       * [Letter Combinations](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/lettercombinations/letter_combinations.go)
       * [Letter Combinations Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/lettercombinations/letter_combinations_test.go)
