@@ -39,6 +39,9 @@
     * Houserobber
       * [Rob](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/houserobber/rob.go)
       * [Rob Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/houserobber/rob_test.go)
+    * Longestcommonsubsequence
+      * [Lcs](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/longestcommonsubsequence/lcs.go)
+      * [Lcs Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/longestcommonsubsequence/lcs_test.go)
     * Uniquepaths
       * [Unique Paths](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/uniquepaths/unique_paths.go)
       * [Unique Paths Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/uniquepaths/unique_paths_test.go)
