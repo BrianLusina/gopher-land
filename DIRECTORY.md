@@ -14,6 +14,9 @@
       * [Removeelement](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeelement/removeelement.go)
       * [Removeelement Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeelement/removeelement_test.go)
   * Backtracking
+    * Decodemessage
+      * [Decode](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/decodemessage/decode.go)
+      * [Decode Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/decodemessage/decode_test.go)
     * Generateparenthesis
       * [Generate Parenthesis](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/generateparenthesis/generate_parenthesis.go)
       * [Generate Parenthesis Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/generateparenthesis/generate_parenthesis_test.go)
@@ -42,6 +45,12 @@
     * Longestcommonsubsequence
       * [Lcs](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/longestcommonsubsequence/lcs.go)
       * [Lcs Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/longestcommonsubsequence/lcs_test.go)
+    * Maxprofit
+      * [Maxprofit](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/maxprofit/maxprofit.go)
+      * [Maxprofit Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/maxprofit/maxprofit_test.go)
+    * Mindistance
+      * [Min Distance](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/mindistance/min_distance.go)
+      * [Min Distance Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/mindistance/min_distance_test.go)
     * Uniquepaths
       * [Unique Paths](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/uniquepaths/unique_paths.go)
       * [Unique Paths Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/dynamicprogramming/uniquepaths/unique_paths_test.go)
@@ -1017,9 +1026,6 @@
     * Maxnumberofksumpairs
       * [Max Operations](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxnumberofksumpairs/max_operations.go)
       * [Max Operations Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxnumberofksumpairs/max_operations_test.go)
-    * Maxprofit
-      * [Maxprofit](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxprofit/maxprofit.go)
-      * [Maxprofit Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/maxprofit/maxprofit_test.go)
     * Movezeroes
       * [Move Zeroes](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/movezeroes/move_zeroes.go)
       * [Move Zeroes Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/movezeroes/move_zeroes_test.go)
