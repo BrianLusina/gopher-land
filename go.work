@@ -9,4 +9,5 @@ use (
 	./gopuzzles
 	./gostrings
 	./designpatterns
+	./bitmanipulation
 )
