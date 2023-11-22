@@ -426,6 +426,9 @@
     * [Allergies](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/allergies/allergies.go)
     * [Allergies Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/allergies/allergies_test.go)
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/allergies/cases_test.go)
+  * Countbits
+    * [Count Bits](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/countbits/count_bits.go)
+    * [Count Bits Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/countbits/count_bits_test.go)
   * Grains
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/grains/cases_test.go)
     * [Grains](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/grains/grains.go)
