@@ -439,6 +439,9 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/secrethandshake/cases_test.go)
     * [Secret Handshake](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/secrethandshake/secret_handshake.go)
     * [Secret Handshake Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/secrethandshake/secret_handshake_test.go)
+  * Singlenumber
+    * [Single Number](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/singlenumber/single_number.go)
+    * [Single Number Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/singlenumber/single_number_test.go)
   * Variablelengthquantity
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/variablelengthquantity/cases_test.go)
     * [Variable Length Quantity](https://github.com/BrianLusina/gopher-land/blob/master/bitmanipulation/variablelengthquantity/variable_length_quantity.go)
