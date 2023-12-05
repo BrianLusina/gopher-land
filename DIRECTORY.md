@@ -73,6 +73,10 @@
       * [Findtownjudge](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/graphs/findtownjudge/findtownjudge.go)
     * Minnumberofvertices
       * [Minnumberofvertices](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/graphs/minnumberofvertices/minnumberofvertices.go)
+  * Greedy
+    * Minarrows
+      * [Min Arrows](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/greedy/minarrows/min_arrows.go)
+      * [Min Arrows Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/greedy/minarrows/min_arrows_test.go)
   * Hamming
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/hamming/cases_test.go)
     * [Hamming](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/hamming/hamming.go)
