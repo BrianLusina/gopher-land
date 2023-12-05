@@ -14,7 +14,7 @@ func TestDirectedGraph(t *testing.T) {
 
 var _ = Describe("DirectedGraph", func() {
 	It("should add a new node to the graph successfully", func() {
-		g := NewDirectedGraph()
+		g := NewDirectedGraph[int]()
 		node := NewNode(1)
 		g.AddNode(node)
 
@@ -22,7 +22,7 @@ var _ = Describe("DirectedGraph", func() {
 	})
 
 	It("should not add a new node when there is an existing node with the same value", func() {
-		g := NewDirectedGraph()
+		g := NewDirectedGraph[int]()
 		nodeOne := NewNode(1)
 		nodeTwo := NewNode(1)
 
@@ -36,7 +36,7 @@ var _ = Describe("DirectedGraph", func() {
 	})
 
 	It("should add new nodes in succession", func() {
-		g := NewDirectedGraph()
+		g := NewDirectedGraph[int]()
 		nodeOne := NewNode(1)
 		nodeTwo := NewNode(2)
 		nodeThree := NewNode(3)

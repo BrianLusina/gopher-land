@@ -1,19 +1,21 @@
 package disjointset
 
-type DisjointSet struct {
-	nodes []*Node
+import "gopherland/pkg/types"
+
+type DisjointSet[T types.Comparable] struct {
+	nodes []*Node[T]
 	size  int
 }
 
-func NewDisjointSet(node ...Node) *DisjointSet {
-	nodes := make([]*Node, len(node))
+func NewDisjointSet[T types.Comparable](node ...Node[T]) *DisjointSet[T] {
+	nodes := make([]*Node[T], len(node))
 	size := len(node)
 
 	for i, n := range node {
 		nodes[i] = &n
 	}
 
-	return &DisjointSet{
+	return &DisjointSet[T]{
 		size:  size,
 		nodes: nodes,
 	}
@@ -22,7 +24,7 @@ func NewDisjointSet(node ...Node) *DisjointSet {
 // Union takes two nodes and makes them part of the same set
 // set with bigger rank should be parent, so that the
 // disjoint set tree will be more flat.
-func (d *DisjointSet) Union(nodeOne, nodeTwo *Node) {
+func (d *DisjointSet[T]) Union(nodeOne, nodeTwo *Node[T]) {
 	rootX := d.Find(nodeOne)
 	rootY := d.Find(nodeTwo)
 
@@ -39,17 +41,17 @@ func (d *DisjointSet) Union(nodeOne, nodeTwo *Node) {
 }
 
 // Find returns the root node of the node
-func (d *DisjointSet) Find(node *Node) *Node {
+func (d *DisjointSet[T]) Find(node *Node[T]) *Node[T] {
 	if node != node.parent {
 		node.parent = d.Find(node.parent)
 	}
 	return node.parent
 }
 
-func (d *DisjointSet) Connected(nodeOne, nodeTwo *Node) bool {
+func (d *DisjointSet[T]) Connected(nodeOne, nodeTwo *Node[T]) bool {
 	return d.Find(nodeOne) == d.Find(nodeTwo)
 }
 
-func (d *DisjointSet) Size() int {
+func (d *DisjointSet[T]) Size() int {
 	return d.size
 }
