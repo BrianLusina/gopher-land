@@ -185,6 +185,10 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/cases_test.go)
     * [Space Age](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/space_age.go)
     * [Space Age Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/space_age_test.go)
+  * Stack
+    * Dailytemps
+      * [Daily Temps](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/dailytemps/daily_temps.go)
+      * [Daily Temps Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/dailytemps/daily_temps_test.go)
   * Strain
     * [Strain](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/strain/strain.go)
     * [Strain Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/strain/strain_test.go)
