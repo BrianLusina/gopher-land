@@ -211,6 +211,10 @@
   * Twofer
     * [Two Fer](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twofer/two_fer.go)
     * [Two Fer Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twofer/two_fer_test.go)
+  * Twopointers
+    * Mergesortedarray
+      * [Merge](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twopointers/mergesortedarray/merge.go)
+      * [Merge Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twopointers/mergesortedarray/merge_test.go)
 
 ## Basics
   * Arithmetic
