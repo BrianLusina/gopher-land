@@ -1,6 +1,7 @@
 package removeduplicates
 
-/**
+/*
+*
 RemoveDuplicates removes duplicates from a sorted slice of integers.
 
 Removes duplicates from a sorted list of integers and returns the number of the unique elements in the list. This
@@ -26,7 +27,8 @@ element in the list.
 The other elements after the pointer i are the duplicate elements. This modifies the sorted list in place retaining
 "some" of the duplicated elements to the right of i. Note that this means we will not know how many times an
 element occurred in the original sorted list of elements.
-**/
+*
+*/
 func RemoveDuplicates(nums []int) int {
 	if len(nums) < 2 {
 		return len(nums)
@@ -44,4 +46,27 @@ func RemoveDuplicates(nums []int) int {
 	}
 
 	return slowPointer + 1
+}
+
+func removeDuplicatesTwo(nums []int) int {
+	if len(nums) <= 2 {
+		return len(nums)
+	}
+
+	// Initialize an integer k that updates the kth index of the array...
+	// only when the current element does not match either of the two previous indexes...
+
+	k := 2
+
+	for i := 2; i < len(nums); i++ {
+		// If the index does not match the (k-1)th and (k-2)th elements, count that element...
+		if nums[i] != nums[k-2] || nums[i] != nums[k-1] {
+			nums[k] = nums[i]
+			k++
+		}
+		// If the index matches the (k-1)th and (k-2)th elements, we skip it...
+	}
+
+	// Return k after placing the final result in the first k slots of nums...
+	return k
 }
