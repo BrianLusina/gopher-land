@@ -4,6 +4,9 @@
     * [Accumulate](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/accumulate/accumulate.go)
     * [Accumulate Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/accumulate/accumulate_test.go)
   * Arrays
+    * Majorityelement
+      * [Majority Element](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/majorityelement/majority_element.go)
+      * [Majority Element Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/majorityelement/majority_element_test.go)
     * Maxsubarray
       * [Max Subarray](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/maxsubarray/max_subarray.go)
       * [Max Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/maxsubarray/max_subarray_test.go)
