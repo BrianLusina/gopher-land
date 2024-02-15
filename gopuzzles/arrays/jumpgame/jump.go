@@ -20,7 +20,7 @@ func jump(nums []int) int {
 	}
 
 	// Greedy strategy: extend coverage as long as possible with lazy jump
-	for idx, _ := range nums {
+	for idx := range nums {
 		// extend coverage as far as possible
 		currentCoverage = utils.Max(currentCoverage, idx+nums[idx])
 
