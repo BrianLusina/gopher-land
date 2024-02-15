@@ -1032,6 +1032,8 @@
     * Jumpgame
       * [Can Jump](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/jumpgame/can_jump.go)
       * [Can Jump Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/jumpgame/can_jump_test.go)
+      * [Jump](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/jumpgame/jump.go)
+      * [Jump Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/jumpgame/jump_test.go)
     * Longestincreasingsubsequence
       * [Longest Increasing Subsequence](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/longestincreasingsubsequence/longest_increasing_subsequence.go)
       * [Longest Increasing Subsequence Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/longestincreasingsubsequence/longest_increasing_subsequence_test.go)
