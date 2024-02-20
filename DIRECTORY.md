@@ -1029,6 +1029,9 @@
     * Highestaltitude
       * [Higest Altitude](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/highestaltitude/higest_altitude.go)
       * [Highest Altitude Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/highestaltitude/highest_altitude_test.go)
+    * Hindex
+      * [H Index](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/hindex/h_index.go)
+      * [H Index Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/hindex/h_index_test.go)
     * Jumpgame
       * [Can Jump](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/jumpgame/can_jump.go)
       * [Can Jump Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/jumpgame/can_jump_test.go)
