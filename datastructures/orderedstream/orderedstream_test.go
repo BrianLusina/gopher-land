@@ -1,9 +1,7 @@
-package orderedstream_test
+package orderedstream
 
 import (
 	"testing"
-
-	"gopherland/designpatterns/orderedstream"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -15,7 +13,7 @@ func TestOrderedStream(t *testing.T) {
 }
 
 var _ = Describe("OrderedStream with n = 5", func() {
-	orderedStream := orderedstream.Constructor(5)
+	orderedStream := Constructor(5)
 
 	It("insert 3, 'ccccc'", func() {
 		actual := orderedStream.Insert(3, "ccccc")

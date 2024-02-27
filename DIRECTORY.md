@@ -625,6 +625,11 @@
   * Hashset
     * [Hashset](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashset/hashset.go)
     * [Hashset Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/hashset/hashset_test.go)
+  * Iterator
+    * [Iterator](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/iterator/iterator.go)
+    * Peeking
+      * [Peeking Iterator](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/iterator/peeking/peeking_iterator.go)
+      * [Peeking Iterator Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/iterator/peeking/peeking_iterator_test.go)
   * List
     * Doublylinked
       * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/doublylinked/linkedlist.go)
@@ -644,6 +649,9 @@
   * Lrucache
     * [Cache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache.go)
     * [Cache Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache_test.go)
+  * Orderedstream
+    * [Orderedstream](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/orderedstream/orderedstream.go)
+    * [Orderedstream Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/orderedstream/orderedstream_test.go)
   * Queues
     * Circular
       * [Circular Linked List Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/circular/circular_linked_list_queue.go)
@@ -659,6 +667,16 @@
       * [Priority Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/priority/priority_queue.go)
       * [Priority Queue Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/priority/priority_queue_test.go)
     * [Queue](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/queues/queue.go)
+  * Randomizedset
+    * [Randomized Set](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/randomizedset/randomized_set.go)
+    * [Randomized Set Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/randomizedset/randomized_set_test.go)
+  * Smallestinfiniteset
+    * [Smallest Infinite Set](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/smallestinfiniteset/smallest_infinite_set.go)
+    * [Smallest Infinite Set Heap](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/smallestinfiniteset/smallest_infinite_set_heap.go)
+    * [Smallest Infinite Set Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/smallestinfiniteset/smallest_infinite_set_test.go)
+  * Snapshotarray
+    * [Snapshot Array](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/snapshotarray/snapshot_array.go)
+    * [Snapshot Array Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/snapshotarray/snapshot_array_test.go)
   * Stack
     * [Interface](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/interface.go)
     * Max
@@ -669,6 +687,9 @@
       * [Minstack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/min/minstack_test.go)
     * [Stack](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/stack.go)
     * [Stack Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/stack/stack_test.go)
+  * Timemap
+    * [Time Map](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/timemap/time_map.go)
+    * [Time Map Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/timemap/time_map_test.go)
   * Trees
     * Binary
       * [Binary Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree.go)
@@ -832,14 +853,6 @@
         * [Memory Storage](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/storage/memory_storage.go)
         * [Store](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/storage/store.go)
         * [Temp Storage](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/storage/temp_storage.go)
-  * Iterator
-    * [Iterator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/iterator/iterator.go)
-    * Peeking
-      * [Peeking Iterator](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/iterator/peeking/peeking_iterator.go)
-      * [Peeking Iterator Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/iterator/peeking/peeking_iterator_test.go)
-  * Orderedstream
-    * [Orderedstream](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/orderedstream/orderedstream.go)
-    * [Orderedstream Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/orderedstream/orderedstream_test.go)
   * Parkinglot
     * [Bus](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/bus.go)
     * [Car](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/car.go)
@@ -853,13 +866,6 @@
     * [Parkingspot Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingspot_test.go)
     * [Parkingsystem](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/parkingsystem.go)
     * [Vehicle](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/parkinglot/vehicle.go)
-  * Smallestinfiniteset
-    * [Smallest Infinite Set](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/smallestinfiniteset/smallest_infinite_set.go)
-    * [Smallest Infinite Set Heap](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/smallestinfiniteset/smallest_infinite_set_heap.go)
-    * [Smallest Infinite Set Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/smallestinfiniteset/smallest_infinite_set_test.go)
-  * Snapshotarray
-    * [Snapshot Array](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/snapshotarray/snapshot_array.go)
-    * [Snapshot Array Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/snapshotarray/snapshot_array_test.go)
   * Structural
     * Composite
       * Filetree
@@ -882,9 +888,6 @@
         * [Client](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/proxy/nginx/client.go)
         * [Nginx](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/proxy/nginx/nginx.go)
         * [Server](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/proxy/nginx/server.go)
-  * Timemap
-    * [Time Map](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/timemap/time_map.go)
-    * [Time Map Test](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/timemap/time_map_test.go)
   * Twitter
     * [Tweet](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/tweet.go)
     * [Twitter](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/twitter/twitter.go)
