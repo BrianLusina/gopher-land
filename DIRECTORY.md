@@ -1020,6 +1020,9 @@
     * [Annalyns Infiltration](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration.go)
     * [Annalyns Infiltration Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration_test.go)
   * Arrays
+    * Candy
+      * [Candy](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/candy/candy.go)
+      * [Candy Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/candy/candy_test.go)
     * Canplaceflowers
       * [Can Place Flowers](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/canplaceflowers/can_place_flowers.go)
       * [Can Place Flowers Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/canplaceflowers/can_place_flowers_test.go)
