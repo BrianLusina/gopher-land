@@ -1006,6 +1006,7 @@
       * [Is Triangle Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/triangle/istriangle/is_triangle_test.go)
   * Twosum
     * [Twosum](https://github.com/BrianLusina/gopher-land/blob/master/gomath/twosum/twosum.go)
+    * [Twosum Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/twosum/twosum_test.go)
   * Utils
     * [Reverseint](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/reverseint.go)
     * [Reverseint Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/reverseint_test.go)
