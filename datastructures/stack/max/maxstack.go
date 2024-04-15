@@ -1,7 +1,8 @@
-package stack
+package maxstack
 
 import (
 	stack "gopherland/datastructures/stack"
+	dynamicstack "gopherland/datastructures/stack/dynamic"
 	"gopherland/pkg/utils"
 
 	"golang.org/x/exp/constraints"
@@ -13,10 +14,12 @@ type MaxStack[T constraints.Ordered] struct {
 	currentMax T
 }
 
-// NewMaxStack creates a new max stack
-func NewMaxStack[T constraints.Ordered](capacity int) *MaxStack[T] {
+// New creates a new max stack
+func New[T constraints.Ordered]() *MaxStack[T] {
+	ds := dynamicstack.New[T]()
+
 	return &MaxStack[T]{
-		Stack: stack.NewStack[T](capacity),
+		Stack: ds,
 	}
 }
 
@@ -40,7 +43,7 @@ func (s *MaxStack[T]) Pop() (T, error) {
 		return utils.Zero[T](), err
 	}
 
-	if s.Stack.Size() == 0 {
+	if s.Size() == 0 {
 		s.currentMax = utils.GetZeroValue[T]()
 	} else if s.currentMax == data {
 		tempMax, err := s.Peek()
@@ -49,7 +52,7 @@ func (s *MaxStack[T]) Pop() (T, error) {
 			return utils.GetZeroValue[T](), err
 		}
 
-		for _, item := range s.GetItems() {
+		for _, item := range s.Items() {
 			if item > tempMax {
 				tempMax = item
 			}
@@ -66,7 +69,7 @@ func (s *MaxStack[T]) Peek() (T, error) {
 }
 
 // GetMax gets the max item in the stack
-func (s *MaxStack[T]) GetMax() T {
+func (s *MaxStack[T]) Max() T {
 	return s.currentMax
 }
 

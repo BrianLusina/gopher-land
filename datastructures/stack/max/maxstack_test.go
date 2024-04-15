@@ -1,4 +1,4 @@
-package stack
+package maxstack
 
 import (
 	"testing"
@@ -14,7 +14,7 @@ func TestMaxStack(t *testing.T) {
 
 var _ = Describe("MaxStack", func() {
 	When("type is of int", func() {
-		maxStack := NewMaxStack[int](10)
+		maxStack := New[int]()
 
 		It("Should add -2 to stack", func() {
 			err := maxStack.Push(-2)
@@ -38,7 +38,7 @@ var _ = Describe("MaxStack", func() {
 		})
 
 		It("Should getMax & return 0 without removing it from the stack", func() {
-			actual := maxStack.GetMax()
+			actual := maxStack.Max()
 
 			Expect(actual).To(Equal(0))
 		})
@@ -59,7 +59,7 @@ var _ = Describe("MaxStack", func() {
 		})
 
 		It("Should getMax() from current stack & return -2 without removing it from Stack", func() {
-			actual := maxStack.GetMax()
+			actual := maxStack.Max()
 
 			Expect(actual).To(Equal(0))
 		})

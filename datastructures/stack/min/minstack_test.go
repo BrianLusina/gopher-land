@@ -1,4 +1,4 @@
-package stack
+package minstack
 
 import (
 	"testing"
@@ -17,7 +17,7 @@ var _ = Describe("MinStack", func() {
 
 		Describe("with values 0, -2, -3", func() {
 
-			minStack := NewMinStack[int](10)
+			minStack := New[int]()
 			// stack is now []
 
 			It("Should add -2 to stack", func() {
@@ -77,7 +77,7 @@ var _ = Describe("MinStack", func() {
 
 		Describe("with values 0, 2, 0, 3", func() {
 
-			minStack := NewMinStack[int](10)
+			minStack := New[int]()
 			// stack is now []
 
 			It("Should add 2 to stack", func() {

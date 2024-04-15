@@ -1,7 +1,8 @@
-package stack
+package minstack
 
 import (
 	"gopherland/datastructures/stack"
+	dynamicstack "gopherland/datastructures/stack/dynamic"
 	"gopherland/pkg/utils"
 
 	"golang.org/x/exp/constraints"
@@ -12,10 +13,12 @@ type MinStack[T constraints.Ordered] struct {
 	currentMinimum T
 }
 
-// NewMinStack creates a new MinStack
-func NewMinStack[T constraints.Ordered](capacity int) *MinStack[T] {
+// New creates a new MinStack
+func New[T constraints.Ordered]() *MinStack[T] {
+	dynamicStack := dynamicstack.New[T]()
+
 	return &MinStack[T]{
-		Stack:          stack.NewStack[T](capacity),
+		Stack:          dynamicStack,
 		currentMinimum: utils.Zero[T](),
 	}
 }
@@ -52,7 +55,7 @@ func (s *MinStack[T]) Pop() (T, error) {
 			return utils.Zero[T](), err
 		}
 
-		for _, item := range s.GetItems() {
+		for _, item := range s.Items() {
 			if item < tempMin {
 				tempMin = item
 			}

@@ -1,4 +1,4 @@
-package stack
+package fixedsizedstack
 
 import (
 	"testing"
@@ -10,11 +10,11 @@ import (
 
 func TestLifoStack(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Stack Test Suite")
+	RunSpecs(t, "Fixed Sized Stack Test Suite")
 }
 
-var _ = Describe("Stack", func() {
-	stack := NewStack[int](10)
+var _ = Describe("Fixed Sized Stack", func() {
+	stack := New[int](10)
 
 	It("Should add -2 to stack", func() {
 		err := stack.Push(-2)
@@ -24,12 +24,11 @@ var _ = Describe("Stack", func() {
 		}
 
 		Expect(stack.Peek()).To(Equal(-2))
-		Expect(stack.items).To(Equal([]int{-2}))
+		Expect(stack.Items()).To(Equal([]int{-2}))
 	})
 
 	It("Should correctly check on its size", func() {
 		Expect(stack.IsEmpty()).To(Equal(false))
-		Expect(stack.isFull()).To(Equal(false))
 		Expect(stack.Size()).To(Equal(1))
 	})
 
@@ -37,12 +36,11 @@ var _ = Describe("Stack", func() {
 		_ = stack.Push(-3)
 
 		Expect(stack.Peek()).To(Equal(-3))
-		Expect(stack.items).To(Equal([]int{-2, -3}))
+		Expect(stack.Items()).To(Equal([]int{-2, -3}))
 	})
 
 	It("Should correctly check on its size after adding -3", func() {
 		Expect(stack.IsEmpty()).To(Equal(false))
-		Expect(stack.isFull()).To(Equal(false))
 		Expect(stack.Size()).To(Equal(2))
 	})
 
@@ -50,12 +48,11 @@ var _ = Describe("Stack", func() {
 		_ = stack.Push(0)
 
 		Expect(stack.Peek()).To(Equal(0))
-		Expect(stack.items).To(Equal([]int{-2, -3, 0}))
+		Expect(stack.Items()).To(Equal([]int{-2, -3, 0}))
 	})
 
 	It("Should correctly check on its size after adding 0", func() {
 		Expect(stack.IsEmpty()).To(Equal(false))
-		Expect(stack.isFull()).To(Equal(false))
 		Expect(stack.Size()).To(Equal(3))
 	})
 
@@ -64,7 +61,7 @@ var _ = Describe("Stack", func() {
 
 		Expect(err).To(BeNil())
 		Expect(actual).To(Equal(0))
-		Expect(stack.items).To(Equal([]int{-2, -3, 0}))
+		Expect(stack.Items()).To(Equal([]int{-2, -3, 0}))
 		Expect(stack.Size()).To(Equal(3))
 	})
 
@@ -73,7 +70,7 @@ var _ = Describe("Stack", func() {
 
 		Expect(err).To(BeNil())
 		Expect(actual).To(Equal(0))
-		Expect(stack.items).To(Equal([]int{-2, -3}))
+		Expect(stack.Items()).To(Equal([]int{-2, -3}))
 		Expect(stack.Size()).To(Equal(2))
 	})
 
@@ -82,7 +79,7 @@ var _ = Describe("Stack", func() {
 
 		Expect(err).To(BeNil())
 		Expect(actual).To(Equal(-3))
-		Expect(stack.items).To(Equal([]int{-2}))
+		Expect(stack.Items()).To(Equal([]int{-2}))
 		Expect(stack.Size()).To(Equal(1))
 	})
 
@@ -91,7 +88,7 @@ var _ = Describe("Stack", func() {
 
 		Expect(err).To(BeNil())
 		Expect(actual).To(Equal(-2))
-		Expect(stack.items).To(Equal([]int{}))
+		Expect(stack.Items()).To(Equal([]int{}))
 		Expect(stack.Size()).To(Equal(0))
 	})
 
