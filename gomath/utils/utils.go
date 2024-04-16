@@ -1,11 +1,19 @@
 // Package utils contains utility functions
 package utils
 
-import "golang.org/x/exp/constraints"
+import (
+	"golang.org/x/exp/constraints"
+)
 
 // Modulo returns the modulo of n and m.
 func Modulo(n, m int) int {
 	return ((n % m) + m) % m
+}
+
+func DivMod(n, m int) (int, int) {
+	rem := Modulo(n, m)
+	n /= m
+	return n, rem
 }
 
 // Max returns the maximum of 2 integers
