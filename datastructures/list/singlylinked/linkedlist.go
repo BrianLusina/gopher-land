@@ -89,7 +89,33 @@ func (sll *LinkedList[T]) DeleteNode(node any) {
 }
 
 func (sll *LinkedList[T]) DeleteNodeByData(data any) {
-	panic("implement me")
+	current := sll.Head
+
+	// If the data we are deleting is at the head, then change the head to the next node in the linked list
+	// and return
+	if current != nil && current.Data == data {
+		sll.Head = current.Next
+		return
+	}
+
+	// this will be used to keep track of the previous node of the node to delete
+	var previous list.Node[T]
+
+	// we move the pointer down the LinkedList until we find the Node whose data matches what we want to delete
+	for current != nil && current.Data != data {
+		previous = *current
+		current = current.Next
+	}
+
+	//if there is no node that matches the condition above, we exit
+	if current == nil {
+		return
+	}
+
+	// re-assign the pointers of the nodes around the node to delete. That is, moving the previous node's next
+	// pointer to the current node's next pointer. This essentially 'deletes' the node by the data attribute
+	previous.Next = current.Next
+	return
 }
 
 func (sll *LinkedList[T]) DeleteTail() (any, error) {
