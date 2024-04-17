@@ -12,8 +12,8 @@ type LinkedList[T comparable] struct {
 	Head *list.Node[T]
 }
 
-// NewLinkedList creates a new Singly LinkedList
-func NewLinkedList[T comparable]() *LinkedList[T] {
+// New creates a new Singly LinkedList
+func New[T comparable]() *LinkedList[T] {
 	return new(LinkedList[T])
 }
 
