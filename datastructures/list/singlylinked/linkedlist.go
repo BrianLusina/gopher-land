@@ -705,3 +705,18 @@ func (sll *LinkedList[T]) OddEvenList() *list.Node[T] {
 	odd.Next = evenHead
 	return sll.Head
 }
+
+// InsertAfterNode inserts the data after the given prevNode if the node is in the linked list
+func (sll *LinkedList[T]) InsertAfterNode(prevNode *list.Node[T], data T) {
+	if prevNode == nil {
+		return
+	}
+
+	// node to insert
+	newNode := list.NewNode(data)
+	// set the new node's next pointer to point to the prevNode's next pointer
+	newNode.Next = prevNode.Next
+
+	// set the prevNode's next pointer to point to the new node
+	prevNode.Next = newNode
+}
