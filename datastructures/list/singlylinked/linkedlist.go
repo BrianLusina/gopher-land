@@ -10,6 +10,7 @@ import (
 type LinkedList[T comparable] struct {
 	// Head of the list
 	Head *list.Node[T]
+	size int
 }
 
 // New creates a new Singly LinkedList
@@ -84,8 +85,32 @@ func (sll *LinkedList[T]) String() string {
 	return result
 }
 
-func (sll *LinkedList[T]) DeleteNode(node any) {
-	panic("implement me")
+func (sll *LinkedList[T]) DeleteNodeByPosition(position int) (*list.Node[T], error) {
+	if sll.Head == nil {
+		return nil, list.ErrEmptyList
+	}
+
+	current := sll.Head
+	if position == 0 {
+		sll.Head = current.Next
+		return current, nil
+	}
+
+	var prev list.Node[T]
+	count := 0
+
+	for current != nil && count != position {
+		prev = *current
+		current = current.Next
+		count += 1
+	}
+
+	if current == nil {
+		return nil, list.ErrInvalidIndex
+	}
+
+	prev.Next = current.Next
+	return current, nil
 }
 
 func (sll *LinkedList[T]) DeleteNodeByData(data any) {
@@ -650,6 +675,8 @@ func (sll *LinkedList[T]) Length() int {
 		current = current.Next
 		count++
 	}
+
+	sll.size = count
 
 	return count
 }
