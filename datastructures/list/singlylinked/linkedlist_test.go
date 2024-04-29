@@ -1,6 +1,7 @@
 package singlylinkedlist
 
 import (
+	"fmt"
 	"gopherland/datastructures/list"
 	"gopherland/pkg/utils"
 	"testing"
@@ -624,4 +625,54 @@ var _ = Describe("SinglyLinkedList", func() {
 			})
 		})
 	})
+
+	Context("Swap", func() {
+		type testCase[T comparable] struct {
+			data     []T
+			expected []T
+			nodeOne  T
+			nodeTwo  T
+			runTest  func(data, expected []T, nodeOne, nodeTwo T)
+		}
+
+		testCases := []testCase[string]{
+			{
+				data:     []string{"A", "B", "C", "D"},
+				expected: []string{"A", "C", "B", "D"},
+				nodeOne:  "B",
+				nodeTwo:  "C",
+				runTest: func(data, expected []string, nodeOne, nodeTwo string) {
+					linkedList := New[string]()
+					for _, v := range data {
+						linkedList.Append(v)
+					}
+
+					linkedList.SwapNodes(nodeOne, nodeTwo)
+					actualNodes := []string{}
+					actualHead := linkedList.Head
+
+					for actualHead != nil {
+						actualNodes = append(actualNodes, actualHead.Data)
+						actualHead = actualHead.Next
+					}
+
+					zipped, err := utils.Zip(actualNodes, expected)
+					assert.NoError(GinkgoT(), err)
+
+					for _, zipPair := range zipped {
+						assert.Equal(GinkgoT(), zipPair.A, zipPair.B)
+					}
+				},
+			},
+		}
+
+		for _, tc := range testCases {
+			When(fmt.Sprintf("linked list is %v", tc.data), func() {
+				It(fmt.Sprintf("should return %v as the new list", tc.expected), func() {
+					tc.runTest(tc.data, tc.expected, tc.nodeOne, tc.nodeTwo)
+				})
+			})
+		}
+	})
+
 })
