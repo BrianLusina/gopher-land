@@ -17,6 +17,7 @@ func TestSinglyLinkedList(t *testing.T) {
 }
 
 var _ = Describe("SinglyLinkedList", func() {
+	t := GinkgoT()
 	Context("Prepend ->Append -> AddAtPosition -> GetNthNode -> DeleteAtPosition -> GetNthNode operations", func() {
 
 		It("should handle \"Prepend(1)\" -> \"Append(3)\" -> \"AddAtPosition(1,2)\" -> \"GetNthNode(1)\" -> \"DeleteAtPosition(1)\" -> \"GetNthNode(1)\"", func() {
@@ -444,7 +445,7 @@ var _ = Describe("SinglyLinkedList", func() {
 			It("should return d for k = 1", func() {
 				expected := list.NewNode("d")
 				actual, err := sll.KthToLastNode(1)
-				assert.NoError(GinkgoT(), err)
+				assert.NoError(t, err)
 
 				Expect(actual).To(Equal(expected))
 			})
@@ -452,7 +453,7 @@ var _ = Describe("SinglyLinkedList", func() {
 			It("should return c for k = 2", func() {
 				expected := list.NewNode("c")
 				actual, err := sll.KthToLastNode(2)
-				assert.NoError(GinkgoT(), err)
+				assert.NoError(t, err)
 
 				Expect(actual.Data).To(Equal(expected.Data))
 			})
@@ -460,7 +461,7 @@ var _ = Describe("SinglyLinkedList", func() {
 			It("should return b for k = 3", func() {
 				expected := list.NewNode("b")
 				actual, err := sll.KthToLastNode(3)
-				assert.NoError(GinkgoT(), err)
+				assert.NoError(t, err)
 
 				Expect(actual.Data).To(Equal(expected.Data))
 			})
@@ -468,15 +469,15 @@ var _ = Describe("SinglyLinkedList", func() {
 			It("should return a for k = 4", func() {
 				expected := list.NewNode("a")
 				actual, err := sll.KthToLastNode(4)
-				assert.NoError(GinkgoT(), err)
+				assert.NoError(t, err)
 
 				Expect(actual.Data).To(Equal(expected.Data))
 			})
 
 			It("should return an error for k = 5", func() {
 				actual, err := sll.KthToLastNode(5)
-				assert.Error(GinkgoT(), err)
-				assert.Nil(GinkgoT(), actual)
+				assert.Error(t, err)
+				assert.Nil(t, actual)
 			})
 		})
 	})
@@ -496,7 +497,7 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 7 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 
@@ -512,7 +513,7 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 3 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 
@@ -528,7 +529,7 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 1 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 		})
@@ -546,7 +547,7 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 7 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle2Pointers()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 
@@ -562,7 +563,7 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 3 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle2Pointers()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 
@@ -578,7 +579,7 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 1 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle2Pointers()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 		})
@@ -600,10 +601,10 @@ var _ = Describe("SinglyLinkedList", func() {
 			}
 
 			zipped, err := utils.Zip[int, int](actualNodes, expected)
-			assert.NoError(GinkgoT(), err)
+			assert.NoError(t, err)
 
 			for _, zipPair := range zipped {
-				assert.Equal(GinkgoT(), zipPair.A, zipPair.B)
+				assert.Equal(t, zipPair.A, zipPair.B)
 			}
 		}
 
@@ -657,10 +658,10 @@ var _ = Describe("SinglyLinkedList", func() {
 					}
 
 					zipped, err := utils.Zip(actualNodes, expected)
-					assert.NoError(GinkgoT(), err)
+					assert.NoError(t, err)
 
 					for _, zipPair := range zipped {
-						assert.Equal(GinkgoT(), zipPair.A, zipPair.B)
+						assert.Equal(t, zipPair.A, zipPair.B)
 					}
 				},
 			},
@@ -670,6 +671,45 @@ var _ = Describe("SinglyLinkedList", func() {
 			When(fmt.Sprintf("linked list is %v", tc.data), func() {
 				It(fmt.Sprintf("should return %v as the new list", tc.expected), func() {
 					tc.runTest(tc.data, tc.expected, tc.nodeOne, tc.nodeTwo)
+				})
+			})
+		}
+	})
+
+	Context("Remove Duplicates", func() {
+		type testCase[T comparable] struct {
+			data     []T
+			expected []T
+			runTest  func(data, expected []T)
+		}
+
+		testCases := []testCase[string]{
+			{
+				data:     []string{"A", "B", "C", "D", "A"},
+				expected: []string{"A", "B", "C", "D"},
+				runTest: func(data, expected []string) {
+					linkedList := New[string]()
+					for _, v := range data {
+						linkedList.Append(v)
+					}
+
+					actualHead := linkedList.RemoveDuplicates()
+					actualNodes := []string{}
+
+					for actualHead != nil {
+						actualNodes = append(actualNodes, actualHead.Data)
+						actualHead = actualHead.Next
+					}
+
+					assert.ElementsMatch(t, expected, actualNodes)
+				},
+			},
+		}
+
+		for _, tc := range testCases {
+			When(fmt.Sprintf("linked list is %v", tc.data), func() {
+				It(fmt.Sprintf("should return %v as the new list", tc.expected), func() {
+					tc.runTest(tc.data, tc.expected)
 				})
 			})
 		}

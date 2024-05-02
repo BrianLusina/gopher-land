@@ -372,17 +372,21 @@ func (sll *LinkedList[T]) RemoveDuplicates() *list.Node[T] {
 		return head
 	}
 
+	seen := map[T]bool{}
 	current := head
-	next := current.Next
+	var previous *list.Node[T]
 
-	for next != nil {
-		if next.Data == current.Data {
-			current.Next = current.Next.Next
-			next = current.Next
+	for current != nil {
+		_, ok := seen[current.Data]
+
+		if ok {
+			previous.Next = current
+			current = nil
 		} else {
-			current = next
-			next = current.Next
+			seen[current.Data] = true
+			previous = current
 		}
+		current = previous.Next
 	}
 	return head
 }
