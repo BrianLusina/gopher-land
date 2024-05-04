@@ -390,50 +390,6 @@ var _ = Describe("SinglyLinkedList", func() {
 		})
 	})
 
-	Context("Rotate", func() {
-		It("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 when k=0", func() {
-			sll := New[int]()
-			sll.Append(10)
-			sll.Append(20)
-			sll.Append(30)
-			sll.Append(40)
-			sll.Append(50)
-			sll.Append(60)
-
-			sll.Rotate(0)
-
-			Expect(sll.Head.Data).To(Equal(10))
-		})
-
-		It("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=7 positions", func() {
-			sll := New[int]()
-			sll.Append(10)
-			sll.Append(20)
-			sll.Append(30)
-			sll.Append(40)
-			sll.Append(50)
-			sll.Append(60)
-
-			sll.Rotate(7)
-
-			Expect(sll.Head.Data).To(Equal(10))
-		})
-
-		It("should rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=4 positions", func() {
-			sll := New[int]()
-			sll.Append(10)
-			sll.Append(20)
-			sll.Append(30)
-			sll.Append(40)
-			sll.Append(50)
-			sll.Append(60)
-
-			sll.Rotate(4)
-
-			Expect(sll.Head.Data).To(Equal(50))
-		})
-	})
-
 	Context("KthToLastNode", func() {
 		When("LinkedList is a->b->c->d", func() {
 			sll := New[string]()

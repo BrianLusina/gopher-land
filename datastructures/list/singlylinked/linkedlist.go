@@ -550,7 +550,7 @@ func (sll *LinkedList[T]) Rotate(k int) {
 		count++
 	}
 
-	// if we don't have a kth node(current is nil), k is greather than or equal to
+	// if we don't have a kth node(current is nil), k is greater than or equal to
 	// count of nodes in linked list. So no need to rotate
 	if current == nil {
 		return
