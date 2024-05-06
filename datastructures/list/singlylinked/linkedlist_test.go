@@ -11,6 +11,106 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+func TestLinkedList(t *testing.T) {
+	t.Run("Is Palindrome", func(t *testing.T) {
+		type testCase[T any] struct {
+			data     []T
+			expected bool
+		}
+
+		var testCases = []testCase[any]{
+			{
+				data:     []any{"r", "a", "c", "e", "c", "a", "r"},
+				expected: true,
+			},
+		}
+
+		t.Run("using a stack", func(t *testing.T) {
+			for _, tc := range testCases {
+				t.Run(fmt.Sprintf("should return %v for %v", tc.expected, tc.data), func(t *testing.T) {
+					linkedList := New[any]()
+					for _, d := range tc.data {
+						linkedList.Append(d)
+					}
+					actual := linkedList.IsPalindrome()
+					if actual != tc.expected {
+						t.Fail()
+						t.Fatalf("expected isPalindrome() for data=%v to be %v, got %v", tc.data, tc.expected, actual)
+					}
+				})
+			}
+		})
+
+		t.Run("using two pointers", func(t *testing.T) {
+			for _, tc := range testCases {
+				t.Run(fmt.Sprintf("should return %v for %v", tc.expected, tc.data), func(t *testing.T) {
+					linkedList := New[any]()
+					for _, d := range tc.data {
+						linkedList.Append(d)
+					}
+					actual := linkedList.IsPalindromeTwoPointers()
+					if actual != tc.expected {
+						t.Fail()
+						t.Fatalf("expected IsPalindromeTwoPointers() for data=%v to be %v, got %v", tc.data, tc.expected, actual)
+					}
+				})
+			}
+		})
+	})
+}
+
+func BenchmarkLinkedList(b *testing.B) {
+	if testing.Short() {
+		b.Skip()
+	}
+
+	b.Run("Is Palindrome", func(b *testing.B) {
+		type testCase[T any] struct {
+			data     []T
+			expected bool
+		}
+
+		var testCases = []testCase[any]{
+			{
+				data:     []any{"r", "a", "c", "e", "c", "a", "r"},
+				expected: true,
+			},
+		}
+
+		b.Run("using a stack", func(b *testing.B) {
+			for _, tc := range testCases {
+				b.Run(fmt.Sprintf("should return %v for %v", tc.expected, tc.data), func(b *testing.B) {
+					linkedList := New[any]()
+					for _, d := range tc.data {
+						linkedList.Append(d)
+					}
+					actual := linkedList.IsPalindrome()
+					if actual != tc.expected {
+						b.Fail()
+						b.Fatalf("expected isPalindrome() for data=%v to be %v, got %v", tc.data, tc.expected, actual)
+					}
+				})
+			}
+		})
+
+		b.Run("using two pointers", func(b *testing.B) {
+			for _, tc := range testCases {
+				b.Run(fmt.Sprintf("should return %v for %v", tc.expected, tc.data), func(b *testing.B) {
+					linkedList := New[any]()
+					for _, d := range tc.data {
+						linkedList.Append(d)
+					}
+					actual := linkedList.IsPalindromeTwoPointers()
+					if actual != tc.expected {
+						b.Fail()
+						b.Fatalf("expected isPalindrome() for data=%v to be %v, got %v", tc.data, tc.expected, actual)
+					}
+				})
+			}
+		})
+	})
+}
+
 func TestSinglyLinkedList(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "SinglyLinkedList Suite")

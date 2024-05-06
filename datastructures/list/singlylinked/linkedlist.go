@@ -271,7 +271,7 @@ func (sll *LinkedList[T]) IsPalindrome() bool {
 	}
 
 	current := sll.Head
-	stack := []any{}
+	stack := []T{}
 
 	for current != nil {
 		stack = append(stack, current.Data)
@@ -288,6 +288,41 @@ func (sll *LinkedList[T]) IsPalindrome() bool {
 			return false
 		}
 		current = current.Next
+	}
+
+	return true
+}
+
+// IsPalindromeTwoPointers checks if a linked list is a palindrome using two pointers
+func (sll *LinkedList[T]) IsPalindromeTwoPointers() bool {
+	if sll.Head == nil {
+		return false
+	}
+
+	if sll.Head.Next == nil {
+		return true
+	}
+
+	firstPointer := sll.Head
+	lastPointer := sll.Head
+	previous := []*list.Node[T]{}
+	i := 0
+
+	for lastPointer != nil {
+		previous = append(previous, lastPointer)
+		lastPointer = lastPointer.Next
+		i++
+	}
+	lastPointer = previous[i-1]
+
+	count := 0
+
+	for count <= i/2+1 {
+		if previous[(len(previous)-count)-1].Data != firstPointer.Data {
+			return false
+		}
+		firstPointer = firstPointer.Next
+		count++
 	}
 
 	return true
