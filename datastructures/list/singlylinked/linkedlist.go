@@ -832,3 +832,36 @@ func (sll *LinkedList[T]) InsertAfterNode(prevNode *list.Node[T], data T) {
 	// set the prevNode's next pointer to point to the new node
 	prevNode.Next = newNode
 }
+
+// MoveTailToHead moves the tail to the head of the linked list making it the new head node
+// Uses two pointers where last pointer will be moved until it points to the last node in the linked list. The second pointer, previous, will
+// point to the second last node in the linked list.
+// Complexity Analysis:
+// An assumption is made where n is the number of nodes in the linked list
+// Time: O(n) as the the pointers have to be moved through each node in the linked list until both point to the last and second last nodes in the linked list
+// Space O(1) as no extra space is incurred in the iteration. Only pointers are moved at the end to move the tail node to the head and make the second to last node
+// the new tail
+func (sll *LinkedList[T]) MoveTailToHead() {
+	if sll.Head != nil && sll.Head.Next != nil {
+		// pointer that is initially set to the head node of the linked list. This will be used to keep track of the last node in the linked list
+		last := sll.Head
+		// previous is a pointer initially set to nil that will be used to keep track of the second to last node in the linked list that will become
+		// the new tail
+		var previous *list.Node[T]
+
+		// move the last pointer to the end of the linked list while the node has a next pointer. This will set the previous pointer to last while also
+		// setting the last pointer to the last node. After this loop, the previous will be at the second last node while the last will be at the last node
+		// in the linked list
+		for last.Next != nil {
+			previous = last
+			last = last.Next
+		}
+		// set the last node's next pointer to point to the head node. Note that at this point in time this has become a circular linked list
+		last.Next = sll.Head
+		// set the previous'(second to last node) next pointer to nil, consequentially breaking the circular linked list and setting this node as the last(tail)
+		// node in the linked list
+		previous.Next = nil
+		// set the new head of the linked list as the last node
+		sll.Head = last
+	}
+}

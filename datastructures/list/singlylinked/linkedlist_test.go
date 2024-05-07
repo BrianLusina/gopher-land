@@ -57,6 +57,49 @@ func TestLinkedList(t *testing.T) {
 			}
 		})
 	})
+
+	t.Run("Move Tail to Head", func(t *testing.T) {
+		type testCase[T any] struct {
+			data         []T
+			expectedHead T
+			expectedList []T
+		}
+
+		var testCases = []testCase[any]{
+			{
+				data:         []any{"r", "a", "c", "e", "c", "a", "r"},
+				expectedHead: "r",
+				expectedList: []any{"r", "r", "a", "c", "e", "c", "a"},
+			},
+			{
+				data:         []any{"a", "b", "c", "d"},
+				expectedHead: "d",
+				expectedList: []any{"d", "a", "b", "c"},
+			},
+		}
+
+		for _, tc := range testCases {
+			t.Run(fmt.Sprintf("should have new head as %v and list as %v for %v", tc.expectedHead, tc.expectedList, tc.data), func(t *testing.T) {
+				linkedList := New[any]()
+				for _, d := range tc.data {
+					linkedList.Append(d)
+				}
+				linkedList.MoveTailToHead()
+
+				actualHead := linkedList.Head
+				assert.Equal(t, tc.expectedHead, actualHead.Data)
+
+				actualData := []any{}
+				for actualHead != nil {
+					actualData = append(actualData, actualHead.Data)
+					actualHead = actualHead.Next
+				}
+
+				assert.ElementsMatch(t, tc.expectedList, actualData)
+			})
+		}
+	})
+
 }
 
 func BenchmarkLinkedList(b *testing.B) {
