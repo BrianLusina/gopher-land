@@ -10,10 +10,11 @@ import (
 type LinkedList[T comparable] struct {
 	// Head of the list
 	Head *list.Node[T]
+	size int
 }
 
-// NewLinkedList creates a new Singly LinkedList
-func NewLinkedList[T comparable]() *LinkedList[T] {
+// New creates a new Singly LinkedList
+func New[T comparable]() *LinkedList[T] {
 	return new(LinkedList[T])
 }
 
@@ -84,12 +85,62 @@ func (sll *LinkedList[T]) String() string {
 	return result
 }
 
-func (sll *LinkedList[T]) DeleteNode(node any) {
-	panic("implement me")
+func (sll *LinkedList[T]) DeleteNodeByPosition(position int) (*list.Node[T], error) {
+	if sll.Head == nil {
+		return nil, list.ErrEmptyList
+	}
+
+	current := sll.Head
+	if position == 0 {
+		sll.Head = current.Next
+		return current, nil
+	}
+
+	var prev list.Node[T]
+	count := 0
+
+	for current != nil && count != position {
+		prev = *current
+		current = current.Next
+		count += 1
+	}
+
+	if current == nil {
+		return nil, list.ErrInvalidIndex
+	}
+
+	prev.Next = current.Next
+	return current, nil
 }
 
 func (sll *LinkedList[T]) DeleteNodeByData(data any) {
-	panic("implement me")
+	current := sll.Head
+
+	// If the data we are deleting is at the head, then change the head to the next node in the linked list
+	// and return
+	if current != nil && current.Data == data {
+		sll.Head = current.Next
+		return
+	}
+
+	// this will be used to keep track of the previous node of the node to delete
+	var previous list.Node[T]
+
+	// we move the pointer down the LinkedList until we find the Node whose data matches what we want to delete
+	for current != nil && current.Data != data {
+		previous = *current
+		current = current.Next
+	}
+
+	//if there is no node that matches the condition above, we exit
+	if current == nil {
+		return
+	}
+
+	// re-assign the pointers of the nodes around the node to delete. That is, moving the previous node's next
+	// pointer to the current node's next pointer. This essentially 'deletes' the node by the data attribute
+	previous.Next = current.Next
+	return
 }
 
 func (sll *LinkedList[T]) DeleteTail() (any, error) {
@@ -169,15 +220,35 @@ func (sll *LinkedList[T]) DeleteAtBeg() any {
 	return current.Data
 }
 
-// Count counts the number of nodes in a Linked List
-func (sll *LinkedList[T]) Count() (count int) {
+// CountOccurrences counts the number of occurrences of a data in a LinkedList. If the linked list is empty(no head). 0 is returned.
+// otherwise the occurrences of the data element will be sought using the equality operator. This assumes that the
+// data element in each node already implements this operator.
+//
+// Complexity:
+// The assumption here is that n is the number of nodes in the linked list.
+//
+// Time O(n): This is because the algorithm iterates through each node in the linked list to find data values in
+// each node that equal the provided data argument in the function. This is both for the worst and best case as
+// each node in the linked list has to be checked
+//
+// Space O(1): no extra space is required other than the value being incremented for each node whose data element
+// equals the provided data argument.
+func (sll *LinkedList[T]) CountOccurrences(data T) int {
 	current := sll.Head
-
-	for current != nil {
-		count++
+	if current == nil {
+		return 0
 	}
 
-	return
+	occurrences := 0
+
+	for current != nil {
+		if current.Data == data {
+			occurrences++
+		}
+		current = current.Next
+	}
+
+	return occurrences
 }
 
 // Display prints out the elements of the list.
@@ -200,7 +271,7 @@ func (sll *LinkedList[T]) IsPalindrome() bool {
 	}
 
 	current := sll.Head
-	stack := []any{}
+	stack := []T{}
 
 	for current != nil {
 		stack = append(stack, current.Data)
@@ -217,6 +288,41 @@ func (sll *LinkedList[T]) IsPalindrome() bool {
 			return false
 		}
 		current = current.Next
+	}
+
+	return true
+}
+
+// IsPalindromeTwoPointers checks if a linked list is a palindrome using two pointers
+func (sll *LinkedList[T]) IsPalindromeTwoPointers() bool {
+	if sll.Head == nil {
+		return false
+	}
+
+	if sll.Head.Next == nil {
+		return true
+	}
+
+	firstPointer := sll.Head
+	lastPointer := sll.Head
+	previous := []*list.Node[T]{}
+	i := 0
+
+	for lastPointer != nil {
+		previous = append(previous, lastPointer)
+		lastPointer = lastPointer.Next
+		i++
+	}
+	lastPointer = previous[i-1]
+
+	count := 0
+
+	for count <= i/2+1 {
+		if previous[(len(previous)-count)-1].Data != firstPointer.Data {
+			return false
+		}
+		firstPointer = firstPointer.Next
+		count++
 	}
 
 	return true
@@ -321,17 +427,21 @@ func (sll *LinkedList[T]) RemoveDuplicates() *list.Node[T] {
 		return head
 	}
 
+	seen := map[T]bool{}
 	current := head
-	next := current.Next
+	var previous *list.Node[T]
 
-	for next != nil {
-		if next.Data == current.Data {
-			current.Next = current.Next.Next
-			next = current.Next
+	for current != nil {
+		_, ok := seen[current.Data]
+
+		if ok {
+			previous.Next = current
+			current = nil
 		} else {
-			current = next
-			next = current.Next
+			seen[current.Data] = true
+			previous = current
 		}
+		current = previous.Next
 	}
 	return head
 }
@@ -475,7 +585,7 @@ func (sll *LinkedList[T]) Rotate(k int) {
 		count++
 	}
 
-	// if we don't have a kth node(current is nil), k is greather than or equal to
+	// if we don't have a kth node(current is nil), k is greater than or equal to
 	// count of nodes in linked list. So no need to rotate
 	if current == nil {
 		return
@@ -625,6 +735,8 @@ func (sll *LinkedList[T]) Length() int {
 		count++
 	}
 
+	sll.size = count
+
 	return count
 }
 
@@ -704,4 +816,52 @@ func (sll *LinkedList[T]) OddEvenList() *list.Node[T] {
 	}
 	odd.Next = evenHead
 	return sll.Head
+}
+
+// InsertAfterNode inserts the data after the given prevNode if the node is in the linked list
+func (sll *LinkedList[T]) InsertAfterNode(prevNode *list.Node[T], data T) {
+	if prevNode == nil {
+		return
+	}
+
+	// node to insert
+	newNode := list.NewNode(data)
+	// set the new node's next pointer to point to the prevNode's next pointer
+	newNode.Next = prevNode.Next
+
+	// set the prevNode's next pointer to point to the new node
+	prevNode.Next = newNode
+}
+
+// MoveTailToHead moves the tail to the head of the linked list making it the new head node
+// Uses two pointers where last pointer will be moved until it points to the last node in the linked list. The second pointer, previous, will
+// point to the second last node in the linked list.
+// Complexity Analysis:
+// An assumption is made where n is the number of nodes in the linked list
+// Time: O(n) as the the pointers have to be moved through each node in the linked list until both point to the last and second last nodes in the linked list
+// Space O(1) as no extra space is incurred in the iteration. Only pointers are moved at the end to move the tail node to the head and make the second to last node
+// the new tail
+func (sll *LinkedList[T]) MoveTailToHead() {
+	if sll.Head != nil && sll.Head.Next != nil {
+		// pointer that is initially set to the head node of the linked list. This will be used to keep track of the last node in the linked list
+		last := sll.Head
+		// previous is a pointer initially set to nil that will be used to keep track of the second to last node in the linked list that will become
+		// the new tail
+		var previous *list.Node[T]
+
+		// move the last pointer to the end of the linked list while the node has a next pointer. This will set the previous pointer to last while also
+		// setting the last pointer to the last node. After this loop, the previous will be at the second last node while the last will be at the last node
+		// in the linked list
+		for last.Next != nil {
+			previous = last
+			last = last.Next
+		}
+		// set the last node's next pointer to point to the head node. Note that at this point in time this has become a circular linked list
+		last.Next = sll.Head
+		// set the previous'(second to last node) next pointer to nil, consequentially breaking the circular linked list and setting this node as the last(tail)
+		// node in the linked list
+		previous.Next = nil
+		// set the new head of the linked list as the last node
+		sll.Head = last
+	}
 }

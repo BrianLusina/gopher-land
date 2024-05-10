@@ -1,6 +1,7 @@
 package singlylinkedlist
 
 import (
+	"fmt"
 	"gopherland/datastructures/list"
 	"gopherland/pkg/utils"
 	"testing"
@@ -10,16 +11,160 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+func TestLinkedList(t *testing.T) {
+	t.Run("Is Palindrome", func(t *testing.T) {
+		type testCase[T any] struct {
+			data     []T
+			expected bool
+		}
+
+		var testCases = []testCase[any]{
+			{
+				data:     []any{"r", "a", "c", "e", "c", "a", "r"},
+				expected: true,
+			},
+		}
+
+		t.Run("using a stack", func(t *testing.T) {
+			for _, tc := range testCases {
+				t.Run(fmt.Sprintf("should return %v for %v", tc.expected, tc.data), func(t *testing.T) {
+					linkedList := New[any]()
+					for _, d := range tc.data {
+						linkedList.Append(d)
+					}
+					actual := linkedList.IsPalindrome()
+					if actual != tc.expected {
+						t.Fail()
+						t.Fatalf("expected isPalindrome() for data=%v to be %v, got %v", tc.data, tc.expected, actual)
+					}
+				})
+			}
+		})
+
+		t.Run("using two pointers", func(t *testing.T) {
+			for _, tc := range testCases {
+				t.Run(fmt.Sprintf("should return %v for %v", tc.expected, tc.data), func(t *testing.T) {
+					linkedList := New[any]()
+					for _, d := range tc.data {
+						linkedList.Append(d)
+					}
+					actual := linkedList.IsPalindromeTwoPointers()
+					if actual != tc.expected {
+						t.Fail()
+						t.Fatalf("expected IsPalindromeTwoPointers() for data=%v to be %v, got %v", tc.data, tc.expected, actual)
+					}
+				})
+			}
+		})
+	})
+
+	t.Run("Move Tail to Head", func(t *testing.T) {
+		type testCase[T any] struct {
+			data         []T
+			expectedHead T
+			expectedList []T
+		}
+
+		var testCases = []testCase[any]{
+			{
+				data:         []any{"r", "a", "c", "e", "c", "a", "r"},
+				expectedHead: "r",
+				expectedList: []any{"r", "r", "a", "c", "e", "c", "a"},
+			},
+			{
+				data:         []any{"a", "b", "c", "d"},
+				expectedHead: "d",
+				expectedList: []any{"d", "a", "b", "c"},
+			},
+		}
+
+		for _, tc := range testCases {
+			t.Run(fmt.Sprintf("should have new head as %v and list as %v for %v", tc.expectedHead, tc.expectedList, tc.data), func(t *testing.T) {
+				linkedList := New[any]()
+				for _, d := range tc.data {
+					linkedList.Append(d)
+				}
+				linkedList.MoveTailToHead()
+
+				actualHead := linkedList.Head
+				assert.Equal(t, tc.expectedHead, actualHead.Data)
+
+				actualData := []any{}
+				for actualHead != nil {
+					actualData = append(actualData, actualHead.Data)
+					actualHead = actualHead.Next
+				}
+
+				assert.ElementsMatch(t, tc.expectedList, actualData)
+			})
+		}
+	})
+
+}
+
+func BenchmarkLinkedList(b *testing.B) {
+	if testing.Short() {
+		b.Skip()
+	}
+
+	b.Run("Is Palindrome", func(b *testing.B) {
+		type testCase[T any] struct {
+			data     []T
+			expected bool
+		}
+
+		var testCases = []testCase[any]{
+			{
+				data:     []any{"r", "a", "c", "e", "c", "a", "r"},
+				expected: true,
+			},
+		}
+
+		b.Run("using a stack", func(b *testing.B) {
+			for _, tc := range testCases {
+				b.Run(fmt.Sprintf("should return %v for %v", tc.expected, tc.data), func(b *testing.B) {
+					linkedList := New[any]()
+					for _, d := range tc.data {
+						linkedList.Append(d)
+					}
+					actual := linkedList.IsPalindrome()
+					if actual != tc.expected {
+						b.Fail()
+						b.Fatalf("expected isPalindrome() for data=%v to be %v, got %v", tc.data, tc.expected, actual)
+					}
+				})
+			}
+		})
+
+		b.Run("using two pointers", func(b *testing.B) {
+			for _, tc := range testCases {
+				b.Run(fmt.Sprintf("should return %v for %v", tc.expected, tc.data), func(b *testing.B) {
+					linkedList := New[any]()
+					for _, d := range tc.data {
+						linkedList.Append(d)
+					}
+					actual := linkedList.IsPalindromeTwoPointers()
+					if actual != tc.expected {
+						b.Fail()
+						b.Fatalf("expected isPalindrome() for data=%v to be %v, got %v", tc.data, tc.expected, actual)
+					}
+				})
+			}
+		})
+	})
+}
+
 func TestSinglyLinkedList(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "SinglyLinkedList Suite")
 }
 
 var _ = Describe("SinglyLinkedList", func() {
+	t := GinkgoT()
 	Context("Prepend ->Append -> AddAtPosition -> GetNthNode -> DeleteAtPosition -> GetNthNode operations", func() {
 
 		It("should handle \"Prepend(1)\" -> \"Append(3)\" -> \"AddAtPosition(1,2)\" -> \"GetNthNode(1)\" -> \"DeleteAtPosition(1)\" -> \"GetNthNode(1)\"", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 			sll.Prepend(1)
 			sll.Append(3)
 			// linked list: 1 -> 3
@@ -40,7 +185,7 @@ var _ = Describe("SinglyLinkedList", func() {
 		})
 
 		It("Prepend(7) -> Prepend(2) -> Prepend(1) -> AddAtPosition(3, 0) -> DeleteAtPosition(2) -> Prepend(6) -> Append(4) -> GetNtNode(4) -> Prepend(4) -> AddAtPosition(5, 0) -> Prepend(6) ", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 
 			sll.Prepend(7)
 			Expect(sll.Head.Data).To(Equal(7))
@@ -86,7 +231,7 @@ var _ = Describe("SinglyLinkedList", func() {
 		})
 
 		It("Prepend(7) -> Append(7) -> Prepend(9) -> Append(8) -> Prepend(6) -> Prepend(0) -> GetNthNode(5)-> Prepend(0) -> GetNthNode(2) -> GetNthNode(5) -> Append(4)", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 
 			sll.Prepend(7)
 			Expect(sll.Head.Data).To(Equal(7))
@@ -138,7 +283,7 @@ var _ = Describe("SinglyLinkedList", func() {
 		})
 
 		It("Prepend(2) -> DeleteAtPosition(1) -> Prepend(2) -> Prepend(7) -> Prepend(3) -> Prepend(2) -> Prepend(5)-> Append(5) -> GetNthNode(5) -> DeleteAtPosition(6) -> DeleteAtPosition(4)", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 
 			sll.Prepend(2)
 			Expect(sll.Head.Data).To(Equal(2))
@@ -197,7 +342,7 @@ var _ = Describe("SinglyLinkedList", func() {
 		})
 
 		It("Prepend(4) -> GetNthNode(1) -> Prepend(1) -> Prepend(5) -> DeleteAtPosition(3) -> Prepend(7) -> GetNthNode(3)-> GetNthNode(3) -> GetNthNode(3) -> Prepend(1) -> DeleteAtPosition(4)", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 
 			sll.Prepend(4)
 			Expect(sll.Head.Data).To(Equal(4))
@@ -256,7 +401,7 @@ var _ = Describe("SinglyLinkedList", func() {
 		})
 
 		It("Prepend(5) -> AddAtPosition(1, 2) -> GetNthNode(1) -> Prepend(6) -> Append(2) -> GetNthNode(3)-> Append(1) -> GetNthNode(5) -> Prepend(2) -> GetNthNode(2) -> Prepend(6)", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 
 			sll.Prepend(5)
 			Expect(sll.Head.Data).To(Equal(5))
@@ -318,7 +463,7 @@ var _ = Describe("SinglyLinkedList", func() {
 
 	Context("GetMiddleNode", func() {
 		It("should return nil for an empty list", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 			val, err := sll.GetMiddleNode()
 
 			Expect(err).ToNot(BeNil())
@@ -328,7 +473,7 @@ var _ = Describe("SinglyLinkedList", func() {
 		})
 
 		It("should return 3 for linked list of 1 -> 2 -> 3 -> 4 -> 5", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 			sll.Append(1)
 			sll.Append(2)
 			sll.Append(3)
@@ -343,7 +488,7 @@ var _ = Describe("SinglyLinkedList", func() {
 		})
 
 		It("should return 7 for linked list of 2->4->6->7->5->1", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 			sll.Append(2)
 			sll.Append(4)
 			sll.Append(6)
@@ -361,7 +506,7 @@ var _ = Describe("SinglyLinkedList", func() {
 
 	Context("Reverse", func() {
 		It("should reverse a non empty linked list 1 -> 2 -> 3 -> 4 -> 5", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 			sll.Append(1)
 			sll.Append(2)
 			sll.Append(3)
@@ -374,7 +519,7 @@ var _ = Describe("SinglyLinkedList", func() {
 		})
 
 		It("should reverse linked list of 2->4->6->7->5->1", func() {
-			sll := NewLinkedList[int]()
+			sll := New[int]()
 			sll.Append(2)
 			sll.Append(4)
 			sll.Append(6)
@@ -388,53 +533,9 @@ var _ = Describe("SinglyLinkedList", func() {
 		})
 	})
 
-	Context("Rotate", func() {
-		It("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 when k=0", func() {
-			sll := NewLinkedList[int]()
-			sll.Append(10)
-			sll.Append(20)
-			sll.Append(30)
-			sll.Append(40)
-			sll.Append(50)
-			sll.Append(60)
-
-			sll.Rotate(0)
-
-			Expect(sll.Head.Data).To(Equal(10))
-		})
-
-		It("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=7 positions", func() {
-			sll := NewLinkedList[int]()
-			sll.Append(10)
-			sll.Append(20)
-			sll.Append(30)
-			sll.Append(40)
-			sll.Append(50)
-			sll.Append(60)
-
-			sll.Rotate(7)
-
-			Expect(sll.Head.Data).To(Equal(10))
-		})
-
-		It("should rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=4 positions", func() {
-			sll := NewLinkedList[int]()
-			sll.Append(10)
-			sll.Append(20)
-			sll.Append(30)
-			sll.Append(40)
-			sll.Append(50)
-			sll.Append(60)
-
-			sll.Rotate(4)
-
-			Expect(sll.Head.Data).To(Equal(50))
-		})
-	})
-
 	Context("KthToLastNode", func() {
 		When("LinkedList is a->b->c->d", func() {
-			sll := NewLinkedList[string]()
+			sll := New[string]()
 			sll.Append("a")
 			sll.Append("b")
 			sll.Append("c")
@@ -443,7 +544,7 @@ var _ = Describe("SinglyLinkedList", func() {
 			It("should return d for k = 1", func() {
 				expected := list.NewNode("d")
 				actual, err := sll.KthToLastNode(1)
-				assert.NoError(GinkgoT(), err)
+				assert.NoError(t, err)
 
 				Expect(actual).To(Equal(expected))
 			})
@@ -451,7 +552,7 @@ var _ = Describe("SinglyLinkedList", func() {
 			It("should return c for k = 2", func() {
 				expected := list.NewNode("c")
 				actual, err := sll.KthToLastNode(2)
-				assert.NoError(GinkgoT(), err)
+				assert.NoError(t, err)
 
 				Expect(actual.Data).To(Equal(expected.Data))
 			})
@@ -459,7 +560,7 @@ var _ = Describe("SinglyLinkedList", func() {
 			It("should return b for k = 3", func() {
 				expected := list.NewNode("b")
 				actual, err := sll.KthToLastNode(3)
-				assert.NoError(GinkgoT(), err)
+				assert.NoError(t, err)
 
 				Expect(actual.Data).To(Equal(expected.Data))
 			})
@@ -467,15 +568,15 @@ var _ = Describe("SinglyLinkedList", func() {
 			It("should return a for k = 4", func() {
 				expected := list.NewNode("a")
 				actual, err := sll.KthToLastNode(4)
-				assert.NoError(GinkgoT(), err)
+				assert.NoError(t, err)
 
 				Expect(actual.Data).To(Equal(expected.Data))
 			})
 
 			It("should return an error for k = 5", func() {
 				actual, err := sll.KthToLastNode(5)
-				assert.Error(GinkgoT(), err)
-				assert.Nil(GinkgoT(), actual)
+				assert.Error(t, err)
+				assert.Nil(t, actual)
 			})
 		})
 	})
@@ -485,7 +586,7 @@ var _ = Describe("SinglyLinkedList", func() {
 		Context("Using 2 Passes", func() {
 			When("linked list is [1,3,4,7,1,2,6]", func() {
 				values := []int{1, 3, 4, 7, 1, 2, 6}
-				linkedList := NewLinkedList[int]()
+				linkedList := New[int]()
 				for _, v := range values {
 					linkedList.Append(v)
 				}
@@ -495,13 +596,13 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 7 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 
 			When("linked list is [1,2,3,4]", func() {
 				values := []int{1, 2, 3, 4}
-				linkedList := NewLinkedList[int]()
+				linkedList := New[int]()
 				for _, v := range values {
 					linkedList.Append(v)
 				}
@@ -511,13 +612,13 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 3 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 
 			When("linked list is [2, 1]", func() {
 				values := []int{2, 1}
-				linkedList := NewLinkedList[int]()
+				linkedList := New[int]()
 				for _, v := range values {
 					linkedList.Append(v)
 				}
@@ -527,7 +628,7 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 1 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 		})
@@ -535,7 +636,7 @@ var _ = Describe("SinglyLinkedList", func() {
 		Context("Using 2 Pointers", func() {
 			When("linked list is [1,3,4,7,1,2,6]", func() {
 				values := []int{1, 3, 4, 7, 1, 2, 6}
-				linkedList := NewLinkedList[int]()
+				linkedList := New[int]()
 				for _, v := range values {
 					linkedList.Append(v)
 				}
@@ -545,13 +646,13 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 7 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle2Pointers()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 
 			When("linked list is [1,2,3,4]", func() {
 				values := []int{1, 2, 3, 4}
-				linkedList := NewLinkedList[int]()
+				linkedList := New[int]()
 				for _, v := range values {
 					linkedList.Append(v)
 				}
@@ -561,13 +662,13 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 3 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle2Pointers()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 
 			When("linked list is [2, 1]", func() {
 				values := []int{2, 1}
-				linkedList := NewLinkedList[int]()
+				linkedList := New[int]()
 				for _, v := range values {
 					linkedList.Append(v)
 				}
@@ -577,7 +678,7 @@ var _ = Describe("SinglyLinkedList", func() {
 				It("should return 1 as the middle node and delete it from linked list", func() {
 					actual := linkedList.DeleteMiddle2Pointers()
 
-					assert.Equal(GinkgoT(), expected.Data, actual.Data)
+					assert.Equal(t, expected.Data, actual.Data)
 				})
 			})
 		})
@@ -585,7 +686,7 @@ var _ = Describe("SinglyLinkedList", func() {
 
 	Context("OddEventList", func() {
 		runTest := func(data, expected []int) {
-			linkedList := NewLinkedList[int]()
+			linkedList := New[int]()
 			for _, v := range data {
 				linkedList.Append(v)
 			}
@@ -599,10 +700,10 @@ var _ = Describe("SinglyLinkedList", func() {
 			}
 
 			zipped, err := utils.Zip[int, int](actualNodes, expected)
-			assert.NoError(GinkgoT(), err)
+			assert.NoError(t, err)
 
 			for _, zipPair := range zipped {
-				assert.Equal(GinkgoT(), zipPair.A, zipPair.B)
+				assert.Equal(t, zipPair.A, zipPair.B)
 			}
 		}
 
@@ -624,4 +725,93 @@ var _ = Describe("SinglyLinkedList", func() {
 			})
 		})
 	})
+
+	Context("Swap", func() {
+		type testCase[T comparable] struct {
+			data     []T
+			expected []T
+			nodeOne  T
+			nodeTwo  T
+			runTest  func(data, expected []T, nodeOne, nodeTwo T)
+		}
+
+		testCases := []testCase[string]{
+			{
+				data:     []string{"A", "B", "C", "D"},
+				expected: []string{"A", "C", "B", "D"},
+				nodeOne:  "B",
+				nodeTwo:  "C",
+				runTest: func(data, expected []string, nodeOne, nodeTwo string) {
+					linkedList := New[string]()
+					for _, v := range data {
+						linkedList.Append(v)
+					}
+
+					linkedList.SwapNodes(nodeOne, nodeTwo)
+					actualNodes := []string{}
+					actualHead := linkedList.Head
+
+					for actualHead != nil {
+						actualNodes = append(actualNodes, actualHead.Data)
+						actualHead = actualHead.Next
+					}
+
+					zipped, err := utils.Zip(actualNodes, expected)
+					assert.NoError(t, err)
+
+					for _, zipPair := range zipped {
+						assert.Equal(t, zipPair.A, zipPair.B)
+					}
+				},
+			},
+		}
+
+		for _, tc := range testCases {
+			When(fmt.Sprintf("linked list is %v", tc.data), func() {
+				It(fmt.Sprintf("should return %v as the new list", tc.expected), func() {
+					tc.runTest(tc.data, tc.expected, tc.nodeOne, tc.nodeTwo)
+				})
+			})
+		}
+	})
+
+	Context("Remove Duplicates", func() {
+		type testCase[T comparable] struct {
+			data     []T
+			expected []T
+			runTest  func(data, expected []T)
+		}
+
+		testCases := []testCase[string]{
+			{
+				data:     []string{"A", "B", "C", "D", "A"},
+				expected: []string{"A", "B", "C", "D"},
+				runTest: func(data, expected []string) {
+					linkedList := New[string]()
+					for _, v := range data {
+						linkedList.Append(v)
+					}
+
+					actualHead := linkedList.RemoveDuplicates()
+					actualNodes := []string{}
+
+					for actualHead != nil {
+						actualNodes = append(actualNodes, actualHead.Data)
+						actualHead = actualHead.Next
+					}
+
+					assert.ElementsMatch(t, expected, actualNodes)
+				},
+			},
+		}
+
+		for _, tc := range testCases {
+			When(fmt.Sprintf("linked list is %v", tc.data), func() {
+				It(fmt.Sprintf("should return %v as the new list", tc.expected), func() {
+					tc.runTest(tc.data, tc.expected)
+				})
+			})
+		}
+	})
+
 })
