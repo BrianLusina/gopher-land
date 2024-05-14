@@ -1,6 +1,8 @@
 package list
 
-import "errors"
+import (
+	"errors"
+)
 
 var (
 	ErrEmptyList    = errors.New("list is empty")
@@ -9,8 +11,14 @@ var (
 
 // LinkedList is an interface for a linked list
 type LinkedList[T comparable] interface {
+	// HeadNode retrieves the Head node of a linked list
+	HeadNode() *Node[T]
+
+	// All can be used to construct an iterator
+	All(yield func(T) bool)
+
 	// Append adds a new element to the end of the list
-	Append(interface{})
+	Append(T)
 
 	// Prepend adds a new element to the beginning of the list
 	Prepend(interface{})
