@@ -7,38 +7,38 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-type testCaseAppend[T any] struct {
-	data       []T
-	appendData T
-	expected   []T
+type testCaseAppendPrepend[T any] struct {
+	initialData []T
+	data        T
+	expected    []T
 }
 
-var testCasesAppend = []testCaseAppend[any]{
+var testCasesAppend = []testCaseAppendPrepend[any]{
 	{
-		data:       []any{1, 2, 3, 4, 5, 6},
-		appendData: 7,
-		expected:   []any{1, 2, 3, 4, 5, 6, 7},
+		initialData: []any{1, 2, 3, 4, 5, 6},
+		data:        7,
+		expected:    []any{1, 2, 3, 4, 5, 6, 7},
 	},
 }
 
 // TestAppend tests adding a new data item to a circular linked list
 func TestAppend(t *testing.T) {
 	for _, tc := range testCasesAppend {
-		testName := fmt.Sprintf("Initial CircularLinkedList of data={%v} should append(%v) to get expected={%v}", tc.data, tc.appendData, tc.expected)
+		testName := fmt.Sprintf("Initial CircularLinkedList of data={%v} should append(%v) to get expected={%v}", tc.initialData, tc.data, tc.expected)
 		t.Run(testName, func(t *testing.T) {
 			linkedList := New[any]()
-			for _, data := range tc.data {
+			for _, data := range tc.initialData {
 				linkedList.Append(data)
 			}
 			actualHead := linkedList.HeadNode()
 			assert.NotNil(t, actualHead)
-			assert.Equal(t, tc.data[0], actualHead.Data)
+			assert.Equal(t, tc.initialData[0], actualHead.Data)
 
 			// append new data
-			linkedList.Append(tc.appendData)
+			linkedList.Append(tc.data)
 
 			actualHead2 := linkedList.HeadNode()
-			assert.Equal(t, tc.data[0], actualHead2.Data)
+			assert.Equal(t, tc.initialData[0], actualHead2.Data)
 
 			actualData := []any{}
 			current := actualHead2
@@ -63,21 +63,104 @@ func BenchmarkAppend(b *testing.B) {
 	}
 
 	for _, tc := range testCasesAppend {
-		testName := fmt.Sprintf("Initial CircularLinkedList of data={%v} should append(%v) to get expected={%v}", tc.data, tc.appendData, tc.expected)
+		testName := fmt.Sprintf("Initial CircularLinkedList of data={%v} should append(%v) to get expected={%v}", tc.initialData, tc.data, tc.expected)
 		b.Run(testName, func(t *testing.B) {
 			linkedList := New[any]()
-			for _, data := range tc.data {
+			for _, data := range tc.initialData {
 				linkedList.Append(data)
 			}
 			actualHead := linkedList.HeadNode()
 			assert.NotNil(t, actualHead)
-			assert.Equal(t, tc.data[0], actualHead.Data)
+			assert.Equal(t, tc.initialData[0], actualHead.Data)
 
 			// append new data
-			linkedList.Append(tc.appendData)
+			linkedList.Append(tc.data)
 
 			actualHead2 := linkedList.HeadNode()
-			assert.Equal(t, tc.data[0], actualHead2.Data)
+			assert.Equal(t, tc.initialData[0], actualHead2.Data)
+
+			actualData := []any{}
+			current := actualHead2
+
+			for current != nil {
+				actualData = append(actualData, current.Data)
+
+				if current.Next == actualHead2 {
+					break
+				}
+				current = current.Next
+			}
+
+			assert.ElementsMatch(t, tc.expected, actualData)
+		})
+	}
+}
+
+var testCasesPrepend = []testCaseAppendPrepend[any]{
+	{
+		initialData: []any{1, 2, 3, 4, 5, 6},
+		data:        7,
+		expected:    []any{7, 1, 2, 3, 4, 5, 6},
+	},
+}
+
+// TestPrepend tests adding a new data item to the beginning of a circular linked list
+func TestPrepend(t *testing.T) {
+	for _, tc := range testCasesPrepend {
+		testName := fmt.Sprintf("Initial CircularLinkedList of data={%v} should prepend(%v) to get expected={%v}", tc.initialData, tc.data, tc.expected)
+		t.Run(testName, func(t *testing.T) {
+			linkedList := New[any]()
+			for _, data := range tc.initialData {
+				linkedList.Append(data)
+			}
+			actualHead := linkedList.HeadNode()
+			assert.NotNil(t, actualHead)
+			assert.Equal(t, tc.initialData[0], actualHead.Data)
+
+			// prepend new data
+			linkedList.Prepend(tc.data)
+
+			actualHead2 := linkedList.HeadNode()
+			assert.Equal(t, tc.expected[0], actualHead2.Data)
+
+			actualData := []any{}
+			current := actualHead2
+
+			for current != nil {
+				actualData = append(actualData, current.Data)
+
+				if current.Next == actualHead2 {
+					break
+				}
+				current = current.Next
+			}
+
+			assert.ElementsMatch(t, tc.expected, actualData)
+		})
+	}
+}
+
+func BenchmarkPrepend(b *testing.B) {
+	if testing.Short() {
+		b.Skipf("Skipping benchmark tests in short mode")
+	}
+
+	for _, tc := range testCasesPrepend {
+		testName := fmt.Sprintf("Initial CircularLinkedList of data={%v} should prepend(%v) to get expected={%v}", tc.initialData, tc.data, tc.expected)
+		b.Run(testName, func(t *testing.B) {
+			linkedList := New[any]()
+			for _, data := range tc.initialData {
+				linkedList.Append(data)
+			}
+			actualHead := linkedList.HeadNode()
+			assert.NotNil(t, actualHead)
+			assert.Equal(t, tc.initialData[0], actualHead.Data)
+
+			// append new data
+			linkedList.Prepend(tc.data)
+
+			actualHead2 := linkedList.HeadNode()
+			assert.Equal(t, tc.expected[0], actualHead2.Data)
 
 			actualData := []any{}
 			current := actualHead2

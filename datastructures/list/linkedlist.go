@@ -21,7 +21,7 @@ type LinkedList[T comparable] interface {
 	Append(T)
 
 	// Prepend adds a new element to the beginning of the list
-	Prepend(interface{})
+	Prepend(T)
 
 	// Pop removes the last element of the list and returns it
 	Pop() (interface{}, error)

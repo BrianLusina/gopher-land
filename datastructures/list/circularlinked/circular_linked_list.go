@@ -54,6 +54,23 @@ func (c *CircularLinkedList[T]) Append(data T) {
 	}
 }
 
+// Prepend adds a new node to the circular linked list making it the head of the list
+func (c *CircularLinkedList[T]) Prepend(data T) {
+	newNode := list.NewNode(data)
+	current := c.Head
+	newNode.Next = c.Head
+
+	if c.Head == nil {
+		newNode.Next = newNode
+	} else {
+		for current.Next != c.Head {
+			current = current.Next
+		}
+		current.Next = newNode
+	}
+	c.Head = newNode
+}
+
 // Array implements list.LinkedList.
 func (c *CircularLinkedList[T]) Array() []interface{} {
 	panic("unimplemented")
@@ -111,11 +128,6 @@ func (c *CircularLinkedList[T]) OddEvenList() *list.Node[T] {
 
 // Pop implements list.LinkedList.
 func (c *CircularLinkedList[T]) Pop() (interface{}, error) {
-	panic("unimplemented")
-}
-
-// Prepend implements list.LinkedList.
-func (c *CircularLinkedList[T]) Prepend(interface{}) {
 	panic("unimplemented")
 }
 
