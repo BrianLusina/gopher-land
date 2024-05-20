@@ -41,7 +41,7 @@ type LinkedList[T comparable] interface {
 
 	DeleteNode(node interface{})
 
-	DeleteNodeByData(data interface{})
+	DeleteNodeByKey(key any)
 
 	DeleteMiddle() (any, error)
 

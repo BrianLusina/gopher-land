@@ -91,9 +91,56 @@ func (c *CircularLinkedList[T]) DeleteNode(node interface{}) {
 	panic("unimplemented")
 }
 
-// DeleteNodeByData implements list.LinkedList.
-func (c *CircularLinkedList[T]) DeleteNodeByData(data interface{}) {
-	panic("unimplemented")
+// DeleteNodeByKey deletes a given node by a key
+func (c *CircularLinkedList[T]) DeleteNodeByKey(key any) {
+	if c.Head != nil {
+		// if the head node's key matches the key we are looking for
+		if c.Head.Key() == key {
+			// set the current pointer to the head node. This will be used to track the last node as the pointer
+			// moves through the list
+			current := c.Head
+			// move through the list until we reach the pointer that points back to the head node.
+			for current.Next != c.Head {
+				current = current.Next
+			}
+
+			// if the head node equals the next node, that means that this linked list has a length of 1, i.e. just 1
+			// node. The head node can be set to None
+			if c.Head == c.Head.Next {
+				c.Head = nil
+			} else {
+				// set the current pointer to point to the current head's next
+				current.Next = c.Head.Next
+				// set the head to now become the next node
+				c.Head = c.Head.Next
+			}
+		} else {
+			// we have a situation where the head node's key is not equal to the head node, therefore, we need to
+			// traverse the list to find the first node whose key matches the given key. Setting current to the head
+			// node acts as the pointer that we keep track of
+			current := c.Head
+			// previous pointer helps to keep track of the previous node as we traverse, it is initially set to None
+			var previous *list.Node[T]
+
+			// we iterate through the linked list as long as the next pointer of the current head is not equal to
+			// the head node. This is to avoid an infinite loop as this is a circular linked list.
+			for current.Next != c.Head {
+				// we set the previous pointer to the current node to keep track of the node before we reset the
+				// current pointer to the next node
+				previous = current
+				// move the current pointer to the next node
+				current = current.Next
+				// if the current node's key is equal to the key we are searching for
+				if current.Key() == key {
+					// we set the previous node's next pointer to point to the current node's next pointer.
+					// Essentially removing the current node from the list
+					previous.Next = current.Next
+					// set the current node to the current's next node
+					current = current.Next
+				}
+			}
+		}
+	}
 }
 
 // DeleteTail implements list.LinkedList.
