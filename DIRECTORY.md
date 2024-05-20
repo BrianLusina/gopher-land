@@ -643,6 +643,7 @@
       * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/doublylinked/node.go)
     * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/linkedlist.go)
     * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/node.go)
+    * [Options](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/options.go)
     * Singlylinked
       * [Linked List Rotate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linked_list_rotate_test.go)
       * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linkedlist.go)
