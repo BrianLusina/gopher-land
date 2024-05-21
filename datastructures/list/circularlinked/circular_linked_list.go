@@ -1,6 +1,8 @@
 package circularlinked
 
-import "gopherland/datastructures/list"
+import (
+	"gopherland/datastructures/list"
+)
 
 // CircularLinkedList is a circular linked list structure
 type CircularLinkedList[T comparable] struct {
@@ -143,6 +145,47 @@ func (c *CircularLinkedList[T]) DeleteNodeByKey(key any) {
 	}
 }
 
+/**
+* SplitList splits a circular linked list into two halves and returns the two halves in a tuple. If the size is 0, i.e. no
+* nodes are in this linked list, then it returns None. If the size is 1, then the first portion of the tuple, at
+* index 0 will be the head of this circular linked list, while the second portion will be None.
+ */
+func (c *CircularLinkedList[T]) SplitList() (*CircularLinkedList[T], *CircularLinkedList[T]) {
+	size := c.Length()
+
+	if size == 0 {
+		return nil, nil
+	}
+
+	if size == 1 {
+		return c, nil
+	}
+
+	mid := size / 2
+	count := 0
+
+	var previous *list.Node[T]
+	current := c.Head
+
+	for current != nil && count < mid {
+		count++
+		previous = current
+		current = current.Next
+	}
+
+	previous.Next = c.Head
+
+	secondList := &CircularLinkedList[T]{}
+	for current.Next != c.Head {
+		secondList.Append(current.Data)
+		current = current.Next
+	}
+
+	secondList.Append(current.Data)
+
+	return c, secondList
+}
+
 // DeleteTail implements list.LinkedList.
 func (c *CircularLinkedList[T]) DeleteTail() (node interface{}, err error) {
 	panic("unimplemented")
@@ -160,7 +203,16 @@ func (c *CircularLinkedList[T]) GetNthNode(position int) (node list.Node[T], err
 
 // Length implements list.LinkedList.
 func (c *CircularLinkedList[T]) Length() int {
-	panic("unimplemented")
+	current := c.Head
+	count := 0
+	for current != nil {
+		count++
+		current = current.Next
+		if current == c.Head {
+			break
+		}
+	}
+	return count
 }
 
 // MaximumPairSum implements list.LinkedList.
