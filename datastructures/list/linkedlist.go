@@ -39,7 +39,7 @@ type LinkedList[T comparable] interface {
 	// GetMiddleNode returns the middle node of the list
 	GetMiddleNode() (node Node[T], err error)
 
-	DeleteNode(node interface{})
+	DeleteNode(node Node[T])
 
 	DeleteNodeByKey(key any)
 

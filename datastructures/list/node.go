@@ -34,3 +34,11 @@ func (n *Node[T]) Key() any {
 func (n *Node[T]) String() string {
 	return fmt.Sprintf("Node(data=%v, key=%v)", n.Data, n.key)
 }
+
+// Compare compares this node to another node
+func (n *Node[T]) Compare(other *Node[T]) bool {
+	if n.key == other.key || n.Data == other.Data {
+		return true
+	}
+	return false
+}

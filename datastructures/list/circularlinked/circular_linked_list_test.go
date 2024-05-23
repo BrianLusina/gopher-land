@@ -2,6 +2,7 @@ package circularlinked
 
 import (
 	"fmt"
+	"gopherland/datastructures/list"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -249,6 +250,97 @@ func BenchmarkDeleteNodeByKey(b *testing.B) {
 			linkedList.DeleteNodeByKey(tc.key)
 
 			actualHead2 := linkedList.HeadNode()
+			assert.Equal(t, tc.expected[0], actualHead2.Data)
+
+			actualData := []any{}
+			current := actualHead2
+
+			for current != nil {
+				actualData = append(actualData, current.Data)
+
+				if current.Next == actualHead2 {
+					break
+				}
+				current = current.Next
+			}
+
+			assert.ElementsMatch(t, tc.expected, actualData)
+		})
+	}
+}
+
+type testCaseDeleteNode[T comparable] struct {
+	data     []T
+	node     list.Node[T]
+	expected []T
+}
+
+var testCasesDeleteNode = []testCaseDeleteNode[any]{
+	{
+		data: []any{1, 2, 3, 4, 5, 6},
+		node: list.Node[any]{
+			Data: 4,
+		},
+		expected: []any{1, 2, 3, 5, 6},
+	},
+}
+
+// TestDeleteNode tests deleting a node
+func TestDeleteNode(t *testing.T) {
+	for _, tc := range testCasesDeleteNode {
+		testName := fmt.Sprintf("Initial CircularLinkedList of data={%v} should delete (%v) to get expected={%v}", tc.data, tc.node, tc.expected)
+		t.Run(testName, func(t *testing.T) {
+			circularLinkedList := New[any]()
+			for _, data := range tc.data {
+				circularLinkedList.Append(data)
+			}
+			actualHead := circularLinkedList.HeadNode()
+			assert.NotNil(t, actualHead)
+			assert.Equal(t, tc.data[0], actualHead.Data)
+
+			// prepend new data
+			circularLinkedList.DeleteNode(tc.node)
+
+			actualHead2 := circularLinkedList.HeadNode()
+			assert.Equal(t, tc.expected[0], actualHead2.Data)
+
+			actualData := []any{}
+			current := actualHead2
+
+			for current != nil {
+				actualData = append(actualData, current.Data)
+
+				if current.Next == actualHead2 {
+					break
+				}
+				current = current.Next
+			}
+
+			assert.ElementsMatch(t, tc.expected, actualData)
+		})
+	}
+}
+
+func BenchmarkDeleteNode(b *testing.B) {
+	if testing.Short() {
+		b.Skipf("Skipping benchmark tests in short mode")
+	}
+
+	for _, tc := range testCasesDeleteNode {
+		testName := fmt.Sprintf("Initial CircularLinkedList of data={%v} should deleteNode(%v) to get expected={%v}", tc.data, tc.node, tc.expected)
+		b.Run(testName, func(t *testing.B) {
+			circularLinkedList := New[any]()
+			for _, data := range tc.data {
+				circularLinkedList.Append(data)
+			}
+			actualHead := circularLinkedList.HeadNode()
+			assert.NotNil(t, actualHead)
+			assert.Equal(t, tc.data[0], actualHead.Data)
+
+			// append new data
+			circularLinkedList.DeleteNode(tc.node)
+
+			actualHead2 := circularLinkedList.HeadNode()
 			assert.Equal(t, tc.expected[0], actualHead2.Data)
 
 			actualData := []any{}
