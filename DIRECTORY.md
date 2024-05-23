@@ -92,6 +92,9 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/isogram/cases_test.go)
     * [Isogram](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/isogram/isogram.go)
     * [Isogram Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/isogram/isogram_test.go)
+  * Josephuscircle
+    * [Josephus Circle](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/josephuscircle/josephus_circle.go)
+    * [Josephus Circle Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/josephuscircle/josephus_circle_test.go)
   * Largest-Series-Product
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/largest-series-product/cases_test.go)
     * [Largest Series Product](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/largest-series-product/largest_series_product.go)
@@ -631,6 +634,11 @@
       * [Peeking Iterator](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/iterator/peeking/peeking_iterator.go)
       * [Peeking Iterator Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/iterator/peeking/peeking_iterator_test.go)
   * List
+    * Circularlinked
+      * [Circular Linked List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/circularlinked/circular_linked_list.go)
+      * [Circular Linked List Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/circularlinked/circular_linked_list_test.go)
+      * [Doc](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/circularlinked/doc.go)
+      * [Options](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/circularlinked/options.go)
     * Doublylinked
       * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/doublylinked/linkedlist.go)
       * [Linkedlist Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/doublylinked/linkedlist_test.go)
@@ -638,6 +646,7 @@
       * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/doublylinked/node.go)
     * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/linkedlist.go)
     * [Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/node.go)
+    * [Options](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/options.go)
     * Singlylinked
       * [Linked List Rotate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linked_list_rotate_test.go)
       * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linkedlist.go)
