@@ -92,6 +92,9 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/isogram/cases_test.go)
     * [Isogram](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/isogram/isogram.go)
     * [Isogram Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/isogram/isogram_test.go)
+  * Josephuscircle
+    * [Josephus Circle](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/josephuscircle/josephus_circle.go)
+    * [Josephus Circle Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/josephuscircle/josephus_circle_test.go)
   * Largest-Series-Product
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/largest-series-product/cases_test.go)
     * [Largest Series Product](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/largest-series-product/largest_series_product.go)
