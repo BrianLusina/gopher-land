@@ -5,192 +5,167 @@ import (
 	"gopherland/datastructures/list"
 	"testing"
 
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
+	"github.com/stretchr/testify/assert"
 )
 
-func TestDoublyLinkedList(t *testing.T) {
-	RegisterFailHandler(Fail)
-	RunSpecs(t, "DoublyLinkedList Suite")
+func TestDeleteNodeByData(t *testing.T) {
+	dll := New[int]()
+
+	dll.Append(1)
+	dll.Append(2)
+	dll.Append(3)
+	dll.Append(4)
+	dll.Append(5)
+
+	assert.Equal(t, 5, dll.Size())
+
+	dll.DeleteNodeByData(3)
+
+	assert.Equal(t, 4, dll.Size())
+
+	assert.Equal(t, "1 <-> 2 <-> 4 <-> 5 <-> nil", fmt.Sprintf("%v", dll))
 }
 
-var _ = Describe("DoublyLinkedList", func() {
+func TestPrependOperations(t *testing.T) {
+	t.Run("should successfully add a new node to a non empty list", func(t *testing.T) {
+		dll := New[int]()
 
-	Describe("Delete operations", func() {
-		Context("when deleting by node data", func() {
+		dll.Append(1)
+		dll.Append(2)
+		dll.Append(3)
+		dll.Append(4)
+		dll.Append(5)
 
-			It("should successfully delete a node by its data", func() {
-				dll := NewLinkedList[int]()
+		assert.Equal(t, 5, dll.Size())
 
-				dll.Append(1)
-				dll.Append(2)
-				dll.Append(3)
-				dll.Append(4)
-				dll.Append(5)
+		dll.Prepend(0)
 
-				Expect(dll.Size()).To(Equal(5))
+		assert.Equal(t, 6, dll.Size())
 
-				dll.DeleteNodeByData(3)
-
-				Expect(dll.Size()).To(Equal(4))
-
-				Expect(fmt.Sprintf("%v", dll)).To(Equal("1 <-> 2 <-> 4 <-> 5 <-> nil"))
-			})
-		})
-
+		assert.Equal(t, "0 <-> 1 <-> 2 <-> 3 <-> 4 <-> 5 <-> nil", fmt.Sprintf("%v", dll))
 	})
 
-	Describe("Prepend operations", func() {
+	t.Run("should successfully add a new node to the head when the node has no head", func(t *testing.T) {
+		dll := New[int]()
 
-		Context("when adding a new node by it's data to a non empty linked list", func() {
+		assert.Equal(t, 0, dll.Size())
+		dll.Prepend(1)
 
-			It("should successfully add a new node to the head", func() {
-				dll := NewLinkedList[int]()
+		assert.Equal(t, 1, dll.Size())
+		assert.Equal(t, 1, dll.Head.Data)
+	})
+}
 
-				dll.Append(1)
-				dll.Append(2)
-				dll.Append(3)
-				dll.Append(4)
-				dll.Append(5)
-
-				Expect(dll.Size()).To(Equal(5))
-
-				dll.Prepend(0)
-
-				Expect(dll.Size()).To(Equal(6))
-
-				Expect(fmt.Sprintf("%v", dll)).To(Equal("0 <-> 1 <-> 2 <-> 3 <-> 4 <-> 5 <-> nil"))
-			})
-		})
-
-		Context("when adding a new node by it's data to an empty linked list", func() {
-
-			It("should successfully add a new node to the head when the node has no head", func() {
-				dll := NewLinkedList[int]()
-
-				Expect(dll.Size()).To(Equal(0))
-
-				dll.Prepend(1)
-
-				Expect(dll.Size()).To(Equal(1))
-				Expect(dll.Head.Data).To(Equal(1))
-			})
-		})
+func TestGetMiddleNode(t *testing.T) {
+	t.Run("should return nil for an empty list", func(t *testing.T) {
+		dll := New[int]()
+		val, err := dll.GetMiddleNode()
+		assert.ErrorIs(t, err, list.ErrEmptyList)
+		assert.Nil(t, val)
 	})
 
-	Context("GetMiddleNode", func() {
-		It("should return nil for an empty list", func() {
-			dll := NewLinkedList[int]()
-			val, err := dll.GetMiddleNode()
+	t.Run("should return 3 for linked list of 1 -> 2 -> 3 -> 4 -> 5", func(t *testing.T) {
+		dll := New[int]()
+		dll.Append(1)
+		dll.Append(2)
+		dll.Append(3)
+		dll.Append(4)
+		dll.Append(5)
 
-			Expect(err).ToNot(BeNil())
-			Expect(val).To(BeNil())
+		val, err := dll.GetMiddleNode()
 
-			Expect(err).To(Equal(list.ErrEmptyList))
-		})
-
-		It("should return 3 for linked list of 1 -> 2 -> 3 -> 4 -> 5", func() {
-			dll := NewLinkedList[int]()
-			dll.Append(1)
-			dll.Append(2)
-			dll.Append(3)
-			dll.Append(4)
-			dll.Append(5)
-
-			val, err := dll.GetMiddleNode()
-
-			Expect(err).To(BeNil())
-			Expect(val).ToNot(BeNil())
-			Expect(val.Data).To(Equal(3))
-		})
-
-		It("should return 7 for linked list of 2->4->6->7->5->1", func() {
-			dll := NewLinkedList[int]()
-			dll.Append(2)
-			dll.Append(4)
-			dll.Append(6)
-			dll.Append(7)
-			dll.Append(5)
-			dll.Append(1)
-
-			val, err := dll.GetMiddleNode()
-
-			Expect(err).To(BeNil())
-			Expect(val).ToNot(BeNil())
-			Expect(val.Data).To(Equal(7))
-		})
+		assert.Nil(t, err)
+		assert.NotNil(t, val)
+		assert.Equal(t, 3, val.Data)
 	})
 
-	Context("Reverse", func() {
-		It("should reverse a non empty linked list 1 -> 2 -> 3 -> 4 -> 5", func() {
-			sll := NewLinkedList[int]()
-			sll.Append(1)
-			sll.Append(2)
-			sll.Append(3)
-			sll.Append(4)
-			sll.Append(5)
+	t.Run("should return 7 for linked list of 2->4->6->7->5->1", func(t *testing.T) {
+		dll := New[int]()
+		dll.Append(2)
+		dll.Append(4)
+		dll.Append(6)
+		dll.Append(7)
+		dll.Append(5)
+		dll.Append(1)
 
-			sll.Reverse()
+		val, err := dll.GetMiddleNode()
 
-			Expect(sll.Head.Data).To(Equal(5))
-		})
+		assert.Nil(t, err)
+		assert.NotNil(t, val)
+		assert.Equal(t, 7, val.Data)
+	})
+}
 
-		It("should reverse linked list of 2->4->6->7->5->1", func() {
-			sll := NewLinkedList[int]()
-			sll.Append(2)
-			sll.Append(4)
-			sll.Append(6)
-			sll.Append(7)
-			sll.Append(5)
-			sll.Append(1)
+func TestReverse(t *testing.T) {
+	t.Run("should reverse a non empty linked list 1 -> 2 -> 3 -> 4 -> 5", func(t *testing.T) {
+		doubly_linked_list := New[int]()
+		doubly_linked_list.Append(1)
+		doubly_linked_list.Append(2)
+		doubly_linked_list.Append(3)
+		doubly_linked_list.Append(4)
+		doubly_linked_list.Append(5)
 
-			sll.Reverse()
+		doubly_linked_list.Reverse()
 
-			Expect(sll.Head.Data).To(Equal(1))
-		})
+		assert.Equal(t, 5, doubly_linked_list.Head.Data)
 	})
 
-	Context("Rotate", func() {
-		It("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 when k=0", func() {
-			dll := NewLinkedList[int]()
-			dll.Append(10)
-			dll.Append(20)
-			dll.Append(30)
-			dll.Append(40)
-			dll.Append(50)
-			dll.Append(60)
+	t.Run("should reverse linked list of 2->4->6->7->5->1", func(t *testing.T) {
+		doubly_linked_list := New[int]()
+		doubly_linked_list.Append(2)
+		doubly_linked_list.Append(4)
+		doubly_linked_list.Append(6)
+		doubly_linked_list.Append(7)
+		doubly_linked_list.Append(5)
+		doubly_linked_list.Append(1)
 
-			dll.Rotate(0)
+		doubly_linked_list.Reverse()
 
-			Expect(dll.Head.Data).To(Equal(10))
-		})
-
-		It("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=7 positions", func() {
-			dll := NewLinkedList[int]()
-			dll.Append(10)
-			dll.Append(20)
-			dll.Append(30)
-			dll.Append(40)
-			dll.Append(50)
-			dll.Append(60)
-
-			dll.Rotate(7)
-
-			Expect(dll.Head.Data).To(Equal(10))
-		})
-
-		It("should rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=4 positions", func() {
-			dll := NewLinkedList[int]()
-			dll.Append(10)
-			dll.Append(20)
-			dll.Append(30)
-			dll.Append(40)
-			dll.Append(50)
-			dll.Append(60)
-
-			dll.Rotate(4)
-
-			Expect(dll.Head.Data).To(Equal(50))
-		})
+		assert.Equal(t, 1, doubly_linked_list.Head.Data)
 	})
-})
+}
+
+func TestRotate(t *testing.T) {
+
+	t.Run("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 when k=0", func(t *testing.T) {
+		dll := New[int]()
+		dll.Append(10)
+		dll.Append(20)
+		dll.Append(30)
+		dll.Append(40)
+		dll.Append(50)
+		dll.Append(60)
+
+		dll.Rotate(0)
+
+		assert.Equal(t, 10, dll.Head.Data)
+	})
+
+	t.Run("should not rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=7 positions", func(t *testing.T) {
+		dll := New[int]()
+		dll.Append(10)
+		dll.Append(20)
+		dll.Append(30)
+		dll.Append(40)
+		dll.Append(50)
+		dll.Append(60)
+
+		dll.Rotate(7)
+
+		assert.Equal(t, 10, dll.Head.Data)
+	})
+
+	t.Run("should rotate a non empty linked list 10 -> 20 -> 30 -> 40 -> 50 -> 60 by k=4 positions", func(t *testing.T) {
+		dll := New[int]()
+		dll.Append(10)
+		dll.Append(20)
+		dll.Append(30)
+		dll.Append(40)
+		dll.Append(50)
+		dll.Append(60)
+
+		dll.Rotate(4)
+
+		assert.Equal(t, 50, dll.Head.Data)
+	})
+}

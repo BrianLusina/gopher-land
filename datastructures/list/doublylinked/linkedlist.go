@@ -6,13 +6,13 @@ import (
 	"gopherland/datastructures/list"
 )
 
-// LinkedList LinkedList data structure
+// LinkedList is a doubly linked list data structure
 type LinkedList[T comparable] struct {
 	Head, Tail *Node[T]
 	Len        int //current length of the list
 }
 
-func NewLinkedList[T comparable]() *LinkedList[T] {
+func New[T comparable]() *LinkedList[T] {
 	return new(LinkedList[T])
 }
 
