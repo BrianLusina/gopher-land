@@ -96,7 +96,7 @@ func (dll *LinkedList[T]) DeleteNode(node *Node[T]) {
 	current := dll.Head
 
 	for current != nil {
-		if current.Data == node.Data {
+		if current.Compare(node.Node) {
 			if node.Next != nil {
 				current.Prev.Next = current.Next
 				current.Next.Prev = current.Prev
@@ -121,6 +121,30 @@ func (dll *LinkedList[T]) DeleteNodeByData(data any) {
 
 	for current != nil {
 		if current.Data == data {
+			if current.Next != nil {
+				current.Prev.Next = current.Next
+				current.Next.Prev = current.Prev
+			} else {
+				current.Prev.Next = nil
+			}
+
+			dll.Len--
+			return
+		}
+		current = current.Next
+	}
+}
+
+// DeleteNodeByKey deletes a node by its key
+func (dll *LinkedList[T]) DeleteNodeByKey(key any) {
+	if dll.Head == nil {
+		return
+	}
+
+	current := dll.Head
+
+	for current != nil {
+		if current.Key() == key {
 			if current.Next != nil {
 				current.Prev.Next = current.Next
 				current.Next.Prev = current.Prev

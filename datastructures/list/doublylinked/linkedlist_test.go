@@ -26,6 +26,24 @@ func TestDeleteNodeByData(t *testing.T) {
 	assert.Equal(t, "1 <-> 2 <-> 4 <-> 5 <-> nil", fmt.Sprintf("%v", dll))
 }
 
+func TestDeleteNodeByKey(t *testing.T) {
+	dll := New[int]()
+
+	dll.Append(1)
+	dll.Append(2)
+	dll.Append(3)
+	dll.Append(4)
+	dll.Append(5)
+
+	assert.Equal(t, 5, dll.Size())
+
+	dll.DeleteNodeByKey(3)
+
+	assert.Equal(t, 4, dll.Size())
+
+	assert.Equal(t, "1 <-> 2 <-> 4 <-> 5 <-> nil", fmt.Sprintf("%v", dll))
+}
+
 func TestPrependOperations(t *testing.T) {
 	t.Run("should successfully add a new node to a non empty list", func(t *testing.T) {
 		dll := New[int]()
