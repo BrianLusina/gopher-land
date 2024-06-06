@@ -115,32 +115,58 @@ func TestGetMiddleNode(t *testing.T) {
 }
 
 func TestReverse(t *testing.T) {
-	t.Run("should reverse a non empty linked list 1 -> 2 -> 3 -> 4 -> 5", func(t *testing.T) {
-		doubly_linked_list := New[int]()
-		doubly_linked_list.Append(1)
-		doubly_linked_list.Append(2)
-		doubly_linked_list.Append(3)
-		doubly_linked_list.Append(4)
-		doubly_linked_list.Append(5)
+	type testCase struct {
+		data     []any
+		expected []any
+	}
 
-		doubly_linked_list.Reverse()
+	testCases := []testCase{
+		{
+			data:     []any{10, 20, 30},
+			expected: []any{30, 20, 10},
+		},
+		{
+			data:     []any{1, 2, 3, 4, 5},
+			expected: []any{5, 4, 3, 2, 1},
+		},
+		{
+			data:     []any{"A", "B", "C"},
+			expected: []any{"C", "B", "A"},
+		},
+		{
+			data:     []any{2, 4, 6, 7, 5, 1},
+			expected: []any{1, 5, 7, 6, 4, 2},
+		},
+	}
 
-		assert.Equal(t, 5, doubly_linked_list.Head.Data)
-	})
+	for _, tc := range testCases {
+		testName := fmt.Sprintf("should reverse a linked list of %v to %v", tc.data, tc.expected)
+		t.Run(testName, func(t *testing.T) {
+			doublyLinkedList := New[any]()
+			for _, data := range tc.data {
+				doublyLinkedList.Append(data)
+			}
 
-	t.Run("should reverse linked list of 2->4->6->7->5->1", func(t *testing.T) {
-		doubly_linked_list := New[int]()
-		doubly_linked_list.Append(2)
-		doubly_linked_list.Append(4)
-		doubly_linked_list.Append(6)
-		doubly_linked_list.Append(7)
-		doubly_linked_list.Append(5)
-		doubly_linked_list.Append(1)
+			doublyLinkedList.Reverse()
 
-		doubly_linked_list.Reverse()
+			assert.Equal(t, tc.expected[0], doublyLinkedList.Head.Data)
 
-		assert.Equal(t, 1, doubly_linked_list.Head.Data)
-	})
+			current := doublyLinkedList.Head
+
+			actualData := []any{}
+			// OR once the rangefunc is no longer behind a feature flag GOEXPERIMENT=rangefunc
+			// for node := range doublyLinkedList.All {
+			// 	actualData = append(actualData, node.Data)
+			// }
+
+			for current != nil {
+				actualData = append(actualData, current.Data)
+				current = current.Next
+			}
+
+			assert.Equal(t, tc.expected, actualData)
+		})
+	}
 }
 
 func TestRotate(t *testing.T) {
