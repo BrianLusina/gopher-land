@@ -213,3 +213,41 @@ func TestRotate(t *testing.T) {
 		assert.Equal(t, 50, dll.Head.Data)
 	})
 }
+
+func TestRemoveDuplicates(t *testing.T) {
+	type testCase struct {
+		data     []any
+		expected []any
+	}
+
+	testCases := []testCase{
+		{
+			data:     []any{1, 6, 1, 4, 2, 2, 4},
+			expected: []any{1, 6, 4, 2},
+		},
+		{
+			data:     []any{1, 4, 7, 4},
+			expected: []any{1, 4, 7},
+		},
+	}
+
+	for _, tc := range testCases {
+		testName := fmt.Sprintf("should remove duplicates from %v to become %v", tc.data, tc.expected)
+		t.Run(testName, func(t *testing.T) {
+			dll := New[any]()
+			for _, d := range tc.data {
+				dll.Append(d)
+			}
+
+			headNode := dll.RemoveDuplicates()
+			actualData := []any{}
+
+			for headNode != nil {
+				actualData = append(actualData, headNode.Data)
+				headNode = headNode.Next
+			}
+
+			assert.Equal(t, tc.expected, actualData)
+		})
+	}
+}

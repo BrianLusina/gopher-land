@@ -439,7 +439,6 @@ func (dll *DoublyLinkedList[T]) DeleteNodeAtPosition(position int) (*Node[T], er
 }
 
 // RemoveDuplicates removes duplicates from a LinkedList
-// This assumes the linked list is sorted in ascending order
 func (dll *DoublyLinkedList[T]) RemoveDuplicates() *Node[T] {
 	head := dll.Head
 
@@ -448,15 +447,22 @@ func (dll *DoublyLinkedList[T]) RemoveDuplicates() *Node[T] {
 	}
 
 	current := head
-	next := current.Next
+	seen := map[any]bool{}
 
-	for next != nil {
-		if next.Data == current.Data {
-			current.Next = current.Next.Next
-			next = current.Next
+	for current != nil {
+		if _, ok := seen[current.Key()]; !ok {
+			seen[current.Key()] = true
+			current = current.Next
 		} else {
+			next := current.Next
+			previous := current.Prev
+
+			previous.Next = next
+			if next != nil {
+				next.Prev = previous
+			}
+
 			current = next
-			next = current.Next
 		}
 	}
 	return head
