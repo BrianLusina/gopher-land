@@ -25,7 +25,7 @@ func (n *Node[T]) SetKey(key any) {
 	n.key = key
 }
 
-// GetKey gets a key for the node
+// Key gets a key for the node
 func (n *Node[T]) Key() any {
 	return n.key
 }
