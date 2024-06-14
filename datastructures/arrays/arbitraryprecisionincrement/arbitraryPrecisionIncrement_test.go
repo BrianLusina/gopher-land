@@ -38,11 +38,13 @@ func BenchmarkArbitraryPrecisionIncrement(b *testing.B) {
 		b.Skip()
 	}
 
-	for _, tc := range testCases {
-		testName := fmt.Sprintf("should return %v for input of %v", tc.expected, tc.a)
-		b.Run(testName, func(b *testing.B) {
-			actual := arbitraryPrecisionIncrement(tc.a)
-			assert.ElementsMatch(b, actual, tc.expected)
-		})
+	for i := 0; i < b.N; i++ {
+		for _, tc := range testCases {
+			testName := fmt.Sprintf("should return %v for input of %v", tc.expected, tc.a)
+			b.Run(testName, func(b *testing.B) {
+				actual := arbitraryPrecisionIncrement(tc.a)
+				assert.ElementsMatch(b, actual, tc.expected)
+			})
+		}
 	}
 }
