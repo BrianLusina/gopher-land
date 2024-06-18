@@ -1,4 +1,4 @@
-package intersectionofarrays
+package intersection
 
 import (
 	"testing"

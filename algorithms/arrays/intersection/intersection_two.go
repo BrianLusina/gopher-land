@@ -1,4 +1,4 @@
-package intersectionofarrays
+package intersection
 
 import "gopherland/pkg/types"
 
@@ -16,10 +16,10 @@ import "gopherland/pkg/types"
 func intersectTwo[T types.Comparable](a []T, b []T) []T {
 	result := []T{}
 
-	for x, val1 := range a {
+	for x, val := range a {
 		for y := range b {
 			if a[x] == b[y] {
-				result = append(result, val1)
+				result = append(result, val)
 				// adding break here ensures that we save on time and steps. if we have found a value that is identical
 				// then there is no need to perform another iteration to check another value, We should proceed to the
 				// next value
