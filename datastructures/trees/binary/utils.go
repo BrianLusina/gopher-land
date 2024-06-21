@@ -1,7 +1,7 @@
 package binary
 
 import (
-	"gopherland/designpatterns/iterator"
+	"gopherland/datastructures/iterator"
 	"strings"
 )
 

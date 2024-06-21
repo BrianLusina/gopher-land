@@ -3,10 +3,12 @@ package binary
 
 import (
 	"fmt"
+	"gopherland/datastructures/queues/fifo"
 	"gopherland/datastructures/trees"
 	"gopherland/math/utils"
 	"gopherland/pkg/types"
 	pkgUtils "gopherland/pkg/utils"
+	"math"
 	"strings"
 )
 
@@ -381,4 +383,34 @@ func (tree *BinaryTree[T]) MaxLevelSum() int {
 	}
 
 	return smallestLevel
+}
+
+// LevelOrderTraversal traverses the tree in a level order fashion returning the data on each node in a slice following the property
+// of arrays where an element in the array with an index of i can be used to find the left and the right children using 2i+1 for the left node
+// and 2i+2 for the right node and the parent node can be found with floor((i-1)/2)
+func (tree *BinaryTree[T]) LevelOrderTraversal() []T {
+	if tree.root == nil {
+		return []T{}
+	}
+
+	queue := fifo.NewFifoQueue[*BinaryTreeNode[T]](math.MaxInt16)
+	queue.Enqueue(tree.root)
+	result := []T{}
+
+	for !queue.IsEmpty() {
+		p, _ := queue.Peek()
+		result = append(result, p.Data)
+
+		node, _ := queue.Dequeue()
+
+		if node.left != nil {
+			queue.Enqueue(node.left)
+		}
+
+		if node.right != nil {
+			queue.Enqueue(node.right)
+		}
+	}
+
+	return result
 }

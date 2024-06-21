@@ -13,7 +13,7 @@ func TestLinkedListQueue(t *testing.T) {
 }
 
 var _ = Describe("LinkedListQueue", func() {
-	linkedListQueue := NewLinkedListQueue()
+	linkedListQueue := NewFifoDLLQueue[int]()
 
 	It("Should add 1 to linkedListQueue", func() {
 		linkedListQueue.Enqueue(1)
