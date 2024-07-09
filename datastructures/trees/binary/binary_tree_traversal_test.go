@@ -9,12 +9,12 @@ import (
 )
 
 func TestBinaryTreeTraversal(t *testing.T) {
+	type testCase[T types.Comparable] struct {
+		root     *BinaryTreeNode[T]
+		expected []any
+	}
 
 	t.Run("Level Order Traversal", func(t *testing.T) {
-		type testCase[T types.Comparable] struct {
-			root     *BinaryTreeNode[T]
-			expected []any
-		}
 
 		intTestCases := []testCase[int]{
 			{
@@ -34,6 +34,32 @@ func TestBinaryTreeTraversal(t *testing.T) {
 				binaryTree := NewBinaryTree(tc.root)
 
 				actual := binaryTree.LevelOrderTraversal()
+
+				assert.ElementsMatch(t, actual, tc.expected)
+			})
+		}
+	})
+
+	t.Run("Reverse Level Order Traversal", func(t *testing.T) {
+
+		intTestCases := []testCase[int]{
+			{
+				root: NewBinaryTreeNode(1,
+					Left(NewBinaryTreeNode(2,
+						Left(NewBinaryTreeNode(4)),
+						Right(NewBinaryTreeNode(5)),
+					)),
+					Right(NewBinaryTreeNode(3)),
+				),
+				expected: []any{4, 5, 2, 3, 1},
+			},
+		}
+
+		for _, tc := range intTestCases {
+			t.Run(fmt.Sprintf("should return %v", tc.expected), func(t *testing.T) {
+				binaryTree := NewBinaryTree(tc.root)
+
+				actual := binaryTree.ReverseLevelOrderTraversal()
 
 				assert.ElementsMatch(t, actual, tc.expected)
 			})

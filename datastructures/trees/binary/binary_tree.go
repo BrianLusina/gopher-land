@@ -4,6 +4,7 @@ package binary
 import (
 	"fmt"
 	"gopherland/datastructures/queues/fifo"
+	dynamicstack "gopherland/datastructures/stack/dynamic"
 	"gopherland/datastructures/trees"
 	"gopherland/math/utils"
 	"gopherland/pkg/types"
@@ -410,6 +411,41 @@ func (tree *BinaryTree[T]) LevelOrderTraversal() []T {
 		if node.right != nil {
 			queue.Enqueue(node.right)
 		}
+	}
+
+	return result
+}
+
+// ReverseLevelOrderTraversal traverses the tree in a level order fashion in reverse starting from the bottom level(the leaf nodes)
+func (tree *BinaryTree[T]) ReverseLevelOrderTraversal() []T {
+	if tree.root == nil {
+		return []T{}
+	}
+
+	queue := fifo.NewFifoQueue[*BinaryTreeNode[T]](math.MaxInt16)
+	stack := dynamicstack.New[*BinaryTreeNode[T]]()
+
+	queue.Enqueue(tree.root)
+
+	result := []T{}
+
+	for !queue.IsEmpty() {
+		node, _ := queue.Dequeue()
+
+		stack.Push(node)
+
+		if node.right != nil {
+			queue.Enqueue(node.right)
+		}
+
+		if node.left != nil {
+			queue.Enqueue(node.left)
+		}
+	}
+
+	for !stack.IsEmpty() {
+		node, _ := stack.Pop()
+		result = append(result, node.Data)
 	}
 
 	return result
