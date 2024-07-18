@@ -261,6 +261,36 @@ func (tree *BinaryTree[T]) Height() int {
 	return heightHelper(tree.root)
 }
 
+// Size returns the number of nodes in this Tree
+func (tree *BinaryTree[T]) Size() int {
+	if tree.root == nil {
+		return 0
+	}
+
+	counter := 1
+	stack := dynamicstack.New[*BinaryTreeNode[T]]()
+	stack.Push(tree.root)
+
+	for !stack.IsEmpty() {
+		node, err := stack.Pop()
+		if err != nil {
+			panic(fmt.Sprintf("Error popping from stack %s", err))
+		}
+
+		if node.left != nil {
+			counter++
+			stack.Push(node.left)
+		}
+
+		if node.right != nil {
+			counter++
+			stack.Push(node.right)
+		}
+	}
+
+	return counter
+}
+
 // LeafSimilar returns true if this tree has similar leaf value sequence to another tree.
 // For example: If this tree has nodes = [3,5,1,6,2,9,8,null,null,7,4] and other tree has nodes =
 // [3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]. Then the leaf value sequence of both is [6,7,4,9,8] which is similar
