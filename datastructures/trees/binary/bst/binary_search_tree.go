@@ -27,26 +27,22 @@ func (bst *BinarySearchTree[T]) Insert(value T) {
 		return
 	}
 
-	// insert helper function to insert a new value in the binary search tree
-	var insert func(node *binary.BinaryTreeNode[T], value T)
+	// insertHelper helper function to insertHelper a new value in the binary search tree
+	var insertHelper func(node *binary.BinaryTreeNode[T], value T) *binary.BinaryTreeNode[T]
 
-	insert = func(node *binary.BinaryTreeNode[T], value T) {
-		if value <= node.Data {
-			if node.Left != nil {
-				insert(node.Left(), value)
-			} else {
-				node.SetLeft(binary.NewBinaryTreeNode(value))
-			}
-		} else {
-			if node.Right != nil {
-				insert(node.Right(), value)
-			} else {
-				node.SetRight(binary.NewBinaryTreeNode(value))
-			}
+	insertHelper = func(node *binary.BinaryTreeNode[T], value T) *binary.BinaryTreeNode[T] {
+		if node == nil {
+			return binary.NewBinaryTreeNode(value)
 		}
+		if value < node.Data {
+			node.SetLeft(insertHelper(node.Left(), value))
+		} else {
+			node.SetRight(insertHelper(node.Right(), value))
+		}
+		return node
 	}
 
-	insert(bst.root, value)
+	insertHelper(bst.root, value)
 }
 
 // Delete deletes a value from the BinarySearchTree
@@ -58,7 +54,7 @@ func (bst *BinarySearchTree[T]) Delete(value T) error {
 	var lift func(node, nodeToDelete *binary.BinaryTreeNode[T]) *binary.BinaryTreeNode[T]
 	lift = func(node, nodeToDelete *binary.BinaryTreeNode[T]) *binary.BinaryTreeNode[T] {
 		// if the current node has a left child, we recursively call this function to continue down the left subtree to find the successor node
-		if node.Left != nil {
+		if node.Left() != nil {
 			node.SetLeft(lift(node.Left(), nodeToDelete))
 			return node
 		} else {
@@ -91,11 +87,11 @@ func (bst *BinarySearchTree[T]) Delete(value T) error {
 			return node
 		} else if val == node.Data {
 			// the current node contains the value we want to delete
-			if node.Left == nil {
+			if node.Left() == nil {
 				// if the current node has no left child, we delete it by returning the right child and it's subtree if existent to be its parents
 				// new subtree
 				return node.Right()
-			} else if node.Right == nil {
+			} else if node.Right() == nil {
 				// if the current node has no left or right child, this ends up being nil as per the first line of this function
 				return node.Left()
 			} else {
@@ -123,11 +119,11 @@ func (bst *BinarySearchTree[T]) Size() int {
 // getValues is a helper function that returns a slice of all the values in the tree
 func getValues[T types.Comparable](node *binary.BinaryTreeNode[T]) []T {
 	var result []T
-	if node.Left != nil {
+	if node.Left() != nil {
 		result = append(getValues(node.Left()), result...)
 	}
 	result = append(result, node.Data)
-	if node.Right != nil {
+	if node.Right() != nil {
 		result = append(result, getValues(node.Right())...)
 	}
 	return result

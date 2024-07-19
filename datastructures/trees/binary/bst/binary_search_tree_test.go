@@ -1,6 +1,8 @@
 package bst
 
 import (
+	"gopherland/datastructures/trees/binary"
+	"gopherland/pkg/types"
 	"testing"
 
 	. "github.com/onsi/ginkgo"
@@ -13,27 +15,39 @@ func TestBinarySearchTree(t *testing.T) {
 	RunSpecs(t, "BinarySearchTree Suite")
 }
 
+func TestBinarySearchTreeInsert(t *testing.T) {
+	type testCase[T types.Comparable] struct {
+		data        []T
+		expected    *binary.BinaryTreeNode[T]
+		description string
+	}
+
+	intTestCases := []testCase[int]{
+		{
+			data:        []int{1},
+			expected:    binary.NewBinaryTreeNode(1),
+			description: "should return tree for 1 value",
+		},
+		{
+			data:        []int{4, 2, 6},
+			expected:    binary.NewBinaryTreeNode(4, binary.Left(binary.NewBinaryTreeNode(2)), binary.Right(binary.NewBinaryTreeNode(6))),
+			description: "should return tree for 3 values",
+		},
+	}
+
+	for _, tc := range intTestCases {
+		t.Run(tc.description, func(t *testing.T) {
+			bst := NewBinarySearchTree[int]()
+			for _, d := range tc.data {
+				bst.Insert(d)
+			}
+
+			assert.Equal(t, tc.expected, bst.root)
+		})
+	}
+}
+
 var _ = Describe("BinarySearchTree", func() {
-	It("should correctly insert new node with no root", func() {
-		bst := NewBinarySearchTree[int]()
-		bst.Insert(1)
-
-		// root should not be nil
-		Expect(bst.root).To(Not(BeNil()))
-	})
-
-	It("should correctly insert new nodes to left and right or root", func() {
-		bst := NewBinarySearchTree[int]()
-		bst.Insert(4)
-		bst.Insert(2)
-		bst.Insert(6)
-
-		// root should not be nil
-		Expect(bst.root).To(Not(BeNil()))
-		Expect(bst.root.Data).To(Equal(4))
-		Expect(bst.root.Left().Data).To(Equal(2))
-		Expect(bst.root.Right().Data).To(Equal(6))
-	})
 
 	It("should correctly return values in sorted order", func() {
 		bst := NewBinarySearchTree[int]()
