@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func main() {
+func run_tcp() {
 	// open connection:
 	conn, err := net.Dial("tcp", ":50000")
 	if err != nil {

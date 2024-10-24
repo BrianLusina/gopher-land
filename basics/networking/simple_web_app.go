@@ -13,7 +13,7 @@ const form = `<html><body><form action="#" method="post" name="bar">
 <input type="submit" value="Submit"/>
 </form></html></body>`
 
-func main() {
+func run_web() {
 	http.HandleFunc("/test1", logPanics(SimpleServer))
 	http.HandleFunc("/test2", logPanics(FormServer))
 	if err := http.ListenAndServe(":8080", nil); err != nil {

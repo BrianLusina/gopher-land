@@ -6,7 +6,7 @@ import (
 	"text/template"
 )
 
-func main() {
+func run_with() {
 	t := template.New("test")
 	t, _ = t.Parse("{{with `hello`}}{{.}}{{end}}!\n")
 	err := t.Execute(os.Stdout, nil)

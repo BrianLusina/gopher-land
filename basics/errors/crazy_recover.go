@@ -20,7 +20,3 @@ func ultraCrazyFunction() {
 		}
 	}
 }
-
-func main() {
-	defer ultraCrazyFunction()
-}

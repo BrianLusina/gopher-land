@@ -49,7 +49,7 @@ func fields2numbers(fields []string) (numbers []int) {
 	return
 }
 
-func main() {
+func run() {
 	var examples = []string{
 		"1 2 3 4 5",
 		"100 50 25 12.5 6.25",

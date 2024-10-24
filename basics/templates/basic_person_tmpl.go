@@ -11,7 +11,7 @@ type Person struct {
 	age  string
 }
 
-func main() {
+func run_basic() {
 	t := template.New("Person")
 	t, _ = t.Parse("hello {{.Name}} you are {{.age}} years old")
 	p := Person{Name: "Bob", age: "50"}

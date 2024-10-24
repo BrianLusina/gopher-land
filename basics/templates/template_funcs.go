@@ -6,7 +6,7 @@ import (
 	"text/template"
 )
 
-func main() {
+func run_template_fn() {
 	t := template.New("test")
 	t = template.Must(t.Parse("{{with $x := `hello`}}{{printf `%s %s` $x `Mary`}}{{end}}!\n"))
 	err := t.Execute(os.Stdout, nil)

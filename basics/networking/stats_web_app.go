@@ -30,7 +30,7 @@ var (
 	pageBottom = ""
 )
 
-func main() {
+func run_stats_web() {
 	http.HandleFunc("/", homePage)
 	if err := http.ListenAndServe(":9001", nil); err != nil {
 		fmt.Println(err.Error())

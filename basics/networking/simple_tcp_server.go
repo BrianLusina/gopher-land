@@ -9,7 +9,7 @@ import (
 
 const maxRead = 25
 
-func main() {
+func run() {
 	flag.Parse()
 	if flag.NArg() != 2 {
 		panic("usage: host port")

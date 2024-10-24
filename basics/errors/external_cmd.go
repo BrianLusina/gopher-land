@@ -6,7 +6,7 @@ import (
 	"os/exec"
 )
 
-func main() {
+func start() {
 	// 1) os.StartProcess //
 	/*********************/
 	/* Linux: */

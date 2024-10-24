@@ -6,7 +6,7 @@ import (
 	"text/template"
 )
 
-func main() {
+func run_template_cond() {
 	tEmpty := template.New("template test 1")
 	tEmpty = template.Must(tEmpty.Parse("Empty pipeline if demo: {{if ``}} Will not print. {{end}}\n"))
 	err := tEmpty.Execute(os.Stdout, nil)

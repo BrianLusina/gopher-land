@@ -9,7 +9,7 @@ import (
 
 const serverAddress = "localhost"
 
-func main() {
+func run_basic_rpc() {
 	client, err := rpc.DialHTTP("tcp", serverAddress+":3001")
 	if err != nil {
 		log.Fatal("Error dialing:", err)

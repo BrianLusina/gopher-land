@@ -6,7 +6,7 @@ import (
 	"net"
 )
 
-func main() {
+func run_socket() {
 	var (
 		host          = "www.apache.org"
 		port          = "80"
