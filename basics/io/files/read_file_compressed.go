@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-func main() {
+func read_compressed_file() {
 	fName := "./files/example.json.gz"
 	var r *bufio.Reader
 	fi, err := os.Open(fName)

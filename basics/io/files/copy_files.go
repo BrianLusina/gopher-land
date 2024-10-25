@@ -35,7 +35,7 @@ func CopyFile(dst, src string) (written int64, err error) {
 	return io.Copy(dstFile, srcFile)
 }
 
-func main() {
+func run_copy_files() {
 	var sourceFile string
 	var destinationFile string
 	fmt.Println("Please enter the source file to read:")

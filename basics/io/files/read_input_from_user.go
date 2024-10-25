@@ -24,6 +24,6 @@ func ReadInputFromUser() {
 	fmt.Println("From the string we read: ", f, i, s)
 }
 
-func main() {
+func read_input_user() {
 	ReadInputFromUser()
 }

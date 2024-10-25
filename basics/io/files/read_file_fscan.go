@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-func main() {
+func read_file_fscan() {
 	file, err := os.Open("./files/products2.txt")
 	if err != nil {
 		panic(err)

@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func read_input_bufio() {
 	inputReader := bufio.NewReader(os.Stdin)
 	fmt.Println("Please enter some input: ")
 	input, err := inputReader.ReadString('\n')

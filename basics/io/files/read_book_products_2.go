@@ -64,7 +64,7 @@ func readFile2(filename string) books2 {
 	return bks
 }
 
-func main() {
+func read_book_products_2() {
 	var filename string
 	fmt.Println("Please enter the name of the file to read:")
 	_, err := fmt.Scanln(&filename)

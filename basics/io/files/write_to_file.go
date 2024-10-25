@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func run_write_to_file() {
 	outputFile, outputError := os.OpenFile("./files/output.txt", os.O_WRONLY|os.O_CREATE, 0666)
 	if outputError != nil {
 		fmt.Printf("An error occurred with file creation\n")

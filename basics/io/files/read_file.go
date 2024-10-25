@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func read_file() {
 	file, err := os.Open("./files/input.txt")
 	if err != nil {
 		fmt.Println(err)
