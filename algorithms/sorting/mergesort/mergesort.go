@@ -3,11 +3,11 @@ package mergesort
 import "gopherland/pkg/types"
 
 // MergeSortInPlace merges a list in place using merge sort
-func MergeSortInPlace[T types.Number](list []T) {
+func MergeSortInPlace[T types.Number](collection []T) {
 
-	mid := len(list) / 2
-	leftHalf := list[:mid]
-	rightHalf := list[mid:]
+	mid := len(collection) / 2
+	leftHalf := collection[:mid]
+	rightHalf := collection[mid:]
 
 	MergeSortInPlace(leftHalf)
 	MergeSortInPlace(rightHalf)
@@ -16,10 +16,10 @@ func MergeSortInPlace[T types.Number](list []T) {
 
 	for i < len(leftHalf) && j < len(rightHalf) {
 		if leftHalf[i] < rightHalf[j] {
-			list[k] = leftHalf[i]
+			collection[k] = leftHalf[i]
 			i++
 		} else {
-			list[k] = rightHalf[j]
+			collection[k] = rightHalf[j]
 			j++
 		}
 		k++
@@ -27,21 +27,21 @@ func MergeSortInPlace[T types.Number](list []T) {
 
 	// Grab any lingering items from left half
 	for i < len(leftHalf) {
-		list[k] = leftHalf[i]
+		collection[k] = leftHalf[i]
 		i++
 		k++
 	}
 
 	// Grab any lingering items from right half
 	for j < len(rightHalf) {
-		list[k] = rightHalf[j]
+		collection[k] = rightHalf[j]
 		j++
 		k++
 	}
 }
 
 // combineLists combines 2 lists into 1 sorted list
-func combineLists[T types.Number](listOne, listTwo []T) []T {
+func combineLists[T types.Comparable](listOne, listTwo []T) []T {
 	listOneIndex, listTwoIndex, mergedList := 0, 0, []T{}
 
 	// Both lists have some items left in them
@@ -71,14 +71,14 @@ func combineLists[T types.Number](listOne, listTwo []T) []T {
 }
 
 // MergeSort merges a list out of place, that is, returns a new list
-func MergeSort[T types.Number](thelist []T) []T {
-	if len(thelist) <= 1 {
-		return thelist
+func MergeSort[T types.Comparable](collection []T) []T {
+	if len(collection) <= 1 {
+		return collection
 	}
 
-	middleIndex := len(thelist) / 2
-	leftHalf := thelist[:middleIndex]
-	rightHalf := thelist[middleIndex:]
+	middleIndex := len(collection) / 2
+	leftHalf := collection[:middleIndex]
+	rightHalf := collection[middleIndex:]
 
 	leftHalfSorted := MergeSort(leftHalf)
 	rightHalfSorted := MergeSort(rightHalf)

@@ -16,7 +16,7 @@ func foo() <-chan string {
 	return mychannel // returns the channel as returning argument
 }
 
-func main() {
+func generator() {
 	mychannel := foo() // foo() returns a channel.
 
 	for i := 0; i < 5; i++ {

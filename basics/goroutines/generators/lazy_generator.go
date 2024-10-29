@@ -20,7 +20,7 @@ func generateInts() int {
 	return <-resume
 }
 
-func main() {
+func lazyGenerator() {
 	resume = integers()
 	fmt.Println(generateInts()) // 0
 	fmt.Println(generateInts()) // 1
