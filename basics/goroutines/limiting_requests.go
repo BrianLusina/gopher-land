@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 const (
 	AvailableMemory         = 10 << 20 // 10 MB
@@ -35,7 +35,7 @@ func MyServer(queue chan *MyRequest) {
 	}
 }
 
-func main() {
+func run_limiting_requests() {
 	queue := make(chan *MyRequest)
 	go MyServer(queue)
 }

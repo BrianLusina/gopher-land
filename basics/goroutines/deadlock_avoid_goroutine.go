@@ -1,8 +1,8 @@
-package main
+package goroutines
 
 import "fmt"
 
-func main() {
+func run_deadlock_avoid_goroutines() {
 	ch1 := make(chan int)
 	ch2 := make(chan int)
 

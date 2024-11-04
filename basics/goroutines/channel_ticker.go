@@ -1,11 +1,11 @@
-package main
+package goroutines
 
 import (
 	"fmt"
 	"time"
 )
 
-func main() {
+func run_channel_ticker() {
 	tick := time.Tick(1e8)
 	boom := time.After(5e8)
 	for {

@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import "fmt"
 
@@ -34,7 +34,7 @@ func BuildLazyIntEvaluator(evalFunc LazyEvaluator, initState any) func() int {
 	}
 }
 
-func main() {
+func run_lazy_evaluator() {
 	evenFunc := func(state any) (any, any) {
 		originalState := state.(int)
 		newState := originalState + 2

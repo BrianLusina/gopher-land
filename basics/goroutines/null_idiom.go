@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import (
 	"fmt"
@@ -13,7 +13,7 @@ func iter(b int, c chan<- int) {
 	close(c)
 }
 
-func main() {
+func run_null_idiom() {
 	n, _ := strconv.Atoi(os.Args[1]) // line arg. converted to integer
 	a := make(chan int)
 	b := make(chan int)

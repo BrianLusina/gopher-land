@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import "fmt"
 
@@ -23,7 +23,7 @@ func countToWithCancel(max int) (<-chan int, func()) {
 	return ch, cancel
 }
 
-func main() {
+func run_cancel_func_pattern() {
 	ch, cancel := countToWithCancel(10)
 	for i := range ch {
 		if i > 5 {

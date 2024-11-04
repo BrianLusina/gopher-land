@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import (
 	"fmt"
@@ -29,7 +29,7 @@ func suckAll(ch1 <-chan int, ch2 <-chan int) {
 	}
 }
 
-func main() {
+func run_switching_with_select() {
 	runtime.GOMAXPROCS(2)
 	ch1 := make(chan int)
 	ch2 := make(chan int)

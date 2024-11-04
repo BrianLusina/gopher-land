@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import (
 	"fmt"
@@ -14,7 +14,7 @@ func printTable(n int, wg *sync.WaitGroup) {
 	wg.Done()
 }
 
-func main() {
+func run_multiplication_table() {
 	var wg sync.WaitGroup
 
 	for number := 2; number <= 12; number++ {

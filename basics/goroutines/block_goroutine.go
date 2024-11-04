@@ -1,13 +1,13 @@
 // Illustrates where the goroutine pump sends integers in an infinite loop on the channel. However, because there is
-//no receiver, the only output is the number 0
-package main
+// no receiver, the only output is the number 0
+package goroutines
 
 import (
 	"fmt"
 	"time"
 )
 
-func main() {
+func run_block_goroutines() {
 	ch1 := make(chan int)
 	go pump(ch1)       // pump hangs
 	fmt.Println(<-ch1) // prints only 0

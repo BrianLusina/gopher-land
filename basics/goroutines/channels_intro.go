@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import (
 	"fmt"
@@ -22,7 +22,7 @@ func getData(ch chan string) {
 	close(ch)
 }
 
-func main() {
+func run_channels_intro() {
 	ch := make(chan string)
 	go sendData(ch)
 	go getData(ch)

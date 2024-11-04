@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import "fmt"
 
@@ -8,7 +8,7 @@ func produce(c chan func()) {
 	c <- nil
 }
 
-func main() {
+func run_anonymous_closure() {
 	c := make(chan func())
 	go produce(c)
 	x := 0

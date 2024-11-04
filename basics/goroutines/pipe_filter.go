@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 func processChannel(in <-chan int, out chan<- int) {
 	for v := range in {
@@ -7,7 +7,7 @@ func processChannel(in <-chan int, out chan<- int) {
 	close(out)
 }
 
-func main() {
+func run_pipe_filter() {
 	receiveOnlyCh := make(<-chan int)
 	sendOnlyCh := make(chan<- int)
 	go processChannel(receiveOnlyCh, sendOnlyCh)

@@ -1,12 +1,12 @@
 package goroutines
 
-func scoreboardManager(in <- chan func(map[string]int), done <- chan struct{})) {
+func scoreboardManager(in <-chan func(map[string]int), done <-chan struct{}) {
 	scoreboard := make(map[string]int)
 	for {
 		select {
-		case <- done:
+		case <-done:
 			return
-		case f := <- in:
+		case f := <-in:
 			f(scoreboard)
 		}
 	}
@@ -14,7 +14,7 @@ func scoreboardManager(in <- chan func(map[string]int), done <- chan struct{})) 
 
 type scoreBoardManager chan func(map[string]int)
 
-func newScoreBoardManager() (scoreboardManager, func()) {
+func newScoreBoardManager() (scoreBoardManager, func()) {
 	ch := make(scoreBoardManager)
 	done := make(chan struct{})
 	go scoreboardManager(ch, done)
@@ -29,7 +29,7 @@ func (sbm scoreBoardManager) update(name string, val int) {
 	}
 }
 
-func (sbm scoreboardManager) read(name string) (int bool) {
+func (sbm scoreBoardManager) read(name string) (int, bool) {
 	var out int
 	var ok bool
 	done := make(chan struct{})
@@ -37,6 +37,6 @@ func (sbm scoreboardManager) read(name string) (int bool) {
 		out, ok = m[name]
 		close(done)
 	}
-	<- done
+	<-done
 	return out, ok
 }

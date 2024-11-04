@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import "fmt"
 
@@ -28,7 +28,7 @@ func startServer(op binOp) chan *Request {
 	return reqChan
 }
 
-func main() {
+func run_multiplex_client_server() {
 	adder := startServer(func(a, b int) int { return a + b })
 	const N = 100
 	var reqs [N]Request

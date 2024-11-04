@@ -1,5 +1,5 @@
 // Package main contains functions to calculate and map points on a polar coordinate system to a cartesian coordinate system.
-package main
+package goroutines
 
 import (
 	"fmt"
@@ -74,7 +74,7 @@ func init() {
 	}
 }
 
-func main() {
+func run_polar_to_cartesian() {
 	questions := make(chan polar)
 	defer close(questions)
 	answers := createSolver(questions)

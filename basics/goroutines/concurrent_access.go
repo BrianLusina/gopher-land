@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import (
 	"fmt"
@@ -40,7 +40,7 @@ func (p *Person) String() string {
 		strconv.FormatFloat(p.Salary(), 'f', 2, 64)
 }
 
-func main() {
+func run_concurrent_access() {
 	bs := NewPerson("Smith Bill", 2500.5)
 	fmt.Println(bs)
 	bs.SetSalary(4000.25)

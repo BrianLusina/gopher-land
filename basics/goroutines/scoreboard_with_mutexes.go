@@ -19,7 +19,7 @@ func (msm *mutexScoreBoardManager) update(name string, val int) {
 	msm.scoreboard[name] = val
 }
 
-func (msm *mutexScoreBoardManager) read(name string) (int bool) {
+func (msm *mutexScoreBoardManager) read(name string) (int, bool) {
 	msm.mu.RLock()
 	defer msm.mu.RUnlock()
 	val, ok := msm.scoreboard[name]

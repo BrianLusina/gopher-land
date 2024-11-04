@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import "fmt"
 
@@ -20,7 +20,7 @@ func startServer2(op binOp) (service chan *Request, quit chan bool) {
 	return service, quit
 }
 
-func main() {
+func run_multiplex_client_server_shutdown() {
 	adder, quit := startServer2(func(a, b int) int { return a + b })
 	const N = 100
 	var reqs [N]Request

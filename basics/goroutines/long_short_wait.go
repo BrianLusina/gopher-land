@@ -1,11 +1,11 @@
-package main
+package goroutines
 
 import (
 	"fmt"
 	"time"
 )
 
-func main() {
+func run_long_short_wait() {
 	fmt.Println("In main()")
 	go longWait()
 	go shortWait()

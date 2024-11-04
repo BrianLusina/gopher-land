@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import "runtime"
 
@@ -23,7 +23,7 @@ func DoPart(sem chan int) {
 	sem <- 1 // signal that this piece is done
 }
 
-func main() {
+func run_parallelize_over_cpu() {
 	runtime.GOMAXPROCS(NCPU)
 	DoAll()
 }

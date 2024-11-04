@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import (
 	"fmt"
@@ -20,7 +20,7 @@ func HeavyFunction2(wg *sync.WaitGroup) {
 	println("Done with heavy function 2")
 }
 
-func main() {
+func run_using_wait_groups() {
 	wg := new(sync.WaitGroup)
 	wg.Add(2)
 	go HeavyFunction1(wg)

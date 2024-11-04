@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import "fmt"
 
@@ -13,7 +13,7 @@ func countTo(max int) <-chan int {
 	return ch
 }
 
-func main() {
+func run_cleanup() {
 	for i := range countTo(10) {
 		fmt.Println(i)
 	}

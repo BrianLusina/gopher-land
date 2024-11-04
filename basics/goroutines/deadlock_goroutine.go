@@ -1,9 +1,9 @@
-package main
+package goroutines
 
 import "fmt"
 
 // running this will cause fatal error: all goroutines are asleep - deadlock!
-func main() {
+func run_deadlock_goroutine() {
 	ch1 := make(chan int)
 	ch2 := make(chan int)
 

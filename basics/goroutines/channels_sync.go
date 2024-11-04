@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import (
 	"fmt"
@@ -25,7 +25,7 @@ func getDataSync(ch <-chan string) {
 	}
 }
 
-func main() {
+func run_channels_sync() {
 	ch := make(chan string)
 	go sendDataSync(ch)
 	getDataSync(ch)

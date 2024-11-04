@@ -1,11 +1,11 @@
-package main
+package goroutines
 
 import (
 	"fmt"
 	"time"
 )
 
-func main() {
+func run_channel_factory() {
 	stream := pumpInts()
 	go suckInts(stream)
 	// the above 2 lines can be shortened to: go suck( pump() )

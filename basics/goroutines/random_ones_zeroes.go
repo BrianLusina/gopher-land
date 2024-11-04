@@ -1,8 +1,8 @@
-package main
+package goroutines
 
 import "fmt"
 
-func main() {
+func run_random_ones_zeroes() {
 	ch := make(chan int)
 
 	// consumer:

@@ -1,8 +1,8 @@
-package main
+package goroutines
 
 import "fmt"
 
-func main() {
+func run_varying_vars() {
 	a := []int{2, 4, 6, 8, 10}
 	ch := make(chan int, len(a))
 	for _, v := range a {

@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import (
 	"flag"
@@ -9,7 +9,7 @@ var ngoroutine = flag.Int("n", 100000, "how many goroutines")
 
 func f(left, right chan int) { left <- 1 + <-right }
 
-func main() {
+func run_chaining_goroutines() {
 	flag.Parse()
 	leftmost := make(chan int)
 	var left, right chan int = nil, leftmost

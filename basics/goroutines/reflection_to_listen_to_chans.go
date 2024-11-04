@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ func produceChans(ch chan<- string, i int) {
 	close(ch)
 }
 
-func main() {
+func run_reflection_to_listen_to_chans() {
 	numChans := 4
 	//I keep the channels in this slice, and want to "loop" over them in the select statement
 	var chans = []chan string{}
