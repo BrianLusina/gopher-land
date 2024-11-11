@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func decode_arbitrary_data() {
 	b := []byte(`{"Name": "Wednesday", "Age": 6, "Parents": ["Gomez", "Morticia"]}`)
 	var f interface{}
 	err := json.Unmarshal(b, &f)

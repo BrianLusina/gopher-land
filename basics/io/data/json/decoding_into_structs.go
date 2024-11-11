@@ -11,7 +11,7 @@ type Node struct {
 	Right *Node
 }
 
-func main() {
+func decoding_into_structs() {
 	b := []byte(`{"Value": "Father", "Left": {"Value": "Left child"}, "Right": {"Value": "Right
   child"}}`)
 	var f Node

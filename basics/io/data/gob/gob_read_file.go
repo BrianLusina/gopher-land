@@ -21,7 +21,7 @@ type Card struct {
 	Remark    string
 }
 
-func main() {
+func gob_read_file() {
 	file, _ := os.OpenFile("./output/vcard.gob", os.O_RDONLY, 0666)
 
 	reader := bufio.NewReader(file)

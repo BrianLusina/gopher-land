@@ -9,7 +9,7 @@ import (
 var t xml.Token
 var err error
 
-func main() {
+func parse_xml_data() {
 	input := "<Person><FirstName>Laura</FirstName><LastName>Lynn</LastName></Person>"
 	inputReader := strings.NewReader(input)
 	p := xml.NewDecoder(inputReader)

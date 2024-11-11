@@ -10,7 +10,7 @@ type Person struct {
 	Age  int    `xml:"personAge"`
 }
 
-func main() {
+func person_xml() {
 	b := []byte(`<Person><personName>Obama</personName><personAge>57</personAge></Person>`)
 	var p Person
 	// Unmarshalling
