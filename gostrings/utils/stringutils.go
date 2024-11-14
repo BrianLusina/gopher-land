@@ -1,5 +1,7 @@
 package utils
 
+import "strings"
+
 // ReverseString reverses a string with 1st character become last and so on
 func ReverseString(s string) string {
 	var rns = make([]byte, len(s))
@@ -20,4 +22,19 @@ func ReverseString(s string) string {
 	// 	result = string(v) + result
 	// }
 	// return result
+}
+
+func RemoveNewLineSuffixes(s string) string {
+	if s == "" {
+		return s
+	}
+
+	if strings.HasSuffix(s, "\r\n") {
+		return RemoveNewLineSuffixes(s[:len(s)-2])
+	}
+
+	if strings.HasSuffix(s, "\n") {
+		return RemoveNewLineSuffixes(s[:len(s)-1])
+	}
+	return s
 }

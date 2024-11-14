@@ -1,7 +1,7 @@
 package squaredstrings
 
 import (
-	"gopherland/gostrings/utils"
+	"gopherland/strings/utils"
 	"strings"
 )
 

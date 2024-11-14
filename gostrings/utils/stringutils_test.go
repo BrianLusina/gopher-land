@@ -4,38 +4,68 @@ import (
 	"fmt"
 	"testing"
 
-	. "github.com/onsi/ginkgo"
-	. "github.com/onsi/gomega"
+	"github.com/stretchr/testify/assert"
 )
 
-func TestStringUtils(t *testing.T) {
-	RegisterFailHandler(Fail)
-	RunSpecs(t, "StringUtils Test Suite")
+func TestReverseString(t *testing.T) {
+	type testCase struct {
+		input    string
+		expected string
+	}
+
+	testCases := []testCase{
+		{"HnDMao", "oaMDnH"},
+		{"ClNNxX", "XxNNlC"},
+		{"iRvxxH", "HxxvRi"},
+		{"bqTVvA", "AvVTqb"},
+		{"wvSyRu", "uRySvw"},
+	}
+
+	for _, testCase := range testCases {
+		t.Run(fmt.Sprintf("should reverse string %s to %s", testCase.input, testCase.expected), func(t *testing.T) {
+			input := testCase.input
+			expected := testCase.expected
+			actual := ReverseString(input)
+			assert.Equal(t, expected, actual)
+		})
+	}
 }
 
-var _ = Describe("StringUtils Tests", func() {
+func TestRemoveNewLineSuffice(t *testing.T) {
+	testCases := map[string]struct {
+		input    string
+		expected string
+	}{
+		"empty": {
+			input:    "",
+			expected: "",
+		},
+		"ending with \r\n": {
+			input:    "a\r\n",
+			expected: "a",
+		},
+		"ending with \n": {
+			input:    "a\n",
+			expected: "a",
+		},
+		"ending with multiple \n": {
+			input:    "a\n\n\n",
+			expected: "a",
+		},
+		"ending without new line": {
+			input:    "a",
+			expected: "a",
+		},
+	}
 
-	Describe("Reverse String Test Cases", func() {
-		type testCase struct {
-			input    string
-			expected string
-		}
-
-		testCases := []testCase{
-			{"HnDMao", "oaMDnH"},
-			{"ClNNxX", "XxNNlC"},
-			{"iRvxxH", "HxxvRi"},
-			{"bqTVvA", "AvVTqb"},
-			{"wvSyRu", "uRySvw"},
-		}
-
-		for _, testCase := range testCases {
-			It(fmt.Sprintf("should reverse string %s to %s", testCase.input, testCase.expected), func() {
-				input := testCase.input
-				expected := testCase.expected
-				actual := ReverseString(input)
-				Expect(actual).To(Equal(expected))
-			})
-		}
-	})
-})
+	for name, testCase := range testCases {
+		test := testCase
+		t.Run(name, func(t *testing.T) {
+			t.Parallel()
+			actual := RemoveNewLineSuffixes(testCase.input)
+			if actual != test.expected {
+				t.Errorf("got %s, expected: %s", actual, test.expected)
+			}
+		})
+	}
+}
