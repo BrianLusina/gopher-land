@@ -1,13 +1,15 @@
 package rpn
 
 import (
-	"gopherland/datastructures/stack"
+	// "gopherland/datastructures/stack"
+
+	"gopherland/datastructures/stack/fixedsizedstack"
 	"log"
 	"strconv"
 )
 
 func evalRPN(tokens []string) int {
-	stack := stack.NewStack[int](len(tokens))
+	stack := fixedsizedstack.New[int](len(tokens))
 
 	for _, char := range tokens {
 		switch char {
