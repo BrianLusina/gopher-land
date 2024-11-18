@@ -8,7 +8,7 @@ import (
 	"unicode/utf8"
 )
 
-func main() {
+func bufio_with_tokens() {
 	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Println("Please enter some input: ")
 

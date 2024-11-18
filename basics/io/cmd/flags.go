@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func main() {
+func flags() {
 	strPtr := flag.String("lang", "Go", "a string")
 	numPtr := flag.Int("num", 108, "an int")
 	boolPtr := flag.Bool("truth", false, "a bool")

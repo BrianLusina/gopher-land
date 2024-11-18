@@ -21,7 +21,7 @@ func cat(reader *bufio.Reader) {
 	}
 }
 
-func main() {
+func using_buffer() {
 	flag.Parse()
 
 	if flag.NArg() == 0 {

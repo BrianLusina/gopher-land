@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func bufio_split() {
 	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Println("Please enter some input: ")
 	//scanner.Split(bufio.ScanRunes) // <-- scan runes (newline included)

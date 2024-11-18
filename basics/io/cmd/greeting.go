@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func main() {
+func greeting() {
 	who := "Me "
 	if len(os.Args) > 1 {
 		who += strings.Join(os.Args[1:], ", ")
