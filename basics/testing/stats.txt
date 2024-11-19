@@ -1,0 +1,26 @@
+goos: darwin
+goarch: amd64
+pkg: gopherland/basics/testing
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+BenchmarkAtomicStoreInt32-12    	158760704	         7.389 ns/op
+BenchmarkAtomicStoreInt32-12    	162151291	         7.391 ns/op
+BenchmarkAtomicStoreInt32-12    	162086767	         7.333 ns/op
+BenchmarkAtomicStoreInt32-12    	162122416	         7.258 ns/op
+BenchmarkAtomicStoreInt32-12    	161517043	         7.347 ns/op
+BenchmarkAtomicStoreInt32-12    	162520376	         7.338 ns/op
+BenchmarkAtomicStoreInt32-12    	163311616	         7.298 ns/op
+BenchmarkAtomicStoreInt32-12    	162266569	         7.519 ns/op
+BenchmarkAtomicStoreInt32-12    	162207226	         7.373 ns/op
+BenchmarkAtomicStoreInt32-12    	165254054	         7.210 ns/op
+BenchmarkAtomicStoreInt64-12    	163773489	         7.319 ns/op
+BenchmarkAtomicStoreInt64-12    	164088567	         7.370 ns/op
+BenchmarkAtomicStoreInt64-12    	164243439	         7.310 ns/op
+BenchmarkAtomicStoreInt64-12    	164575546	         7.312 ns/op
+BenchmarkAtomicStoreInt64-12    	165276238	         7.290 ns/op
+BenchmarkAtomicStoreInt64-12    	165408702	         7.298 ns/op
+BenchmarkAtomicStoreInt64-12    	165313360	         7.313 ns/op
+BenchmarkAtomicStoreInt64-12    	165517131	         7.275 ns/op
+BenchmarkAtomicStoreInt64-12    	165571826	         7.271 ns/op
+BenchmarkAtomicStoreInt64-12    	163680832	         7.259 ns/op
+PASS
+ok  	gopherland/basics/testing	39.493s
