@@ -2,6 +2,8 @@
 package utils
 
 import (
+	"gopherland/pkg/types"
+
 	"golang.org/x/exp/constraints"
 )
 
@@ -32,9 +34,9 @@ func Min(a, b int) int {
 	return b
 }
 
-// Sum returns the sum of a slice of integers
-func Sum(numbers []int) int {
-	result := 0
+// Sum returns the sum of a slice of numbers
+func Sum[T types.Number](numbers []T) T {
+	var result T
 	for _, number := range numbers {
 		result += number
 	}
