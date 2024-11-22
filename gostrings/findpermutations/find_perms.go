@@ -11,7 +11,7 @@ func permutate(word string, start, end int) string {
 
 	for i := start; i <= end; i++ {
 		chars[start], chars[i] = chars[i], chars[start]
-		permutate(chars, start+1, end)
+		permutate(chars[start+1], start+1, end)
 		chars[start], chars[i] = chars[i], chars[start]
 	}
 
@@ -21,8 +21,8 @@ func permutate(word string, start, end int) string {
 func FindPermutations(word string) []string {
 	var result []string
 
-	l := len(word)
-	return permutate(word, 0, l)
+	// l := len(word)
+	// return permutate(word, 0, l)
 
 	if len(word) == 0 {
 		return []string{}
