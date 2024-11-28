@@ -20,7 +20,7 @@ var _ = Describe("DisjointSet", func() {
 		nodeFour := NewNode(4)
 		nodeFive := NewNode(5)
 
-		nodes := []Node{*nodeOne, *nodeTwo, *nodeThree, *nodeFour, *nodeFive}
+		nodes := []Node[int]{*nodeOne, *nodeTwo, *nodeThree, *nodeFour, *nodeFive}
 
 		disjointSet := NewDisjointSet(nodes...)
 
@@ -49,7 +49,7 @@ var _ = Describe("DisjointSet", func() {
 		nodeFour := NewNode(4)
 		nodeFive := NewNode(5)
 
-		nodes := []Node{*nodeOne, *nodeTwo, *nodeThree, *nodeFour, *nodeFive}
+		nodes := []Node[int]{*nodeOne, *nodeTwo, *nodeThree, *nodeFour, *nodeFive}
 
 		disjointSet := NewDisjointSet(nodes...)
 
