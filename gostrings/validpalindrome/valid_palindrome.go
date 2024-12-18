@@ -1,6 +1,7 @@
 package validpalindrome
 
 import (
+	"gopherland/pkg/utils"
 	"regexp"
 	"strings"
 )
@@ -52,13 +53,13 @@ func isPalindromeTwoPointers(s string) bool {
 
 		// and as long as the left pointer is less than the right pointer AND the character is not alphanumeric
 		// increase the left pointer by 1 to move it to the next character that is alphanumeric
-		for left < right && !isAlphanumeric(s[left]) {
+		for left < right && !utils.IsAlphanumeric(s[left]) {
 			left++
 		}
 
 		// and as long as the right pointer is greater than the left pointer AND the character at the right pointer is not
 		// alphanumeric, decrease the right pointer until we get to a valid alphanumeric character
-		for right > left && !isAlphanumeric(s[right]) {
+		for right > left && !utils.IsAlphanumeric(s[right]) {
 			right--
 		}
 
@@ -76,11 +77,4 @@ func isPalindromeTwoPointers(s string) bool {
 		right--
 	}
 	return true
-}
-
-// isAlphanumeric returns true if the character is an alphanumeric character
-// this uses the ASCII table to quickly find the position of the character. Since the characters A-Z are contiguous, simply checking whether this
-// character falls within the range will determine whether this character is alphanumeric or not. Same case applies for a-z & 0-9
-func isAlphanumeric(char byte) bool {
-	return ('A' <= char && char <= 'Z') || ('a' <= char && char <= 'z') || ('0' <= char && char <= '9')
 }
