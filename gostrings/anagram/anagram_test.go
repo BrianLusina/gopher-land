@@ -18,6 +18,29 @@ func equal(a, b []string) bool {
 	return fmt.Sprintf("%v", a) == fmt.Sprintf("%v", b)
 }
 
+func TestIsAnagram(t *testing.T) {
+	for _, tt := range isAnagramTestCases {
+		t.Run(fmt.Sprintf("%s and %s", tt.word1, tt.word2), func(t *testing.T) {
+			actual := IsAnagram(tt.word1, tt.word2)
+			if actual != tt.expected {
+				t.Fatalf("expected %v, got: %v", tt.expected, actual)
+			}
+		})
+	}
+}
+
+func BenchmarkIsAnagram(b *testing.B) {
+	if testing.Short() {
+		b.Skip()
+	}
+
+	for i := 0; i < b.N; i++ {
+		for _, tt := range isAnagramTestCases {
+			IsAnagram(tt.word1, tt.word2)
+		}
+	}
+}
+
 func TestDetectAnagrams(t *testing.T) {
 	for _, tt := range testCases {
 		actual := Detect(tt.subject, tt.candidates)

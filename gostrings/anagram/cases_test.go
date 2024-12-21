@@ -162,3 +162,25 @@ var generateAnagramTestCases = []struct {
 		expected: []string{"abc", "acb", "bac", "bca", "cab", "cba"},
 	},
 }
+
+var isAnagramTestCases = []struct {
+	word1    string
+	word2    string
+	expected bool
+}{
+	{
+		word1:    "fairy tales",
+		word2:    "rail safety",
+		expected: true,
+	},
+	{
+		word1:    "William Shakespeare",
+		word2:    "I am a weakish speller",
+		expected: true,
+	},
+	{
+		word1:    "Madam Curie",
+		word2:    "Radium came",
+		expected: true,
+	},
+}
