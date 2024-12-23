@@ -1,13 +1,13 @@
-package validpalindrome
+package palindrome
 
 import "testing"
 
-type testCase struct {
+type isPalindromeTestCase struct {
 	phrase   string
 	expected bool
 }
 
-var testCases = []testCase{
+var isPalindromeCases = []isPalindromeTestCase{
 	{
 		phrase:   "A man, a plan, a canal: Panama",
 		expected: true,
@@ -22,8 +22,8 @@ var testCases = []testCase{
 	},
 }
 
-func TestValidPalindrome(t *testing.T) {
-	for _, tc := range testCases {
+func TestIsPalindrome(t *testing.T) {
+	for _, tc := range isPalindromeCases {
 		actual := isPalindrome(tc.phrase)
 		if actual != tc.expected {
 			t.Fatalf("isPalindrome(%s) = %v, expected %v", tc.phrase, actual, tc.expected)
@@ -31,16 +31,16 @@ func TestValidPalindrome(t *testing.T) {
 	}
 }
 
-func BenchmarkValidPalindrome(b *testing.B) {
+func BenchmarkIsPalindrome(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		for _, tt := range testCases {
+		for _, tt := range isPalindromeCases {
 			isPalindrome(tt.phrase)
 		}
 	}
 }
 
-func TestValidPalindromeTwoPointers(t *testing.T) {
-	for _, tc := range testCases {
+func TestIsPalindromeTwoPointers(t *testing.T) {
+	for _, tc := range isPalindromeCases {
 		actual := isPalindromeTwoPointers(tc.phrase)
 		if actual != tc.expected {
 			t.Fatalf("isPalindrome(%s) = %v, expected %v", tc.phrase, actual, tc.expected)
@@ -48,9 +48,9 @@ func TestValidPalindromeTwoPointers(t *testing.T) {
 	}
 }
 
-func BenchmarkValidPalindromeTwoPointers(b *testing.B) {
+func BenchmarkIsPalindromeTwoPointers(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		for _, tt := range testCases {
+		for _, tt := range isPalindromeCases {
 			isPalindromeTwoPointers(tt.phrase)
 		}
 	}

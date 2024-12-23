@@ -1,4 +1,4 @@
-package validpalindrome
+package palindrome
 
 import (
 	"gopherland/pkg/utils"
@@ -24,20 +24,7 @@ func isPalindrome(s string) bool {
 		}
 	}
 
-	return strings.ToLower(word) == strings.ToLower(reverse(word))
-}
-
-func reverse(s string) string {
-	rns := []rune(s) // convert to rune
-	for i, j := 0, len(rns)-1; i < j; i, j = i+1, j-1 {
-
-		// swap the letters of the string,
-		// like first with last and so on.
-		rns[i], rns[j] = rns[j], rns[i]
-	}
-
-	// return the reversed string.
-	return string(rns)
+	return strings.EqualFold(word, utils.Reverse(word))
 }
 
 // isPalindromeTwoPointers uses 2 pointers to find out if a string is a palindrome. This only considers alphanumeric characters & ignores casing.
