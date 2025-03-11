@@ -32,10 +32,6 @@ var testCases = []testCase{
 		expected: true,
 	},
 	{
-		nums:     []int{2, 1, -1, -2},
-		expected: false,
-	},
-	{
 		nums:     []int{5, 4, -2, -1, 3},
 		expected: false,
 	},

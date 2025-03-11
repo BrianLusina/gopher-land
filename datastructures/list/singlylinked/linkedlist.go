@@ -328,6 +328,57 @@ func (sll *LinkedList[T]) IsPalindromeTwoPointers() bool {
 	return true
 }
 
+// IsPalindromeTwoPointers2 checks if a linked list is a palindrome using another variation of two pointers
+// Checks to see if a Linked list is a Palindrome.
+// Returns True if it is, false otherwise.
+// Uses two pointers approach to check if a linked list is a palindrome. First it finds the middle of the list using
+// two pointers a fast and a slow pointer and then reverses the second half of the list. Once the second half is
+// reversed, it compares the first half and the reversed second half
+//
+// Complexity:
+// We assume that n is the number of nodes in the linked list
+//
+// Time O(n): we traverse the linked list to check for the palindrome property.
+//
+// Space O(1): No extra space is used when traversing the linked list
+func (sll *LinkedList[T]) IsPalindromeTwoPointers2() bool {
+	// an empty linked list or a linked list with only one node is considered a palindrome
+	if sll.Head == nil || sll.Head.Next == nil {
+		return true
+	}
+
+	// find the middle of the list using fast and slow pointers. The fast pointer will have gotten to the end of the
+	// the linked list and the slow pointer will be at the middle of the linked list
+	fastPointer := sll.Head
+	slowPointer := sll.Head
+	for fastPointer != nil && fastPointer.Next != nil {
+		slowPointer = slowPointer.Next
+		fastPointer = fastPointer.Next.Next
+	}
+
+	var previous *list.Node[T]
+	// reverse the second half of the list
+	for slowPointer != nil {
+		nxt := slowPointer.Next
+		slowPointer.Next = previous
+		previous = slowPointer
+		slowPointer = nxt
+	}
+
+	// now prev is the head of the reversed second half
+	// compare the first half and the reversed second half
+	left, right := sll.Head, previous
+	for right != nil {
+		if left.Data != right.Data {
+			return false
+		}
+		left = left.Next
+		right = right.Next
+	}
+
+	return true
+}
+
 // DetectCycle detects cycles in a LinkedList & returns the Node that contains a cycle
 func (sll *LinkedList[T]) DetectCycle() *list.Node[T] {
 	if sll.Head == nil || sll.Head.Next == nil {

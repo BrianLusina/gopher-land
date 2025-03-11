@@ -56,6 +56,22 @@ func TestLinkedList(t *testing.T) {
 				})
 			}
 		})
+
+		t.Run("using two pointers v2", func(t *testing.T) {
+			for _, tc := range testCases {
+				t.Run(fmt.Sprintf("should return %v for %v", tc.expected, tc.data), func(t *testing.T) {
+					linkedList := New[any]()
+					for _, d := range tc.data {
+						linkedList.Append(d)
+					}
+					actual := linkedList.IsPalindromeTwoPointers2()
+					if actual != tc.expected {
+						t.Fail()
+						t.Fatalf("expected IsPalindromeTwoPointers2() for data=%v to be %v, got %v", tc.data, tc.expected, actual)
+					}
+				})
+			}
+		})
 	})
 
 	t.Run("Move Tail to Head", func(t *testing.T) {
