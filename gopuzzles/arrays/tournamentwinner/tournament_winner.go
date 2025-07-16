@@ -61,8 +61,10 @@ func tournamentWinnerV2(competitions [][]string, results []int) string {
 		}
 	}
 
+	maxPoints := 0
 	for team, points := range teams {
-		if points > teams[winner] {
+		if points > maxPoints {
+			maxPoints = points
 			winner = team
 		}
 	}
