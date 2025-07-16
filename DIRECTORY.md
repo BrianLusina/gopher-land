@@ -4,18 +4,35 @@
     * [Accumulate](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/accumulate/accumulate.go)
     * [Accumulate Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/accumulate/accumulate_test.go)
   * Arrays
+    * Intersection
+      * [Intersection One](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/intersection/intersection_one.go)
+      * [Intersection One Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/intersection/intersection_one_test.go)
+      * [Intersection Two](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/intersection/intersection_two.go)
+      * [Intersection Two Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/intersection/intersection_two_test.go)
     * Majorityelement
       * [Majority Element](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/majorityelement/majority_element.go)
       * [Majority Element Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/majorityelement/majority_element_test.go)
     * Maxsubarray
       * [Max Subarray](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/maxsubarray/max_subarray.go)
       * [Max Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/maxsubarray/max_subarray_test.go)
+    * Optimaltaskassignment
+      * [Optimal Task Assignment](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/optimaltaskassignment/optimal_task_assignment.go)
+      * [Optimal Task Assignment Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/optimaltaskassignment/optimal_task_assignment_test.go)
     * Removeduplicates
       * [Removeduplicates](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeduplicates/removeduplicates.go)
       * [Removeduplicates Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeduplicates/removeduplicates_test.go)
     * Removeelement
       * [Removeelement](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeelement/removeelement.go)
       * [Removeelement Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/removeelement/removeelement_test.go)
+    * Sortedsquaredarray
+      * [Sorted Square Array Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/sortedsquaredarray/sorted_square_array_test.go)
+      * [Sorted Squared Array](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/sortedsquaredarray/sorted_squared_array.go)
+    * Subsequence
+      * [Is Valid Subsequence](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/subsequence/is_valid_subsequence.go)
+      * [Is Valid Subsequence Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/subsequence/is_valid_subsequence_test.go)
+    * Twosum
+      * [Twosum](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/twosum/twosum.go)
+      * [Twosum Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/twosum/twosum_test.go)
   * Backtracking
     * Decodemessage
       * [Decode](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/backtracking/decodemessage/decode.go)
@@ -60,6 +77,13 @@
   * Etl
     * [Etl](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/etl/etl.go)
     * [Etl Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/etl/etl_test.go)
+  * Fastandslow
+    * Circulararrayloop
+      * [Circular Array Loop](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/fastandslow/circulararrayloop/circular_array_loop.go)
+      * [Circular Array Loop Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/fastandslow/circulararrayloop/circular_array_loop_test.go)
+    * Findduplicate
+      * [Find Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/fastandslow/findduplicate/find_duplicate.go)
+      * [Find Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/fastandslow/findduplicate/find_duplicate_test.go)
   * Frog Jumps
     * [Frogjumps](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/frog_jumps/frogjumps.go)
   * Frogjumps
@@ -167,6 +191,16 @@
       * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/search/binarysearch/cases_test.go)
     * Interpolation
       * [Interpolation Search](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/search/interpolation/interpolation_search.go)
+  * Slidingwindow
+    * Longestrepeatingcharreplacement
+      * [Longest Repeating Char Replacement](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/slidingwindow/longestrepeatingcharreplacement/longest_repeating_char_replacement.go)
+      * [Longest Repeating Char Replacement Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/slidingwindow/longestrepeatingcharreplacement/longest_repeating_char_replacement_test.go)
+    * Longestsubstring
+      * [Longestsubstring](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/slidingwindow/longestsubstring/longestsubstring.go)
+      * [Longestsubstring Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/slidingwindow/longestsubstring/longestsubstring_test.go)
+    * Longestsubstringwithkchars
+      * [Longestsubkchars](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/slidingwindow/longestsubstringwithkchars/longestsubkchars.go)
+      * [Longestsubkchars Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/slidingwindow/longestsubstringwithkchars/longestsubkchars_test.go)
   * Sorting
     * Bubblesort
       * [Bubblesort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/bubblesort/bubblesort.go)
@@ -221,6 +255,12 @@
     * Mergesortedarray
       * [Merge](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twopointers/mergesortedarray/merge.go)
       * [Merge Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twopointers/mergesortedarray/merge_test.go)
+    * Sortcolors
+      * [Sort Colors](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twopointers/sortcolors/sort_colors.go)
+      * [Sort Colors Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twopointers/sortcolors/sort_colors_test.go)
+    * Sumofthree
+      * [Find Sum Of Three](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twopointers/sumofthree/find_sum_of_three.go)
+      * [Find Sum Of Three Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/twopointers/sumofthree/find_sum_of_three_test.go)
 
 ## Basics
   * Arithmetic
@@ -237,6 +277,47 @@
   * Comments
     * [Weather Forecast](https://github.com/BrianLusina/gopher-land/blob/master/basics/comments/weather_forecast.go)
     * [Weather Forecast Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/comments/weather_forecast_test.go)
+  * Concurrency
+    * [Anonymous Closure In Channel](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/anonymous_closure_in_channel.go)
+    * [Benchmark Goroutines](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/benchmark_goroutines.go)
+    * [Block Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/block_goroutine.go)
+    * [Cancel Func Pattern](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/cancel_func_pattern.go)
+    * [Chaining Goroutines](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/chaining_goroutines.go)
+    * [Channel Factory](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/channel_factory.go)
+    * [Channel Ticker](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/channel_ticker.go)
+    * [Channels Intro](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/channels_intro.go)
+    * [Channels Sync](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/channels_sync.go)
+    * [Cleanup](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/cleanup.go)
+    * [Concurrent Access](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/concurrent_access.go)
+    * [Deadlock Avoid Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/deadlock_avoid_goroutine.go)
+    * [Deadlock Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/deadlock_goroutine.go)
+    * [Done Pattern](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/done_pattern.go)
+    * Err Groups
+      * [Handler](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/err_groups/handler.go)
+    * Generators
+      * [Generator](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/generators/generator.go)
+      * [Lazy Generator](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/generators/lazy_generator.go)
+    * [Lazy Evaluator](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/lazy_evaluator.go)
+    * [Limiting Requests](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/limiting_requests.go)
+    * [Long Short Wait](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/long_short_wait.go)
+    * [Multiplex Client Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/multiplex_client_server.go)
+    * [Multiplex Client Server Shutdown](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/multiplex_client_server_shutdown.go)
+    * [Multiplication Table](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/multiplication_table.go)
+    * [Nil Channels](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/nil_channels.go)
+    * [Null Idiom](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/null_idiom.go)
+    * [Parallelize Over Cpu](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/parallelize_over_cpu.go)
+    * [Pipe Filter](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/pipe_filter.go)
+    * [Polar To Cartesian](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/polar_to_cartesian.go)
+    * [Random Ones Zeroes](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/random_ones_zeroes.go)
+    * [Reflection To Listen To Chans](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/reflection_to_listen_to_chans.go)
+    * [Scoreboard With Channels](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/scoreboard_with_channels.go)
+    * [Scoreboard With Mutexes](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/scoreboard_with_mutexes.go)
+    * [Switching With Select](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/switching_with_select.go)
+    * Sync Cond
+      * [Sync Cond](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/sync_cond/sync_cond.go)
+      * [Sync Cond Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/sync_cond/sync_cond_test.go)
+    * [Using Wait Group](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/using_wait_group.go)
+    * [Varying Vars](https://github.com/BrianLusina/gopher-land/blob/master/basics/concurrency/varying_vars.go)
   * Conditionals
     * Blackjack
       * [Blackjack](https://github.com/BrianLusina/gopher-land/blob/master/basics/conditionals/blackjack/blackjack.go)
@@ -244,6 +325,23 @@
     * Vehiclepurchase
       * [Vehicle Purchase](https://github.com/BrianLusina/gopher-land/blob/master/basics/conditionals/vehiclepurchase/vehicle_purchase.go)
       * [Vehicle Purchase Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/conditionals/vehiclepurchase/vehicle_purchase_test.go)
+  * Contexts
+    * [Context Values](https://github.com/BrianLusina/gopher-land/blob/master/basics/contexts/context_values.go)
+    * [Custom Context](https://github.com/BrianLusina/gopher-land/blob/master/basics/contexts/custom_context.go)
+  * Cpucaches
+    * [Cache Placement Policy](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/cache_placement_policy.go)
+    * [Data Alignment](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/data_alignment.go)
+    * [Data Alignment Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/data_alignment_test.go)
+    * [False Sharing](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/false_sharing.go)
+    * [False Sharing Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/false_sharing_test.go)
+    * [Instruction Level Parallelism](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/instruction_level_parallelism.go)
+    * [Instruction Level Parallelism Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/instruction_level_parallelism_test.go)
+    * [Predictability](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/predictability.go)
+    * [Predictability Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/predictability_test.go)
+    * [Slice](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/slice.go)
+    * [Slice Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/slice_test.go)
+    * [Slice Vs Structs](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/slice_vs_structs.go)
+    * [Slice Vs Structs Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/cpucaches/slice_vs_structs_test.go)
   * Datatypes
     * Organization
       * [Person](https://github.com/BrianLusina/gopher-land/blob/master/basics/datatypes/organization/person.go)
@@ -280,44 +378,10 @@
       * [Timer](https://github.com/BrianLusina/gopher-land/blob/master/basics/functions/timer/timer.go)
   * Generics
     * [Generics](https://github.com/BrianLusina/gopher-land/blob/master/basics/generics/generics.go)
-  * Goroutines
-    * [Anonymous Closure In Channel](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/anonymous_closure_in_channel.go)
-    * [Benchmark Goroutines](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/benchmark_goroutines.go)
-    * [Block Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/block_goroutine.go)
-    * [Cancel Func Pattern](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/cancel_func_pattern.go)
-    * [Chaining Goroutines](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/chaining_goroutines.go)
-    * [Channel Factory](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channel_factory.go)
-    * [Channel Ticker](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channel_ticker.go)
-    * [Channels Intro](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channels_intro.go)
-    * [Channels Sync](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/channels_sync.go)
-    * [Cleanup](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/cleanup.go)
-    * [Concurrent Access](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/concurrent_access.go)
-    * [Deadlock Avoid Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/deadlock_avoid_goroutine.go)
-    * [Deadlock Goroutine](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/deadlock_goroutine.go)
-    * [Done Pattern](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/done_pattern.go)
-    * Generators
-      * [Generator](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/generators/generator.go)
-      * [Lazy Generator](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/generators/lazy_generator.go)
-    * [Lazy Evaluator](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/lazy_evaluator.go)
-    * [Limiting Requests](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/limiting_requests.go)
-    * [Long Short Wait](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/long_short_wait.go)
-    * [Multiplex Client Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/multiplex_client_server.go)
-    * [Multiplex Client Server Shutdown](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/multiplex_client_server_shutdown.go)
-    * [Multiplication Table](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/multiplication_table.go)
-    * [Null Idiom](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/null_idiom.go)
-    * [Parallelize Over Cpu](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/parallelize_over_cpu.go)
-    * [Pipe Filter](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/pipe_filter.go)
-    * [Polar To Cartesian](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/polar_to_cartesian.go)
-    * [Random Ones Zeroes](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/random_ones_zeroes.go)
-    * [Reflection To Listen To Chans](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/reflection_to_listen_to_chans.go)
-    * [Scoreboard With Channels](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/scoreboard_with_channels.go)
-    * [Scoreboard With Mutexes](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/scoreboard_with_mutexes.go)
-    * [Switching With Select](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/switching_with_select.go)
-    * [Using Wait Group](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/using_wait_group.go)
-    * [Varying Vars](https://github.com/BrianLusina/gopher-land/blob/master/basics/goroutines/varying_vars.go)
   * Interfaces
     * [Empty Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/empty_interfaces.go)
     * [Interface Example](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/interface_example.go)
+    * [Location](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/location.go)
     * [Miner Interface](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/miner_interface.go)
     * [Nil Interfaces](https://github.com/BrianLusina/gopher-land/blob/master/basics/interfaces/nil_interfaces.go)
     * Thefarm
@@ -359,6 +423,19 @@
       * [Read Input From User](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/files/read_input_from_user.go)
       * [Write To File](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/files/write_to_file.go)
       * [Write To Wiki](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/files/write_to_wiki.go)
+    * Http
+      * [Basic Handler](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/http/basic_handler.go)
+      * [Basic Handler Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/http/basic_handler_test.go)
+      * [Default Client And Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/http/default_client_and_server.go)
+      * [Duration Client](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/http/duration_client.go)
+      * [Duration Client Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/http/duration_client_test.go)
+      * [Handler](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/http/handler.go)
+      * [Http Body](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/http/http_body.go)
+    * Readerwriter
+      * [Io Reader](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/readerwriter/io_reader.go)
+      * [Io Reader Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/readerwriter/io_reader_test.go)
+    * Sql
+      * [Row Iteration Errors](https://github.com/BrianLusina/gopher-land/blob/master/basics/io/sql/row_iteration_errors.go)
   * Maps
     * Gross Store
       * [Gross Store](https://github.com/BrianLusina/gopher-land/blob/master/basics/maps/gross_store/gross_store.go)
@@ -383,6 +460,9 @@
     * [Stats Web App](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/stats_web_app.go)
     * [Tcp Client](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/tcp_client.go)
     * [Tcp Server](https://github.com/BrianLusina/gopher-land/blob/master/basics/networking/tcp_server.go)
+  * Performance
+    * [Stack Vs Heap](https://github.com/BrianLusina/gopher-land/blob/master/basics/performance/stack_vs_heap.go)
+    * [Stack Vs Heap Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/performance/stack_vs_heap_test.go)
   * Pointers
     * Electionday
       * [Election Day](https://github.com/BrianLusina/gopher-land/blob/master/basics/pointers/electionday/election_day.go)
@@ -414,6 +494,9 @@
   * Structs
     * Anonymous
       * [Anonymous Fields](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/anonymous/anonymous_fields.go)
+    * Customer
+      * [Customer](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/customer/customer.go)
+      * [Customer Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/customer/customer_test.go)
     * Needforspeed
       * [Need For Speed](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/needforspeed/need_for_speed.go)
       * [Need For Speed Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/structs/needforspeed/need_for_speed_test.go)
@@ -423,6 +506,11 @@
     * [Template Funcs](https://github.com/BrianLusina/gopher-land/blob/master/basics/templates/template_funcs.go)
     * [With End](https://github.com/BrianLusina/gopher-land/blob/master/basics/templates/with_end.go)
     * [With Variables](https://github.com/BrianLusina/gopher-land/blob/master/basics/templates/with_variables.go)
+  * Testing
+    * [Benchmark Compiler Optimizations](https://github.com/BrianLusina/gopher-land/blob/master/basics/testing/benchmark_compiler_optimizations.go)
+    * [Benchmark Compiler Optimizations Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/testing/benchmark_compiler_optimizations_test.go)
+    * [Benchmarks](https://github.com/BrianLusina/gopher-land/blob/master/basics/testing/benchmarks.go)
+    * [Microbenchmarks Test](https://github.com/BrianLusina/gopher-land/blob/master/basics/testing/microbenchmarks_test.go)
   * Time
     * Bookingupforbeauty
       * [Booking Up For Beauty](https://github.com/BrianLusina/gopher-land/blob/master/basics/time/bookingupforbeauty/booking_up_for_beauty.go)
@@ -521,6 +609,12 @@
 
 ## Datastructures
   * Arrays
+    * Arbitraryprecisionincrement
+      * [Arbitraryprecisionincrement](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/arbitraryprecisionincrement/arbitraryPrecisionIncrement.go)
+      * [Arbitraryprecisionincrement Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/arbitraryprecisionincrement/arbitraryPrecisionIncrement_test.go)
+    * Arrayadvance
+      * [Array Advance](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/arrayadvance/array_advance.go)
+      * [Array Advance Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/arrayadvance/array_advance_test.go)
     * Buildarrayfromperm
       * [Buildarrayfromperm](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/buildarrayfromperm/buildarrayfromperm.go)
       * [Buildarrayfromperm Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/buildarrayfromperm/buildarrayfromperm_test.go)
@@ -537,9 +631,6 @@
     * Dynamicarray
       * [Dynamic Array](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/dynamicarray/dynamic_array.go)
       * [Dynamic Array Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/dynamicarray/dynamic_array_test.go)
-    * Findduplicate
-      * [Find Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findduplicate/find_duplicate.go)
-      * [Find Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findduplicate/find_duplicate_test.go)
     * Findunique
       * [Find Unique](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findunique/find_unique.go)
       * [Find Unique Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/findunique/find_unique_test.go)
@@ -548,11 +639,6 @@
       * [Highest Rank Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highestrank/highest_rank_test.go)
     * Highlow
       * [Highlow](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/highlow/highlow.go)
-    * Intersectionofarrays
-      * [Intersectionone](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionOne.go)
-      * [Intersectionone Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionOne_test.go)
-      * [Intersectiontwo](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionTwo.go)
-      * [Intersectiontwo Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intersectionofarrays/intersectionTwo_test.go)
     * Intervals
       * Mergeintervals
         * [Mergeintervals](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/intervals/mergeintervals/mergeintervals.go)
@@ -595,6 +681,13 @@
       * [Circular Buffer](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/circularbuffer/circular_buffer.go)
       * [Circular Buffer Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/circularbuffer/circular_buffer_test.go)
     * [Errors](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/buffer/errors.go)
+  * Cache
+    * Inmem
+      * [Cache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/cache/inmem/cache.go)
+      * [Cache Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/cache/inmem/cache_test.go)
+    * Lrucache
+      * [Cache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/cache/lrucache/cache.go)
+      * [Cache Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/cache/lrucache/cache_test.go)
   * Containers
     * [Containers](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/containers/containers.go)
     * [Containers Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/containers/containers_test.go)
@@ -657,9 +750,6 @@
         * [Simple Linked List Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/simple/simple_linked_list_test.go)
       * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/utils.go)
       * [Utils Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/utils_test.go)
-  * Lrucache
-    * [Cache](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache.go)
-    * [Cache Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/lrucache/cache_test.go)
   * Orderedstream
     * [Orderedstream](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/orderedstream/orderedstream.go)
     * [Orderedstream Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/orderedstream/orderedstream_test.go)
@@ -712,7 +802,9 @@
       * [Binary Tree New Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_new_test.go)
       * [Binary Tree Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_node.go)
       * [Binary Tree Node Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_node_test.go)
+      * [Binary Tree Property Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_property_test.go)
       * [Binary Tree Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_test.go)
+      * [Binary Tree Traversal Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/binary_tree_traversal_test.go)
       * Bst
         * [Binary Search Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/bst/binary_search_tree.go)
         * [Binary Search Tree Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/binary/bst/binary_search_tree_test.go)
@@ -749,6 +841,7 @@
       * [Tree Building Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree-building/tree_building_test.go)
     * [Tree](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree.go)
     * [Tree Node](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree_node.go)
+    * [Tree Node Options](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/tree_node_options.go)
     * Trie
       * Prefix
         * [Trie](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/trees/trie/prefix/trie.go)
@@ -889,6 +982,12 @@
         * [File](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/composite/filetree/file.go)
         * [Folder](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/composite/filetree/folder.go)
         * [Main](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/composite/filetree/main.go)
+    * Decorator
+      * Globalnotifier
+        * [Client](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/decorator/globalnotifier/client.go)
+        * [Notifier](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/decorator/globalnotifier/notifier.go)
+        * [Slack](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/decorator/globalnotifier/slack.go)
+        * [Telegram](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/decorator/globalnotifier/telegram.go)
     * Facade
       * Wallet
         * [Account](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/structural/facade/wallet/account.go)
@@ -948,6 +1047,10 @@
   * Circleofnumbers
     * [Circleofnumbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers.go)
     * [Circleofnumbers Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/circleofnumbers/circleofnumbers_test.go)
+  * Collatz Conjecture
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/collatz_conjecture/cases_test.go)
+    * [Collatz Conjecture](https://github.com/BrianLusina/gopher-land/blob/master/gomath/collatz_conjecture/collatz_conjecture.go)
+    * [Collatz Conjecture Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/collatz_conjecture/collatz_conjecture_test.go)
   * Constructrectangle
     * [Construct Rectangle](https://github.com/BrianLusina/gopher-land/blob/master/gomath/constructrectangle/construct_rectangle.go)
     * [Construct Rectangle Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/constructrectangle/construct_rectangle_test.go)
@@ -1020,19 +1123,13 @@
     * Istriangle
       * [Is Triangle](https://github.com/BrianLusina/gopher-land/blob/master/gomath/triangle/istriangle/is_triangle.go)
       * [Is Triangle Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/triangle/istriangle/is_triangle_test.go)
-  * Twosum
-    * [Twosum](https://github.com/BrianLusina/gopher-land/blob/master/gomath/twosum/twosum.go)
-    * [Twosum Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/twosum/twosum_test.go)
   * Utils
     * [Reverseint](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/reverseint.go)
     * [Reverseint Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/reverseint_test.go)
     * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/utils.go)
+    * [Utils Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/utils/utils_test.go)
 
 ## Gopuzzles
-  * Anagram
-    * [Anagram](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/anagram/anagram.go)
-    * [Anagram Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/anagram/anagram_test.go)
-    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/anagram/cases_test.go)
   * Annalyn
     * [Annalyns Infiltration](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration.go)
     * [Annalyns Infiltration Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/annalyn/annalyns_infiltration_test.go)
@@ -1093,6 +1190,9 @@
     * Threepointers
       * [Minimize](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/threepointers/minimize.go)
       * [Minimize Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/threepointers/minimize_test.go)
+    * Tournamentwinner
+      * [Tournament Winner](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/tournamentwinner/tournament_winner.go)
+      * [Tournament Winner Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/tournamentwinner/tournament_winner_test.go)
     * Trappedrain
       * [Trapped Rain](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/trappedrain/trapped_rain.go)
       * [Trapped Rain Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/trappedrain/trapped_rain_test.go)
@@ -1189,6 +1289,10 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rectangles/cases_test.go)
     * [Rectangles](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rectangles/rectangles.go)
     * [Rectangles Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/rectangles/rectangles_test.go)
+  * Resistorcolor
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/resistorcolor/cases_test.go)
+    * [Resistor Color](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/resistorcolor/resistor_color.go)
+    * [Resistor Color Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/resistorcolor/resistor_color_test.go)
   * Robotname
     * [Robot Name](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name.go)
     * [Robot Name Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/robotname/robot_name_test.go)
@@ -1274,6 +1378,10 @@
     * [Two Bucket Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/twobucket/two_bucket_test.go)
 
 ## Gostrings
+  * Anagram
+    * [Anagram](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/anagram/anagram.go)
+    * [Anagram Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/anagram/anagram_test.go)
+    * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/anagram/cases_test.go)
   * Bandnamegenerator
     * [Band Name Generator](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/bandnamegenerator/band_name_generator.go)
     * [Band Name Generator Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/bandnamegenerator/band_name_generator_test.go)
@@ -1294,6 +1402,8 @@
   * Findpermutations
     * [Find Perms](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findpermutations/find_perms.go)
     * [Find Perms Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findpermutations/find_perms_test.go)
+  * Findsubstring
+    * [Find Substring](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/findsubstring/find_substring.go)
   * Fixstringcase
     * [Fix String Case](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/fixstringcase/fix_string_case.go)
     * [Fix String Case Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/fixstringcase/fix_string_case_test.go)
@@ -1315,15 +1425,12 @@
   * Issubsequence
     * [Is Subsequence](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/issubsequence/is_subsequence.go)
     * [Is Subsequence Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/issubsequence/is_subsequence_test.go)
-  * Longestrepeatingcharreplacement
-    * [Longest Repeating Char Replacement](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestrepeatingcharreplacement/longest_repeating_char_replacement.go)
-    * [Longest Repeating Char Replacement Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestrepeatingcharreplacement/longest_repeating_char_replacement_test.go)
-  * Longestsubstring
-    * [Longestsubstring](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstring/longestsubstring.go)
-    * [Longestsubstring Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstring/longestsubstring_test.go)
-  * Longestsubstringwithkchars
-    * [Longestsubkchars](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstringwithkchars/longestsubkchars.go)
-    * [Longestsubkchars Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longestsubstringwithkchars/longestsubkchars_test.go)
+  * Isunique
+    * [Is Unique](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isunique/is_unique.go)
+    * [Is Unique Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isunique/is_unique_test.go)
+  * Lookandsaysequence
+    * [Look And Say Sequence](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/lookandsaysequence/look_and_say_sequence.go)
+    * [Look And Say Sequence Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/lookandsaysequence/look_and_say_sequence_test.go)
   * Maximumtime
     * [Maximum Time](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time.go)
     * [Maximum Time Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/maximumtime/maximum_time_test.go)
@@ -1339,9 +1446,17 @@
   * Meteorology
     * [Meteorology](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/meteorology/meteorology.go)
     * [Meteorology Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/meteorology/meteorology_test.go)
+  * Palindrome
+    * [Is Palindrome](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/palindrome/is_palindrome.go)
+    * [Is Palindrome Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/palindrome/is_palindrome_test.go)
+    * [Palindrome Permutation](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/palindrome/palindrome_permutation.go)
+    * [Palindrome Permutation Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/palindrome/palindrome_permutation_test.go)
   * Parsinglogfiles
     * [Parsing Log Files](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/parsinglogfiles/parsing_log_files.go)
     * [Parsing Log Files Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/parsinglogfiles/parsing_log_files_test.go)
+  * Permutation
+    * [Check Permutation](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/permutation/check_permutation.go)
+    * [Check Permutation Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/permutation/check_permutation_test.go)
   * Phonenumber
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/cases_test.go)
     * [Phone Number](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/phonenumber/phone_number.go)
@@ -1370,6 +1485,9 @@
     * [First Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/series/first_test.go)
     * [Series](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/series/series.go)
     * [Series Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/series/series_test.go)
+  * Spreadsheetencoding
+    * [Spreadsheet Encoding](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/spreadsheetencoding/spreadsheet_encoding.go)
+    * [Spreadsheet Encoding Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/spreadsheetencoding/spreadsheet_encoding_test.go)
   * Squaredstrings
     * [Squared Strings](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings.go)
     * [Squared Strings Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/squaredstrings/squared_strings_test.go)
@@ -1385,9 +1503,6 @@
   * Utils
     * [Stringutils](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/utils/stringutils.go)
     * [Stringutils Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/utils/stringutils_test.go)
-  * Validpalindrome
-    * [Valid Palindrome](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/validpalindrome/valid_palindrome.go)
-    * [Valid Palindrome Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/validpalindrome/valid_palindrome_test.go)
   * Wordcount
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordcount/cases_test.go)
     * [Word Count](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/wordcount/word_count.go)
@@ -1411,9 +1526,16 @@
     * [Meetup Test](https://github.com/BrianLusina/gopher-land/blob/master/gotime/meetup/meetup_test.go)
 
 ## Pkg
+  * Errdefs
+    * [Multi Error](https://github.com/BrianLusina/gopher-land/blob/master/pkg/errdefs/multi_error.go)
   * Types
     * [Types](https://github.com/BrianLusina/gopher-land/blob/master/pkg/types/types.go)
   * Utils
+    * Io
+      * [Io Utils](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/io/io_utils.go)
     * [Slice Utils](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/slice_utils.go)
+    * [Slice Utils Test](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/slice_utils_test.go)
+    * [String Utils](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/string_utils.go)
+    * [String Utils Test](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/string_utils_test.go)
     * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/utils.go)
     * [Utils Test](https://github.com/BrianLusina/gopher-land/blob/master/pkg/utils/utils_test.go)
