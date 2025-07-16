@@ -15,8 +15,12 @@ func tournamentWinner(competitions [][]string, results []int) string {
 		homeTeam := pair.A[0]
 		awayTeam := pair.A[1]
 
-		teams[homeTeam] = 0
-		teams[awayTeam] = 0
+		if _, ok := teams[homeTeam]; !ok {
+			teams[homeTeam] = 0
+		}
+		if _, ok := teams[awayTeam]; !ok {
+			teams[awayTeam] = 0
+		}
 
 		result := pair.B
 
@@ -30,9 +34,10 @@ func tournamentWinner(competitions [][]string, results []int) string {
 			}
 		}
 	}
-
+	maxPoints := 0
 	for team, points := range teams {
-		if points > teams[winner] {
+		if points > maxPoints {
+			maxPoints = points
 			winner = team
 		}
 	}
@@ -50,17 +55,9 @@ func tournamentWinnerV2(competitions [][]string, results []int) string {
 
 		// 0 means that the away team won
 		if competitionWinner == 0 {
-			if points, ok := teams[awayTeam]; ok {
-				teams[awayTeam] = points + 3
-			} else {
-				teams[awayTeam] = points + 3
-			}
+			teams[awayTeam] += 3
 		} else {
-			if points, ok := teams[homeTeam]; ok {
-				teams[homeTeam] = points + 3
-			} else {
-				teams[homeTeam] = points + 3
-			}
+			teams[homeTeam] += 3
 		}
 	}
 
