@@ -15,6 +15,9 @@
     * Maxsubarray
       * [Max Subarray](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/maxsubarray/max_subarray.go)
       * [Max Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/maxsubarray/max_subarray_test.go)
+    * Nonconstructiblechange
+      * [Non Construcible Change Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/nonconstructiblechange/non_construcible_change_test.go)
+      * [Non Constructible Change](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/nonconstructiblechange/non_constructible_change.go)
     * Optimaltaskassignment
       * [Optimal Task Assignment](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/optimaltaskassignment/optimal_task_assignment.go)
       * [Optimal Task Assignment Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/optimaltaskassignment/optimal_task_assignment_test.go)
