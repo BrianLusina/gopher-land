@@ -204,6 +204,9 @@
     * Longestsubstringwithkchars
       * [Longestsubkchars](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/slidingwindow/longestsubstringwithkchars/longestsubkchars.go)
       * [Longestsubkchars Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/slidingwindow/longestsubstringwithkchars/longestsubkchars_test.go)
+    * Repeateddnasequences
+      * [Repeated Dna Sequences](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/slidingwindow/repeateddnasequences/repeated_dna_sequences.go)
+      * [Repeated Dna Sequences Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/slidingwindow/repeateddnasequences/repeated_dna_sequences_test.go)
   * Sorting
     * Bubblesort
       * [Bubblesort](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/sorting/bubblesort/bubblesort.go)

@@ -100,3 +100,24 @@ func BenchmarkReverse(b *testing.B) {
 		}
 	}
 }
+
+func TestEqualUnorderedSlices(t *testing.T) {
+	testCases := []struct {
+		a, b     []int
+		expected bool
+	}{
+		{[]int{1, 2, 3}, []int{3, 2, 1}, true},
+		{[]int{1, 2, 2}, []int{2, 1, 1}, false},
+		{[]int{1, 2, 3}, []int{4, 5, 6}, false},
+		{[]int{1, 2, 3}, []int{1, 2, 3, 4}, false},
+	}
+
+	for _, tc := range testCases {
+		t.Run(fmt.Sprintf("EqualUnorderedSlices(%v, %v)", tc.a, tc.b), func(t *testing.T) {
+			actual := EqualUnorderedSlices(tc.a, tc.b)
+			if tc.expected != actual {
+				t.Fatalf("expected %v, got %v", tc.expected, actual)
+			}
+		})
+	}
+}
