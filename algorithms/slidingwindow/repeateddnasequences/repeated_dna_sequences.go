@@ -56,5 +56,33 @@ func findRepeatedDnaSequences(dnaSequence string) []string {
 }
 
 func findRepeatedDnaSequencesNaive(dnaSequence string) []string {
-	panic("")
+	if len(dnaSequence) <= 10 {
+		return []string{}
+	}
+
+	resultSet := map[string]bool{}
+	seen := map[string]bool{}
+
+	for idx := 0; idx < len(dnaSequence); idx++ {
+		if idx+10 > len(dnaSequence) {
+			break
+		}
+		subsequence := dnaSequence[idx : idx+10]
+		if len(subsequence) < 10 {
+			continue
+		}
+		if _, ok := seen[subsequence]; ok {
+			if _, ok := resultSet[subsequence]; !ok {
+				resultSet[subsequence] = true
+			}
+		} else {
+			seen[subsequence] = true
+		}
+	}
+
+	result := []string{}
+	for k := range resultSet {
+		result = append(result, k)
+	}
+	return result
 }

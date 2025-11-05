@@ -53,6 +53,17 @@ func TestFindRepeatedDnaSequences(t *testing.T) {
 	}
 }
 
+func TestFindRepeatedDnaSequencesNaive(t *testing.T) {
+	for _, tc := range testCases {
+		t.Run(fmt.Sprintf("dnaSequence=%s", tc.dnaSequence), func(t *testing.T) {
+			actualResult := findRepeatedDnaSequencesNaive(tc.dnaSequence)
+			if !utils.EqualUnorderedSlices(actualResult, tc.expectedResult) {
+				t.Errorf("expected %v, but got %v", tc.expectedResult, actualResult)
+			}
+		})
+	}
+}
+
 func BenchmarkFindRepeatedDnaSequences(b *testing.B) {
 	if testing.Short() {
 		b.Skip()
@@ -60,12 +71,19 @@ func BenchmarkFindRepeatedDnaSequences(b *testing.B) {
 
 	for b.Loop() {
 		for _, tc := range testCases {
-			b.Run(fmt.Sprintf("dnaSequence=%s", tc.dnaSequence), func(b *testing.B) {
-				actualResult := findRepeatedDnaSequences(tc.dnaSequence)
-				if !utils.EqualUnorderedSlices(actualResult, tc.expectedResult) {
-					b.Errorf("expected %v, but got %v", tc.expectedResult, actualResult)
-				}
-			})
+			findRepeatedDnaSequences(tc.dnaSequence)
+		}
+	}
+}
+
+func BenchmarkFindRepeatedDnaSequencesNaive(b *testing.B) {
+	if testing.Short() {
+		b.Skip()
+	}
+
+	for b.Loop() {
+		for _, tc := range testCases {
+			findRepeatedDnaSequencesNaive(tc.dnaSequence)
 		}
 	}
 }
