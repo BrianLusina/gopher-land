@@ -40,7 +40,7 @@ func EqualUnorderedSlices[T comparable](a, b []T) bool {
 		return false
 	}
 
-	counts := make(map[any]int)
+	counts := make(map[T]int)
 	for _, item := range a {
 		counts[item]++
 	}
