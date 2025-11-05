@@ -35,7 +35,7 @@ func sum8(s []int64) int64 {
 
 // EqualUnorderedSlices checks if two slices are equal, without considering the order of elements.
 // It returns true if the two slices are equal, false otherwise.
-func EqualUnorderedSlices[T any](a, b []T) bool {
+func EqualUnorderedSlices[T comparable](a, b []T) bool {
 	if len(a) != len(b) {
 		return false
 	}
