@@ -251,46 +251,45 @@ func (bst *BinarySearchTree[T]) Serialize() []string {
 // 	bst.root = root
 // }
 
-// FIXME: check validity of a binary search tree
 // IsValid checks if a binary search tree is valid
-// func (bst *BinarySearchTree[T]) IsValid() bool {
-// 	type Data struct {
-// 		lowerBound T
-// 		node       *binary.BinaryTreeNode[T]
-// 		upperBound T
-// 	}
+func (bst *BinarySearchTree[T]) IsValid() bool {
+	type Data struct {
+		lowerBound *binary.BinaryTreeNode[T]
+		node       *binary.BinaryTreeNode[T]
+		upperBound *binary.BinaryTreeNode[T]
+	}
 
-// 	if bst.root == nil {
-// 		return true
-// 	}
+	if bst.root == nil {
+		return true
+	}
 
-// 	stack := []Data{}
-// 	stack = append(stack, Data{lowerBound: math.Inf(-1), node: bst.root, upperBound: math.Inf(1)})
+	stack := []Data{}
+	stack = append(stack, Data{lowerBound: bst.root.Left(), node: bst.root, upperBound: bst.root.Right()})
 
-// 	for len(stack) != 0 {
-// 		data := stack[len(stack)-1]
-// 		stack = stack[:len(stack)-1]
+	for len(stack) != 0 {
+		data := stack[len(stack)-1]
+		stack = stack[:len(stack)-1]
 
-// 		node := data.node
-// 		lowerBound := data.lowerBound
-// 		upperBound := data.upperBound
+		node := data.node
+		lowerBound := data.lowerBound
+		upperBound := data.upperBound
 
-// 		if node == nil {
-// 			continue
-// 		}
+		if node == nil {
+			continue
+		}
 
-// 		if node.Data <= lowerBound || node.Data >= upperBound {
-// 			return false
-// 		}
+		if node.Data <= lowerBound.Data || node.Data >= upperBound.Data {
+			return false
+		}
 
-// 		if node.Left != nil {
-// 			stack = append(stack, Data{lowerBound: lowerBound, node: node.Left, upperBound: node.Data})
-// 		}
+		if node.Left() != nil {
+			stack = append(stack, Data{lowerBound: lowerBound, node: node.Left(), upperBound: node})
+		}
 
-// 		if node.Right != nil {
-// 			stack = append(stack, Data{lowerBound: node.Data, node: node.Right, upperBound: upperBound})
-// 		}
-// 	}
+		if node.Right() != nil {
+			stack = append(stack, Data{lowerBound: node, node: node.Right(), upperBound: upperBound})
+		}
+	}
 
-// 	return true
-// }
+	return true
+}
