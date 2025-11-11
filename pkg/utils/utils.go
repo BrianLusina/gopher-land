@@ -3,6 +3,7 @@ package utils
 import (
 	"fmt"
 	"gopherland/pkg/types"
+	"slices"
 	"strings"
 )
 
@@ -141,11 +142,5 @@ func All[T any](elements []T, predicate func(data T) bool) bool {
 
 // Any returns tree if any of the elements in the slice match the given predicate, returns false otherwise
 func Any[T any](elements []T, predicate func(data T) bool) bool {
-	for _, element := range elements {
-		if predicate(element) {
-			return true
-		}
-	}
-
-	return false
+	return slices.ContainsFunc(elements, predicate)
 }

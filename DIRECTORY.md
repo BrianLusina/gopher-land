@@ -662,6 +662,9 @@
       * Reshapematrix
         * [Reshapematrix](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/reshapematrix/reshapematrix.go)
         * [Reshapematrix Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/reshapematrix/reshapematrix_test.go)
+      * Settozero
+        * [Set To Zero](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/settozero/set_to_zero.go)
+        * [Set To Zero Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/matrix/settozero/set_to_zero_test.go)
     * Maxsubarray
       * [Max Subarray](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray.go)
       * [Max Subarray Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/arrays/maxsubarray/max_subarray_test.go)
