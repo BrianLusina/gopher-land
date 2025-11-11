@@ -52,3 +52,22 @@ func EqualUnorderedSlices[T comparable](a, b []T) bool {
 	}
 	return true
 }
+
+// EqualMatrices checks if two 2D matrices are equal, without considering the order of elements.
+// It returns true if the two matrices are equal, false otherwise.
+func EqualMatrices[T comparable](a, b [][]T) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := range a {
+		if len(a[i]) != len(b[i]) {
+			return false
+		}
+		for j := range a[i] {
+			if a[i][j] != b[i][j] {
+				return false
+			}
+		}
+	}
+	return true
+}
