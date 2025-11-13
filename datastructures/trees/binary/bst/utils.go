@@ -18,7 +18,10 @@ func ConstructTree[T types.Comparable](data []T) *BinarySearchTree[T] {
 	}
 
 	// sort the data, this will ensure that if the data is not sorted it is sorted in place
-	slices.Sort(data)
+	// Make a copy to avoid modifying the input
+	dataCopy := make([]T, len(data))
+	copy(dataCopy, data)
+	slices.Sort(dataCopy)
 
 	var constructTreeHelper func(left, right int) *binary.BinaryTreeNode[T]
 
@@ -27,7 +30,7 @@ func ConstructTree[T types.Comparable](data []T) *BinarySearchTree[T] {
 			return nil
 		}
 		mid := (left + right) / 2
-		node := binary.NewBinaryTreeNode(data[mid])
+		node := binary.NewBinaryTreeNode(dataCopy[mid])
 		// construct the left subtree
 		node.SetLeft(constructTreeHelper(left, mid-1))
 		// construct the right subtree
@@ -35,7 +38,7 @@ func ConstructTree[T types.Comparable](data []T) *BinarySearchTree[T] {
 		return node
 	}
 
-	root := constructTreeHelper(0, len(data)-1)
+	root := constructTreeHelper(0, len(dataCopy)-1)
 	bst := &BinarySearchTree[T]{root: root}
 	return bst
 }
