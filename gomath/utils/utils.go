@@ -66,3 +66,15 @@ func Abs(x int) int {
 	}
 	return x
 }
+
+// sumOfSquaredDigits returns the sum of the squares of the digits of n.
+// For example, sumOfSquaredDigits(19) returns 82 (1^2 + 9^2).
+func SumOfSquaredDigits(n int) int {
+	sum := 0
+	for n > 0 {
+		digit := n % 10
+		sum += digit * digit
+		n /= 10
+	}
+	return sum
+}

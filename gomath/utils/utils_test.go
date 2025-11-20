@@ -35,3 +35,24 @@ func TestAbs(t *testing.T) {
 		})
 	}
 }
+
+func TestSumOfSquaredDigits(t *testing.T) {
+	type testCase struct {
+		n        int
+		expected int
+	}
+
+	testCases := []testCase{{
+		n:        19,
+		expected: 82,
+	}}
+
+	for _, tc := range testCases {
+		t.Run(fmt.Sprintf("SumOfSquaredDigits(%d)", tc.n), func(t *testing.T) {
+			actual := SumOfSquaredDigits(tc.n)
+			if actual != tc.expected {
+				t.Fail()
+			}
+		})
+	}
+}
