@@ -182,12 +182,12 @@ func (bst *BinarySearchTree[T]) Serialize() []string {
 	preOrderTraversal(root)
 
 	for _, value := range values {
-		switch value.(type) {
+		switch value := value.(type) {
 		case int:
-			v := strconv.Itoa(value.(int))
+			v := strconv.Itoa(value)
 			output = append(output, v)
 		case string:
-			output = append(output, value.(string))
+			output = append(output, value)
 		}
 	}
 
@@ -292,4 +292,54 @@ func (bst *BinarySearchTree[T]) IsValid() bool {
 	}
 
 	return true
+}
+
+// FindKthLargest returns the kth largest element in the BinarySearchTree.
+//
+// This uses a reverse in order traversal moving from right
+// to root to left until the kth largest node can be found. We don't have to traverse the whole tree since binary
+// search trees are already ordered following the property of the right subtree has nodes which have the left
+// sub-tree always less than their parent and the right subtree has nodes with values that are either equal to or
+// greater than the parent. With this property in mind, we perform a reverse in order traversal to be able to move
+// from right to root to left to find the kth largest node in the tree.
+//
+// Complexity:
+// Time: O(h + k): where h is the height of the tree and k is the input
+// Space: O(h): where h is the height of the tree.
+//
+// If k is larger than the number of elements in the tree, it will return nil.
+//
+// The BinarySearchTree must be a valid BST for this operation to work correctly.
+func (bst *BinarySearchTree[T]) FindKthLargest(k int) *binary.BinaryTreeNode[T] {
+	type TreeInfo struct {
+		numberOfNodesVisited int
+		lastVisitedNode      *binary.BinaryTreeNode[T]
+	}
+
+	treeInfo := &TreeInfo{numberOfNodesVisited: 0, lastVisitedNode: nil}
+
+	// reverseInOrderTraverse performs a recursive reverse in-order traversal (right, node, left)
+	// of a binary tree starting at the given node and updates the provided treeInfo aggregator.
+	// It is intended for use with binary search trees to visit elements in descending order.
+	// The function mutates treeInfo (for example to collect values, compute ranks or indices)
+	// and is a no-op when the node is nil. Callers should provide a non-nil treeInfo and
+	// ensure proper synchronization if the traversal will be used concurrently.
+	var reverseInOrderTraverse func(node *binary.BinaryTreeNode[T], treeInfo *TreeInfo)
+	reverseInOrderTraverse = func(node *binary.BinaryTreeNode[T], treeInfo *TreeInfo) {
+		if node == nil || treeInfo.numberOfNodesVisited >= k {
+			return
+		}
+
+		reverseInOrderTraverse(node.Right(), treeInfo)
+
+		if treeInfo.numberOfNodesVisited < k+1 {
+			treeInfo.numberOfNodesVisited++
+			treeInfo.lastVisitedNode = node
+		}
+		reverseInOrderTraverse(node.Left(), treeInfo)
+	}
+
+	reverseInOrderTraverse(bst.root, treeInfo)
+
+	return treeInfo.lastVisitedNode
 }
