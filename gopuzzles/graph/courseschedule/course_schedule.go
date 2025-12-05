@@ -4,6 +4,7 @@ const WHITE = 1
 const GRAY = 2
 const BLACK = 3
 
+// CanFinish checks if it is possible to finish the number of courses given a slice of prerequisite courses to do
 func CanFinish(numCourses int, prerequisites [][]int) bool {
 	adjacencyList := map[int][]int{}
 	color := make(map[int]int)
@@ -24,7 +25,7 @@ func CanFinish(numCourses int, prerequisites [][]int) bool {
 
 	isPossible := true
 
-	for i := 0; i < numCourses; i++ {
+	for i := range numCourses {
 		color[i] = WHITE
 	}
 
@@ -41,9 +42,10 @@ func CanFinish(numCourses int, prerequisites [][]int) bool {
 
 		if ok {
 			for _, neighbour := range neighbours {
-				if color[neighbour] == WHITE {
+				switch color[neighbour] {
+				case WHITE:
 					dfs(neighbour)
-				} else if color[neighbour] == GRAY {
+				case GRAY:
 					isPossible = false
 				}
 			}
@@ -52,7 +54,7 @@ func CanFinish(numCourses int, prerequisites [][]int) bool {
 		color[node] = BLACK
 	}
 
-	for index := 0; index < numCourses; index++ {
+	for index := range numCourses {
 		if color[index] == WHITE {
 			dfs(index)
 		}
