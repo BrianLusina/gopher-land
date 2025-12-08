@@ -10,6 +10,7 @@ import (
 	"gopherland/pkg/types"
 	pkgUtils "gopherland/pkg/utils"
 	"math"
+	"slices"
 	"strings"
 )
 
@@ -485,6 +486,56 @@ func (tree *BinaryTree[T]) ReverseLevelOrderTraversal() []T {
 	for !stack.IsEmpty() {
 		node, _ := stack.Pop()
 		result = append(result, node.Data)
+	}
+
+	return result
+}
+
+/**
+* ZigZagLevelOrderTraversal performs zigzag level order traversal of a binary tree.
+*
+* Time Complexity: O(n) where n is the number of nodes
+* Space Complexity: O(w) where w is the maximum width of the tree
+ */
+func (tree *BinaryTree[T]) ZigZagLevelOrderTraversal() [][]T {
+	if tree.root == nil {
+		return [][]T{}
+	}
+
+	result := [][]T{}
+
+	queue := fifo.NewFifoQueue[*BinaryTreeNode[T]](math.MaxInt16)
+	queue.Enqueue(tree.root)
+
+	levelNumber := 0
+
+	for !queue.IsEmpty() {
+		levelSize := queue.Size()
+		currentLevel := []T{}
+
+		for range levelSize {
+			node, err := queue.Dequeue()
+			if err != nil {
+				panic("failed to dequeue from queue")
+			}
+
+			if node.left != nil {
+				queue.Enqueue(node.left)
+			}
+
+			if node.right != nil {
+				queue.Enqueue(node.right)
+			}
+		}
+
+		if levelNumber%2 == 0 {
+			slices.Reverse(currentLevel)
+			result = append(result, currentLevel)
+		} else {
+			result = append(result, currentLevel)
+		}
+
+		levelNumber++
 	}
 
 	return result
