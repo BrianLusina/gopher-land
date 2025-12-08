@@ -515,6 +515,7 @@ func (tree *BinaryTree[T]) ZigZagLevelOrderTraversal() [][]T {
 
 		for range levelSize {
 			node, err := queue.Dequeue()
+			currentLevel = append(currentLevel, node.Data)
 			if err != nil {
 				panic("failed to dequeue from queue")
 			}
