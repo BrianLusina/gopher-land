@@ -87,6 +87,9 @@
     * Findduplicate
       * [Find Duplicate](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/fastandslow/findduplicate/find_duplicate.go)
       * [Find Duplicate Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/fastandslow/findduplicate/find_duplicate_test.go)
+    * Happynumber
+      * [Happy Number](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/fastandslow/happynumber/happy_number.go)
+      * [Happy Number Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/fastandslow/happynumber/happy_number_test.go)
   * Frog Jumps
     * [Frogjumps](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/frog_jumps/frogjumps.go)
   * Frogjumps
@@ -97,8 +100,6 @@
     * [Gigasecond](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/gigasecond/gigasecond.go)
     * [Gigasecond Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/gigasecond/gigasecond_test.go)
   * Graphs
-    * Courseschedule
-      * [Courseschedule](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/graphs/courseschedule/courseschedule.go)
     * Findtownjudge
       * [Findtownjudge](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/graphs/findtownjudge/findtownjudge.go)
     * Minnumberofvertices
@@ -111,6 +112,10 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/hamming/cases_test.go)
     * [Hamming](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/hamming/hamming.go)
     * [Hamming Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/hamming/hamming_test.go)
+  * Intervals
+    * Tasksscheduler
+      * [Task Scheduler](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/tasksscheduler/task_scheduler.go)
+      * [Task Scheduler Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/tasksscheduler/task_scheduler_test.go)
   * Isbnverifier
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/isbnverifier/cases_test.go)
     * [Isbn Verifier](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/isbnverifier/isbn_verifier.go)
@@ -1231,6 +1236,9 @@
     * [Flood Fill](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill.go)
     * [Flood Fill Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/floodfill/flood_fill_test.go)
   * Graph
+    * Courseschedule
+      * [Course Schedule](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/courseschedule/course_schedule.go)
+      * [Course Schedule Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/courseschedule/course_schedule_test.go)
     * Findifpathexists
       * [Validpath](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/findifpathexists/validpath.go)
       * [Validpath Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/graph/findifpathexists/validpath_test.go)
@@ -1441,6 +1449,9 @@
   * Isunique
     * [Is Unique](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isunique/is_unique.go)
     * [Is Unique Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/isunique/is_unique_test.go)
+  * Longesthappystrings
+    * [Longest Happy Strings](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longesthappystrings/longest_happy_strings.go)
+    * [Longest Happy Strings Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/longesthappystrings/longest_happy_strings_test.go)
   * Lookandsaysequence
     * [Look And Say Sequence](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/lookandsaysequence/look_and_say_sequence.go)
     * [Look And Say Sequence Test](https://github.com/BrianLusina/gopher-land/blob/master/gostrings/lookandsaysequence/look_and_say_sequence_test.go)
