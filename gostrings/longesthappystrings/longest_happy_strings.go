@@ -2,6 +2,7 @@ package longesthappystrings
 
 import (
 	"container/heap"
+	"fmt"
 	"strings"
 )
 
@@ -29,6 +30,12 @@ func (h *maxHeap) Pop() any {
 	return x
 }
 
+// longestDiverseString returns the longest possible "happy string" using at most a 'a's, b 'b's, and c 'c's.
+// A happy string contains only 'a', 'b', 'c' and has no three consecutive identical characters.
+// If multiple valid strings of maximum length exist, any one may be returned.
+// Returns an empty string if no valid string can be formed.
+//
+// Reference: https://leetcode.com/problems/longest-happy-string/
 func longestDiverseString(a, b, c int) string {
 	if a == 0 && b == 0 && c == 0 {
 		return ""
@@ -81,4 +88,25 @@ func longestDiverseString(a, b, c int) string {
 	}
 
 	return strings.Join(result, "")
+}
+
+func isValidHappyString(s string, a, b, c int) (bool, string) {
+	// Check no three consecutive
+	for i := 0; i <= len(s)-3; i++ {
+		if s[i] == s[i+1] && s[i] == s[i+2] {
+			return false, fmt.Sprintf("contains three consecutive '%c' at position %d", s[i], i)
+		}
+	}
+
+	// Check character counts
+	counts := map[rune]int{'a': 0, 'b': 0, 'c': 0}
+	for _, ch := range s {
+		counts[ch]++
+	}
+	if counts['a'] > a || counts['b'] > b || counts['c'] > c {
+		return false, fmt.Sprintf("character counts exceed limits: got a=%d,b=%d,c=%d want a<=%d,b<=%d,c<=%d",
+			counts['a'], counts['b'], counts['c'], a, b, c)
+	}
+
+	return true, ""
 }
