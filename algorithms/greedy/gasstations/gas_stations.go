@@ -1,6 +1,8 @@
 package gasstations
 
-import "gopherland/math/utils"
+import (
+	"gopherland/math/utils"
+)
 
 // canCompleteCircuit If sum of gas is less than sum of cost, then there is no way to get through all stations.
 // So while we loop through the stations we sum up, so that at the end we can check the sum.
