@@ -105,6 +105,9 @@
     * Minnumberofvertices
       * [Minnumberofvertices](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/graphs/minnumberofvertices/minnumberofvertices.go)
   * Greedy
+    * Gasstations
+      * [Gas Stations](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/greedy/gasstations/gas_stations.go)
+      * [Gas Stations Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/greedy/gasstations/gas_stations_test.go)
     * Minarrows
       * [Min Arrows](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/greedy/minarrows/min_arrows.go)
       * [Min Arrows Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/greedy/minarrows/min_arrows_test.go)
@@ -113,6 +116,10 @@
     * [Hamming](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/hamming/hamming.go)
     * [Hamming Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/hamming/hamming_test.go)
   * Intervals
+    * Meetingrooms
+      * [Meeting Rooms](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/meetingrooms/meeting_rooms.go)
+      * [Meeting Rooms Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/meetingrooms/meeting_rooms_test.go)
+      * [Priority Queue](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/meetingrooms/priority_queue.go)
     * Tasksscheduler
       * [Task Scheduler](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/tasksscheduler/task_scheduler.go)
       * [Task Scheduler Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/tasksscheduler/task_scheduler_test.go)
@@ -240,6 +247,9 @@
     * Dailytemps
       * [Daily Temps](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/dailytemps/daily_temps.go)
       * [Daily Temps Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/dailytemps/daily_temps_test.go)
+    * Minstrlen
+      * [Min Str Len](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/minstrlen/min_str_len.go)
+      * [Min Str Len Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/minstrlen/min_str_len_test.go)
   * Strain
     * [Strain](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/strain/strain.go)
     * [Strain Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/strain/strain_test.go)
@@ -1161,9 +1171,6 @@
     * Finddiffoftwoarrays
       * [Find Diff Of Two Arrays](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/finddiffoftwoarrays/find_diff_of_two_arrays.go)
       * [Find Diff Of Two Arrays Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/finddiffoftwoarrays/find_diff_of_two_arrays_test.go)
-    * Gasstations
-      * [Gas Stations](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/gasstations/gas_stations.go)
-      * [Gas Stations Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/gasstations/gas_stations_test.go)
     * Highestaltitude
       * [Higest Altitude](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/highestaltitude/higest_altitude.go)
       * [Highest Altitude Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/arrays/highestaltitude/highest_altitude_test.go)
