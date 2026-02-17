@@ -200,3 +200,60 @@ func MaximumPairSumReverseInPlace[T types.Comparable](head *list.Node[T]) T {
 
 	return maximumSum
 }
+
+// ReverseGroup reverses a group of nodes in a linked list
+func ReverseGroups[T comparable](head *list.Node[T], k int) *list.Node[T] {
+	if k <= 1 || head == nil {
+		return head
+	}
+
+	// Sentinel node to handle edge cases such as when the head of the linked list is part of the group to reverse. This will be used to keep track of the previous node of the group to reverse
+	// Also, it will simplify the return
+	sentinelHead := &list.Node[T]{Data: *new(T)}
+	sentinelHead.Next = head
+	// ptr will be used to keep track of the last node of the previous group that was reversed. This will be used to connect the last node of the previous group to the head of the current group that is being reversed
+	ptr := sentinelHead
+
+	var reverseListHelper func(node *list.Node[T], n int) (*list.Node[T], *list.Node[T])
+	reverseListHelper = func(node *list.Node[T], n int) (*list.Node[T], *list.Node[T]) {
+		var previous *list.Node[T]
+		var next *list.Node[T]
+		currentNode := node
+
+		for ; n > 0; n-- {
+			next = currentNode.Next
+			currentNode.Next = previous
+			previous = currentNode
+			currentNode = next
+		}
+
+		return previous, currentNode
+	}
+
+	// While the tracking node has not reached the end
+	for ptr != nil {
+		// Set the count of the current group, we start with 1
+		tracker := ptr
+		for i := 0; i < k; i++ {
+			// While we can still move the tracking node and we have not reached the end of the group, we move the tracking node and increment the count
+			if tracker == nil {
+				break
+			}
+			tracker = tracker.Next
+		}
+
+		if tracker == nil {
+			break
+		}
+
+		previous, current := reverseListHelper(ptr.Next, k)
+
+		lastNodeOfReversedGroup := ptr.Next
+		lastNodeOfReversedGroup.Next = current
+		ptr.Next = previous
+		ptr = lastNodeOfReversedGroup
+
+	}
+
+	return sentinelHead.Next
+}

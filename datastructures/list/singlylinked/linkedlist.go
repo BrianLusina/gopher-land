@@ -13,6 +13,16 @@ type LinkedList[T comparable] struct {
 	size int
 }
 
+func (sll *LinkedList[T]) ToSlice() []T {
+	var values []T
+	current := sll.Head
+	for current != nil {
+		values = append(values, current.Data)
+		current = current.Next
+	}
+	return values
+}
+
 // New creates a new Singly LinkedList
 func New[T comparable]() *LinkedList[T] {
 	return new(LinkedList[T])
@@ -660,31 +670,82 @@ func (sll *LinkedList[T]) Rotate(k int) {
 }
 
 // ReverseGroup reverses a group of nodes in a linked list
-func (sll *LinkedList[T]) ReverseGroups(k int) {
-	if k == 0 {
-		return
+func (sll *LinkedList[T]) ReverseGroups(k int) *list.Node[T] {
+	if k <= 1 || sll.Head == nil {
+		return sll.Head
 	}
 
-	if sll.Head == nil {
-		return
-	}
+	// Sentinel node to handle edge cases such as when the head of the linked list is part of the group to reverse. This will be used to keep track of the previous node of the group to reverse
+	// Also, it will simplify the return
+	sentinelHead := &list.Node[T]{Data: *new(T)}
+	sentinelHead.Next = sll.Head
+	// Tail will be used to keep track of the last node of the previous group that was reversed. This will be used to connect the last node of the previous group to the head of the current group that is being reversed
+	tail := sentinelHead
 
+	// Tracking node will cycle through the linked list
+	trackingNode := sll.Head
 	current := sll.Head
-	var next *list.Node[T]
-	var prev *list.Node[T]
-	count := 0
 
-	for current != nil && count < k {
-		next = current.Next
-		current.Next = prev
-		prev = current
-		current = next
-		count++
+	var reverseListHelper func(head *list.Node[T]) *list.Node[T]
+	reverseListHelper = func(head *list.Node[T]) *list.Node[T] {
+		var previous *list.Node[T]
+		currentNode := head
+
+		for currentNode != nil {
+			next := currentNode.Next
+			currentNode.Next = previous
+			previous = currentNode
+			currentNode = next
+		}
+
+		return head
 	}
 
-	if next != nil {
-		sll.Head.Next = next
+	// While the tracking node has not reached the end
+	for trackingNode != nil {
+		// Set the count of the current group, we start with 1
+		count := 1
+		for count < k {
+			// While we can still move the tracking node and we have not reached the end of the group, we move the tracking node and increment the count
+			if trackingNode != nil {
+				trackingNode = trackingNode.Next
+				count++
+			} else {
+				// We have reached the end of the linked list before reaching the end of the group, so we return as there is no need to reverse a group that is not complete
+				return sentinelHead.Next
+			}
+		}
+
+		// only perform below if we have enough nodes inside k-group and haven't reached end. node is currently at the
+		// tail of the k-group after reversal it will be the head of the k-group
+		if trackingNode != nil {
+			// track the head of the next k group
+			next := trackingNode.Next
+
+			// Sever the list, so we can reverse it
+			trackingNode.Next = nil
+
+			// Reverse list which will return new tail
+			newTail := reverseListHelper(current)
+
+			// re-attach our new tail back to the remaining linked list
+			newTail.Next = next
+
+			// setup prev linked list to node, which was once the k-group's tail, but after reversal became the
+			// k-group's head
+			tail.Next = trackingNode
+
+			// update tail to be the new tail of the reversed group
+			tail = newTail
+
+			// update current to be the head of the next k group
+			current = next
+			trackingNode = next
+		}
+
 	}
+
+	return sentinelHead.Next
 }
 
 func (sll *LinkedList[T]) DeleteAtPosition(position int) (*list.Node[T], error) {
