@@ -110,18 +110,16 @@ func TestReverseKGroupUtil(t *testing.T) {
 }
 
 func BenchmarkReverseKGroup(b *testing.B) {
-	for b.Loop() {
-		for _, tc := range reverseKGroupTestCases {
-			sll := New[int]()
-			b.Run("should reverse a linked list of 1000 nodes in groups of 10", func(b *testing.B) {
-
-				for j := range tc.values {
-					sll.Append(j)
+	for _, tc := range reverseKGroupTestCases {
+		b.Run(fmt.Sprintf("k=%d/n=%d", tc.k, len(tc.values)), func(b *testing.B) {
+			for b.Loop() {
+				sll := New[int]()
+				for _, v := range tc.values {
+					sll.Append(v)
 				}
-
-				sll.ReverseGroups(10)
-			})
-		}
+				sll.ReverseGroups(tc.k)
+			}
+		})
 	}
 }
 
