@@ -768,6 +768,7 @@
       * [Linked List Rotate Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linked_list_rotate_test.go)
       * [Linkedlist](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linkedlist.go)
       * [Linkedlist Delete Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linkedlist_delete_test.go)
+      * [Linkedlist Reverse Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linkedlist_reverse_test.go)
       * [Linkedlist Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/linkedlist_test.go)
       * Simple
         * [Simple Linked List](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/simple/simple_linked_list.go)
