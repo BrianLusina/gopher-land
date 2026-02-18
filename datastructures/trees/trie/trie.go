@@ -1,5 +1,7 @@
 package trie
 
+import "slices"
+
 type (
 	// Trie represents a trie tree
 	Trie struct {
@@ -65,4 +67,53 @@ func (t *Trie) Compact() (remove bool) {
 	}
 
 	return !current.IsLeaf && len(current.Children) == 0
+}
+
+func (t *Trie) Insert(word string) {
+	current := t.Root
+	for _, c := range word {
+		if current.Children[c] == nil {
+			current.Children[c] = NewTrieNode()
+		}
+		current = current.Children[c]
+	}
+	current.IsLeaf = true
+}
+
+func (t *Trie) Search(word string) bool {
+	current := t.Root
+	for _, c := range word {
+		if current.Children[c] == nil {
+			return false
+		}
+		current = current.Children[c]
+	}
+	return current.IsLeaf
+}
+
+// Remove removes a word from the Trie
+func (t *Trie) Remove(word string) {
+	current := t.Root
+	type pair struct {
+		node *Node
+		char rune
+	}
+	childList := []pair{}
+
+	for _, c := range word {
+		childList = append(childList, pair{node: current, char: c})
+		current = current.Children[c]
+	}
+
+	slices.Reverse(childList)
+	for _, c := range childList {
+		parent := c.node
+		childChar := c.char
+		target := parent.Children[childChar]
+
+		if target.Children != nil {
+			return
+		}
+		delete(parent.Children, childChar)
+	}
 }
