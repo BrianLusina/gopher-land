@@ -1,7 +1,7 @@
 package edges
 
 import (
-	"gopherland/datastructures/graphs"
+	"gopherland/datastructures/graphs/vertex"
 	"testing"
 
 	. "github.com/onsi/ginkgo"
@@ -15,14 +15,14 @@ func TestDirectedEdge(t *testing.T) {
 
 var _ = Describe("DirectedEdge", func() {
 	It("should create a new  edge with 0 weight and 2 nodes/vertices", func() {
-		source := graphs.NewVertex(1)
-		destination := graphs.NewVertex(2)
+		source := vertex.NewVertex(1)
+		destination := vertex.NewVertex(2)
 
 		edge := NewDirectedEdge(source, destination, 0)
 
 		Expect(edge).ToNot(BeNil())
 		Expect(edge.GetWeight()).To(Equal(0))
-		Expect(edge.GetNodes()).To(Equal([]*graphs.Vertex[int]{source, destination}))
+		Expect(edge.GetNodes()).To(Equal([]*vertex.Vertex[int]{source, destination}))
 
 		Expect(source.GetDegree()).To(Equal(1))
 		Expect(destination.GetDegree()).To(Equal(1))

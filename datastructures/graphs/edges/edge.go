@@ -1,7 +1,7 @@
 package edges
 
 import (
-	"gopherland/datastructures/graphs"
+	"gopherland/datastructures/graphs/vertex"
 	"gopherland/pkg/types"
 )
 
@@ -11,7 +11,7 @@ type Edge[T types.Comparable] interface {
 	IsSelfEdge() bool
 
 	// GetNodes retrieves all the nodes in this edge
-	GetNodes() []*graphs.Vertex[T]
+	GetNodes() []*vertex.Vertex[T]
 
 	// IsWeighted is used to check if an edge has a weight/cost
 	IsWeighted() bool
