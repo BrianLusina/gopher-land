@@ -19,9 +19,9 @@ func MaxRot(n int64) int64 {
 	pow := int64(math.Pow10(k))
 
 	for i := 0; i < k; i++ {
-		firstDigit, _ := strconv.Atoi(strconv.Itoa(int(n))[0])
+		firstDigit, _ := strconv.Atoi(string(strconv.Itoa(int(n))[0]))
 
-		left := (n*10 + firstDigit - (firstDigit * pow * 10))
+		left := (n*10 + int64(firstDigit) - (int64(firstDigit) * pow * 10))
 		rotated = left
 		numbers = append(numbers, rotated)
 		max = int64(math.Max(float64(max), float64(rotated)))
