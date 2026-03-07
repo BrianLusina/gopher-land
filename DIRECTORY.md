@@ -4,6 +4,9 @@
     * [Accumulate](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/accumulate/accumulate.go)
     * [Accumulate Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/accumulate/accumulate_test.go)
   * Arrays
+    * Findmissingelem
+      * [Missing Elem](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/findmissingelem/missing_elem.go)
+      * [Missing Elem Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/findmissingelem/missing_elem_test.go)
     * Intersection
       * [Intersection One](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/intersection/intersection_one.go)
       * [Intersection One Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/arrays/intersection/intersection_one_test.go)
@@ -120,6 +123,9 @@
       * [Meeting Rooms](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/meetingrooms/meeting_rooms.go)
       * [Meeting Rooms Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/meetingrooms/meeting_rooms_test.go)
       * [Priority Queue](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/meetingrooms/priority_queue.go)
+    * Removeintervals
+      * [Remove Covered Intervals](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/removeintervals/remove_covered_intervals.go)
+      * [Remove Covered Intervals Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/removeintervals/remove_covered_intervals_test.go)
     * Tasksscheduler
       * [Task Scheduler](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/tasksscheduler/task_scheduler.go)
       * [Task Scheduler Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/intervals/tasksscheduler/task_scheduler_test.go)
@@ -166,8 +172,6 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/pangram/cases_test.go)
     * [Pangram](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/pangram/pangram.go)
     * [Pangram Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/pangram/pangram_test.go)
-  * Permmissingelem
-    * [Missingelem](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/permmissingelem/missingelem.go)
   * Proteintranslation
     * [Protein Translation](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/proteintranslation/protein_translation.go)
     * [Protein Translation Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/proteintranslation/protein_translation_test.go)
@@ -263,6 +267,10 @@
   * Tapeequilibrium
     * [Tapeequlibrium](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/tapeequilibrium/tapeequlibrium.go)
   * Trees
+    * Trie
+      * Wordsearch
+        * [Word Search Two](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/trees/trie/wordsearch/word_search_two.go)
+        * [Word Search Two Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/trees/trie/wordsearch/word_search_two_test.go)
     * Uniquebsts
       * [Uniquebsts](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/trees/uniquebsts/uniquebsts.go)
       * [Uniquebsts Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/trees/uniquebsts/uniquebsts_test.go)
@@ -982,6 +990,11 @@
         * [Gun Factory](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/guns/gun_factory.go)
         * [Main](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/guns/main.go)
         * [Musket](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/guns/musket.go)
+      * Notification
+        * [Email Notification](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/notification/email_notification.go)
+        * [Notification](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/notification/notification.go)
+        * [Notification Factory](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/notification/notification_factory.go)
+        * [Sms Notification](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/notification/sms_notification.go)
       * Storage
         * [Client](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/storage/client.go)
         * [Disk Storage](https://github.com/BrianLusina/gopher-land/blob/master/designpatterns/creational/factory/storage/disk_storage.go)
@@ -1113,6 +1126,9 @@
     * [Cases Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/perfectnumbers/cases_test.go)
     * [Perfect Numbers](https://github.com/BrianLusina/gopher-land/blob/master/gomath/perfectnumbers/perfect_numbers.go)
     * [Perfect Numbers Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/perfectnumbers/perfect_numbers_test.go)
+  * Poweroftwo
+    * [Power Of Two](https://github.com/BrianLusina/gopher-land/blob/master/gomath/poweroftwo/power_of_two.go)
+    * [Power Of Two Test](https://github.com/BrianLusina/gopher-land/blob/master/gomath/poweroftwo/power_of_two_test.go)
   * Powersofi
     * [Powersofi](https://github.com/BrianLusina/gopher-land/blob/master/gomath/powersofi/powersofi.go)
   * Primes
