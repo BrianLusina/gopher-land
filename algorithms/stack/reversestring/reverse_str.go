@@ -1,6 +1,10 @@
 package reversestring
 
-import dynamicstack "gopherland/datastructures/stack/dynamic"
+import (
+	"strings"
+
+	dynamicstack "gopherland/datastructures/stack/dynamic"
+)
 
 // reverseString Reverses an input string using a stack data structure
 // Complexity:
@@ -8,9 +12,12 @@ import dynamicstack "gopherland/datastructures/stack/dynamic"
 // Time: O(n), iterate through the whole string
 // Space: O(n), a stack is used to store the characters in the input string.
 // Args:
-// 	text (str): string to reverse
+//
+//	text (str): string to reverse
+//
 // Return:
-// 	str: reversed string
+//
+//	str: reversed string
 func reverseString(text string) string {
 	stack := dynamicstack.New[rune]()
 
@@ -20,7 +27,7 @@ func reverseString(text string) string {
 	}
 
 	// # initialize an empty string which will be the result
-	reversedString := ""
+	var reversedString strings.Builder
 
 	// # iterate over all the items in the stack popping of items from the top of the stack and adding them to the result
 	// # string.
@@ -29,8 +36,24 @@ func reverseString(text string) string {
 		if err != nil {
 			panic("failed to pop off from stack")
 		}
-		reversedString += string(value)
+		reversedString.WriteString(string(value))
 	}
 
-	return reversedString
+	return reversedString.String()
+}
+
+// reverseCharArray reverses the characters in a string slice in place
+func reverseCharArray(s []string) {
+	if len(s) <= 1 {
+		return
+	}
+
+	left := 0
+	right := len(s) - 1
+
+	for left < right {
+		s[left], s[right] = s[right], s[left]
+		left += 1
+		right -= 1
+	}
 }
