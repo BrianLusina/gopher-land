@@ -16,3 +16,9 @@ type String interface {
 type Comparable interface {
 	constraints.Ordered
 }
+
+// Pair represents a tuple that encapsulates any type
+type Pair[T, U any] struct {
+	First  T
+	Second U
+}
