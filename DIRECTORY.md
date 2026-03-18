@@ -248,12 +248,33 @@
     * [Space Age](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/space_age.go)
     * [Space Age Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/space_age/space_age_test.go)
   * Stack
+    * Asteroidcollision
+      * [Asteroid Collision](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/asteroidcollision/asteroid_collision.go)
+      * [Asteroid Collision Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/asteroidcollision/asteroid_collision_test.go)
     * Dailytemps
       * [Daily Temps](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/dailytemps/daily_temps.go)
       * [Daily Temps Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/dailytemps/daily_temps_test.go)
+    * Decimaltobinary
+      * [Inttobin](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/decimaltobinary/inttobin.go)
+      * [Inttobin Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/decimaltobinary/inttobin_test.go)
+    * Decodestring
+      * [Decode String](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/decodestring/decode_string.go)
+      * [Decode String Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/decodestring/decode_string_test.go)
     * Minstrlen
       * [Min Str Len](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/minstrlen/min_str_len.go)
       * [Min Str Len Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/minstrlen/min_str_len_test.go)
+    * Nextgreater
+      * [Next Greater](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/nextgreater/next_greater.go)
+      * [Next Greater Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/nextgreater/next_greater_test.go)
+    * Removingstars
+      * [Remove Stars](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/removingstars/remove_stars.go)
+      * [Remove Stars Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/removingstars/remove_stars_test.go)
+    * Reversestring
+      * [Reverse Str](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/reversestring/reverse_str.go)
+      * [Reverse Str Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/reversestring/reverse_str_test.go)
+    * Validbraces
+      * [Valid Braces](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/validbraces/valid_braces.go)
+      * [Valid Braces Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/stack/validbraces/valid_braces_test.go)
   * Strain
     * [Strain](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/strain/strain.go)
     * [Strain Test](https://github.com/BrianLusina/gopher-land/blob/master/algorithms/strain/strain_test.go)
@@ -783,6 +804,9 @@
         * [Simple Linked List Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/simple/simple_linked_list_test.go)
       * [Utils](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/utils.go)
       * [Utils Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/list/singlylinked/utils_test.go)
+  * Mapsum
+    * [Map Sum Pairs](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/mapsum/map_sum_pairs.go)
+    * [Map Sum Pairs Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/mapsum/map_sum_pairs_test.go)
   * Orderedstream
     * [Orderedstream](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/orderedstream/orderedstream.go)
     * [Orderedstream Test](https://github.com/BrianLusina/gopher-land/blob/master/datastructures/orderedstream/orderedstream_test.go)
@@ -1388,28 +1412,6 @@
   * Slowestkey
     * [Slowest Key](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key.go)
     * [Slowest Key Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/slowestkey/slowest_key_test.go)
-  * Stack
-    * Asteroidcollision
-      * [Asteroid Collision](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/asteroidcollision/asteroid_collision.go)
-      * [Asteroid Collision Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/asteroidcollision/asteroid_collision_test.go)
-    * Decimaltobinary
-      * [Inttobin](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/decimaltobinary/inttobin.go)
-      * [Inttobin Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/decimaltobinary/inttobin_test.go)
-    * Decodestring
-      * [Decode String](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/decodestring/decode_string.go)
-      * [Decode String Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/decodestring/decode_string_test.go)
-    * Nextgreater
-      * [Next Greater](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/nextgreater/next_greater.go)
-      * [Next Greater Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/nextgreater/next_greater_test.go)
-    * Removingstars
-      * [Remove Stars](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/removingstars/remove_stars.go)
-      * [Remove Stars Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/removingstars/remove_stars_test.go)
-    * Reversestring
-      * [Reverse Str](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/reversestring/reverse_str.go)
-      * [Reverse Str Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/reversestring/reverse_str_test.go)
-    * Validbraces
-      * [Valid Braces](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/validbraces/valid_braces.go)
-      * [Valid Braces Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/stack/validbraces/valid_braces_test.go)
   * Studentlunch
     * [Student Lunch](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/studentlunch/student_lunch.go)
     * [Student Lunch Test](https://github.com/BrianLusina/gopher-land/blob/master/gopuzzles/studentlunch/student_lunch_test.go)
