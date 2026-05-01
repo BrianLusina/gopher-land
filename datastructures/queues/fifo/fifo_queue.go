@@ -7,12 +7,22 @@ import (
 
 type FifoQueue[T any] struct {
 	items   []T
-	maxsize int
+	maxSize int
 }
 
-func NewFifoQueue[T any](maxsize int) *FifoQueue[T] {
-	data := make([]T, 0, maxsize)
-	return &FifoQueue[T]{items: data, maxsize: maxsize}
+// NewFifoQueue creates a new First In First Out Queue with optional parameters that the caller can tune to their needs
+// the type is any to allow the queue to handle arbitrary/generic types
+func NewFifoQueue[T any](opts ...FifoQueueOptions[T]) *FifoQueue[T] {
+	data := make([]T, 0)
+	queue := &FifoQueue[T]{
+		items: data,
+	}
+
+	for _, opt := range opts {
+		opt(queue)
+	}
+
+	return queue
 }
 
 // Enqueue adds an item to the back of the queue
@@ -49,7 +59,7 @@ func (q *FifoQueue[T]) IsEmpty() bool {
 
 // isEmpty returns true if the queue is empty
 func (q *FifoQueue[T]) IsFull() bool {
-	return q.Size() == q.maxsize
+	return q.Size() == q.maxSize
 }
 
 // Items returns a slice of the items in the queue

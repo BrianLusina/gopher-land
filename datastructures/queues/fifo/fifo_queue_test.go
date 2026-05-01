@@ -14,7 +14,7 @@ func TestFifoQueue(t *testing.T) {
 
 var _ = Describe("FifoQueue", func() {
 	When("int queue is of max size of 5", func() {
-		fifoQueue := NewFifoQueue[int](5)
+		fifoQueue := NewFifoQueue[int](WithMaxSize[int](5))
 
 		It("Should add 1 to fifoQueue", func() {
 			fifoQueue.Enqueue(1)
