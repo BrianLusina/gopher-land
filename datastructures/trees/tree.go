@@ -19,7 +19,7 @@ type Tree[T types.Comparable] interface {
 	// Deserialize deserializes the tree
 	Deserialize() *TreeNode[T]
 
-	Insert(value interface{})
+	Insert(value T)
 
 	InorderTraversalIteratively()
 
