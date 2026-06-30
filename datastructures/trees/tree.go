@@ -21,7 +21,7 @@ type Tree[T types.Comparable] interface {
 
 	Insert(value T)
 
-	InorderTraversalIteratively()
+	InorderTraversal()
 
 	InorderMorrisTraversal()
 }

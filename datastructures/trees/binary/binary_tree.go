@@ -9,7 +9,6 @@ import (
 	"gopherland/math/utils"
 	"gopherland/pkg/types"
 	pkgUtils "gopherland/pkg/utils"
-	"math"
 	"slices"
 	"strings"
 )
@@ -76,6 +75,48 @@ func NewBinaryTreeFromSlice[T types.Comparable](data []T) *BinaryTree[T] {
 	return &BinaryTree[T]{
 		root: root,
 	}
+}
+
+// InorderTraversal traverse the binary tree inorder
+func (tree *BinaryTree[T]) InorderTraversal() []T {
+	data := []T{}
+	if tree.root == nil {
+		return data
+	}
+
+	var inorderHelper func(node *BinaryTreeNode[T])
+	inorderHelper = func(node *BinaryTreeNode[T]) {
+		if node == nil {
+			return
+		}
+		inorderHelper(node.left)
+		data = append(data, node.Data)
+		inorderHelper(node.right)
+	}
+
+	inorderHelper(tree.root)
+	return data
+}
+
+// PreOrderTraversal traverses a tree in pre-order fashion
+func (tree *BinaryTree[T]) PreOrderTraversal() []T {
+	data := []T{}
+	if tree.root == nil {
+		return data
+	}
+
+	var preOrderTraversalHelper func(node *BinaryTreeNode[T])
+	preOrderTraversalHelper = func(node *BinaryTreeNode[T]) {
+		if node == nil {
+			return
+		}
+		data = append(data, node.Data)
+		preOrderTraversalHelper(node.left)
+		preOrderTraversalHelper(node.right)
+	}
+
+	preOrderTraversalHelper(tree.root)
+	return data
 }
 
 // func IsBstRecursive[T types.Comparable](node *BinaryTreeNode[T], min, max T) bool {
@@ -434,7 +475,7 @@ func (tree *BinaryTree[T]) LevelOrderTraversal() []T {
 		return []T{}
 	}
 
-	queue := fifo.NewFifoQueue[*BinaryTreeNode[T]](math.MaxInt16)
+	queue := fifo.NewFifoQueue[*BinaryTreeNode[T]]()
 	queue.Enqueue(tree.root)
 	result := []T{}
 
@@ -462,7 +503,7 @@ func (tree *BinaryTree[T]) ReverseLevelOrderTraversal() []T {
 		return []T{}
 	}
 
-	queue := fifo.NewFifoQueue[*BinaryTreeNode[T]](math.MaxInt16)
+	queue := fifo.NewFifoQueue[*BinaryTreeNode[T]]()
 	stack := dynamicstack.New[*BinaryTreeNode[T]]()
 
 	queue.Enqueue(tree.root)
@@ -504,7 +545,7 @@ func (tree *BinaryTree[T]) ZigZagLevelOrderTraversal() [][]T {
 
 	result := [][]T{}
 
-	queue := fifo.NewFifoQueue[*BinaryTreeNode[T]](math.MaxInt16)
+	queue := fifo.NewFifoQueue[*BinaryTreeNode[T]]()
 	queue.Enqueue(tree.root)
 
 	levelNumber := 0
