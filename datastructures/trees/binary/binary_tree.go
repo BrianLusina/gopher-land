@@ -119,6 +119,56 @@ func (tree *BinaryTree[T]) PreOrderTraversal() []T {
 	return data
 }
 
+// PostOrderTraversal traverse the tree in a post order fashion starting from the left node to the right node and thn the current node
+func (tree *BinaryTree[T]) PostOrderTraversal() []T {
+	data := []T{}
+	if tree.root == nil {
+		return data
+	}
+
+	var postOrderTraversalHelper func(node *BinaryTreeNode[T])
+	postOrderTraversalHelper = func(node *BinaryTreeNode[T]) {
+		if node == nil {
+			return
+		}
+		postOrderTraversalHelper(node.left)
+		postOrderTraversalHelper(node.right)
+		data = append(data, node.Data)
+	}
+
+	postOrderTraversalHelper(tree.root)
+	return data
+}
+
+// LevelOrderTraversal traverses the tree level by level
+func (tree *BinaryTree[T]) LevelOrderTraversal() ([]T, error) {
+	data := []T{}
+	if tree.root == nil {
+		return data, nil
+	}
+
+	queue := fifo.NewFifoQueue[BinaryTreeNode[T]]()
+	queue.Enqueue(*tree.root)
+
+	for !queue.IsEmpty() {
+		node, peekErr := queue.Peek()
+		if peekErr != nil {
+			return []T{}, peekErr
+		}
+		data = append(data, node.Data)
+
+		if node.left != nil {
+			queue.Enqueue(*node.left)
+		}
+
+		if node.right != nil {
+			queue.Enqueue(*node.right)
+		}
+	}
+
+	return data, nil
+}
+
 // func IsBstRecursive[T types.Comparable](node *BinaryTreeNode[T], min, max T) bool {
 // 	if node == nil {
 // 		return true
