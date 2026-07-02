@@ -24,10 +24,23 @@ func Right[T types.Comparable](right *BinaryTreeNode[T]) BinaryTreeNodeOption[T]
 	}
 }
 
+func LeftThread[T types.Comparable](leftThread bool) BinaryTreeNodeOption[T] {
+	return func(node *BinaryTreeNode[T]) {
+		node.leftThread = leftThread
+	}
+}
+
+func RightThread[T types.Comparable](rightThread bool) BinaryTreeNodeOption[T] {
+	return func(node *BinaryTreeNode[T]) {
+		node.rightThread = rightThread
+	}
+}
+
 // BinaryTreeNode represent a Binary Tree Node in a Binary Tree
 type BinaryTreeNode[T types.Comparable] struct {
 	trees.TreeNode[T]
-	left, right *BinaryTreeNode[T]
+	left, right             *BinaryTreeNode[T]
+	leftThread, rightThread bool
 }
 
 // NewBinaryTreeNode creates a new BinaryTreeNode
@@ -35,9 +48,11 @@ func NewBinaryTreeNode[T types.Comparable](data T, opts ...BinaryTreeNodeOption[
 	node := trees.NewTreeNode(data)
 
 	binaryTreeNode := &BinaryTreeNode[T]{
-		TreeNode: *node,
-		left:     nil,
-		right:    nil,
+		TreeNode:    *node,
+		left:        nil,
+		right:       nil,
+		leftThread:  false,
+		rightThread: false,
 	}
 
 	for _, opt := range opts {
@@ -65,6 +80,26 @@ func (node *BinaryTreeNode[T]) Right() *BinaryTreeNode[T] {
 // SetRight sets the right node of a binary tree node
 func (node *BinaryTreeNode[T]) SetRight(n *BinaryTreeNode[T]) {
 	node.right = n
+}
+
+// Left retrieves the left node of a binary tree node
+func (node *BinaryTreeNode[T]) LeftThread() bool {
+	return node.leftThread
+}
+
+// SetLeftThread sets the left thread of a binary tree node
+func (node *BinaryTreeNode[T]) SetLeftThread(value bool) {
+	node.leftThread = value
+}
+
+// RightThread retrieves the right thread of a binary tree node
+func (node *BinaryTreeNode[T]) RightThread() bool {
+	return node.rightThread
+}
+
+// SetRightThread sets the right thread of a binary tree node
+func (node *BinaryTreeNode[T]) SetRightThread(value bool) {
+	node.rightThread = value
 }
 
 // Serialize serializes a node into a string

@@ -33,7 +33,7 @@ func TestBinaryTreeTraversal(t *testing.T) {
 			t.Run(fmt.Sprintf("should return %v", tc.expected), func(t *testing.T) {
 				binaryTree := NewBinaryTree(tc.root)
 
-				actual := binaryTree.LevelOrderTraversal()
+				actual, _ := binaryTree.LevelOrderTraversal()
 
 				assert.ElementsMatch(t, actual, tc.expected)
 			})

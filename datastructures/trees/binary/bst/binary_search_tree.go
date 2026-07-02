@@ -19,6 +19,16 @@ func NewBinarySearchTree[T types.Comparable]() *BinarySearchTree[T] {
 	return &BinarySearchTree[T]{}
 }
 
+// Root returns the root of the binary search tree
+func (bst *BinarySearchTree[T]) Root() *binary.BinaryTreeNode[T] {
+	return bst.root
+}
+
+// SetRoot sets the root of the binary search tree. Use with caution as this can break the binary search tree property if the root is not set correctly.
+func (bst *BinarySearchTree[T]) SetRoot(root *binary.BinaryTreeNode[T]) {
+	bst.root = root
+}
+
 // Insert inserts a new node with the value into the binary search tree
 func (bst *BinarySearchTree[T]) Insert(value T) {
 	// we don't have a root
