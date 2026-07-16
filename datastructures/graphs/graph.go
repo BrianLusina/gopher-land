@@ -1,13 +1,16 @@
 package graphs
 
-import "gopherland/pkg/types"
+import (
+	"gopherland/datastructures/graphs/vertex"
+	"gopherland/pkg/types"
+)
 
 type Graph[T types.Comparable] interface {
 	// AddNode adds a new node to the graph
-	AddVertex(nodeOne Vertex[T]) error
+	AddVertex(nodeOne vertex.Vertex[T]) error
 
 	// GetNode returns a node from the graph
-	GetVertex(data any) *Vertex[T]
+	GetVertex(data any) *vertex.Vertex[T]
 
 	// Size returns the number of nodes in the graph
 	Size() int

@@ -1,6 +1,7 @@
 package graphs
 
 import (
+	"gopherland/datastructures/graphs/vertex"
 	"reflect"
 	"testing"
 
@@ -15,7 +16,7 @@ func TestGraphUtils(t *testing.T) {
 
 var _ = Describe("CloneGraph", func() {
 	It("should clone a graph and return a new graph", func() {
-		nodeOne := NewVertex(1)
+		nodeOne := vertex.NewVertex(1)
 		// nodeTwo := NewVertex(2)
 		// nodeThree := NewVertex(3)
 		// nodeFour := NewVertex(4)

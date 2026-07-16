@@ -1,9 +1,12 @@
 package directed
 
-import "gopherland/datastructures/graphs"
+import (
+	"gopherland/datastructures/graphs/vertex"
+	"gopherland/pkg/types"
+)
 
-type Node struct {
-	graphs.Node
+type Node[T types.Comparable] struct {
+	vertex.Vertex[T]
 
 	// InDegree is the number of edges pointing to the node
 	InDegree int
@@ -13,10 +16,10 @@ type Node struct {
 }
 
 // NewNode creates a new node with the given data
-func NewNode(data any) *Node {
-	node := graphs.NewNode(data)
-	return &Node{
-		Node:      *node,
+func NewNode[T types.Comparable](data T) *Node[T] {
+	node := vertex.NewVertex(data)
+	return &Node[T]{
+		Vertex:    *node,
 		InDegree:  0,
 		OutDegree: 0,
 	}

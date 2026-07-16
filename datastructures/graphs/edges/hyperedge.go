@@ -1,19 +1,19 @@
 package edges
 
 import (
-	"gopherland/datastructures/graphs"
+	"gopherland/datastructures/graphs/vertex"
 	"gopherland/pkg/types"
 )
 
 // Hyper represents a hyper edge in a graph which connects many vertices
 type Hyper[T types.Comparable] struct {
 	// nodes is a slice of all the nodes this edge connects
-	nodes []*graphs.Vertex[T]
+	nodes []*vertex.Vertex[T]
 }
 
 // NewHyperEdge creates a new directed edge between two nodes with a weight
-func NewHyperEdge[T types.Comparable](nodes ...*graphs.Vertex[T]) Edge[T] {
-	n := []*graphs.Vertex[T]{}
+func NewHyperEdge[T types.Comparable](nodes ...*vertex.Vertex[T]) Edge[T] {
+	n := []*vertex.Vertex[T]{}
 	n = append(n, nodes...)
 	return &Hyper[T]{
 		nodes: n,
@@ -27,7 +27,7 @@ func (e *Hyper[T]) IsSelfEdge() bool {
 
 // GetNodes returns the nodes connected by the edge
 // this includes the nodes in the edges if any
-func (e *Hyper[T]) GetNodes() []*graphs.Vertex[T] {
+func (e *Hyper[T]) GetNodes() []*vertex.Vertex[T] {
 	return e.nodes
 }
 
