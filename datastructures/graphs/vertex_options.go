@@ -1,16 +1,9 @@
-package vertex
+package graphs
 
 import "gopherland/pkg/types"
 
 // VertexOption is the option to apply to a Vertex
 type VertexOption[T types.Comparable] func(*Vertex[T])
-
-// WithID sets the ID on the vertext node
-func WithID[T types.Comparable](id string) VertexOption[T] {
-	return func(v *Vertex[T]) {
-		v.id = id
-	}
-}
 
 // WithAdjacentVertices adds adjacent vertices to this vertex
 func WithAdjacentVertices[T types.Comparable](adjacentVertices map[string]*Vertex[T]) VertexOption[T] {
@@ -27,8 +20,8 @@ func WithAdjacentVertices[T types.Comparable](adjacentVertices map[string]*Verte
 	}
 }
 
-func WithMetadata[T types.Comparable](metadata map[any]any) VertexOption[T] {
+func WithProperties[T types.Comparable](metadata map[any]any) VertexOption[T] {
 	return func(v *Vertex[T]) {
-		v.metadata = metadata
+		v.properties = metadata
 	}
 }

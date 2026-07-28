@@ -1,6 +1,7 @@
-package vertex
+package graphs
 
 import (
+	"gopherland/datastructures/graphs/edges"
 	"gopherland/pkg/types"
 )
 
@@ -13,26 +14,26 @@ type (
 		// data of the node
 		data T
 
-		// metadata is a map of metadata to attach to a node
-		metadata map[any]any
-
-		// degree is the number of edges connected to this vertex
-		degree int
+		// properties is a map of properties to attach to a node
+		properties map[any]any
 
 		// adjacentVertices is a map of this vertices neighbors
 		adjacentVertices map[string]*Vertex[T]
 
-		// TODO: add field to keep track of nth degree neighbors of this vertex, for example, 2nd degree neighbor, which means that in order to get to
-		// the 2nd degree vertex, one has to move through 1 other vertex so, A->B->C, where C is a 2nd degree neighbor of A & vice versa.
+		// edges is a map of edges connected to this vertex
+		edges  map[string]*edges.Edge[T]
+		degree int
 	}
 )
 
-// NewVertex creates a new node with the given data
-func NewVertex[T types.Comparable](data T, options ...VertexOption[T]) *Vertex[T] {
+// NewVertex creates a new node/vertex with the given data
+func NewVertex[T types.Comparable](id string, data T, options ...VertexOption[T]) *Vertex[T] {
 	vertex := &Vertex[T]{
+		id:               id,
 		data:             data,
 		adjacentVertices: map[string]*Vertex[T]{},
-		metadata:         map[any]any{},
+		properties:       map[any]any{},
+		edges:            map[string]*edges.Edge[T]{},
 	}
 
 	for _, option := range options {
@@ -42,18 +43,24 @@ func NewVertex[T types.Comparable](data T, options ...VertexOption[T]) *Vertex[T
 	return vertex
 }
 
-func (v *Vertex[T]) SetMetadata(data map[any]any) {
-	v.metadata = data
+func (v *Vertex[T]) SetProperty(key any, value any) {
+	v.properties[key] = value
 }
 
-func (v *Vertex[T]) GetMetadata(data map[any]any) {
-	v.metadata = data
+func (v *Vertex[T]) GetProperty(key any) (any, bool) {
+	value, ok := v.properties[key]
+	return value, ok
+}
+
+func (v *Vertex[T]) GetProperties() map[any]any {
+	return v.properties
 }
 
 // AddAdjacentVertex adds a vertex as a "neighbor" or adjacent vertex to this vertex
-func (v *Vertex[T]) AddAdjacentVertex(vertex Vertex[T]) {
-	if _, ok := v.adjacentVertices[vertex.id]; !ok {
-		v.adjacentVertices[vertex.id] = &vertex
+func (v *Vertex[T]) AddAdjacentVertex(adjacentVertex Vertex[T]) {
+	if _, ok := v.adjacentVertices[adjacentVertex.id]; !ok {
+		v.adjacentVertices[adjacentVertex.id] = &adjacentVertex
+		adjacentVertex.AddAdjacentVertex(*v)
 
 		// we increase the degree because as long as this vertex has neighbors, it has edges incoming or outgoing which means we
 		// increase the degree to reflect the number of increasing edges implied by adding a neighbor
